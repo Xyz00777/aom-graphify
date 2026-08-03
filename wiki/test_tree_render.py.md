@@ -41,7 +41,7 @@
 - [_compute_tree_budget](_compute_tree_budget.md) (2 shared connections)
 - [RunState](RunState.md) (2 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
-- [WarningType](WarningType.md) (1 shared connections)
+- [Status](Status.md) (1 shared connections)
 - [TreeProjection](TreeProjection.md) (1 shared connections)
 - [RoleGroupDefinition](RoleGroupDefinition.md) (1 shared connections)
 - [HostRunState](HostRunState.md) (1 shared connections)

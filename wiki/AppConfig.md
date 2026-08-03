@@ -39,7 +39,7 @@
 - [TestConfigFieldValidation](TestConfigFieldValidation.md) (5 shared connections)
 - [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (5 shared connections)
 - [TestConfigFromEnvironment](TestConfigFromEnvironment.md) (4 shared connections)
-- [WarningType](WarningType.md) (4 shared connections)
+- [Status](Status.md) (4 shared connections)
 - [load_config](load_config.md) (3 shared connections)
 - [test_config.py](test_config.py.md) (3 shared connections)
 - [RedactionConfig](RedactionConfig.md) (2 shared connections)

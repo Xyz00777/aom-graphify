@@ -1,11 +1,10 @@
 # _AsyncEventWriter
 
-> 32 nodes · cohesion 0.07
+> 30 nodes · cohesion 0.07
 
 ## Key Concepts
 
 - **_AsyncEventWriter** (12 connections) — `src/ansible_aom/session/store.py`
-- **.record_event()** (5 connections) — `src/ansible_aom/session/store.py`
 - **.record_stderr()** (5 connections) — `src/ansible_aom/session/store.py`
 - **._writer_for()** (5 connections) — `src/ansible_aom/session/store.py`
 - **.enqueue()** (4 connections) — `src/ansible_aom/session/store.py`
@@ -29,13 +28,13 @@
 - **Wait until the queue is fully drained.          Used by tests that need to asser** (1 connections) — `src/ansible_aom/session/store.py`
 - **Signal the writer thread to drain and exit.** (1 connections) — `src/ansible_aom/session/store.py`
 - **Consume the rest of the queue as no-ops after a disk error.          We can't wr** (1 connections) — `src/ansible_aom/session/store.py`
-- *... and 7 more nodes in this community*
+- **Drain the queue, writing each line to events.jsonl.          Any disk error (``o** (1 connections) — `src/ansible_aom/session/store.py`
+- *... and 5 more nodes in this community*
 
 ## Relationships
 
-- [SessionManager](SessionManager.md) (7 shared connections)
-- [load_session](load_session.md) (3 shared connections)
-- [JsonlEvent](JsonlEvent.md) (1 shared connections)
+- [SessionManager](SessionManager.md) (6 shared connections)
+- [load_session](load_session.md) (5 shared connections)
 - [Prompt Detection Heuristics](Prompt_Detection_Heuristics.md) (1 shared connections)
 
 ## Source Files
@@ -44,7 +43,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 82 (100%)
+- EXTRACTED: 76 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

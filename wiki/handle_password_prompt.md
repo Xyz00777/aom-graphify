@@ -1,6 +1,6 @@
 # .handle_password_prompt
 
-> 35 nodes · cohesion 0.07
+> 21 nodes · cohesion 0.13
 
 ## Key Concepts
 
@@ -15,28 +15,24 @@
 - **.test_password_returned_as_string()** (3 connections) — `tests/compact/test_password.py`
 - **.test_password_with_special_characters()** (3 connections) — `tests/compact/test_password.py`
 - **.test_password_with_unicode_characters()** (3 connections) — `tests/compact/test_password.py`
-- **.test_handle_password_prompt_cursor_positioning_on_tty()** (3 connections) — `tests/compact/test_password.py`
-- **.test_handle_password_prompt_delegates_to_getpass()** (3 connections) — `tests/compact/test_password.py`
-- **.test_handle_password_prompt_empty_child_param()** (3 connections) — `tests/compact/test_password.py`
-- **.test_handle_password_prompt_returns_empty_on_eof()** (3 connections) — `tests/compact/test_password.py`
-- **.test_handle_password_prompt_returns_empty_on_keyboard_interrupt()** (3 connections) — `tests/compact/test_password.py`
-- **.test_handle_password_prompt_returns_empty_on_os_error()** (3 connections) — `tests/compact/test_password.py`
-- **.test_handle_password_prompt_with_mock_pexpect_child()** (3 connections) — `tests/compact/test_password.py`
-- **TC-143: handle_password_prompt uses getpass.getpass for PTY integration.** (1 connections) — `tests/compact/test_password.py`
-- **TC-143: child param exists for interface compatibility but unused in compact mod** (1 connections) — `tests/compact/test_password.py`
-- **TC-143: child param accepted for TUI interface compatibility.** (1 connections) — `tests/compact/test_password.py`
-- **TC-143: Cursor positioning escape sequence written before getpass.** (1 connections) — `tests/compact/test_password.py`
-- **TC-143: EOFError from getpass returns empty string (user cancelled).** (1 connections) — `tests/compact/test_password.py`
-- **TC-143: KeyboardInterrupt from getpass returns empty string (user cancelled).** (1 connections) — `tests/compact/test_password.py`
-- **TC-143: OSError from getpass (no TTY) returns empty string.** (1 connections) — `tests/compact/test_password.py`
-- *... and 10 more nodes in this community*
+- **TC-145: Verify password masked by getpass, sent to PTY.      In compact mode, th** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: getpass.getpass is used which masks input (no echo).** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: The prompt text (e.g., 'Vault password: ') is shown to user via getpass.** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: All password prompt types use the same terminal pass-through path.** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: Password returned as a plain string for PTY sending.** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: Passwords with special characters handled correctly.** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: Passwords with unicode characters handled correctly.** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: Empty password (user pressed Enter) returned as empty string.** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: Cursor is positioned at bottom of terminal before getpass.          This** (1 connections) — `tests/compact/test_password.py`
+- **TC-145: Cursor positioning silently ignored on non-TTY environments.          If** (1 connections) — `tests/compact/test_password.py`
 
 ## Relationships
 
 - [TestPasswordPromptPTYIntegration](TestPasswordPromptPTYIntegration.md) (7 shared connections)
-- [CompactRenderer](CompactRenderer.md) (2 shared connections)
 - [TestPasswordTimeoutDefault](TestPasswordTimeoutDefault.md) (2 shared connections)
-- [.test_handle_password_prompt_passes_prompt_text_to_getpass](test_handle_password_prompt_passes_prompt_text_to_getpass.md) (1 shared connections)
+- [CompactRenderer](CompactRenderer.md) (1 shared connections)
+- [test_password.py](test_password.py.md) (1 shared connections)
+- [.test_handle_password_prompt_returns_empty_on_keyboard_interrupt](test_handle_password_prompt_returns_empty_on_keyboard_interrupt.md) (1 shared connections)
 - [FakeRenderer](FakeRenderer.md) (1 shared connections)
 
 ## Source Files
@@ -46,8 +42,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 61 (63%)
-- INFERRED: 36 (37%)
+- EXTRACTED: 40 (58%)
+- INFERRED: 29 (42%)
 - AMBIGUOUS: 0 (0%)
 
 ---

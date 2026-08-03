@@ -29,13 +29,10 @@
 
 ## Relationships
 
-- [Status](Status.md) (2 shared connections)
-- [WarningEntry](WarningEntry.md) (2 shared connections)
-- [TaskDefinition](TaskDefinition.md) (2 shared connections)
-- [HostRunState](HostRunState.md) (2 shared connections)
-- [WarningType](WarningType.md) (1 shared connections)
+- [Status](Status.md) (4 shared connections)
+- [TaskDefinition](TaskDefinition.md) (3 shared connections)
+- [HostRunState](HostRunState.md) (3 shared connections)
 - [RoleGroupDefinition](RoleGroupDefinition.md) (1 shared connections)
-- [PlayRunState](PlayRunState.md) (1 shared connections)
 
 ## Source Files
 

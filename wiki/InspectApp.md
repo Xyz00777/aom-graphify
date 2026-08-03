@@ -1,6 +1,6 @@
 # InspectApp
 
-> 149 nodes · cohesion 0.03
+> 148 nodes · cohesion 0.03
 
 ## Key Concepts
 
@@ -11,7 +11,6 @@
 - **_RunRow** (14 connections) — `src/ansible_aom/tui/screens/inspect.py`
 - **._load_tasks_for()** (13 connections) — `src/ansible_aom/tui/screens/inspect.py`
 - **._refresh_footer()** (12 connections) — `src/ansible_aom/tui/screens/inspect.py`
-- **VerboseScope** (11 connections) — `src/ansible_aom/tui/screens/inspect.py`
 - **._apply_session_model()** (9 connections) — `src/ansible_aom/tui/screens/inspect.py`
 - **._focus_pane_id()** (8 connections) — `src/ansible_aom/tui/screens/inspect.py`
 - **.on_mount()** (8 connections) — `src/ansible_aom/tui/screens/inspect.py`
@@ -29,16 +28,17 @@
 - **test_detail_pane_handles_huge_stdout_quickly()** (6 connections) — `tests/tui/test_inspect_screen.py`
 - **test_fallback_loaded_session_stays_cached()** (6 connections) — `tests/tui/test_inspect_screen.py`
 - **test_highlighting_successful_task_updates_detail()** (6 connections) — `tests/tui/test_inspect_screen.py`
-- *... and 124 more nodes in this community*
+- **test_runs_pane_never_parses_full_log()** (6 connections) — `tests/tui/test_inspect_screen.py`
+- *... and 123 more nodes in this community*
 
 ## Relationships
 
-- [_ConfirmDelete](_ConfirmDelete.md) (24 shared connections)
+- [inspect_model.py](inspect_model.py.md) (29 shared connections)
+- [_ConfirmDelete](_ConfirmDelete.md) (21 shared connections)
 - [._update_detail](_update_detail.md) (17 shared connections)
-- [TaskTreeNode](TaskTreeNode.md) (16 shared connections)
-- [inspect_model.py](inspect_model.py.md) (13 shared connections)
-- [load_session](load_session.md) (11 shared connections)
-- [StatusCounts](StatusCounts.md) (9 shared connections)
+- [load_session](load_session.md) (10 shared connections)
+- [StatusCounts](StatusCounts.md) (8 shared connections)
+- [test_session_index.py](test_session_index.py.md) (3 shared connections)
 - [SessionManager](SessionManager.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 
@@ -50,8 +50,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 576 (78%)
-- INFERRED: 160 (22%)
+- EXTRACTED: 570 (79%)
+- INFERRED: 156 (21%)
 - AMBIGUOUS: 0 (0%)
 
 ---

@@ -19,7 +19,7 @@
 
 - [json.py](json.py.md) (1 shared connections)
 - [RunState](RunState.md) (1 shared connections)
-- [renderer.py](renderer.py.md) (1 shared connections)
+- [._render_status_panel](_render_status_panel.md) (1 shared connections)
 
 ## Source Files
 

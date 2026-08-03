@@ -23,10 +23,9 @@
 
 ## Relationships
 
-- [load_session](load_session.md) (3 shared connections)
+- [load_session](load_session.md) (4 shared connections)
 - [SessionManager](SessionManager.md) (2 shared connections)
 - [json.py](json.py.md) (1 shared connections)
-- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 
 ## Source Files
 

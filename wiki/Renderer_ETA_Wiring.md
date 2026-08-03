@@ -30,7 +30,7 @@
 
 ## Relationships
 
-- [test_runner_stall_flush.py](test_runner_stall_flush.py.md) (1 shared connections)
+- [_FakeSink](_FakeSink.md) (1 shared connections)
 
 ## Source Files
 

@@ -22,9 +22,9 @@
 
 ## Relationships
 
-- [history.py](history.py.md) (2 shared connections)
-- [build_run_config_key](build_run_config_key.md) (2 shared connections)
+- [build_run_config_key](build_run_config_key.md) (3 shared connections)
 - [json.py](json.py.md) (1 shared connections)
+- [history.py](history.py.md) (1 shared connections)
 
 ## Source Files
 

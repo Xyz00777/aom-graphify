@@ -18,7 +18,7 @@
 ## Relationships
 
 - [rerun/cli.py](rerun-cli.py.md) (2 shared connections)
-- [KeyAction TypedDict](KeyAction_TypedDict.md) (1 shared connections)
+- [Path](Path.md) (1 shared connections)
 
 ## Source Files
 

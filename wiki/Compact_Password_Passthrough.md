@@ -24,7 +24,7 @@
 
 ## Relationships
 
-- [WarningType](WarningType.md) (1 shared connections)
+- [Status](Status.md) (1 shared connections)
 - [RedactionConfig](RedactionConfig.md) (1 shared connections)
 - [WarningsConfig](WarningsConfig.md) (1 shared connections)
 - [AppConfig](AppConfig.md) (1 shared connections)

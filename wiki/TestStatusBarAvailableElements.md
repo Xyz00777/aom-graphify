@@ -27,11 +27,8 @@
 
 ## Relationships
 
-- [WarningType](WarningType.md) (3 shared connections)
-- [HostRunState](HostRunState.md) (2 shared connections)
-- [Status](Status.md) (1 shared connections)
-- [WarningEntry](WarningEntry.md) (1 shared connections)
-- [PlayRunState](PlayRunState.md) (1 shared connections)
+- [Status](Status.md) (5 shared connections)
+- [HostRunState](HostRunState.md) (3 shared connections)
 
 ## Source Files
 

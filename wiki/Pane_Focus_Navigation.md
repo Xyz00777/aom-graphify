@@ -34,10 +34,8 @@
 
 - [RunState](RunState.md) (5 shared connections)
 - [TaskDefinition](TaskDefinition.md) (4 shared connections)
-- [HostRunState](HostRunState.md) (2 shared connections)
-- [WarningType](WarningType.md) (1 shared connections)
-- [Status](Status.md) (1 shared connections)
-- [PlayRunState](PlayRunState.md) (1 shared connections)
+- [HostRunState](HostRunState.md) (3 shared connections)
+- [Status](Status.md) (2 shared connections)
 
 ## Source Files
 

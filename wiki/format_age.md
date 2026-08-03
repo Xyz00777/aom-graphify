@@ -27,10 +27,11 @@
 
 ## Relationships
 
-- [format.py](format.py.md) (4 shared connections)
+- [format.py](format.py.md) (3 shared connections)
 - [format_preflight_summary](format_preflight_summary.md) (2 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
-- [._emit_event_log](_emit_event_log.md) (1 shared connections)
+- [JsonlEvent](JsonlEvent.md) (1 shared connections)
+- [format_status_bar](format_status_bar.md) (1 shared connections)
 
 ## Source Files
 

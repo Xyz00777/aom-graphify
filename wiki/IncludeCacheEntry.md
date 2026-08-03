@@ -1,62 +1,61 @@
 # IncludeCacheEntry
 
-> 180 nodes · cohesion 0.02
+> 55 nodes · cohesion 0.08
 
 ## Key Concepts
 
 - **IncludeCacheEntry** (47 connections) — `src/ansible_aom/core/models.py`
-- **Path** (43 connections)
 - **includes.py** (36 connections) — `src/ansible_aom/core/includes.py`
 - **preflight.py** (22 connections) — `src/ansible_aom/ansible/preflight.py`
 - **graft_include_children()** (19 connections) — `src/ansible_aom/core/includes.py`
-- **RoleCacheEntry** (19 connections) — `src/ansible_aom/core/models.py`
-- **TestGraftIncludeChildren** (18 connections) — `tests/unit/test_include_cache.py`
 - **Path** (15 connections)
 - **resolve_includes_from_playbook()** (15 connections) — `src/ansible_aom/core/includes.py`
 - **_discover_role()** (14 connections) — `src/ansible_aom/core/includes.py`
 - **parse_include_tasks_file()** (13 connections) — `src/ansible_aom/core/includes.py`
-- **test_include_cache.py** (13 connections) — `tests/unit/test_include_cache.py`
-- **TestParseIncludeTasksFile** (13 connections) — `tests/unit/test_include_cache.py`
-- **TestResolveIncludesFromPlaybook** (13 connections) — `tests/unit/test_include_cache.py`
 - **resolve_role_relative_includes()** (12 connections) — `src/ansible_aom/core/includes.py`
 - **_discover_include()** (11 connections) — `src/ansible_aom/core/includes.py`
 - **discover_include_with_runtime_path()** (11 connections) — `src/ansible_aom/core/includes.py`
 - **_graft_section_dfs()** (11 connections) — `src/ansible_aom/core/includes.py`
 - **parse_role_tasks()** (11 connections) — `src/ansible_aom/core/includes.py`
-- **TestDiscoverRole** (11 connections) — `tests/unit/test_include_cache.py`
-- **TestParseRoleTasks** (11 connections) — `tests/unit/test_include_cache.py`
-- **_make_play()** (10 connections) — `tests/unit/test_include_cache.py`
-- **TestCacheEntryProperties** (10 connections) — `tests/unit/test_include_cache.py`
-- **TestDiscoverInclude** (10 connections) — `tests/unit/test_include_cache.py`
 - **_load_task_list()** (9 connections) — `src/ansible_aom/core/includes.py`
-- *... and 155 more nodes in this community*
+- **_walk_documents_for_includes()** (9 connections) — `src/ansible_aom/core/includes.py`
+- **_graft_imported_playbook()** (8 connections) — `src/ansible_aom/core/includes.py`
+- **_lookup_directive()** (8 connections) — `src/ansible_aom/core/includes.py`
+- **_scan_tasks_for_includes_impl()** (8 connections) — `src/ansible_aom/core/includes.py`
+- **_build_name_index()** (7 connections) — `src/ansible_aom/core/includes.py`
+- **_scan_role_tasks_for_includes()** (7 connections) — `src/ansible_aom/core/includes.py`
+- **_scan_tasks_for_includes()** (6 connections) — `src/ansible_aom/core/includes.py`
+- **_collect_role_refs_from_tasks()** (5 connections) — `src/ansible_aom/core/includes.py`
+- **_find_nested_role_includes()** (5 connections) — `src/ansible_aom/core/includes.py`
+- **_graft_children()** (5 connections) — `src/ansible_aom/core/includes.py`
+- **_roles_referenced()** (5 connections) — `src/ansible_aom/core/includes.py`
+- *... and 30 more nodes in this community*
 
 ## Relationships
 
-- [TaskDefinition](TaskDefinition.md) (37 shared connections)
-- [RunState](RunState.md) (19 shared connections)
-- [JsonlEvent](JsonlEvent.md) (9 shared connections)
+- [Path](Path.md) (34 shared connections)
+- [TaskDefinition](TaskDefinition.md) (16 shared connections)
+- [TestGraftIncludeChildren](TestGraftIncludeChildren.md) (15 shared connections)
+- [RunState](RunState.md) (8 shared connections)
 - [run_preflight](run_preflight.md) (6 shared connections)
-- [WarningType](WarningType.md) (5 shared connections)
-- [StreamPhase](StreamPhase.md) (5 shared connections)
+- [Status](Status.md) (6 shared connections)
+- [run_state.py](run_state.py.md) (6 shared connections)
+- [TestParseRoleTasks](TestParseRoleTasks.md) (6 shared connections)
+- [RoleCacheEntry](RoleCacheEntry.md) (5 shared connections)
 - [_play_start](_play_start.md) (5 shared connections)
-- [TestRoleGrouping](TestRoleGrouping.md) (3 shared connections)
-- [RoleGroupDefinition](RoleGroupDefinition.md) (3 shared connections)
-- [json.py](json.py.md) (2 shared connections)
-- [TreeProjection](TreeProjection.md) (2 shared connections)
-- [datetime](datetime.md) (2 shared connections)
+- [assemble_definitions](assemble_definitions.md) (3 shared connections)
+- [StreamPhase](StreamPhase.md) (3 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/ansible/preflight.py`
 - `src/ansible_aom/core/includes.py`
 - `src/ansible_aom/core/models.py`
-- `tests/unit/test_include_cache.py`
 
 ## Audit Trail
 
-- EXTRACTED: 762 (91%)
-- INFERRED: 78 (9%)
+- EXTRACTED: 337 (94%)
+- INFERRED: 22 (6%)
 - AMBIGUOUS: 0 (0%)
 
 ---

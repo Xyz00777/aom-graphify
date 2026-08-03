@@ -71,8 +71,8 @@
 ### uses
 - [PlayDefinition](PlayDefinition.md) `INFERRED`
 - [RoleGroupDefinition](RoleGroupDefinition.md) `INFERRED`
-- [WarningType](WarningType.md) `INFERRED`
-- [WarningEntry](WarningEntry.md) `INFERRED`
+- WarningType `INFERRED`
+- WarningEntry `INFERRED`
 - [JsonlEvent](JsonlEvent.md) `INFERRED`
 - [IncludeCacheEntry](IncludeCacheEntry.md) `INFERRED`
 - TestPtyStreamParserStderrLineEmission `INFERRED`
@@ -82,7 +82,7 @@
 - TestPtyStreamParserPhases `INFERRED`
 - TestListHostsEdgeCases `INFERRED`
 - _SessionSink `INFERRED`
-- [TestRoleGrouping](TestRoleGrouping.md) `INFERRED`
+- TestRoleGrouping `INFERRED`
 - TestJsonLineStreamCarryBuffer `INFERRED`
 - TestListHostsParser `INFERRED`
 - TestRunStateUnknownEvent `INFERRED`

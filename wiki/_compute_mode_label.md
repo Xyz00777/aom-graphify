@@ -34,12 +34,13 @@
 ## Relationships
 
 - [CompactRenderer](CompactRenderer.md) (5 shared connections)
-- [renderer.py](renderer.py.md) (4 shared connections)
-- [format.py](format.py.md) (3 shared connections)
-- [._emit_event_log](_emit_event_log.md) (2 shared connections)
+- [renderer.py](renderer.py.md) (3 shared connections)
+- [format.py](format.py.md) (2 shared connections)
+- [JsonlEvent](JsonlEvent.md) (2 shared connections)
+- [format_status_bar](format_status_bar.md) (2 shared connections)
 - [diagnostics.py](diagnostics.py.md) (1 shared connections)
 - [RunState](RunState.md) (1 shared connections)
-- [test_task_progress.py](test_task_progress.py.md) (1 shared connections)
+- [._render_status_panel](_render_status_panel.md) (1 shared connections)
 
 ## Source Files
 

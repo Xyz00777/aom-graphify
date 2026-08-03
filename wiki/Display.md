@@ -1,18 +1,19 @@
 # Display
 
-> 51 nodes · cohesion 0.05
+> 54 nodes · cohesion 0.05
 
 ## Key Concepts
 
 - **Display** (92 connections) — `src/ansible_aom/compact/display.py`
 - **TestDegradedModeEntry** (9 connections) — `tests/compact/test_small_terminal.py`
-- **TestReEnableOnResize** (7 connections) — `tests/compact/test_small_terminal.py`
-- **TestNonTtyUnaffected** (4 connections) — `tests/compact/test_log_flush_batching.py`
+- **TestDegradedModeFallthrough** (7 connections) — `tests/compact/test_small_terminal.py`
+- **TestForceSizePassthrough** (5 connections) — `tests/compact/test_small_terminal.py`
 - **.test_sighup_saves_session()** (4 connections) — `tests/integration/test_compact_renderer.py`
 - **.test_terminal_cleanup_on_exit()** (4 connections) — `tests/integration/test_compact_renderer.py`
 - **.test_force_size_at_threshold_does_not_degrade()** (3 connections) — `tests/compact/test_small_terminal.py`
 - **.test_non_tty_is_never_degraded()** (3 connections) — `tests/compact/test_small_terminal.py`
-- **.test_update_without_force_size_falls_back_to_real_terminal()** (3 connections) — `tests/compact/test_small_terminal.py`
+- **.test_stop_in_degraded_mode_is_a_noop()** (3 connections) — `tests/compact/test_small_terminal.py`
+- **.test_start_without_force_size_works_as_before()** (3 connections) — `tests/compact/test_small_terminal.py`
 - **.test_display_has_print_log_method()** (3 connections) — `tests/integration/test_compact_renderer.py`
 - **.test_display_has_start_method()** (3 connections) — `tests/integration/test_compact_renderer.py`
 - **.test_display_has_stop_method()** (3 connections) — `tests/integration/test_compact_renderer.py`
@@ -25,38 +26,36 @@
 - **.test_throttled_refresh_rate_max_four_per_second()** (3 connections) — `tests/integration/test_compact_renderer.py`
 - **.__init__()** (2 connections) — `src/ansible_aom/compact/display.py`
 - **.start()** (2 connections) — `src/ansible_aom/compact/display.py`
-- **.test_non_tty_print_log_stays_immediate_and_plain()** (2 connections) — `tests/compact/test_log_flush_batching.py`
 - **.test_force_size_below_threshold_enters_degraded_mode()** (2 connections) — `tests/compact/test_small_terminal.py`
 - **.test_force_size_below_threshold_prints_one_line_warning()** (2 connections) — `tests/compact/test_small_terminal.py`
 - **.test_force_size_just_below_cols_threshold_degrades()** (2 connections) — `tests/compact/test_small_terminal.py`
-- *... and 26 more nodes in this community*
+- *... and 29 more nodes in this community*
 
 ## Relationships
 
-- [Status](Status.md) (24 shared connections)
-- [test_small_terminal.py](test_small_terminal.py.md) (11 shared connections)
+- [HostRunState](HostRunState.md) (29 shared connections)
 - [.update](update.md) (10 shared connections)
-- [Per-Task Timing Tests](Per-Task_Timing_Tests.md) (6 shared connections)
-- [CompactRenderer](CompactRenderer.md) (4 shared connections)
+- [IO](IO.md) (8 shared connections)
+- [_fresh_display](_fresh_display.md) (7 shared connections)
+- [TestReEnableOnResize](TestReEnableOnResize.md) (5 shared connections)
 - [TestRewindCorrectness](TestRewindCorrectness.md) (4 shared connections)
-- [renderer.py](renderer.py.md) (3 shared connections)
-- [IO](IO.md) (3 shared connections)
-- [TestSignalHandling](TestSignalHandling.md) (3 shared connections)
-- [_row_count](_row_count.md) (2 shared connections)
+- [CompactRenderer](CompactRenderer.md) (3 shared connections)
+- [JsonlEvent](JsonlEvent.md) (2 shared connections)
 - [Monochrome Terminal Fallback](Monochrome_Terminal_Fallback.md) (2 shared connections)
 - [Completion State Labels](Completion_State_Labels.md) (2 shared connections)
+- [renderer.py](renderer.py.md) (1 shared connections)
+- [_row_count](_row_count.md) (1 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/compact/display.py`
-- `tests/compact/test_log_flush_batching.py`
 - `tests/compact/test_small_terminal.py`
 - `tests/integration/test_compact_renderer.py`
 
 ## Audit Trail
 
-- EXTRACTED: 134 (67%)
-- INFERRED: 67 (33%)
+- EXTRACTED: 141 (68%)
+- INFERRED: 66 (32%)
 - AMBIGUOUS: 0 (0%)
 
 ---

@@ -23,7 +23,7 @@
 
 - [CompactRenderer](CompactRenderer.md) (2 shared connections)
 - [Display](Display.md) (2 shared connections)
-- [_row_count](_row_count.md) (1 shared connections)
+- [IO](IO.md) (1 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
 
 ## Source Files

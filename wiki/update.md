@@ -30,7 +30,8 @@
 ## Relationships
 
 - [Display](Display.md) (10 shared connections)
-- [_row_count](_row_count.md) (5 shared connections)
+- [_row_count](_row_count.md) (4 shared connections)
+- [IO](IO.md) (1 shared connections)
 
 ## Source Files
 

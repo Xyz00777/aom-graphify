@@ -36,9 +36,8 @@
 - [TaskDefinition](TaskDefinition.md) (16 shared connections)
 - [.from_run_state](from_run_state.md) (11 shared connections)
 - [RunState](RunState.md) (9 shared connections)
-- [Status](Status.md) (3 shared connections)
+- [Status](Status.md) (4 shared connections)
 - [RoleGroupDefinition](RoleGroupDefinition.md) (3 shared connections)
-- [WarningType](WarningType.md) (1 shared connections)
 - [TreeProjection](TreeProjection.md) (1 shared connections)
 
 ## Source Files

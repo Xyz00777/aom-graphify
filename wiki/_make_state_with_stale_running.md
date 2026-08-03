@@ -21,13 +21,11 @@
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (5 shared connections)
+- [HostRunState](HostRunState.md) (7 shared connections)
+- [Status](Status.md) (2 shared connections)
 - [TaskDefinition](TaskDefinition.md) (2 shared connections)
-- [PlayRunState](PlayRunState.md) (2 shared connections)
-- [WarningType](WarningType.md) (1 shared connections)
 - [TreeProjection](TreeProjection.md) (1 shared connections)
 - [RunState](RunState.md) (1 shared connections)
-- [Status](Status.md) (1 shared connections)
 - [.from_run_state](from_run_state.md) (1 shared connections)
 
 ## Source Files

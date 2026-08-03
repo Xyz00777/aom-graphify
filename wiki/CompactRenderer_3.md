@@ -100,21 +100,21 @@
 - [Display](Display.md) `INFERRED`
 - [JsonlEvent](JsonlEvent.md) `INFERRED`
 - LivenessState `INFERRED`
-- HeartbeatTracker `INFERRED`
-- TestHideStateFlag `INFERRED`
+- [HeartbeatTracker](HeartbeatTracker.md) `INFERRED`
+- [TestHideStateFlag](TestHideStateFlag.md) `INFERRED`
 - RunProgress `INFERRED`
 - [TestPasswordPromptPTYIntegration](TestPasswordPromptPTYIntegration.md) `INFERRED`
 - [RendererMirrorMachine](RendererMirrorMachine.md) `INFERRED`
 - PriorRun `INFERRED`
-- [TestSignalHandling](TestSignalHandling.md) `INFERRED`
+- TestSignalHandling `INFERRED`
 - [TestPasswordPromptPatterns](TestPasswordPromptPatterns.md) `INFERRED`
 - [TestHideStateCompactPlumbing](TestHideStateCompactPlumbing.md) `INFERRED`
-- TestNoRedactFlag `INFERRED`
+- [TestNoRedactFlag](TestNoRedactFlag.md) `INFERRED`
 - TestRendererProtocol `INFERRED`
 - TestDisplayClass `INFERRED`
 - TestNonTTYBehavior `INFERRED`
 - TestRefreshStrategy `INFERRED`
-- [TestTerminalSizeCheck](TestTerminalSizeCheck.md) `INFERRED`
+- TestTerminalSizeCheck `INFERRED`
 - TestPackageIdentity `INFERRED`
 
 ---

@@ -12,9 +12,8 @@
 ## Relationships
 
 - [Display](Display.md) (2 shared connections)
-- [Status](Status.md) (1 shared connections)
+- [HostRunState](HostRunState.md) (2 shared connections)
 - [CompactRenderer](CompactRenderer.md) (1 shared connections)
-- [TestSignalHandling](TestSignalHandling.md) (1 shared connections)
 
 ## Source Files
 

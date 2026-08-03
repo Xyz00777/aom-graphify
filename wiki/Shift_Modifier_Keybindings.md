@@ -30,7 +30,7 @@
 - [CompactRenderer](CompactRenderer.md) (6 shared connections)
 - [history.py](history.py.md) (3 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
-- [WarningType](WarningType.md) (1 shared connections)
+- [Status](Status.md) (1 shared connections)
 
 ## Source Files
 

@@ -1,11 +1,13 @@
 # PtyStreamParser
 
-> 107 nodes · cohesion 0.02
+> 145 nodes · cohesion 0.02
 
 ## Key Concepts
 
 - **PtyStreamParser** (338 connections) — `src/ansible_aom/core/parser.py`
+- **TestPasswordPromptPatterns** (17 connections) — `tests/unit/test_pty_stream.py`
 - **TestPtyStreamParserLatestOutputIsPlaintext** (15 connections) — `tests/unit/test_parser.py`
+- **TestPasswordPromptHandling** (10 connections) — `tests/unit/test_pty_stream.py`
 - **.test_process_play_start_creates_play_state()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_process_playbook_start_sets_start_time()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_process_runner_start_free_strategy()** (3 connections) — `tests/unit/test_parser.py`
@@ -27,34 +29,33 @@
 - **.test_connection_release_removes_from_active()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_connection_release_unknown_conn_id_noop()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_deprecation_does_not_emit_stderr_line()** (3 connections) — `tests/unit/test_parser.py`
-- **.test_non_warning_plaintext_emits_stderr_line()** (3 connections) — `tests/unit/test_parser.py`
-- **.test_password_prompt_does_not_emit_stderr_line()** (3 connections) — `tests/unit/test_parser.py`
-- *... and 82 more nodes in this community*
+- *... and 120 more nodes in this community*
 
 ## Relationships
 
-- [StreamPhase](StreamPhase.md) (67 shared connections)
+- [Status](Status.md) (71 shared connections)
+- [test_playbook_parser.py](test_playbook_parser.py.md) (23 shared connections)
 - [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (23 shared connections)
+- [StreamPhase](StreamPhase.md) (20 shared connections)
+- [test_error_handling.py](test_error_handling.py.md) (16 shared connections)
 - [_drive](_drive.md) (14 shared connections)
-- [test_error_handling.py](test_error_handling.py.md) (13 shared connections)
-- [TestPasswordPromptPatterns](TestPasswordPromptPatterns.md) (13 shared connections)
 - [TestEdgeCases](TestEdgeCases.md) (11 shared connections)
 - [_safe_loads](_safe_loads.md) (10 shared connections)
 - [TestEventParsing](TestEventParsing.md) (9 shared connections)
 - [TestConftestFixtures](TestConftestFixtures.md) (9 shared connections)
 - [TestPtyStreamParserPhaseTransitions](TestPtyStreamParserPhaseTransitions.md) (9 shared connections)
 - [TestWarningPatternDetection](TestWarningPatternDetection.md) (9 shared connections)
-- [TestMultiLineWarningContinuation](TestMultiLineWarningContinuation.md) (8 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/core/parser.py`
 - `tests/unit/test_parser.py`
+- `tests/unit/test_pty_stream.py`
 
 ## Audit Trail
 
-- EXTRACTED: 428 (77%)
-- INFERRED: 126 (23%)
+- EXTRACTED: 519 (80%)
+- INFERRED: 132 (20%)
 - AMBIGUOUS: 0 (0%)
 
 ---

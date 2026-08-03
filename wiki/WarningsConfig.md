@@ -35,7 +35,7 @@
 
 - [AppConfig](AppConfig.md) (8 shared connections)
 - [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (6 shared connections)
-- [WarningType](WarningType.md) (3 shared connections)
+- [Status](Status.md) (4 shared connections)
 - [RedactionConfig](RedactionConfig.md) (3 shared connections)
 - [TestConfigModelBasics](TestConfigModelBasics.md) (3 shared connections)
 - [load_config](load_config.md) (2 shared connections)
