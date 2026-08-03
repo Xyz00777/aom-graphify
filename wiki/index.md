@@ -179,7 +179,7 @@
 - [Compact Password Passthrough](Compact_Password_Passthrough.md) — 17 nodes
 - [Task Liveness Indicator](Task_Liveness_Indicator.md) — 17 nodes
 - [Total Task Counting](Total_Task_Counting.md) — 16 nodes
-- [Runtime Event Handlers](Runtime_Event_Handlers.md) — 16 nodes
+- [test_full_completion_summary.py](test_full_completion_summary.py.md) — 16 nodes
 - [Run Diagnostics Tests](Run_Diagnostics_Tests.md) — 16 nodes
 - [build_verbose_lines](build_verbose_lines.md) — 16 nodes
 - [test_renderer_set_definitions.py](test_renderer_set_definitions.py.md) — 16 nodes

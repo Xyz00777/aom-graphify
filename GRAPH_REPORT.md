@@ -9,7 +9,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1afc1b5d`
+- Built from commit: `e8eeca5f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -89,7 +89,7 @@
 - Host Result Hide Filter
 - .handle_password_prompt
 - Hide State Normalization
-- Runtime Event Handlers
+- test_full_completion_summary.py
 - Credential String Sanitization
 - redact_dict
 - Terminal Row Counting
@@ -951,7 +951,7 @@ Nodes (11): TC-145: Verify password masked by getpass, sent to PTY.      In comp
 Cohesion: 0.16
 Nodes (15): Replay ``session_id`` from ``session_dir`` through ``renderer``.      Args:, replay_session(), _make_session(), Path, Unit tests for F2 replay_session.  Replay reads `events.jsonl` + `meta.json` fro, Real ansible JSONL is not strictly monotonic across threads.      A delta of -0., `handle_completion` is called with the meta.json status., Create a sessions/<id>/ directory with events.jsonl + meta.json. (+7 more)
 
-### Community 76 - "Runtime Event Handlers"
+### Community 76 - "test_full_completion_summary.py"
 Cohesion: 0.33
 Nodes (15): _logged(), _ok(), _play_def(), Per-task summary fires on FULL play completion, not on the next task.  Under a f, A task with zero terminal results at cancel produces no summary —     a bare ``—, A task summarised mid-run is not re-emitted at cancel/stats., A task that never completes on all hosts (run cancelled) still gets     a summar, _renderer() (+7 more)
 
@@ -1911,7 +1911,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.178) - this node is a cross-community bridge._
 - **Why does `Status` connect `HostRunState` to `PtyStreamParser`, `RunState`, `test_loop_item_count.py`, `StreamPhase`, `WarningEntry`, `.from_run_state`, `TaskDefinition`, `TestCoreModuleStructure`, `PlayDefinition`, `CompactRenderer`, `WarningType`, `Memory Bounds Constants`, `TestRoleGrouping`, `json.py`, `TestInspectSubcommand`, `TestStatusEnum`, `parse_list_tasks_output`, `TreeProjection`, `TestVerboseDebugLogging`, `JsonLineStream`, `AOM TUI Application`, `_make_state_with_stale_running`, `TestRuntimeRoleTaskCount`, `TestCrossPlayLookupIsolation`, `tree.py`, `TestVerboseDiagnostics`, `TestNoRedactFlag`, `Dirty Flag Throttle`, `format_status_bar`, `TestTemplateVariableNameMismatch`, `TestPerEventLogColors`, `TestSignalHandling`, `_BoundedSet`, `renderer.py`, `TestUngroupedRoleTasksInTree`, `TestHideStateCompactPlumbing`, `RendererMirrorMachine`, `TestWarningVisibilityCompactPlumbing`, `TestConfigPathFlag`, `_make_play`, `TestVerboseAlwaysMsgDisplay`, `TestFormatFlag`, `TestExitCodes`, `test_pause_lingering_cleanup.py`, `TestWarningTypeEnum`, `TestPasswordPromptPatterns`, `TestV2PlaybookOnStatsCrossCheck`, `TestFinalCompletionIndicator`, `TestHostRunState`, `TestEventParsing`, `Warning Pattern Classification`, `format_tree_block`, `TestPtyStreamParserPhases`, `TestMultiPlayTruncationWithRoleFooters`, `TestCaptureVerboseFlag`, `Pane Focus Navigation`, `TestStatusBarAvailableElements`, `Pydantic Model Basics`, `icons.py`?**
   _High betweenness centrality (0.114) - this node is a cross-community bridge._
-- **Why does `CompactRenderer` connect `CompactRenderer` to `HostRunState`, `Compact Display Logic`, `Renderer Parity Invariant`, `Password Prompt Patterns`, `Monochrome Terminal Fallback`, `Display`, `TestCoreModuleStructure`, `Parser Phase Transitions`, `PlayDefinition`, `json.py`, `TestInspectSubcommand`, `TestVerboseDebugLogging`, `Inspect CLI Commands`, `test_renderer_parity.py`, `test_renderer_set_definitions.py`, `Event Log Emission`, `TestVerboseDiagnostics`, `Psutil Safe Probe`, `test_incremental_counters.py`, `TestPasswordPromptPTYIntegration`, `TestNoRedactFlag`, `format_status_bar`, `Tree Expansion Icons`, `Renderer`, `TestPasswordTimeoutDefault`, `TestPerEventLogColors`, `Session Footer Hint`, `PriorRun`, `TestSignalHandling`, `_BoundedSet`, `renderer.py`, `App Config Model Tests`, `TestHideStateCompactPlumbing`, `RendererMirrorMachine`, `TestWarningVisibilityCompactPlumbing`, `._emit_event_log`, `Per-Task Timing Tests`, `test_tree_render.py`, `Status Icon Unicode Mapping`, `Stderr Capture Handling`, `Playbook Run Integration Tests`, `test_unknown_event_hint.py`, `TestConfigPathFlag`, `RunProgress`, `TestVerboseAlwaysMsgDisplay`, `TestExitCodes`, `.handle_password_prompt`, `TestFormatFlag`, `Runtime Event Handlers`, `Shift Modifier Keybindings`, `TestPasswordPromptPatterns`, `create_renderer`, `Preflight Definition Assembly`, `TestFinalCompletionIndicator`, `test_replay_determinism.py`, `test_completion_summary.py`, `Mitogen Event Robustness`, `test_warning_color.py`, `Completion State Labels`, `Loop Item Counter`, `RunSummary Schema Contract`, `TestCaptureVerboseFlag`, `Playbook Event Parsing`, `test_unmatched_event_hint.py`, `Inspect CLI Module`, `.test_perf_022_update_state_keeps_sticky_active_play_on_gap_frame`, `JSONL Event Parsing`?**
+- **Why does `CompactRenderer` connect `CompactRenderer` to `HostRunState`, `Compact Display Logic`, `Renderer Parity Invariant`, `Password Prompt Patterns`, `Monochrome Terminal Fallback`, `Display`, `TestCoreModuleStructure`, `Parser Phase Transitions`, `PlayDefinition`, `json.py`, `TestInspectSubcommand`, `TestVerboseDebugLogging`, `Inspect CLI Commands`, `test_renderer_parity.py`, `test_renderer_set_definitions.py`, `Event Log Emission`, `TestVerboseDiagnostics`, `Psutil Safe Probe`, `test_incremental_counters.py`, `TestPasswordPromptPTYIntegration`, `TestNoRedactFlag`, `format_status_bar`, `Tree Expansion Icons`, `Renderer`, `TestPasswordTimeoutDefault`, `TestPerEventLogColors`, `Session Footer Hint`, `PriorRun`, `TestSignalHandling`, `_BoundedSet`, `renderer.py`, `App Config Model Tests`, `TestHideStateCompactPlumbing`, `RendererMirrorMachine`, `TestWarningVisibilityCompactPlumbing`, `._emit_event_log`, `Per-Task Timing Tests`, `test_tree_render.py`, `Status Icon Unicode Mapping`, `Stderr Capture Handling`, `Playbook Run Integration Tests`, `test_unknown_event_hint.py`, `TestConfigPathFlag`, `RunProgress`, `TestVerboseAlwaysMsgDisplay`, `TestExitCodes`, `.handle_password_prompt`, `TestFormatFlag`, `test_full_completion_summary.py`, `Shift Modifier Keybindings`, `TestPasswordPromptPatterns`, `create_renderer`, `Preflight Definition Assembly`, `TestFinalCompletionIndicator`, `test_replay_determinism.py`, `test_completion_summary.py`, `Mitogen Event Robustness`, `test_warning_color.py`, `Completion State Labels`, `Loop Item Counter`, `RunSummary Schema Contract`, `TestCaptureVerboseFlag`, `Playbook Event Parsing`, `test_unmatched_event_hint.py`, `Inspect CLI Module`, `.test_perf_022_update_state_keeps_sticky_active_play_on_gap_frame`, `JSONL Event Parsing`?**
   _High betweenness centrality (0.103) - this node is a cross-community bridge._
 - **Are the 253 inferred relationships involving `RunState` (e.g. with `_NullSink` and `_SessionSink`) actually correct?**
   _`RunState` has 253 INFERRED edges - model-reasoned connections that need verification._
