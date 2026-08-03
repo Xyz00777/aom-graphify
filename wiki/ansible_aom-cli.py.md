@@ -1,10 +1,11 @@
 # ansible_aom/cli.py
 
-> 29 nodes · cohesion 0.13
+> 33 nodes · cohesion 0.12
 
 ## Key Concepts
 
 - **ansible_aom/cli.py** (26 connections) — `src/ansible_aom/cli.py`
+- **main()** (18 connections) — `src/ansible_aom/cli.py`
 - **ensure_inventory_arg()** (9 connections) — `src/ansible_aom/cli.py`
 - **MonkeyPatch** (9 connections)
 - **Path** (9 connections)
@@ -23,38 +24,38 @@
 - **.test_leaves_args_unchanged_when_no_default_present()** (4 connections) — `tests/unit/test_cli_inventory_autodetect.py`
 - **.test_prepends_default_inventory_when_none_given()** (4 connections) — `tests/unit/test_cli_inventory_autodetect.py`
 - **_confirm_no_redact()** (3 connections) — `src/ansible_aom/cli.py`
+- **set_debug()** (3 connections) — `src/ansible_aom/core/diagnostics.py`
 - **__main__.py** (3 connections) — `src/ansible_aom/__main__.py`
 - **OutputFormat** (1 connections)
 - **CLI entry point for AOM.  This module provides the main command-line interface f** (1 connections) — `src/ansible_aom/cli.py`
 - **If no -i/--inventory flag is set, prepend one pointing at the default file.** (1 connections) — `src/ansible_aom/cli.py`
-- **Validate ``--no-redact`` per QC-003 (Q4=B: confirm prompt).      Returns ``(proc** (1 connections) — `src/ansible_aom/cli.py`
-- **Return the first conventional inventory file found in CWD, or None.** (1 connections) — `src/ansible_aom/cli.py`
-- *... and 4 more nodes in this community*
+- *... and 8 more nodes in this community*
 
 ## Relationships
 
-- [load_session](load_session.md) (7 shared connections)
-- [source_hash](source_hash.md) (2 shared connections)
-- [State Transition Validation](State_Transition_Validation.md) (2 shared connections)
-- [merge_limit_args](merge_limit_args.md) (2 shared connections)
-- [Renderer](Renderer.md) (2 shared connections)
+- [source_hash](source_hash.md) (3 shared connections)
+- [State Transition Validation](State_Transition_Validation.md) (3 shared connections)
+- [merge_limit_args](merge_limit_args.md) (3 shared connections)
+- [diagnostics.py](diagnostics.py.md) (3 shared connections)
+- [create_parser](create_parser.md) (2 shared connections)
+- [completion_snippet](completion_snippet.md) (2 shared connections)
+- [Auto Version Bump Hook](Auto_Version_Bump_Hook.md) (2 shared connections)
+- [LiveDriver](LiveDriver.md) (2 shared connections)
+- [cli_main](cli_main.md) (2 shared connections)
+- [load_session](load_session.md) (2 shared connections)
 - [create_renderer](create_renderer.md) (2 shared connections)
-- [create_parser](create_parser.md) (1 shared connections)
-- [WarningType Enum](WarningType_Enum.md) (1 shared connections)
-- [completion_snippet](completion_snippet.md) (1 shared connections)
-- [Auto Version Bump Hook](Auto_Version_Bump_Hook.md) (1 shared connections)
-- [diagnostics.py](diagnostics.py.md) (1 shared connections)
-- [log_filter.py](log_filter.py.md) (1 shared connections)
+- [rerun/cli.py](rerun-cli.py.md) (2 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/__main__.py`
 - `src/ansible_aom/cli.py`
+- `src/ansible_aom/core/diagnostics.py`
 - `tests/unit/test_cli_inventory_autodetect.py`
 
 ## Audit Trail
 
-- EXTRACTED: 133 (100%)
+- EXTRACTED: 156 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

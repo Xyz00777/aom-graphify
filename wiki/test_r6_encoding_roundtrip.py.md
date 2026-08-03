@@ -33,10 +33,9 @@
 
 ## Relationships
 
-- [JsonLineStream](JsonLineStream.md) (4 shared connections)
+- [StreamPhase](StreamPhase.md) (4 shared connections)
+- [._emit_event_log](_emit_event_log.md) (4 shared connections)
 - [run_playbook](run_playbook.md) (3 shared connections)
-- [_compute_mode_label](_compute_mode_label.md) (2 shared connections)
-- [renderer.py](renderer.py.md) (2 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 
 ## Source Files

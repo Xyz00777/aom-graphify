@@ -1,61 +1,61 @@
 # inspect_model.py
 
-> 54 nodes · cohesion 0.06
+> 85 nodes · cohesion 0.05
 
 ## Key Concepts
 
 - **inspect_model.py** (55 connections) — `src/ansible_aom/core/inspect_model.py`
+- **inspect.py** (42 connections) — `src/ansible_aom/tui/screens/inspect.py`
+- **index.py** (41 connections) — `src/ansible_aom/session/index.py`
 - **tree_from_index()** (19 connections) — `src/ansible_aom/core/inspect_model.py`
 - **RunSummary** (18 connections) — `src/ansible_aom/core/inspect_model.py`
+- **index_is_fresh()** (18 connections) — `src/ansible_aom/session/index.py`
+- **load_structure()** (18 connections) — `src/ansible_aom/session/index.py`
+- **Path** (15 connections)
 - **_MutCounts** (12 connections) — `src/ansible_aom/core/inspect_model.py`
 - **.feed()** (12 connections) — `src/ansible_aom/core/inspect_model.py`
+- **load_summary()** (12 connections) — `src/ansible_aom/session/index.py`
+- **read_event()** (11 connections) — `src/ansible_aom/session/index.py`
 - **SessionIndex** (10 connections) — `src/ansible_aom/core/inspect_model.py`
 - **summary_from_index()** (10 connections) — `src/ansible_aom/core/inspect_model.py`
-- **TestAsyncPollDoesNotLeakDictIntoLoopItem** (10 connections) — `tests/unit/test_inspect_model.py`
+- **ensure_index()** (10 connections) — `src/ansible_aom/session/index.py`
+- **events_stat()** (10 connections) — `src/ansible_aom/session/index.py`
+- **index_path()** (10 connections) — `src/ansible_aom/session/index.py`
+- **EventRef** (9 connections) — `src/ansible_aom/core/inspect_model.py`
+- **build_indexes()** (9 connections) — `src/ansible_aom/session/index.py`
+- **sessions_needing_index()** (9 connections) — `src/ansible_aom/session/index.py`
 - **accumulate_session_events()** (8 connections) — `src/ansible_aom/core/inspect_model.py`
 - **_freeze_map()** (7 connections) — `src/ansible_aom/core/inspect_model.py`
-- **_make_loop_item()** (7 connections) — `src/ansible_aom/core/inspect_model.py`
 - **_parse_iso()** (7 connections) — `src/ansible_aom/core/inspect_model.py`
 - **.finish()** (7 connections) — `src/ansible_aom/core/inspect_model.py`
 - **stderr_row_from_event()** (7 connections) — `src/ansible_aom/core/inspect_model.py`
-- **_nest_includes()** (6 connections) — `src/ansible_aom/core/inspect_model.py`
-- **.freeze()** (5 connections) — `src/ansible_aom/core/inspect_model.py`
-- **StderrRow** (5 connections) — `src/ansible_aom/core/inspect_model.py`
-- **_group_key()** (4 connections) — `src/ansible_aom/core/inspect_model.py`
-- **LoopItem** (4 connections) — `src/ansible_aom/core/inspect_model.py`
-- **PlayRow** (4 connections) — `src/ansible_aom/core/inspect_model.py`
-- **_render_value()** (4 connections) — `src/ansible_aom/core/inspect_model.py`
-- **verbose_lines_from_rows()** (4 connections) — `src/ansible_aom/core/inspect_model.py`
-- **_verbose_vars()** (4 connections) — `src/ansible_aom/core/inspect_model.py`
-- **_HostAcc** (3 connections) — `src/ansible_aom/core/inspect_model.py`
-- **.add_event()** (3 connections) — `src/ansible_aom/core/inspect_model.py`
-- *... and 29 more nodes in this community*
+- *... and 60 more nodes in this community*
 
 ## Relationships
 
+- [TaskTreeNode](TaskTreeNode.md) (40 shared connections)
+- [test_session_index.py](test_session_index.py.md) (36 shared connections)
 - [StatusCounts](StatusCounts.md) (27 shared connections)
-- [index.py](index.py.md) (22 shared connections)
-- [Diagnostics and Profiler](Diagnostics_and_Profiler.md) (9 shared connections)
-- [inspect.py](inspect.py.md) (9 shared connections)
-- [text.py](text.py.md) (8 shared connections)
-- [build_verbose_lines](build_verbose_lines.md) (6 shared connections)
-- [TaskTreeNode](TaskTreeNode.md) (6 shared connections)
-- [renderer.py](renderer.py.md) (4 shared connections)
-- [json.py](json.py.md) (4 shared connections)
-- [tree.py](tree.py.md) (2 shared connections)
-- [test_invariants_session_roundtrip.py](test_invariants_session_roundtrip.py.md) (1 shared connections)
-- [InspectApp](InspectApp.md) (1 shared connections)
+- [load_session](load_session.md) (15 shared connections)
+- [InspectApp](InspectApp.md) (13 shared connections)
+- [test_inspect_accumulator.py](test_inspect_accumulator.py.md) (11 shared connections)
+- [_ConfirmDelete](_ConfirmDelete.md) (11 shared connections)
+- [JsonlEvent](JsonlEvent.md) (5 shared connections)
+- [._update_detail](_update_detail.md) (5 shared connections)
+- [TestAsyncPollDoesNotLeakDictIntoLoopItem](TestAsyncPollDoesNotLeakDictIntoLoopItem.md) (3 shared connections)
+- [._emit_event_log](_emit_event_log.md) (2 shared connections)
+- [json.py](json.py.md) (2 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/core/inspect_model.py`
-- `tests/unit/test_inspect_accumulator.py`
-- `tests/unit/test_inspect_model.py`
+- `src/ansible_aom/session/index.py`
+- `src/ansible_aom/tui/screens/inspect.py`
 
 ## Audit Trail
 
-- EXTRACTED: 262 (94%)
-- INFERRED: 16 (6%)
+- EXTRACTED: 518 (98%)
+- INFERRED: 10 (2%)
 - AMBIGUOUS: 0 (0%)
 
 ---

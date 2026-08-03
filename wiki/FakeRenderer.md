@@ -23,11 +23,11 @@
 
 ## Relationships
 
-- [test_event_source.py](test_event_source.py.md) (5 shared connections)
-- [Renderer](Renderer.md) (1 shared connections)
+- [test_event_source.py](test_event_source.py.md) (4 shared connections)
+- [LiveDriver](LiveDriver.md) (2 shared connections)
+- [EventSource](EventSource.md) (1 shared connections)
 - [ReplayDriver](ReplayDriver.md) (1 shared connections)
 - [.handle_password_prompt](handle_password_prompt.md) (1 shared connections)
-- [test_live_driver_drives_renderer_with_fake_subprocess](test_live_driver_drives_renderer_with_fake_subprocess.md) (1 shared connections)
 
 ## Source Files
 

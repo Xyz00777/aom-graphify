@@ -33,10 +33,11 @@
 
 ## Relationships
 
-- [json.py](json.py.md) (10 shared connections)
+- [JsonlEvent](JsonlEvent.md) (9 shared connections)
 - [load_session](load_session.md) (4 shared connections)
 - [core/__init__.py](core-__init__.py.md) (1 shared connections)
 - [IO](IO.md) (1 shared connections)
+- [json.py](json.py.md) (1 shared connections)
 
 ## Source Files
 

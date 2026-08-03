@@ -1,46 +1,38 @@
 # _FakeSink
 
-> 19 nodes · cohesion 0.13
+> 12 nodes · cohesion 0.20
 
 ## Key Concepts
 
-- **_FakeSink** (11 connections) — `tests/unit/test_runner_heartbeat.py`
-- **test_runner_heartbeat.py** (9 connections) — `tests/unit/test_runner_heartbeat.py`
-- **TestFeedNotesBytes** (7 connections) — `tests/unit/test_runner_heartbeat.py`
-- **TestSampleSubprocessActive** (7 connections) — `tests/unit/test_runner_heartbeat.py`
-- **TestTaskStartCountsAsHeartbeat** (6 connections) — `tests/unit/test_runner_heartbeat.py`
-- **.test_task_start_does_not_clear_heartbeat()** (6 connections) — `tests/unit/test_runner_heartbeat.py`
-- **_parser_in_execution_phase()** (5 connections) — `tests/unit/test_runner_heartbeat.py`
-- **.test_jsonl_event_line_notes_pty_bytes()** (5 connections) — `tests/unit/test_runner_heartbeat.py`
-- **.test_plaintext_line_notes_pty_bytes()** (5 connections) — `tests/unit/test_runner_heartbeat.py`
-- **.end()** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **.__init__()** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **.record_event()** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **.record_stderr()** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **Tests for the runner's heartbeat wiring.  The runner is responsible for feeding** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **The CPU sampler degrades gracefully and never raises.** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **Return a parser advanced past the PRE_RUN_PROMPTS gate.      ``feed_line`` only** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **Every successful line fed to ``_feed`` bumps the heartbeat.** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **The task_start line is itself bytes from the subprocess; it must     leave the t** (1 connections) — `tests/unit/test_runner_heartbeat.py`
-- **``reset_heartbeat`` is no longer called on task_start — the         line's own `** (1 connections) — `tests/unit/test_runner_heartbeat.py`
+- **_FakeSink** (21 connections) — `tests/unit/test_runner_stall_flush.py`
+- **TestSentinelPreventsRefiring** (5 connections) — `tests/unit/test_runner_stall_flush.py`
+- **.test_negative_stall_count_with_prior_prompt_still_skips()** (5 connections) — `tests/unit/test_runner_stall_flush.py`
+- **.test_prompt_path_emits_visible_breadcrumb()** (5 connections) — `tests/unit/test_runner_stall_flush.py`
+- **.test_negative_stall_count_skips_prompt_path()** (4 connections) — `tests/unit/test_runner_stall_flush.py`
+- **.end()** (1 connections) — `tests/unit/test_runner_stall_flush.py`
+- **.__init__()** (1 connections) — `tests/unit/test_runner_stall_flush.py`
+- **.record_event()** (1 connections) — `tests/unit/test_runner_stall_flush.py`
+- **.record_stderr()** (1 connections) — `tests/unit/test_runner_stall_flush.py`
+- **Once a prompt has fired, subsequent timeouts in the same window     must not re-** (1 connections) — `tests/unit/test_runner_stall_flush.py`
+- **Even if the prior line is a prompt, sentinel blocks re-firing.** (1 connections) — `tests/unit/test_runner_stall_flush.py`
+- **A detected prompt prints a [aom] hint so the user sees what's happening.** (1 connections) — `tests/unit/test_runner_stall_flush.py`
 
 ## Relationships
 
-- [RunState](RunState.md) (7 shared connections)
-- [PtyStreamParser](PtyStreamParser.md) (6 shared connections)
-- [StreamPhase](StreamPhase.md) (5 shared connections)
-- [run_playbook](run_playbook.md) (4 shared connections)
-- [_get_psutil](_get_psutil.md) (2 shared connections)
-- [json.py](json.py.md) (1 shared connections)
+- [_FakeChild](_FakeChild.md) (7 shared connections)
+- [_handle_timeout_branch](_handle_timeout_branch.md) (6 shared connections)
+- [test_runner_stall_flush.py](test_runner_stall_flush.py.md) (4 shared connections)
+- [.test_renderer_crash_sends_empty_line_to_avoid_hang](test_renderer_crash_sends_empty_line_to_avoid_hang.md) (2 shared connections)
+- [.test_hint_only_fires_once](test_hint_only_fires_once.md) (2 shared connections)
 
 ## Source Files
 
-- `tests/unit/test_runner_heartbeat.py`
+- `tests/unit/test_runner_stall_flush.py`
 
 ## Audit Trail
 
-- EXTRACTED: 59 (83%)
-- INFERRED: 12 (17%)
+- EXTRACTED: 47 (100%)
+- INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 
 ---

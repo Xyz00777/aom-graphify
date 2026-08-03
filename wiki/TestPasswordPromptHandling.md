@@ -1,29 +1,37 @@
 # TestPasswordPromptHandling
 
-> 6 nodes · cohesion 0.33
+> 12 nodes · cohesion 0.17
 
 ## Key Concepts
 
-- **TestPasswordPromptHandling** (5 connections) — `tests/integration/test_error_handling.py`
-- **.test_password_patterns_defined()** (3 connections) — `tests/integration/test_error_handling.py`
-- **.test_password_timeout_value()** (2 connections) — `tests/integration/test_error_handling.py`
-- **Tests for password prompt detection and handling.** (1 connections) — `tests/integration/test_error_handling.py`
-- **All password patterns from spec are defined.** (1 connections) — `tests/integration/test_error_handling.py`
-- **Password timeout defaults to 60 seconds.** (1 connections) — `tests/integration/test_error_handling.py`
+- **TestPasswordPromptHandling** (10 connections) — `tests/unit/test_pty_stream.py`
+- **.test_multiple_password_prompts_replaced()** (3 connections) — `tests/unit/test_pty_stream.py`
+- **.test_password_prompt_cleared_after_handling()** (3 connections) — `tests/unit/test_pty_stream.py`
+- **.test_password_prompt_in_recap_phase()** (3 connections) — `tests/unit/test_pty_stream.py`
+- **.test_password_prompt_pending_state()** (3 connections) — `tests/unit/test_pty_stream.py`
+- **.test_password_prompt_preserved_across_phases()** (3 connections) — `tests/unit/test_pty_stream.py`
+- **TC-143 to TC-148: Password prompt handling in PTY stream.** (1 connections) — `tests/unit/test_pty_stream.py`
+- **TC-143: Password prompts set _pending_password_prompt.** (1 connections) — `tests/unit/test_pty_stream.py`
+- **Password prompt state cleared after handle_password_prompt.** (1 connections) — `tests/unit/test_pty_stream.py`
+- **Multiple password prompts - last one wins.** (1 connections) — `tests/unit/test_pty_stream.py`
+- **Password prompt persists across phase transition.** (1 connections) — `tests/unit/test_pty_stream.py`
+- **Password prompts still detected in POST_RUN_RECAP (unusual edge case).** (1 connections) — `tests/unit/test_pty_stream.py`
 
 ## Relationships
 
-- [PtyStreamParser](PtyStreamParser.md) (2 shared connections)
-- [Completion Host Table](Completion_Host_Table.md) (1 shared connections)
+- [PtyStreamParser](PtyStreamParser.md) (6 shared connections)
+- [WarningType](WarningType.md) (1 shared connections)
+- [StreamPhase](StreamPhase.md) (1 shared connections)
+- [json.py](json.py.md) (1 shared connections)
 
 ## Source Files
 
-- `tests/integration/test_error_handling.py`
+- `tests/unit/test_pty_stream.py`
 
 ## Audit Trail
 
-- EXTRACTED: 11 (85%)
-- INFERRED: 2 (15%)
+- EXTRACTED: 28 (90%)
+- INFERRED: 3 (10%)
 - AMBIGUOUS: 0 (0%)
 
 ---

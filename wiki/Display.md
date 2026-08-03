@@ -1,13 +1,12 @@
 # Display
 
-> 53 nodes · cohesion 0.05
+> 51 nodes · cohesion 0.05
 
 ## Key Concepts
 
 - **Display** (92 connections) — `src/ansible_aom/compact/display.py`
 - **TestDegradedModeEntry** (9 connections) — `tests/compact/test_small_terminal.py`
 - **TestReEnableOnResize** (7 connections) — `tests/compact/test_small_terminal.py`
-- **.test_sigwinch_triggers_rerender()** (5 connections) — `tests/integration/test_compact_renderer.py`
 - **TestNonTtyUnaffected** (4 connections) — `tests/compact/test_log_flush_batching.py`
 - **.test_sighup_saves_session()** (4 connections) — `tests/integration/test_compact_renderer.py`
 - **.test_terminal_cleanup_on_exit()** (4 connections) — `tests/integration/test_compact_renderer.py`
@@ -29,22 +28,23 @@
 - **.test_non_tty_print_log_stays_immediate_and_plain()** (2 connections) — `tests/compact/test_log_flush_batching.py`
 - **.test_force_size_below_threshold_enters_degraded_mode()** (2 connections) — `tests/compact/test_small_terminal.py`
 - **.test_force_size_below_threshold_prints_one_line_warning()** (2 connections) — `tests/compact/test_small_terminal.py`
-- *... and 28 more nodes in this community*
+- **.test_force_size_just_below_cols_threshold_degrades()** (2 connections) — `tests/compact/test_small_terminal.py`
+- *... and 26 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (26 shared connections)
-- [IO](IO.md) (10 shared connections)
+- [Status](Status.md) (24 shared connections)
+- [test_small_terminal.py](test_small_terminal.py.md) (11 shared connections)
 - [.update](update.md) (10 shared connections)
 - [Per-Task Timing Tests](Per-Task_Timing_Tests.md) (6 shared connections)
-- [CompactRenderer](CompactRenderer.md) (5 shared connections)
-- [TestDegradedModeFallthrough](TestDegradedModeFallthrough.md) (5 shared connections)
+- [CompactRenderer](CompactRenderer.md) (4 shared connections)
 - [TestRewindCorrectness](TestRewindCorrectness.md) (4 shared connections)
-- [TestSignalHandling](TestSignalHandling.md) (4 shared connections)
-- [_BoundedSet](_BoundedSet.md) (2 shared connections)
+- [renderer.py](renderer.py.md) (3 shared connections)
+- [IO](IO.md) (3 shared connections)
+- [TestSignalHandling](TestSignalHandling.md) (3 shared connections)
+- [_row_count](_row_count.md) (2 shared connections)
 - [Monochrome Terminal Fallback](Monochrome_Terminal_Fallback.md) (2 shared connections)
 - [Completion State Labels](Completion_State_Labels.md) (2 shared connections)
-- [renderer.py](renderer.py.md) (1 shared connections)
 
 ## Source Files
 
@@ -55,8 +55,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 137 (66%)
-- INFERRED: 70 (34%)
+- EXTRACTED: 134 (67%)
+- INFERRED: 67 (33%)
 - AMBIGUOUS: 0 (0%)
 
 ---

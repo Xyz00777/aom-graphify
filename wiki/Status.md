@@ -1,68 +1,64 @@
 # Status
 
-> God node · 273 connections · `src/ansible_aom/core/models.py`
+> 131 nodes · cohesion 0.02
 
-**Community:** [HostRunState](HostRunState.md)
+## Key Concepts
 
-## Connections by Relation
+- **Status** (273 connections) — `src/ansible_aom/core/models.py`
+- **test_cli.py** (34 connections) — `tests/unit/test_cli.py`
+- **TestHideStateFlag** (28 connections) — `tests/unit/test_cli.py`
+- **test_compact_renderer.py** (22 connections) — `tests/integration/test_compact_renderer.py`
+- **TestRendererProtocol** (17 connections) — `tests/unit/test_cli.py`
+- **TestDisplayClass** (16 connections) — `tests/integration/test_compact_renderer.py`
+- **TestNonTTYBehavior** (16 connections) — `tests/integration/test_compact_renderer.py`
+- **TestRefreshStrategy** (16 connections) — `tests/integration/test_compact_renderer.py`
+- **TestPackageIdentity** (16 connections) — `tests/unit/test_cli.py`
+- **TestRendererFactory** (16 connections) — `tests/unit/test_cli.py`
+- **TestCompactRendererHandleCompletion** (15 connections) — `tests/integration/test_compact_renderer.py`
+- **TestCompactRendererProtocol** (15 connections) — `tests/integration/test_compact_renderer.py`
+- **TestCLIEntryPoint** (14 connections) — `tests/unit/test_cli.py`
+- **TestVerboseDiagnostics** (14 connections) — `tests/unit/test_cli.py`
+- **TestPasswordPassThrough** (13 connections) — `tests/integration/test_compact_renderer.py`
+- **TestInstallCompletionFlag** (13 connections) — `tests/unit/test_cli.py`
+- **TestVerboseDebugLogging** (13 connections) — `tests/unit/test_cli.py`
+- **TestCompactDependencies** (12 connections) — `tests/integration/test_compact_renderer.py`
+- **TestCompactRendererStart** (12 connections) — `tests/integration/test_compact_renderer.py`
+- **TestNonTTYRefreshFallback** (12 connections) — `tests/integration/test_compact_renderer.py`
+- **TestRichLiveConfiguration** (12 connections) — `tests/integration/test_compact_renderer.py`
+- **TestAnsibleOptionsPassthrough** (12 connections) — `tests/unit/test_cli.py`
+- **TestBasicCLIInvocation** (12 connections) — `tests/unit/test_cli.py`
+- **TestHelpFlag** (12 connections) — `tests/unit/test_cli.py`
+- **TestVerboseFlag** (12 connections) — `tests/unit/test_cli.py`
+- *... and 106 more nodes in this community*
 
-### contains
-- models.py `EXTRACTED`
+## Relationships
 
-### imports
-- [renderer.py](renderer.py.md) `EXTRACTED`
-- [json.py](json.py.md) `EXTRACTED`
-- run_state.py `EXTRACTED`
-- format.py `EXTRACTED`
-- [tree.py](tree.py.md) `EXTRACTED`
-- tree_projection.py `EXTRACTED`
-- [icons.py](icons.py.md) `EXTRACTED`
-- parity.py `EXTRACTED`
-- core/exit_code.py `EXTRACTED`
+- [HostRunState](HostRunState.md) (73 shared connections)
+- [CompactRenderer](CompactRenderer.md) (54 shared connections)
+- [create_parser](create_parser.md) (49 shared connections)
+- [TaskDefinition](TaskDefinition.md) (46 shared connections)
+- [PlayRunState](PlayRunState.md) (36 shared connections)
+- [RunState](RunState.md) (26 shared connections)
+- [Display](Display.md) (24 shared connections)
+- [WarningType](WarningType.md) (19 shared connections)
+- [JsonRenderer](JsonRenderer.md) (17 shared connections)
+- [test_event_processing.py](test_event_processing.py.md) (17 shared connections)
+- [StreamPhase](StreamPhase.md) (15 shared connections)
+- [TreeProjection](TreeProjection.md) (10 shared connections)
 
-### indirect_call
-- test_host_terminal_states_are_disjoint() `INFERRED`
-- .test_status_enum_has_eight_values() `INFERRED`
-- .test_status_enum_values() `INFERRED`
+## Source Files
 
-### inherits
-- Enum `EXTRACTED`
+- `src/ansible_aom/core/models.py`
+- `tests/compact/test_status_bar_colors.py`
+- `tests/integration/test_compact_renderer.py`
+- `tests/unit/test_cli.py`
+- `tests/unit/test_parser.py`
 
-### rationale_for
-- Task/host execution status. `EXTRACTED`
+## Audit Trail
 
-### references
-- get_status_icon() `EXTRACTED`
-- _state_with_play() `EXTRACTED`
-- get_status_color() `EXTRACTED`
-- get_status_icon_ascii() `EXTRACTED`
-- _effective_status() `EXTRACTED`
-- ._state_with() `EXTRACTED`
-- _shape() `EXTRACTED`
-- _bump() `EXTRACTED`
-- ._worst_status_of() `EXTRACTED`
-
-### uses
-- [RunState](RunState.md) `INFERRED`
-- [CompactRenderer](CompactRenderer.md) `INFERRED`
-- JsonRenderer `INFERRED`
-- [TreeProjection](TreeProjection.md) `INFERRED`
-- TestPtyStreamParserStderrLineEmission `INFERRED`
-- TreeLine `INFERRED`
-- TestJsonLineStreamBasics `INFERRED`
-- TestHideStateFlag `INFERRED`
-- TestListTasksEdgeCases `INFERRED`
-- [RendererMirrorMachine](RendererMirrorMachine.md) `INFERRED`
-- TestListTasksParser `INFERRED`
-- [TestPtyStreamParserPhases](TestPtyStreamParserPhases.md) `INFERRED`
-- TestTaskDefinition `INFERRED`
-- TestListHostsEdgeCases `INFERRED`
-- [TestHostRunState](TestHostRunState.md) `INFERRED`
-- TestPlayRunState `INFERRED`
-- TestRunState `INFERRED`
-- [TestStatusEnum](TestStatusEnum.md) `INFERRED`
-- [TestRoleGrouping](TestRoleGrouping.md) `INFERRED`
-- TestPlayDefinition `INFERRED`
+- EXTRACTED: 388 (45%)
+- INFERRED: 482 (55%)
+- AMBIGUOUS: 0 (0%)
 
 ---
 

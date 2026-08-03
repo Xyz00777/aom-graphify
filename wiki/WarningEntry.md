@@ -1,62 +1,61 @@
 # WarningEntry
 
-> 222 nodes · cohesion 0.01
+> 86 nodes · cohesion 0.03
 
 ## Key Concepts
 
 - **WarningEntry** (72 connections) — `src/ansible_aom/core/models.py`
-- **StatusBarConfig** (64 connections) — `src/ansible_aom/core/config.py`
-- **test_panels.py** (29 connections) — `tests/tui/test_panels.py`
+- **TestPlayDefinition** (20 connections) — `tests/unit/test_models.py`
 - **TestWarningEntry** (19 connections) — `tests/unit/test_models.py`
+- **test_models.py** (18 connections) — `tests/unit/test_models.py`
 - **TestFilterPanelWarningCheckboxes** (15 connections) — `tests/tui/test_panels.py`
-- **TestFilterPanelHostFilter** (14 connections) — `tests/tui/test_panels.py`
-- **TestFilterPanelStatusCheckboxes** (14 connections) — `tests/tui/test_panels.py`
-- **TestFilterPanelTextFilter** (14 connections) — `tests/tui/test_panels.py`
-- **TestFilterPanelActivation** (13 connections) — `tests/tui/test_panels.py`
-- **TestStatusBarElementConfiguration** (13 connections) — `tests/tui/test_panels.py`
-- **TestSummaryPanelHostsProgress** (13 connections) — `tests/tui/test_panels.py`
-- **TestSummaryPanelHostStatusBreakdown** (13 connections) — `tests/tui/test_panels.py`
-- **TestDebugPanelCommandEnvDisplay** (12 connections) — `tests/tui/test_panels.py`
-- **TestDebugPanelDataDisplay** (12 connections) — `tests/tui/test_panels.py`
-- **TestDebugPanelMemoryUsage** (12 connections) — `tests/tui/test_panels.py`
-- **TestDebugPanelSubprocessPid** (12 connections) — `tests/tui/test_panels.py`
-- **TestDebugPanelToggleKey** (12 connections) — `tests/tui/test_panels.py`
-- **TestLogPanelAnsiColorHandling** (12 connections) — `tests/tui/test_panels.py`
-- **TestLogPanelSearchLogic** (12 connections) — `tests/tui/test_panels.py`
-- **TestPanelInteractions** (12 connections) — `tests/tui/test_panels.py`
-- **TestStatusBarYamlConfiguration** (12 connections) — `tests/tui/test_panels.py`
-- **TestSummaryPanelPlayDisplay** (12 connections) — `tests/tui/test_panels.py`
-- **TestSummaryPanelTasksProgress** (12 connections) — `tests/tui/test_panels.py`
-- **TestDebugPanelEventCount** (11 connections) — `tests/tui/test_panels.py`
-- **TestDebugPanelParsingErrors** (11 connections) — `tests/tui/test_panels.py`
-- *... and 197 more nodes in this community*
+- **TestDefinitionVsStateSeparation** (15 connections) — `tests/unit/test_models.py`
+- **TestLinearForceCompletion** (15 connections) — `tests/unit/test_models.py`
+- **TestTaskMatching** (15 connections) — `tests/unit/test_models.py`
+- **TestWarningTypeEnum** (15 connections) — `tests/unit/test_models.py`
+- **TestRunnerTaskCompletionPromotion** (14 connections) — `tests/unit/test_models.py`
+- **TestFreeStrategyMetaTaskVisibility** (12 connections) — `tests/unit/test_models.py`
+- **.test_state_classes_are_mutable_intent()** (4 connections) — `tests/unit/test_models.py`
+- **.test_warning_only_entries_shown()** (3 connections) — `tests/tui/test_panels.py`
+- **.warnings_list()** (3 connections) — `tests/tui/test_panels.py`
+- **.test_definition_classes_are_immutable_intent()** (3 connections) — `tests/unit/test_models.py`
+- **.test_definition_path_can_be_populated_later()** (3 connections) — `tests/unit/test_models.py`
+- **.test_definition_uuid_can_be_populated_later()** (3 connections) — `tests/unit/test_models.py`
+- **.test_play_definition_hosts_pattern_localhost()** (3 connections) — `tests/unit/test_models.py`
+- **.test_play_definition_hosts_pattern_wildcard()** (3 connections) — `tests/unit/test_models.py`
+- **.test_play_definition_hosts_vs_resolved_hosts()** (3 connections) — `tests/unit/test_models.py`
+- **.test_play_definition_id_sequential_number_format()** (3 connections) — `tests/unit/test_models.py`
+- **.test_play_definition_required_fields()** (3 connections) — `tests/unit/test_models.py`
+- **.test_play_definition_resolved_hosts_defaults_empty()** (3 connections) — `tests/unit/test_models.py`
+- **.test_play_definition_tasks_defaults_empty()** (3 connections) — `tests/unit/test_models.py`
+- **.test_task_matching_uses_uuid_first_if_present()** (3 connections) — `tests/unit/test_models.py`
+- *... and 61 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (105 shared connections)
-- [AppConfig](AppConfig.md) (25 shared connections)
-- [WarningType](WarningType.md) (25 shared connections)
-- [TaskDefinition](TaskDefinition.md) (11 shared connections)
+- [TaskDefinition](TaskDefinition.md) (39 shared connections)
+- [WarningType](WarningType.md) (30 shared connections)
+- [HostRunState](HostRunState.md) (24 shared connections)
+- [PlayRunState](PlayRunState.md) (15 shared connections)
+- [RoleGroupDefinition](RoleGroupDefinition.md) (11 shared connections)
+- [Status](Status.md) (9 shared connections)
 - [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (8 shared connections)
-- [Replay CLI Subcommand](Replay_CLI_Subcommand.md) (7 shared connections)
-- [Memory Bounds Constants](Memory_Bounds_Constants.md) (6 shared connections)
-- [RunState](RunState.md) (6 shared connections)
-- [TestStatusBarAvailableElements](TestStatusBarAvailableElements.md) (3 shared connections)
-- [StreamPhase](StreamPhase.md) (2 shared connections)
+- [StreamPhase](StreamPhase.md) (3 shared connections)
+- [TestFilterPanelHostFilter](TestFilterPanelHostFilter.md) (3 shared connections)
 - [PtyStreamParser](PtyStreamParser.md) (2 shared connections)
 - [_safe_loads](_safe_loads.md) (2 shared connections)
+- [TestFilterPanelStatusCheckboxes](TestFilterPanelStatusCheckboxes.md) (2 shared connections)
 
 ## Source Files
 
-- `src/ansible_aom/core/config.py`
 - `src/ansible_aom/core/models.py`
 - `tests/tui/test_panels.py`
 - `tests/unit/test_models.py`
 
 ## Audit Trail
 
-- EXTRACTED: 482 (62%)
-- INFERRED: 293 (38%)
+- EXTRACTED: 230 (63%)
+- INFERRED: 134 (37%)
 - AMBIGUOUS: 0 (0%)
 
 ---

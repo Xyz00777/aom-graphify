@@ -34,7 +34,8 @@
 ## Relationships
 
 - [SessionManager](SessionManager.md) (7 shared connections)
-- [load_session](load_session.md) (4 shared connections)
+- [load_session](load_session.md) (3 shared connections)
+- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 - [Prompt Detection Heuristics](Prompt_Detection_Heuristics.md) (1 shared connections)
 
 ## Source Files

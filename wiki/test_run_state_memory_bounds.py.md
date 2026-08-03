@@ -28,8 +28,8 @@
 ## Relationships
 
 - [RunState](RunState.md) (6 shared connections)
+- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
-- [state_machine.py](state_machine.py.md) (1 shared connections)
 
 ## Source Files
 

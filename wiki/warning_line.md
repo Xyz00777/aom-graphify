@@ -9,7 +9,7 @@
 
 ## Relationships
 
-- [Test Event Fixtures](Test_Event_Fixtures.md) (1 shared connections)
+- [tests/conftest.py](tests-conftest.py.md) (1 shared connections)
 
 ## Source Files
 

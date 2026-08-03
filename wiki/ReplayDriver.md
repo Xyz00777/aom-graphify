@@ -16,7 +16,7 @@
 - [test_event_source.py](test_event_source.py.md) (3 shared connections)
 - [Hide State Normalization](Hide_State_Normalization.md) (2 shared connections)
 - [cli_main](cli_main.md) (2 shared connections)
-- [json.py](json.py.md) (1 shared connections)
+- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 - [FakeRenderer](FakeRenderer.md) (1 shared connections)
 - [Renderer](Renderer.md) (1 shared connections)
 

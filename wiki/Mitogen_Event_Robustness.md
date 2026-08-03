@@ -34,9 +34,9 @@
 ## Relationships
 
 - [CompactRenderer](CompactRenderer.md) (6 shared connections)
-- [PlayDefinition](PlayDefinition.md) (4 shared connections)
+- [TaskDefinition](TaskDefinition.md) (4 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
-- [HostRunState](HostRunState.md) (1 shared connections)
+- [WarningType](WarningType.md) (1 shared connections)
 
 ## Source Files
 

@@ -29,10 +29,9 @@
 
 ## Relationships
 
-- [JsonLineStream](JsonLineStream.md) (2 shared connections)
+- [json.py](json.py.md) (2 shared connections)
+- [StreamPhase](StreamPhase.md) (2 shared connections)
 - [TaskDefinition](TaskDefinition.md) (2 shared connections)
-- [StreamPhase](StreamPhase.md) (1 shared connections)
-- [json.py](json.py.md) (1 shared connections)
 
 ## Source Files
 

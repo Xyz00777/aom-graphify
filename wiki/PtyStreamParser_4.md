@@ -73,13 +73,13 @@
 - [RoleGroupDefinition](RoleGroupDefinition.md) `INFERRED`
 - [WarningType](WarningType.md) `INFERRED`
 - [WarningEntry](WarningEntry.md) `INFERRED`
-- JsonlEvent `INFERRED`
+- [JsonlEvent](JsonlEvent.md) `INFERRED`
 - [IncludeCacheEntry](IncludeCacheEntry.md) `INFERRED`
 - TestPtyStreamParserStderrLineEmission `INFERRED`
 - TestJsonLineStreamBasics `INFERRED`
 - TestListTasksEdgeCases `INFERRED`
 - TestListTasksParser `INFERRED`
-- [TestPtyStreamParserPhases](TestPtyStreamParserPhases.md) `INFERRED`
+- TestPtyStreamParserPhases `INFERRED`
 - TestListHostsEdgeCases `INFERRED`
 - _SessionSink `INFERRED`
 - [TestRoleGrouping](TestRoleGrouping.md) `INFERRED`
@@ -87,7 +87,7 @@
 - TestListHostsParser `INFERRED`
 - TestRunStateUnknownEvent `INFERRED`
 - _NullSink `INFERRED`
-- TestMultiLineWarningContinuation `INFERRED`
+- [TestMultiLineWarningContinuation](TestMultiLineWarningContinuation.md) `INFERRED`
 - TestPtyStreamParserJsonlEvents `INFERRED`
 
 ---

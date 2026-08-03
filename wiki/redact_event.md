@@ -1,57 +1,54 @@
 # redact_event
 
-> 86 nodes · cohesion 0.04
+> 44 nodes · cohesion 0.06
 
 ## Key Concepts
 
 - **redact_event()** (69 connections) — `src/ansible_aom/core/redaction.py`
-- **RedactionConfig** (28 connections)
-- **_ansible_event_with_res()** (26 connections) — `tests/integration/test_redaction.py`
-- **integration/test_redaction.py** (16 connections) — `tests/integration/test_redaction.py`
-- **TestLayer3StringSanitizationOnEvents** (9 connections) — `tests/integration/test_redaction.py`
-- **TestLayer2PasswordFieldsOnEvents** (8 connections) — `tests/integration/test_redaction.py`
-- **TestCustomConfigOnRealisticEvents** (6 connections) — `tests/integration/test_redaction.py`
-- **TestLayer1NoLogOnFullEvent** (6 connections) — `tests/integration/test_redaction.py`
-- **TestLayer4InvocationModuleArgs** (6 connections) — `tests/integration/test_redaction.py`
-- **.test_custom_fields_redacted_on_event()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_custom_patterns_sanitize_strings_on_event()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_custom_whitelist_extends_default()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_entire_res_replaced_with_censored_marker()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_envelope_preserved_after_no_log_censorship()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_no_log_false_passes_through_to_other_layers()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_per_item_no_log_censors_only_marked_items()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_generic_secret_fields_redacted()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_known_ansible_password_fields_redacted()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_nested_passwords_in_realistic_dict_redacted()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_password_match_regex_field_redacted()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_whitelisted_pass_fields_not_redacted()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_all_sanitized_fields_together()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_cmd_field_url_credentials_stripped()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_cmd_list_each_entry_sanitized()** (5 connections) — `tests/integration/test_redaction.py`
-- **.test_msg_field_cli_credentials_stripped()** (5 connections) — `tests/integration/test_redaction.py`
-- *... and 61 more nodes in this community*
+- **test_properties_redaction.py** (15 connections) — `tests/unit/test_properties_redaction.py`
+- **TestLayer1AnsibleNoLog** (7 connections) — `tests/unit/test_redaction.py`
+- **TestInvocationModuleArgs** (6 connections) — `tests/unit/test_redaction.py`
+- **TestNoLogLayer0StillWorks** (5 connections) — `tests/unit/test_redaction_layer4.py`
+- **SearchStrategy** (4 connections)
+- **.test_deeply_nested_args()** (4 connections) — `tests/unit/test_redaction.py`
+- **.test_module_args_list_values()** (4 connections) — `tests/unit/test_redaction.py`
+- **.test_module_args_recursive_redaction()** (4 connections) — `tests/unit/test_redaction.py`
+- **.test_no_log_censors_result_field()** (4 connections) — `tests/unit/test_redaction.py`
+- **.test_no_log_loop_items_individually_censored()** (4 connections) — `tests/unit/test_redaction.py`
+- **.test_no_log_mixed_loop_items()** (4 connections) — `tests/unit/test_redaction.py`
+- **.test_no_log_replaces_entire_result()** (4 connections) — `tests/unit/test_redaction.py`
+- **_distinctive_secret()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **_innocuous_key()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **_password_shaped_key()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **test_no_log_at_top_level_censors_everything()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **test_no_log_in_loop_items_censors_that_item()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **test_password_redaction_works_through_nested_dicts()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **test_password_shaped_keys_are_redacted()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **test_whitelisted_keys_pass_through()** (3 connections) — `tests/unit/test_properties_redaction.py`
+- **.test_no_log_loop_item_censored()** (3 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_no_log_replaces_entire_result()** (3 connections) — `tests/unit/test_redaction_layer4.py`
+- **_whitelisted_key()** (2 connections) — `tests/unit/test_properties_redaction.py`
+- **Apply all redaction layers to an event dict. Returns a new event.      Layer ord** (1 connections) — `src/ansible_aom/core/redaction.py`
+- *... and 19 more nodes in this community*
 
 ## Relationships
 
-- [RedactionConfig](RedactionConfig.md) (28 shared connections)
-- [AppConfig](AppConfig.md) (11 shared connections)
-- [Summary Panel Widget](Summary_Panel_Widget.md) (5 shared connections)
-- [unit/test_redaction.py](unit-test_redaction.py.md) (5 shared connections)
+- [RedactionConfig](RedactionConfig.md) (68 shared connections)
 - [redact_dict](redact_dict.md) (3 shared connections)
 - [View Mode Selection](View_Mode_Selection.md) (2 shared connections)
-- [sanitize_string](sanitize_string.md) (1 shared connections)
-- [TestRedactionHelperFunctions](TestRedactionHelperFunctions.md) (1 shared connections)
+- [json.py](json.py.md) (1 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/core/redaction.py`
-- `tests/integration/test_redaction.py`
+- `tests/unit/test_properties_redaction.py`
+- `tests/unit/test_redaction.py`
 - `tests/unit/test_redaction_layer4.py`
 
 ## Audit Trail
 
-- EXTRACTED: 366 (97%)
-- INFERRED: 10 (3%)
+- EXTRACTED: 183 (98%)
+- INFERRED: 3 (2%)
 - AMBIGUOUS: 0 (0%)
 
 ---

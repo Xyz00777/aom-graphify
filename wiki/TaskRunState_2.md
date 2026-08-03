@@ -62,12 +62,12 @@
 - TestHideStateFlag `INFERRED`
 - TestListTasksEdgeCases `INFERRED`
 - TestListTasksParser `INFERRED`
-- [TestPtyStreamParserPhases](TestPtyStreamParserPhases.md) `INFERRED`
-- TestTaskDefinition `INFERRED`
+- TestPtyStreamParserPhases `INFERRED`
+- [TestTaskDefinition](TestTaskDefinition.md) `INFERRED`
 - TestListHostsEdgeCases `INFERRED`
-- [TestHostRunState](TestHostRunState.md) `INFERRED`
+- TestHostRunState `INFERRED`
 - TestPlayRunState `INFERRED`
-- TestRunState `INFERRED`
+- [TestRunState](TestRunState.md) `INFERRED`
 - [TestStatusEnum](TestStatusEnum.md) `INFERRED`
 - [TestRoleGrouping](TestRoleGrouping.md) `INFERRED`
 - TestPlayDefinition `INFERRED`

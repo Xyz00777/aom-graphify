@@ -33,7 +33,7 @@
 
 ### imports
 - [json.py](json.py.md) `EXTRACTED`
-- format.py `EXTRACTED`
+- [format.py](format.py.md) `EXTRACTED`
 - [runner.py](runner.py.md) `EXTRACTED`
 - tree_projection.py `EXTRACTED`
 - includes.py `EXTRACTED`
@@ -96,8 +96,8 @@
 - [PlayRunState](PlayRunState.md) `INFERRED`
 - [TaskRunState](TaskRunState.md) `INFERRED`
 - [RoleGroupDefinition](RoleGroupDefinition.md) `INFERRED`
-- JsonRenderer `INFERRED`
-- JsonlEvent `INFERRED`
+- [JsonRenderer](JsonRenderer.md) `INFERRED`
+- [JsonlEvent](JsonlEvent.md) `INFERRED`
 - [TreeProjection](TreeProjection.md) `INFERRED`
 - [IncludeCacheEntry](IncludeCacheEntry.md) `INFERRED`
 - TreeLine `INFERRED`
@@ -106,9 +106,9 @@
 - RoleCacheEntry `INFERRED`
 - _NullSink `INFERRED`
 - [TestHideStateCompactPlumbing](TestHideStateCompactPlumbing.md) `INFERRED`
-- [TestNoRedactFlag](TestNoRedactFlag.md) `INFERRED`
+- TestNoRedactFlag `INFERRED`
 - TestRendererProtocol `INFERRED`
-- TestHandleEventDispatcher `INFERRED`
+- [TestHandleEventDispatcher](TestHandleEventDispatcher.md) `INFERRED`
 
 ---
 

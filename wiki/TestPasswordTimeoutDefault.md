@@ -27,9 +27,8 @@
 
 ## Relationships
 
-- [CompactRenderer](CompactRenderer.md) (2 shared connections)
+- [CompactRenderer](CompactRenderer.md) (3 shared connections)
 - [.handle_password_prompt](handle_password_prompt.md) (2 shared connections)
-- [test_password.py](test_password.py.md) (1 shared connections)
 
 ## Source Files
 

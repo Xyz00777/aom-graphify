@@ -1,6 +1,6 @@
 # redact_dict
 
-> 35 nodes · cohesion 0.06
+> 27 nodes · cohesion 0.09
 
 ## Key Concepts
 
@@ -10,10 +10,6 @@
 - **TestRedactionPerformance** (5 connections) — `tests/unit/test_redaction.py`
 - **TestWhitelistFalsePositives** (5 connections) — `tests/unit/test_redaction.py`
 - **_redact_list()** (4 connections) — `src/ansible_aom/core/redaction.py`
-- **TestConfigCustomFields** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_custom_fields_redacted()** (4 connections) — `tests/unit/test_redaction.py`
-- **TestConfigCustomWhitelist** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_custom_whitelist_not_redacted()** (4 connections) — `tests/unit/test_redaction.py`
 - **.test_empty_dict_list_handling()** (4 connections) — `tests/unit/test_redaction.py`
 - **.test_max_depth_truncation()** (4 connections) — `tests/unit/test_redaction.py`
 - **.test_nested_dict_redaction()** (4 connections) — `tests/unit/test_redaction.py`
@@ -29,16 +25,16 @@
 - **TC-158: Password fields in list items are redacted.** (1 connections) — `tests/unit/test_redaction.py`
 - **TC-158 edge case: Max depth (10) truncation.** (1 connections) — `tests/unit/test_redaction.py`
 - **TC-158 edge: Empty dicts and lists handled correctly.** (1 connections) — `tests/unit/test_redaction.py`
-- *... and 10 more nodes in this community*
+- **Tests for TC-159: Whitelist prevents false positive redaction.** (1 connections) — `tests/unit/test_redaction.py`
+- **TC-159: PASSWORD_WHITELIST prevents false positive redaction.** (1 connections) — `tests/unit/test_redaction.py`
+- **TC-159: Configured custom whitelist extends PASSWORD_WHITELIST.** (1 connections) — `tests/unit/test_redaction.py`
+- **Performance-related tests for redaction.** (1 connections) — `tests/unit/test_redaction.py`
+- *... and 2 more nodes in this community*
 
 ## Relationships
 
-- [RedactionConfig](RedactionConfig.md) (16 shared connections)
-- [AppConfig](AppConfig.md) (5 shared connections)
-- [unit/test_redaction.py](unit-test_redaction.py.md) (5 shared connections)
+- [RedactionConfig](RedactionConfig.md) (24 shared connections)
 - [redact_event](redact_event.md) (3 shared connections)
-- [sanitize_string](sanitize_string.md) (1 shared connections)
-- [TestRedactionHelperFunctions](TestRedactionHelperFunctions.md) (1 shared connections)
 
 ## Source Files
 
@@ -47,8 +43,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 102 (95%)
-- INFERRED: 5 (5%)
+- EXTRACTED: 84 (97%)
+- INFERRED: 3 (3%)
 - AMBIGUOUS: 0 (0%)
 
 ---

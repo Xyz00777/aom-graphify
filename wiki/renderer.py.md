@@ -1,64 +1,64 @@
 # renderer.py
 
-> 48 nodes · cohesion 0.07
+> 59 nodes · cohesion 0.07
 
 ## Key Concepts
 
 - **renderer.py** (106 connections) — `src/ansible_aom/compact/renderer.py`
-- **format.py** (60 connections) — `src/ansible_aom/compact/format.py`
-- **_wrap()** (19 connections) — `src/ansible_aom/compact/format.py`
-- **format_host_summary()** (14 connections) — `src/ansible_aom/compact/format.py`
-- **TestHostSummaryColors** (12 connections) — `tests/compact/test_status_bar_colors.py`
-- **test_status_bar_colors.py** (10 connections) — `tests/compact/test_status_bar_colors.py`
-- **TestColorEnabled** (10 connections) — `tests/compact/test_status_bar_colors.py`
-- **_truncate_msg()** (8 connections) — `src/ansible_aom/compact/format.py`
-- **._format_loop_item_line()** (8 connections) — `src/ansible_aom/compact/renderer.py`
+- **RunProgress** (27 connections) — `src/ansible_aom/core/estimate.py`
+- **test_estimate.py** (20 connections) — `tests/unit/test_estimate.py`
+- **_est()** (19 connections) — `tests/unit/test_estimate.py`
+- **._render_status_panel()** (18 connections) — `src/ansible_aom/compact/renderer.py`
+- **_BoundedSet** (16 connections) — `src/ansible_aom/compact/renderer.py`
+- **project_remaining()** (16 connections) — `src/ansible_aom/core/estimate.py`
+- **RunEstimate** (12 connections) — `src/ansible_aom/core/estimate.py`
+- **.__init__()** (10 connections) — `src/ansible_aom/compact/renderer.py`
+- **add_completed()** (10 connections) — `src/ansible_aom/core/estimate.py`
+- **add_in_flight()** (10 connections) — `src/ansible_aom/core/estimate.py`
+- **run_state_status_counts()** (10 connections) — `src/ansible_aom/core/tree.py`
+- **estimate.py** (8 connections) — `src/ansible_aom/core/estimate.py`
 - **_color_enabled()** (7 connections) — `src/ansible_aom/compact/format.py`
-- **is_async_poll_payload()** (7 connections) — `src/ansible_aom/core/_async_poll.py`
-- **test_invariants_runstate_renderer.py** (7 connections) — `tests/unit/test_invariants_runstate_renderer.py`
-- **_truncate_visible()** (6 connections) — `src/ansible_aom/compact/format.py`
-- **_verbose_ok_body()** (6 connections) — `src/ansible_aom/compact/format.py`
-- **_format_count_cells()** (5 connections) — `src/ansible_aom/compact/format.py`
-- **_extract_error_msg()** (5 connections) — `src/ansible_aom/compact/renderer.py`
-- **_count_cell()** (4 connections) — `src/ansible_aom/compact/format.py`
-- **_async_poll.py** (4 connections) — `src/ansible_aom/core/_async_poll.py`
-- **_first_line()** (3 connections) — `src/ansible_aom/compact/renderer.py`
-- **test_truncate_visible_plain_mode_emits_no_sgr()** (3 connections) — `tests/compact/test_tree_render.py`
-- **Render non-zero status count cells.      Order: ok, changed, skipped, failed, un** (2 connections) — `src/ansible_aom/compact/format.py`
-- **.test_off_when_no_color_set_even_for_tty()** (2 connections) — `tests/compact/test_status_bar_colors.py`
-- **.test_off_when_not_a_tty()** (2 connections) — `tests/compact/test_status_bar_colors.py`
-- **.test_on_when_tty_and_no_color_unset()** (2 connections) — `tests/compact/test_status_bar_colors.py`
-- **.test_changed_segment_is_yellow()** (2 connections) — `tests/compact/test_status_bar_colors.py`
-- *... and 23 more nodes in this community*
+- **._cached_count_total_tasks()** (4 connections) — `src/ansible_aom/compact/renderer.py`
+- **test_add_completed_buckets_by_prior_result()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_add_completed_fixed_task_does_not_touch_var_actual()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_add_completed_ignores_unmatched_path()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_add_in_flight_caps_credit_at_prior_but_not_actual()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_add_in_flight_credits_variable_bucket_and_actual()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_add_in_flight_fixed_task_credits_floor_only()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_fast_rerun_keeps_floor_but_collapses_variable()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_fixed_floor_projected_unscaled()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_no_prior_returns_none()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_remaining_never_negative()** (4 connections) — `tests/unit/test_estimate.py`
+- *... and 34 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (22 shared connections)
+- [CompactRenderer](CompactRenderer.md) (15 shared connections)
 - [._emit_event_log](_emit_event_log.md) (12 shared connections)
-- [PlayDefinition](PlayDefinition.md) (10 shared connections)
-- [format_status_bar](format_status_bar.md) (10 shared connections)
-- [.from_run_state](from_run_state.md) (8 shared connections)
-- [icons.py](icons.py.md) (8 shared connections)
-- [CompactRenderer](CompactRenderer.md) (8 shared connections)
-- [_compute_mode_label](_compute_mode_label.md) (6 shared connections)
-- [format_tree_block](format_tree_block.md) (6 shared connections)
-- [RunProgress](RunProgress.md) (6 shared connections)
-- [format_preflight_summary](format_preflight_summary.md) (5 shared connections)
-- [format_age](format_age.md) (5 shared connections)
+- [format.py](format.py.md) (10 shared connections)
+- [JsonlEvent](JsonlEvent.md) (8 shared connections)
+- [format_host_summary](format_host_summary.md) (6 shared connections)
+- [test_task_progress.py](test_task_progress.py.md) (5 shared connections)
+- [Status](Status.md) (5 shared connections)
+- [TreeProjection](TreeProjection.md) (5 shared connections)
+- [_compute_mode_label](_compute_mode_label.md) (4 shared connections)
+- [history.py](history.py.md) (4 shared connections)
+- [Display](Display.md) (3 shared connections)
+- [format_host_rows](format_host_rows.md) (3 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/compact/format.py`
 - `src/ansible_aom/compact/renderer.py`
-- `src/ansible_aom/core/_async_poll.py`
+- `src/ansible_aom/core/estimate.py`
+- `src/ansible_aom/core/tree.py`
 - `tests/compact/test_status_bar_colors.py`
-- `tests/compact/test_tree_render.py`
-- `tests/unit/test_invariants_runstate_renderer.py`
+- `tests/unit/test_estimate.py`
 
 ## Audit Trail
 
-- EXTRACTED: 308 (90%)
-- INFERRED: 34 (10%)
+- EXTRACTED: 378 (95%)
+- INFERRED: 21 (5%)
 - AMBIGUOUS: 0 (0%)
 
 ---

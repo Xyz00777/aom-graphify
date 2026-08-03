@@ -34,8 +34,8 @@
 ## Relationships
 
 - [Error Handling Tests](Error_Handling_Tests.md) (9 shared connections)
-- [icons.py](icons.py.md) (1 shared connections)
-- [HostRunState](HostRunState.md) (1 shared connections)
+- [format_host_summary](format_host_summary.md) (1 shared connections)
+- [Status](Status.md) (1 shared connections)
 - [test_icons.py](test_icons.py.md) (1 shared connections)
 
 ## Source Files

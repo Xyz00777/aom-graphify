@@ -33,7 +33,7 @@
 
 ### imports
 - run_state.py `EXTRACTED`
-- format.py `EXTRACTED`
+- [format.py](format.py.md) `EXTRACTED`
 - tree_projection.py `EXTRACTED`
 - includes.py `EXTRACTED`
 - preflight.py `EXTRACTED`
@@ -84,12 +84,12 @@
 - TestListTasksEdgeCases `INFERRED`
 - [RendererMirrorMachine](RendererMirrorMachine.md) `INFERRED`
 - TestListTasksParser `INFERRED`
-- [TestPtyStreamParserPhases](TestPtyStreamParserPhases.md) `INFERRED`
-- TestTaskDefinition `INFERRED`
+- TestPtyStreamParserPhases `INFERRED`
+- [TestTaskDefinition](TestTaskDefinition.md) `INFERRED`
 - TestListHostsEdgeCases `INFERRED`
-- [TestHostRunState](TestHostRunState.md) `INFERRED`
+- TestHostRunState `INFERRED`
 - TestPlayRunState `INFERRED`
-- TestRunState `INFERRED`
+- [TestRunState](TestRunState.md) `INFERRED`
 - [TestStatusEnum](TestStatusEnum.md) `INFERRED`
 - [TestRoleGrouping](TestRoleGrouping.md) `INFERRED`
 - TestPlayDefinition `INFERRED`

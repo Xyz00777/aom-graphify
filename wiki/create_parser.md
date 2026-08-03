@@ -1,50 +1,50 @@
 # create_parser
 
-> 54 nodes · cohesion 0.04
+> 120 nodes · cohesion 0.02
 
 ## Key Concepts
 
 - **create_parser()** (81 connections) — `src/ansible_aom/cli.py`
+- **TestNoRedactFlag** (17 connections) — `tests/unit/test_cli.py`
+- **TestFormatFlag** (15 connections) — `tests/unit/test_cli.py`
+- **TestConfigPathFlag** (14 connections) — `tests/unit/test_cli.py`
+- **TestCaptureVerboseFlag** (13 connections) — `tests/unit/test_cli.py`
+- **TestCaptureSetupFlag** (12 connections) — `tests/unit/test_cli.py`
+- **TestHideDeprecationsFlag** (12 connections) — `tests/unit/test_cli.py`
+- **TestHideWarningsFlag** (12 connections) — `tests/unit/test_cli.py`
+- **TestNoFailedHintFlag** (12 connections) — `tests/unit/test_cli.py`
+- **.test_config_path_is_visible_to_config_layer_argv_lookup()** (4 connections) — `tests/unit/test_cli.py`
 - **.test_inventory_flag_passed_through()** (3 connections) — `tests/unit/test_cli.py`
+- **.test_limit_flag_passed_through()** (3 connections) — `tests/unit/test_cli.py`
+- **.test_unknown_args_passed_through()** (3 connections) — `tests/unit/test_cli.py`
+- **.test_playbook_argument_accepted()** (3 connections) — `tests/unit/test_cli.py`
 - **.test_playbook_positional_argument_required()** (3 connections) — `tests/unit/test_cli.py`
 - **.test_create_parser_has_playbook_positional_arg()** (3 connections) — `tests/unit/test_cli.py`
 - **.test_create_parser_returns_argparse_parser()** (3 connections) — `tests/unit/test_cli.py`
+- **.test_format_flag_does_not_appear_in_ansible_args()** (3 connections) — `tests/unit/test_cli.py`
+- **.test_help_displays_usage()** (3 connections) — `tests/unit/test_cli.py`
+- **.test_help_shows_flags()** (3 connections) — `tests/unit/test_cli.py`
 - **.test_hide_state_accepts_single_value()** (3 connections) — `tests/unit/test_cli.py`
 - **.test_hide_state_all_valid_values()** (3 connections) — `tests/unit/test_cli.py`
 - **.test_hide_state_case_insensitive_all_upper()** (3 connections) — `tests/unit/test_cli.py`
+- **.test_hide_state_case_insensitive_dedup()** (3 connections) — `tests/unit/test_cli.py`
 - **.test_hide_state_case_insensitive_mixed()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_hide_state_comma_separated()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_hide_state_does_not_appear_in_ansible_args()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_hide_state_is_repeatable()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_hide_state_mixed_append_and_comma()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_hide_state_rejects_unknown_in_comma_separated()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_yes_unchanged_from_task_5_1()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_verbose_flag_defaults_false()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_verbose_flag_exists()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_yes_flag_defaults_false()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_yes_help_text_mentions_yes()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_create_parser_calls_argcomplete_autocomplete()** (2 connections) — `tests/unit/test_cli.py`
-- **.test_capture_setup_defaults_false()** (2 connections) — `tests/unit/test_cli.py`
-- **.test_capture_setup_does_not_leak_to_ansible_args()** (2 connections) — `tests/unit/test_cli.py`
-- **.test_capture_setup_long_form()** (2 connections) — `tests/unit/test_cli.py`
-- **.test_help_text_documents_install_completion()** (2 connections) — `tests/unit/test_cli.py`
-- **.test_hide_deprecations_defaults_false()** (2 connections) — `tests/unit/test_cli.py`
-- *... and 29 more nodes in this community*
+- *... and 95 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (34 shared connections)
-- [TestConfigPathFlag](TestConfigPathFlag.md) (5 shared connections)
-- [TestFormatFlag](TestFormatFlag.md) (5 shared connections)
-- [TestCaptureVerboseFlag](TestCaptureVerboseFlag.md) (4 shared connections)
-- [TestNoRedactFlag](TestNoRedactFlag.md) (4 shared connections)
+- [Status](Status.md) (49 shared connections)
+- [HostRunState](HostRunState.md) (16 shared connections)
+- [JsonRenderer](JsonRenderer.md) (9 shared connections)
+- [CompactRenderer](CompactRenderer.md) (8 shared connections)
+- [PlayRunState](PlayRunState.md) (8 shared connections)
+- [RunState](RunState.md) (8 shared connections)
+- [TestYesFlag](TestYesFlag.md) (6 shared connections)
+- [ansible_aom/cli.py](ansible_aom-cli.py.md) (2 shared connections)
 - [WarningType Enum](WarningType_Enum.md) (2 shared connections)
-- [unit/test_no_record.py](unit-test_no_record.py.md) (2 shared connections)
-- [ansible_aom/cli.py](ansible_aom-cli.py.md) (1 shared connections)
-- [load_session](load_session.md) (1 shared connections)
-- [.test_limit_flag_passed_through](test_limit_flag_passed_through.md) (1 shared connections)
-- [.test_unknown_args_passed_through](test_unknown_args_passed_through.md) (1 shared connections)
-- [.test_playbook_argument_accepted](test_playbook_argument_accepted.md) (1 shared connections)
+- [TestNoRecordParserFlag](TestNoRecordParserFlag.md) (2 shared connections)
+- [.test_hide_state_rejects_unknown_in_comma_separated](test_hide_state_rejects_unknown_in_comma_separated.md) (1 shared connections)
+- [.test_verbose_flag_exists](test_verbose_flag_exists.md) (1 shared connections)
 
 ## Source Files
 
@@ -53,8 +53,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 76 (41%)
-- INFERRED: 110 (59%)
+- EXTRACTED: 203 (51%)
+- INFERRED: 196 (49%)
 - AMBIGUOUS: 0 (0%)
 
 ---

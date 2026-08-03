@@ -24,8 +24,11 @@
 
 ## Relationships
 
-- [AppConfig](AppConfig.md) (4 shared connections)
-- [WarningEntry](WarningEntry.md) (1 shared connections)
+- [WarningType](WarningType.md) (1 shared connections)
+- [RedactionConfig](RedactionConfig.md) (1 shared connections)
+- [WarningsConfig](WarningsConfig.md) (1 shared connections)
+- [AppConfig](AppConfig.md) (1 shared connections)
+- [test_config.py](test_config.py.md) (1 shared connections)
 
 ## Source Files
 

@@ -1,6 +1,6 @@
 # cli_main
 
-> 18 nodes · cohesion 0.18
+> 13 nodes · cohesion 0.28
 
 ## Key Concepts
 
@@ -12,25 +12,22 @@
 - **.test_cli_main_speed_zero_allowed()** (5 connections) — `tests/unit/test_cli_replay.py`
 - **.test_cli_main_default_uses_compact_renderer()** (4 connections) — `tests/unit/test_cli_replay.py`
 - **.test_cli_main_speed_forwarded()** (4 connections) — `tests/unit/test_cli_replay.py`
-- **TestReplayDispatch** (4 connections) — `tests/unit/test_cli_replay.py`
 - **.test_cli_main_returns_1_when_session_missing()** (3 connections) — `tests/unit/test_cli_replay.py`
-- **.test_replay_dispatches_to_replay_main()** (2 connections) — `tests/unit/test_cli_replay.py`
 - **Entry point for ``aom replay <session-id> [...]``.      Argparse the supplied ta** (1 connections) — `src/ansible_aom/drivers/replay.py`
 - **CLI tests for the F2 `aom replay` subcommand dispatch.  Mirrors the inspect-disp** (1 connections) — `tests/unit/test_cli_replay.py`
 - **`--speed 0` is the documented "fast as possible" sentinel.** (1 connections) — `tests/unit/test_cli_replay.py`
-- **`aom replay <id>` invokes the replay CLI entry with ['<id>'].** (1 connections) — `tests/unit/test_cli_replay.py`
 - **`replay.cli_main` parses argv, builds a renderer, calls replay_session.** (1 connections) — `tests/unit/test_cli_replay.py`
-- **.test_replay_forwards_speed_flag()** (1 connections) — `tests/unit/test_cli_replay.py`
-- **.test_replay_propagates_exit_code()** (1 connections) — `tests/unit/test_cli_replay.py`
 
 ## Relationships
 
-- [load_session](load_session.md) (2 shared connections)
-- [json.py](json.py.md) (2 shared connections)
+- [ansible_aom/cli.py](ansible_aom-cli.py.md) (2 shared connections)
 - [ReplayDriver](ReplayDriver.md) (2 shared connections)
-- [ansible_aom/cli.py](ansible_aom-cli.py.md) (1 shared connections)
+- [diagnostics.py](diagnostics.py.md) (1 shared connections)
+- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 - [Ansible Posix Availability](Ansible_Posix_Availability.md) (1 shared connections)
 - [create_renderer](create_renderer.md) (1 shared connections)
+- [json.py](json.py.md) (1 shared connections)
+- [TestReplayDispatch](TestReplayDispatch.md) (1 shared connections)
 
 ## Source Files
 
@@ -39,8 +36,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 55 (87%)
-- INFERRED: 8 (13%)
+- EXTRACTED: 46 (85%)
+- INFERRED: 8 (15%)
 - AMBIGUOUS: 0 (0%)
 
 ---

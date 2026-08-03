@@ -37,7 +37,7 @@
 - [renderer.py](renderer.py.md) (1 shared connections)
 - [IO](IO.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
-- [text.py](text.py.md) (1 shared connections)
+- [render_session](render_session.md) (1 shared connections)
 
 ## Source Files
 

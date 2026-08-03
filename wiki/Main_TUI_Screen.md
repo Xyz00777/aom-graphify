@@ -33,9 +33,8 @@
 
 ## Relationships
 
+- [renderer.py](renderer.py.md) (2 shared connections)
 - [log_filter.py](log_filter.py.md) (2 shared connections)
-- [renderer.py](renderer.py.md) (1 shared connections)
-- [_BoundedSet](_BoundedSet.md) (1 shared connections)
 
 ## Source Files
 

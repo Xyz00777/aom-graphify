@@ -1,68 +1,65 @@
 # TaskDefinition
 
-> 203 nodes · cohesion 0.02
+> 158 nodes · cohesion 0.02
 
 ## Key Concepts
 
 - **TaskDefinition** (357 connections) — `src/ansible_aom/core/models.py`
-- **RoleGroupDefinition** (152 connections) — `src/ansible_aom/core/models.py`
-- **TestTaskDefinition** (24 connections) — `tests/unit/test_models.py`
-- **test_models.py** (18 connections) — `tests/unit/test_models.py`
-- **TestRoleGroupDefinition** (18 connections) — `tests/unit/test_models.py`
-- **TestMemoryBounds** (17 connections) — `tests/unit/test_models.py`
-- **TestTaskMatchingAlgorithm** (16 connections) — `tests/unit/test_event_processing.py`
-- **TestDefinitionVsStateSeparation** (15 connections) — `tests/unit/test_models.py`
-- **TestLinearForceCompletion** (15 connections) — `tests/unit/test_models.py`
-- **TestTaskMatching** (15 connections) — `tests/unit/test_models.py`
-- **TestRunnerTaskCompletionPromotion** (14 connections) — `tests/unit/test_models.py`
-- **test_tree_nested_roles.py** (14 connections) — `tests/unit/test_tree_nested_roles.py`
-- **HostRow** (13 connections) — `src/ansible_aom/core/tree_projection.py`
-- **TestFreeStrategyMetaTaskVisibility** (12 connections) — `tests/unit/test_models.py`
-- **_iter_leaf_task_defs()** (10 connections) — `src/ansible_aom/core/run_state.py`
-- **_play_def()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_mixed_consecutive_and_nested_roles()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_nested_role_renders_as_sub_branch()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_runtime_podman_prefix_does_not_duplicate_role_header()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
+- **PlayDefinition** (323 connections) — `src/ansible_aom/core/models.py`
+- **test_tree_projection.py** (28 connections) — `tests/unit/test_tree_projection.py`
+- **count_total_tasks()** (17 connections) — `src/ansible_aom/compact/format.py`
+- **TestCrossPlayLookupIsolation** (13 connections) — `tests/unit/test_tree_classify_and_role_labels.py`
+- **TestDynamicChildrenAsPendingInTree** (13 connections) — `tests/unit/test_tree_classify_and_role_labels.py`
+- **test_dynamic_counters.py** (12 connections) — `tests/unit/test_dynamic_counters.py`
+- **TestStickyFallbackTreeRender** (12 connections) — `tests/unit/test_tree_classify_and_role_labels.py`
+- **test_tree_classify_and_role_labels.py** (11 connections) — `tests/unit/test_tree_classify_and_role_labels.py`
 - **TestIncludeStubHiding** (10 connections) — `tests/unit/test_tree_projection.py`
-- **_fire_startup()** (9 connections) — `tests/unit/test_tree_nested_roles.py`
-- **_line_summary()** (9 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_regression_flat_role_tasks_unchanged()** (9 connections) — `tests/unit/test_tree_nested_roles.py`
+- **TestDynamicChildrenRoleTotalTasks** (9 connections) — `tests/unit/test_tree_classify_and_role_labels.py`
+- **TestDynamicChildrenTaskRole** (9 connections) — `tests/unit/test_tree_classify_and_role_labels.py`
+- **TestFailedTaskRemainsVisible** (9 connections) — `tests/unit/test_tree_classify_and_role_labels.py`
 - **TestTreeKindIncludesMore** (9 connections) — `tests/unit/test_tree_projection.py`
-- **.test_arbitrary_depth_renders_correctly()** (8 connections) — `tests/unit/test_tree_nested_roles.py`
-- *... and 178 more nodes in this community*
+- **TestTreeLineIdentity** (9 connections) — `tests/unit/test_tree_projection.py`
+- **_count_tasks()** (8 connections) — `src/ansible_aom/compact/format.py`
+- **test_total_tasks_seen_no_cache_falls_back_to_preflight_runtime_max()** (8 connections) — `tests/unit/test_dynamic_counters.py`
+- **TestTreeLinesAsyncTaskIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeLinesDelegatedTaskIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeLinesGroupedRoleNestedChildren** (8 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeLinesNestedChildIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeLinesPlayIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeLinesPreflightTaskIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeLinesSerialWindowIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeLinesTaskIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- *... and 133 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (105 shared connections)
-- [PlayDefinition](PlayDefinition.md) (104 shared connections)
-- [.from_run_state](from_run_state.md) (79 shared connections)
-- [RunState](RunState.md) (65 shared connections)
-- [WarningType](WarningType.md) (29 shared connections)
-- [TestCrossPlayLookupIsolation](TestCrossPlayLookupIsolation.md) (25 shared connections)
-- [TestUngroupedRoleTasksInTree](TestUngroupedRoleTasksInTree.md) (15 shared connections)
-- [TestRoleGrouping](TestRoleGrouping.md) (13 shared connections)
-- [IncludeCacheEntry](IncludeCacheEntry.md) (12 shared connections)
-- [WarningEntry](WarningEntry.md) (11 shared connections)
-- [json.py](json.py.md) (10 shared connections)
-- [TreeProjection](TreeProjection.md) (8 shared connections)
+- [RoleGroupDefinition](RoleGroupDefinition.md) (73 shared connections)
+- [RunState](RunState.md) (71 shared connections)
+- [.from_run_state](from_run_state.md) (69 shared connections)
+- [Status](Status.md) (46 shared connections)
+- [HostRunState](HostRunState.md) (39 shared connections)
+- [WarningEntry](WarningEntry.md) (39 shared connections)
+- [IncludeCacheEntry](IncludeCacheEntry.md) (37 shared connections)
+- [_play_start](_play_start.md) (36 shared connections)
+- [StreamPhase](StreamPhase.md) (31 shared connections)
+- [format_preflight_summary](format_preflight_summary.md) (17 shared connections)
+- [TreeProjection](TreeProjection.md) (17 shared connections)
+- [test_event_processing.py](test_event_processing.py.md) (17 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/compact/format.py`
-- `src/ansible_aom/core/includes.py`
 - `src/ansible_aom/core/models.py`
-- `src/ansible_aom/core/run_state.py`
-- `src/ansible_aom/core/tree_projection.py`
-- `tests/unit/test_event_processing.py`
+- `tests/unit/test_dynamic_counters.py`
 - `tests/unit/test_invariants_runstate_renderer.py`
 - `tests/unit/test_models.py`
-- `tests/unit/test_tree_nested_roles.py`
+- `tests/unit/test_tree_classify_and_role_labels.py`
 - `tests/unit/test_tree_projection.py`
 
 ## Audit Trail
 
-- EXTRACTED: 859 (65%)
-- INFERRED: 454 (35%)
+- EXTRACTED: 903 (68%)
+- INFERRED: 431 (32%)
 - AMBIGUOUS: 0 (0%)
 
 ---

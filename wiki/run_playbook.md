@@ -1,62 +1,63 @@
 # run_playbook
 
-> 58 nodes · cohesion 0.06
+> 36 nodes · cohesion 0.08
 
 ## Key Concepts
 
 - **run_playbook()** (85 connections) — `src/ansible_aom/ansible/runner.py`
-- **runner.py** (59 connections) — `src/ansible_aom/ansible/runner.py`
-- **_drive()** (25 connections) — `src/ansible_aom/ansible/runner.py`
-- **_SessionSink** (22 connections) — `src/ansible_aom/ansible/runner.py`
-- **_feed()** (19 connections) — `src/ansible_aom/ansible/runner.py`
-- **_NullSink** (18 connections) — `src/ansible_aom/ansible/runner.py`
-- **_flush_pending()** (11 connections) — `src/ansible_aom/ansible/runner.py`
-- **_fire_prompt()** (8 connections) — `src/ansible_aom/ansible/runner.py`
-- **spawn** (7 connections)
-- **_peek_unread()** (6 connections) — `src/ansible_aom/ansible/runner.py`
-- **._disable()** (6 connections) — `src/ansible_aom/ansible/runner.py`
-- **.record_stderr()** (6 connections) — `src/ansible_aom/ansible/runner.py`
-- **_callback_env()** (5 connections) — `src/ansible_aom/ansible/runner.py`
-- **_consume_unread()** (5 connections) — `src/ansible_aom/ansible/runner.py`
-- **Path** (5 connections)
-- **test_runner_session_meta.py** (5 connections) — `tests/unit/test_runner_session_meta.py`
-- **test_state_dir_isolation.py** (5 connections) — `tests/unit/test_state_dir_isolation.py`
-- **_bundled_callback_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **_bundled_connection_callback_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **_default_session_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **.record_event()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **test_sink_end_without_counts_still_works()** (4 connections) — `tests/unit/test_runner_session_meta.py`
+- **_fake_ansible_command()** (8 connections) — `tests/integration/test_runner.py`
+- **test_runner.py** (7 connections) — `tests/integration/test_runner.py`
+- **TestRunnerPreflight** (6 connections) — `tests/integration/test_runner.py`
+- **.test_record_false_does_not_touch_default_state_dir()** (5 connections) — `tests/integration/test_no_record.py`
+- **TestRunnerHappyPath** (5 connections) — `tests/integration/test_runner.py`
+- **integration/test_no_record.py** (4 connections) — `tests/integration/test_no_record.py`
+- **.test_record_false_writes_no_session_dir()** (4 connections) — `tests/integration/test_no_record.py`
+- **TestRunnerCommandNotFound** (4 connections) — `tests/integration/test_runner.py`
+- **TestRunnerFailureExit** (4 connections) — `tests/integration/test_runner.py`
+- **.test_run_playbook_calls_preflight_and_forwards_definitions()** (4 connections) — `tests/integration/test_runner.py`
+- **.test_run_playbook_forwards_every_preflight_error_to_add_warning()** (4 connections) — `tests/integration/test_runner.py`
 - **_build_command()** (3 connections) — `src/ansible_aom/ansible/runner.py`
-- **.end()** (3 connections) — `src/ansible_aom/ansible/runner.py`
-- **.__init__()** (3 connections) — `src/ansible_aom/ansible/runner.py`
-- *... and 33 more nodes in this community*
+- **record_tracemalloc_peak()** (3 connections) — `src/ansible_aom/core/diagnostics.py`
+- **test_runner_finishes_promptly_on_clean_eof()** (3 connections) — `tests/integration/test_no_eof_hang.py`
+- **_fake_ansible_command()** (3 connections) — `tests/integration/test_no_record.py`
+- **TestNoRecordIntegration** (3 connections) — `tests/integration/test_no_record.py`
+- **.test_run_playbook_marks_failed_on_nonzero_exit()** (3 connections) — `tests/integration/test_runner.py`
+- **.test_run_playbook_calls_renderer_start_and_completion()** (3 connections) — `tests/integration/test_runner.py`
+- **.test_run_playbook_forwards_jsonl_events_to_update_state()** (3 connections) — `tests/integration/test_runner.py`
+- **.test_run_playbook_forwards_preflight_errors_as_warnings()** (3 connections) — `tests/integration/test_runner.py`
+- **Path** (2 connections)
+- **.test_run_playbook_returns_127_when_command_missing()** (2 connections) — `tests/integration/test_runner.py`
+- **Return the (executable, args) pair to spawn.      Split out so tests can patch i** (1 connections) — `src/ansible_aom/ansible/runner.py`
+- **Run a playbook through the renderer; return the subprocess exit code.      The r** (1 connections) — `src/ansible_aom/ansible/runner.py`
+- *... and 11 more nodes in this community*
 
 ## Relationships
 
 - [Path](Path.md) (14 shared connections)
-- [diagnostics.py](diagnostics.py.md) (11 shared connections)
-- [CLI Main Entry Point](CLI_Main_Entry_Point.md) (10 shared connections)
-- [_drive](_drive.md) (10 shared connections)
-- [json.py](json.py.md) (9 shared connections)
-- [Renderer](Renderer.md) (9 shared connections)
+- [runner.py](runner.py.md) (12 shared connections)
 - [Status Color Mapping](Status_Color_Mapping.md) (8 shared connections)
-- [PtyStreamParser](PtyStreamParser.md) (7 shared connections)
-- [RunState](RunState.md) (7 shared connections)
-- [_fake_ansible_command](_fake_ansible_command.md) (7 shared connections)
-- [_get_psutil](_get_psutil.md) (4 shared connections)
-- [StreamPhase](StreamPhase.md) (4 shared connections)
+- [diagnostics.py](diagnostics.py.md) (5 shared connections)
+- [TaskDefinition](TaskDefinition.md) (5 shared connections)
+- [Task Tree Navigation](Task_Tree_Navigation.md) (4 shared connections)
+- [build_run_config_key](build_run_config_key.md) (3 shared connections)
+- [test_r6_encoding_roundtrip.py](test_r6_encoding_roundtrip.py.md) (3 shared connections)
+- [Host Collection Helpers](Host_Collection_Helpers.md) (3 shared connections)
+- [Renderer](Renderer.md) (2 shared connections)
+- [rerun/cli.py](rerun-cli.py.md) (2 shared connections)
+- [test_replay_determinism.py](test_replay_determinism.py.md) (2 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/ansible/runner.py`
 - `src/ansible_aom/core/diagnostics.py`
-- `tests/unit/test_runner_session_meta.py`
-- `tests/unit/test_state_dir_isolation.py`
+- `tests/integration/test_no_eof_hang.py`
+- `tests/integration/test_no_record.py`
+- `tests/integration/test_runner.py`
 
 ## Audit Trail
 
-- EXTRACTED: 301 (81%)
-- INFERRED: 70 (19%)
+- EXTRACTED: 117 (64%)
+- INFERRED: 67 (36%)
 - AMBIGUOUS: 0 (0%)
 
 ---

@@ -1,63 +1,62 @@
 # WarningType
 
-> 109 nodes · cohesion 0.03
+> 140 nodes · cohesion 0.02
 
 ## Key Concepts
 
 - **WarningType** (95 connections) — `src/ansible_aom/core/models.py`
-- **PreParseResult** (35 connections) — `src/ansible_aom/core/parser.py`
-- **parse_list_hosts_output()** (28 connections) — `src/ansible_aom/core/parser.py`
-- **test_parser.py** (24 connections) — `tests/unit/test_parser.py`
-- **TestListHostsEdgeCases** (23 connections) — `tests/unit/test_parser.py`
-- **TestListHostsParser** (20 connections) — `tests/unit/test_parser.py`
-- **TestMultiLineWarningContinuation** (18 connections) — `tests/unit/test_parser.py`
-- **TestPtyStreamParserJsonlEvents** (18 connections) — `tests/unit/test_parser.py`
-- **TestWarningDetectionThroughAnsiPrefix** (18 connections) — `tests/unit/test_parser.py`
-- **TestListHostsFallback** (17 connections) — `tests/unit/test_parser.py`
-- **TestListTasksListHostsIntegration** (16 connections) — `tests/unit/test_parser.py`
-- **TestParallelPreParse** (16 connections) — `tests/unit/test_parser.py`
-- **TestPtyStreamParserPlaintextCap** (16 connections) — `tests/unit/test_parser.py`
-- **TestStatusEnum** (16 connections) — `tests/unit/test_parser.py`
-- **.test_preparse_result_assembly()** (5 connections) — `tests/unit/test_parser.py`
-- **.test_list_hosts_all_inventory()** (4 connections) — `tests/unit/test_parser.py`
-- **.test_parse_play_line_pattern()** (4 connections) — `tests/unit/test_parser.py`
-- **.test_skip_non_host_lines()** (4 connections) — `tests/unit/test_parser.py`
-- **._feed_wrapped_warning()** (4 connections) — `tests/unit/test_parser.py`
-- **.test_concurrent_parse_combine_results()** (4 connections) — `tests/unit/test_parser.py`
-- **.test_parallel_parse_does_not_corrupt_data()** (4 connections) — `tests/unit/test_parser.py`
-- **.test_process_task_start_linear_strategy()** (4 connections) — `tests/unit/test_parser.py`
-- **.test_list_hosts_output_populates_resolved_hosts()** (3 connections) — `tests/unit/test_host_resolution.py`
-- **.test_warning_type_enum_has_two_values()** (3 connections) — `tests/unit/test_models.py`
-- **.test_list_hosts_dynamic_inventory_timeout()** (3 connections) — `tests/unit/test_parser.py`
-- *... and 84 more nodes in this community*
+- **models.py** (86 connections) — `src/ansible_aom/core/models.py`
+- **StatusBarConfig** (64 connections) — `src/ansible_aom/core/config.py`
+- **test_panels.py** (29 connections) — `tests/tui/test_panels.py`
+- **TestStatusBarElementConfiguration** (13 connections) — `tests/tui/test_panels.py`
+- **TestSummaryPanelHostsProgress** (13 connections) — `tests/tui/test_panels.py`
+- **TestSummaryPanelHostStatusBreakdown** (13 connections) — `tests/tui/test_panels.py`
+- **TestDebugPanelCommandEnvDisplay** (12 connections) — `tests/tui/test_panels.py`
+- **TestDebugPanelDataDisplay** (12 connections) — `tests/tui/test_panels.py`
+- **TestDebugPanelMemoryUsage** (12 connections) — `tests/tui/test_panels.py`
+- **TestDebugPanelSubprocessPid** (12 connections) — `tests/tui/test_panels.py`
+- **TestDebugPanelToggleKey** (12 connections) — `tests/tui/test_panels.py`
+- **TestLogPanelAnsiColorHandling** (12 connections) — `tests/tui/test_panels.py`
+- **TestPanelInteractions** (12 connections) — `tests/tui/test_panels.py`
+- **TestStatusBarYamlConfiguration** (12 connections) — `tests/tui/test_panels.py`
+- **TestSummaryPanelTasksProgress** (12 connections) — `tests/tui/test_panels.py`
+- **TestDebugPanelEventCount** (11 connections) — `tests/tui/test_panels.py`
+- **TestDebugPanelParsingErrors** (11 connections) — `tests/tui/test_panels.py`
+- **TestFilterPanelStateManagement** (11 connections) — `tests/tui/test_panels.py`
+- **TestLogPanelMaxLines** (10 connections) — `tests/tui/test_panels.py`
+- **test_runtime_role_task_count.py** (5 connections) — `tests/unit/test_runtime_role_task_count.py`
+- **Enum** (3 connections)
+- **.test_status_bar_updates_from_state()** (3 connections) — `tests/tui/test_panels.py`
+- **.test_status_bar_displays_configured_elements()** (3 connections) — `tests/tui/test_panels.py`
+- **.test_status_bar_elements_order_preserved()** (3 connections) — `tests/tui/test_panels.py`
+- *... and 115 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (44 shared connections)
-- [PtyStreamParser](PtyStreamParser.md) (39 shared connections)
-- [TaskDefinition](TaskDefinition.md) (29 shared connections)
-- [WarningEntry](WarningEntry.md) (25 shared connections)
-- [JsonLineStream](JsonLineStream.md) (20 shared connections)
-- [StreamPhase](StreamPhase.md) (16 shared connections)
-- [PlayDefinition](PlayDefinition.md) (11 shared connections)
-- [parse_list_tasks_output](parse_list_tasks_output.md) (10 shared connections)
-- [test_pty_stream.py](test_pty_stream.py.md) (5 shared connections)
-- [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (5 shared connections)
-- [RunState](RunState.md) (4 shared connections)
-- [TestPtyStreamParserPhases](TestPtyStreamParserPhases.md) (4 shared connections)
+- [HostRunState](HostRunState.md) (39 shared connections)
+- [WarningEntry](WarningEntry.md) (30 shared connections)
+- [PlayRunState](PlayRunState.md) (26 shared connections)
+- [Status](Status.md) (19 shared connections)
+- [StreamPhase](StreamPhase.md) (19 shared connections)
+- [TestFilterPanelHostFilter](TestFilterPanelHostFilter.md) (9 shared connections)
+- [Replay CLI Subcommand](Replay_CLI_Subcommand.md) (7 shared connections)
+- [TreeProjection](TreeProjection.md) (7 shared connections)
+- [Memory Bounds Constants](Memory_Bounds_Constants.md) (6 shared connections)
+- [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (6 shared connections)
+- [IncludeCacheEntry](IncludeCacheEntry.md) (5 shared connections)
+- [TaskDefinition](TaskDefinition.md) (5 shared connections)
 
 ## Source Files
 
+- `src/ansible_aom/core/config.py`
 - `src/ansible_aom/core/models.py`
-- `src/ansible_aom/core/parser.py`
-- `tests/unit/test_host_resolution.py`
-- `tests/unit/test_models.py`
-- `tests/unit/test_parser.py`
+- `tests/tui/test_panels.py`
+- `tests/unit/test_runtime_role_task_count.py`
 
 ## Audit Trail
 
-- EXTRACTED: 317 (58%)
-- INFERRED: 234 (42%)
+- EXTRACTED: 378 (59%)
+- INFERRED: 268 (41%)
 - AMBIGUOUS: 0 (0%)
 
 ---

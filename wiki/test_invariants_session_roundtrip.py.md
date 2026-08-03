@@ -1,6 +1,6 @@
 # test_invariants_session_roundtrip.py
 
-> 19 nodes · cohesion 0.14
+> 21 nodes · cohesion 0.13
 
 ## Key Concepts
 
@@ -9,6 +9,7 @@
 - **test_session_roundtrip_preserves_state_shape()** (7 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **event_sequences()** (6 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **_runstate_status_totals()** (5 connections) — `tests/integration/test_invariants_session_roundtrip.py`
+- **_shape()** (5 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **test_runstate_never_holds_orphan_hostrunstate()** (4 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **_tree_status_totals()** (4 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **_make_play_start()** (2 connections) — `tests/integration/test_invariants_session_roundtrip.py`
@@ -17,6 +18,7 @@
 - **TempPathFactory** (2 connections)
 - **DrawFn** (1 connections)
 - **Stateful invariants over the session persistence round-trip.  A single sequence** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
+- **Reduce a RunState to its persistence-invariant skeleton.      Plays → task_ids →** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **Aggregate ``StatusCounts`` across every task node in the tree.      ``build_task** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **Walk RunState the way the tree builder walks events.** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **Persist → load → replay yields the same structural state.** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
@@ -26,14 +28,16 @@
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (4 shared connections)
 - [_drive](_drive.md) (4 shared connections)
-- [load_session](load_session.md) (3 shared connections)
 - [StatusCounts](StatusCounts.md) (3 shared connections)
+- [JsonlEvent](JsonlEvent.md) (2 shared connections)
+- [RunState](RunState.md) (2 shared connections)
 - [SessionManager](SessionManager.md) (2 shared connections)
+- [load_session](load_session.md) (2 shared connections)
 - [inspect_model.py](inspect_model.py.md) (1 shared connections)
-- [json.py](json.py.md) (1 shared connections)
-- [RunState](RunState.md) (1 shared connections)
+- [WarningType](WarningType.md) (1 shared connections)
+- [Status](Status.md) (1 shared connections)
+- [HostRunState](HostRunState.md) (1 shared connections)
 
 ## Source Files
 
@@ -41,7 +45,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 66 (99%)
+- EXTRACTED: 72 (99%)
 - INFERRED: 1 (1%)
 - AMBIGUOUS: 0 (0%)
 

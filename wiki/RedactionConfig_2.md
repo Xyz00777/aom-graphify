@@ -1,53 +1,54 @@
 # RedactionConfig
 
-> 51 nodes · cohesion 0.05
+> 68 nodes · cohesion 0.04
 
 ## Key Concepts
 
-- **RedactionConfig** (47 connections)
-- **TestSanitizationAppliedFields** (8 connections) — `tests/unit/test_redaction.py`
-- **TestLayer1AnsibleNoLog** (7 connections) — `tests/unit/test_redaction.py`
-- **TestRedactionIntegration** (7 connections) — `tests/unit/test_redaction.py`
-- **TestInvocationModuleArgs** (6 connections) — `tests/unit/test_redaction.py`
-- **TestRedactionConfigModel** (6 connections) — `tests/unit/test_redaction.py`
-- **.test_deeply_nested_args()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_module_args_list_values()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_module_args_recursive_redaction()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_no_log_censors_result_field()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_no_log_loop_items_individually_censored()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_no_log_mixed_loop_items()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_no_log_replaces_entire_result()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_empty_event_handling()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_full_event_redaction()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_layer1_takes_precedence()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_non_dict_value_handling()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_all_fields_together()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_cmd_field_sanitized()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_msg_field_sanitized()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_stderr_field_sanitized()** (4 connections) — `tests/unit/test_redaction.py`
-- **.test_stdout_field_sanitized()** (4 connections) — `tests/unit/test_redaction.py`
-- **custom_config()** (3 connections) — `tests/unit/test_redaction.py`
-- **.test_config_with_values()** (3 connections) — `tests/unit/test_redaction.py`
-- **.test_default_config_has_empty_lists()** (3 connections) — `tests/unit/test_redaction.py`
-- *... and 26 more nodes in this community*
+- **RedactionConfig** (24 connections)
+- **sanitize_string()** (17 connections) — `src/ansible_aom/core/redaction.py`
+- **redaction.py** (14 connections) — `src/ansible_aom/core/redaction.py`
+- **should_redact()** (14 connections) — `src/ansible_aom/core/redaction.py`
+- **test_redaction_layer4.py** (12 connections) — `tests/unit/test_redaction_layer4.py`
+- **TestLayer2UserConfig** (8 connections) — `tests/unit/test_redaction_layer4.py`
+- **TestRecurseByKeyNotValue** (8 connections) — `tests/unit/test_redaction_layer4.py`
+- **TestLayer1ExactMatchKeys** (7 connections) — `tests/unit/test_redaction_layer4.py`
+- **TestWhitelistStillWorks** (7 connections) — `tests/unit/test_redaction_layer4.py`
+- **TestSanitizeStringLayer3Unchanged** (6 connections) — `tests/unit/test_redaction_layer4.py`
+- **TestInvocationsLayer4StaysConsistent** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_exact_match_does_not_catch_suffix_or_prefix()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_exact_match_is_case_insensitive_on_lookup()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_qc002_exact_match_keys_redacted()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_custom_fields_extends_exact_match()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_custom_key_patterns_invalid_regex_skipped()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_custom_key_patterns_matches_suffix()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_custom_key_patterns_matches_token_suffix()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_layer2_does_not_rediscover_exact_match_keys()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_dict_recursion_redacts_nested_exact_match_keys()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_list_recursion_redacts_dict_items()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_recursion_depth_bounded()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_secret_in_value_under_safe_key_not_redacted()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_value_substring_password_not_redacted()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- **.test_config_whitelist_extends_defaults()** (4 connections) — `tests/unit/test_redaction_layer4.py`
+- *... and 43 more nodes in this community*
 
 ## Relationships
 
-- [redact_event](redact_event.md) (15 shared connections)
-- [unit/test_redaction.py](unit-test_redaction.py.md) (12 shared connections)
-- [redact_dict](redact_dict.md) (11 shared connections)
-- [sanitize_string](sanitize_string.md) (7 shared connections)
-- [AppConfig](AppConfig.md) (5 shared connections)
-- [TestRedactionHelperFunctions](TestRedactionHelperFunctions.md) (4 shared connections)
+- [RedactionConfig](RedactionConfig.md) (17 shared connections)
+- [redact_event](redact_event.md) (16 shared connections)
+- [redact_dict](redact_dict.md) (6 shared connections)
+- [TestURLCredentialSanitization](TestURLCredentialSanitization.md) (3 shared connections)
+- [View Mode Selection](View_Mode_Selection.md) (1 shared connections)
 
 ## Source Files
 
-- `tests/unit/test_redaction.py`
+- `src/ansible_aom/core/redaction.py`
+- `tests/unit/test_properties_redaction.py`
+- `tests/unit/test_redaction_layer4.py`
 
 ## Audit Trail
 
-- EXTRACTED: 177 (97%)
-- INFERRED: 5 (3%)
+- EXTRACTED: 237 (98%)
+- INFERRED: 6 (2%)
 - AMBIGUOUS: 0 (0%)
 
 ---

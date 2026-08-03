@@ -27,7 +27,8 @@
 
 - [Display](Display.md) (6 shared connections)
 - [CompactRenderer](CompactRenderer.md) (4 shared connections)
-- [IO](IO.md) (2 shared connections)
+- [_row_count](_row_count.md) (1 shared connections)
+- [IO](IO.md) (1 shared connections)
 
 ## Source Files
 

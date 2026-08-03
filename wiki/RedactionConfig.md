@@ -1,56 +1,49 @@
 # RedactionConfig
 
-> 57 nodes · cohesion 0.05
+> 80 nodes · cohesion 0.04
 
 ## Key Concepts
 
-- **RedactionConfig** (24 connections)
-- **redaction.py** (14 connections) — `src/ansible_aom/core/redaction.py`
-- **should_redact()** (14 connections) — `src/ansible_aom/core/redaction.py`
-- **test_redaction_layer4.py** (12 connections) — `tests/unit/test_redaction_layer4.py`
-- **TestLayer2UserConfig** (8 connections) — `tests/unit/test_redaction_layer4.py`
-- **TestRecurseByKeyNotValue** (8 connections) — `tests/unit/test_redaction_layer4.py`
-- **TestLayer1ExactMatchKeys** (7 connections) — `tests/unit/test_redaction_layer4.py`
-- **TestWhitelistStillWorks** (7 connections) — `tests/unit/test_redaction_layer4.py`
-- **TestInvocationsLayer4StaysConsistent** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_exact_match_does_not_catch_suffix_or_prefix()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_exact_match_is_case_insensitive_on_lookup()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_qc002_exact_match_keys_redacted()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_custom_fields_extends_exact_match()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_custom_key_patterns_invalid_regex_skipped()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_custom_key_patterns_matches_suffix()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_custom_key_patterns_matches_token_suffix()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_layer2_does_not_rediscover_exact_match_keys()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_dict_recursion_redacts_nested_exact_match_keys()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_list_recursion_redacts_dict_items()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_recursion_depth_bounded()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_secret_in_value_under_safe_key_not_redacted()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_value_substring_password_not_redacted()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_config_whitelist_extends_defaults()** (4 connections) — `tests/unit/test_redaction_layer4.py`
-- **default_config()** (3 connections) — `tests/unit/test_redaction_layer4.py`
-- **.test_invocation_module_args_uses_layer1()** (3 connections) — `tests/unit/test_redaction_layer4.py`
-- *... and 32 more nodes in this community*
+- **RedactionConfig** (28 connections)
+- **_ansible_event_with_res()** (26 connections) — `tests/integration/test_redaction.py`
+- **integration/test_redaction.py** (16 connections) — `tests/integration/test_redaction.py`
+- **TestLayer3StringSanitizationOnEvents** (9 connections) — `tests/integration/test_redaction.py`
+- **TestLayer2PasswordFieldsOnEvents** (8 connections) — `tests/integration/test_redaction.py`
+- **TestCustomConfigOnRealisticEvents** (6 connections) — `tests/integration/test_redaction.py`
+- **TestLayer1NoLogOnFullEvent** (6 connections) — `tests/integration/test_redaction.py`
+- **TestLayer4InvocationModuleArgs** (6 connections) — `tests/integration/test_redaction.py`
+- **.test_custom_fields_redacted_on_event()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_custom_patterns_sanitize_strings_on_event()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_custom_whitelist_extends_default()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_entire_res_replaced_with_censored_marker()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_envelope_preserved_after_no_log_censorship()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_no_log_false_passes_through_to_other_layers()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_per_item_no_log_censors_only_marked_items()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_generic_secret_fields_redacted()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_known_ansible_password_fields_redacted()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_nested_passwords_in_realistic_dict_redacted()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_password_match_regex_field_redacted()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_whitelisted_pass_fields_not_redacted()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_all_sanitized_fields_together()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_cmd_field_url_credentials_stripped()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_cmd_list_each_entry_sanitized()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_msg_field_cli_credentials_stripped()** (5 connections) — `tests/integration/test_redaction.py`
+- **.test_stderr_field_cli_credentials_stripped()** (5 connections) — `tests/integration/test_redaction.py`
+- *... and 55 more nodes in this community*
 
 ## Relationships
 
-- [redact_event](redact_event.md) (13 shared connections)
-- [AppConfig](AppConfig.md) (8 shared connections)
-- [redact_dict](redact_dict.md) (5 shared connections)
-- [sanitize_string](sanitize_string.md) (5 shared connections)
-- [Summary Panel Widget](Summary_Panel_Widget.md) (1 shared connections)
-- [unit/test_redaction.py](unit-test_redaction.py.md) (1 shared connections)
-- [View Mode Selection](View_Mode_Selection.md) (1 shared connections)
-- [TestRedactionHelperFunctions](TestRedactionHelperFunctions.md) (1 shared connections)
+- [redact_event](redact_event.md) (25 shared connections)
+- [RedactionConfig](RedactionConfig.md) (11 shared connections)
 
 ## Source Files
 
-- `src/ansible_aom/core/redaction.py`
-- `tests/unit/test_redaction_layer4.py`
+- `tests/integration/test_redaction.py`
 
 ## Audit Trail
 
-- EXTRACTED: 196 (98%)
-- INFERRED: 5 (2%)
+- EXTRACTED: 285 (97%)
+- INFERRED: 9 (3%)
 - AMBIGUOUS: 0 (0%)
 
 ---

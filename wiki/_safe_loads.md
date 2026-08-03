@@ -34,10 +34,10 @@
 ## Relationships
 
 - [PtyStreamParser](PtyStreamParser.md) (10 shared connections)
-- [json.py](json.py.md) (5 shared connections)
-- [StreamPhase](StreamPhase.md) (2 shared connections)
+- [JsonlEvent](JsonlEvent.md) (5 shared connections)
+- [json.py](json.py.md) (2 shared connections)
 - [WarningEntry](WarningEntry.md) (2 shared connections)
-- [JsonLineStream](JsonLineStream.md) (1 shared connections)
+- [StreamPhase](StreamPhase.md) (1 shared connections)
 - [Prompt Detection Heuristics](Prompt_Detection_Heuristics.md) (1 shared connections)
 
 ## Source Files

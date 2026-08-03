@@ -28,9 +28,8 @@
 
 ## Relationships
 
+- [RedactionConfig](RedactionConfig.md) (2 shared connections)
 - [redact_event](redact_event.md) (2 shared connections)
-- [AppConfig](AppConfig.md) (1 shared connections)
-- [RedactionConfig](RedactionConfig.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 
 ## Source Files

@@ -33,9 +33,8 @@
 
 ## Relationships
 
-- [TestConfigPathFlag](TestConfigPathFlag.md) (1 shared connections)
-- [ansible_aom/cli.py](ansible_aom-cli.py.md) (1 shared connections)
-- [load_session](load_session.md) (1 shared connections)
+- [ansible_aom/cli.py](ansible_aom-cli.py.md) (2 shared connections)
+- [create_parser](create_parser.md) (1 shared connections)
 
 ## Source Files
 

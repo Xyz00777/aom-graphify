@@ -1,6 +1,6 @@
 # TestRuntimeRoleTaskCount
 
-> 17 nodes · cohesion 0.15
+> 15 nodes · cohesion 0.17
 
 ## Key Concepts
 
@@ -8,12 +8,10 @@
 - **._state_with_dynamic_role()** (7 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **.test_no_double_counting_preflight_and_runtime()** (7 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **.test_task_name_with_colon_not_misidentified_as_role()** (6 connections) — `tests/unit/test_runtime_role_task_count.py`
-- **test_runtime_role_task_count.py** (5 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **_td()** (5 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **.test_dynamic_role_with_no_preflight_shows_runtime_count()** (5 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **.test_dynamic_role_shows_task_count_in_label()** (4 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **.test_dynamic_role_task_appears_under_role_header()** (4 connections) — `tests/unit/test_runtime_role_task_count.py`
-- **Regression tests for role_total_tasks counting runtime-only tasks.  When a role** (1 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **A role loaded via include_role must show its runtime task count         in the r** (1 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **Runtime podman tasks should appear as children of the podman         role header** (1 connections) — `tests/unit/test_runtime_role_task_count.py`
 - **When a role has tasks in BOTH preflight and runtime (same task         resolved** (1 connections) — `tests/unit/test_runtime_role_task_count.py`
@@ -24,12 +22,12 @@
 
 ## Relationships
 
-- [PlayDefinition](PlayDefinition.md) (5 shared connections)
+- [TaskDefinition](TaskDefinition.md) (7 shared connections)
 - [.from_run_state](from_run_state.md) (5 shared connections)
-- [TaskDefinition](TaskDefinition.md) (4 shared connections)
 - [RunState](RunState.md) (4 shared connections)
-- [HostRunState](HostRunState.md) (2 shared connections)
-- [tree.py](tree.py.md) (1 shared connections)
+- [WarningType](WarningType.md) (2 shared connections)
+- [RoleGroupDefinition](RoleGroupDefinition.md) (2 shared connections)
+- [Status](Status.md) (1 shared connections)
 
 ## Source Files
 
@@ -37,8 +35,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 59 (94%)
-- INFERRED: 4 (6%)
+- EXTRACTED: 53 (93%)
+- INFERRED: 4 (7%)
 - AMBIGUOUS: 0 (0%)
 
 ---

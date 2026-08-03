@@ -33,9 +33,8 @@
 
 ## Relationships
 
-- [format_status_bar](format_status_bar.md) (8 shared connections)
-- [_BoundedSet](_BoundedSet.md) (2 shared connections)
-- [renderer.py](renderer.py.md) (1 shared connections)
+- [format.py](format.py.md) (8 shared connections)
+- [renderer.py](renderer.py.md) (3 shared connections)
 - [CompactRenderer](CompactRenderer.md) (1 shared connections)
 
 ## Source Files

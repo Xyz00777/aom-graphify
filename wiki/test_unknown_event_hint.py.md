@@ -17,7 +17,7 @@
 
 - [CompactRenderer](CompactRenderer.md) (3 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
-- [json.py](json.py.md) (1 shared connections)
+- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 - [RunState](RunState.md) (1 shared connections)
 
 ## Source Files
