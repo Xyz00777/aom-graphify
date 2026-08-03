@@ -1,0 +1,6 @@
+# Regenerable runtime noise — keep the graph repo clean.
+cache/
+manifest.json
+.graphify_root
+.graphify_labels.json.sig
+20??-??-??/
