@@ -23,7 +23,8 @@
 
 ## Relationships
 
-- [RunState](RunState.md) (9 shared connections)
+- [HostRunState](HostRunState.md) (7 shared connections)
+- [RunState](RunState.md) (2 shared connections)
 
 ## Source Files
 

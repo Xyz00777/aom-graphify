@@ -35,7 +35,8 @@
 
 - [Path](Path.md) (15 shared connections)
 - [IncludeCacheEntry](IncludeCacheEntry.md) (15 shared connections)
-- [TaskDefinition](TaskDefinition.md) (8 shared connections)
+- [TaskDefinition](TaskDefinition.md) (6 shared connections)
+- [PlayDefinition](PlayDefinition.md) (2 shared connections)
 - [RoleCacheEntry](RoleCacheEntry.md) (1 shared connections)
 
 ## Source Files

@@ -26,10 +26,11 @@
 ## Relationships
 
 - [HostRunState](HostRunState.md) (4 shared connections)
-- [TaskDefinition](TaskDefinition.md) (2 shared connections)
 - [Display](Display.md) (1 shared connections)
 - [CompactRenderer](CompactRenderer.md) (1 shared connections)
 - [Status](Status.md) (1 shared connections)
+- [TaskDefinition](TaskDefinition.md) (1 shared connections)
+- [PlayDefinition](PlayDefinition.md) (1 shared connections)
 
 ## Source Files
 

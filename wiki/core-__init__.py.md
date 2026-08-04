@@ -15,10 +15,10 @@
 
 ## Relationships
 
-- [run_playbook](run_playbook.md) (1 shared connections)
+- [runner.py](runner.py.md) (1 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
 - [load_session](load_session.md) (1 shared connections)
-- [test_renderer_stats.py](test_renderer_stats.py.md) (1 shared connections)
+- [CompactRenderer](CompactRenderer.md) (1 shared connections)
 - [RunDiagnostics](RunDiagnostics.md) (1 shared connections)
 - [test_diagnostics.py](test_diagnostics.py.md) (1 shared connections)
 - [Secret Redaction Layers](Secret_Redaction_Layers.md) (1 shared connections)

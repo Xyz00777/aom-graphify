@@ -23,8 +23,9 @@
 
 ## Relationships
 
-- [RunState](RunState.md) (8 shared connections)
+- [HostRunState](HostRunState.md) (6 shared connections)
 - [JsonlEvent](JsonlEvent.md) (2 shared connections)
+- [RunState](RunState.md) (2 shared connections)
 - [run_state.py](run_state.py.md) (1 shared connections)
 - [load_session](load_session.md) (1 shared connections)
 

@@ -16,9 +16,10 @@
 
 - [HostRunState](HostRunState.md) (4 shared connections)
 - [CompactRenderer](CompactRenderer.md) (2 shared connections)
-- [TaskDefinition](TaskDefinition.md) (2 shared connections)
 - [Display](Display.md) (1 shared connections)
 - [Status](Status.md) (1 shared connections)
+- [TaskDefinition](TaskDefinition.md) (1 shared connections)
+- [PlayDefinition](PlayDefinition.md) (1 shared connections)
 - [format_host_rows](format_host_rows.md) (1 shared connections)
 
 ## Source Files

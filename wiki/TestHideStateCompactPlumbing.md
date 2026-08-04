@@ -33,11 +33,12 @@
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (11 shared connections)
+- [HostRunState](HostRunState.md) (10 shared connections)
 - [CompactRenderer](CompactRenderer.md) (2 shared connections)
 - [Status](Status.md) (2 shared connections)
 - [RunState](RunState.md) (2 shared connections)
 - [JsonRenderer](JsonRenderer.md) (2 shared connections)
+- [TestCoreModuleStructure](TestCoreModuleStructure.md) (1 shared connections)
 
 ## Source Files
 

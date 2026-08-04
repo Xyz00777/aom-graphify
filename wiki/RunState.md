@@ -1,6 +1,6 @@
 # RunState
 
-> 291 nodes · cohesion 0.01
+> 292 nodes · cohesion 0.01
 
 ## Key Concepts
 
@@ -10,10 +10,7 @@
 - **TestRunStateUnknownEvent** (19 connections) — `tests/unit/test_parser.py`
 - **TestHandleEventDispatcher** (17 connections) — `tests/unit/test_event_processing.py`
 - **datetime** (15 connections)
-- **TestElapsedTimeFormat** (15 connections) — `tests/unit/test_event_processing.py`
-- **TestHandleEventMalformedPayloads** (15 connections) — `tests/unit/test_event_processing.py`
 - **._handle_v2_playbook_on_task_start()** (14 connections) — `src/ansible_aom/core/run_state.py`
-- **TestTimestampLocalTimezone** (14 connections) — `tests/unit/test_event_processing.py`
 - **._handle_v2_runner_on_start()** (13 connections) — `src/ansible_aom/core/run_state.py`
 - **._task_dict()** (13 connections) — `src/ansible_aom/core/run_state.py`
 - **TestPlaybookOnStats** (13 connections) — `tests/unit/test_event_processing.py`
@@ -29,22 +26,25 @@
 - **TestHandleEventTimestampParsing** (11 connections) — `tests/unit/test_event_processing.py`
 - **TestHandleEventUnknownType** (11 connections) — `tests/unit/test_event_processing.py`
 - **TestHandlerTaskStart** (11 connections) — `tests/unit/test_event_processing.py`
-- *... and 266 more nodes in this community*
+- **TestPlaybookOnStart** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestPlayStart** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnFailed** (11 connections) — `tests/unit/test_event_processing.py`
+- *... and 267 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (178 shared connections)
-- [TaskDefinition](TaskDefinition.md) (90 shared connections)
-- [.from_run_state](from_run_state.md) (51 shared connections)
-- [Status](Status.md) (42 shared connections)
+- [HostRunState](HostRunState.md) (156 shared connections)
+- [PlayDefinition](PlayDefinition.md) (76 shared connections)
+- [TaskDefinition](TaskDefinition.md) (63 shared connections)
+- [Status](Status.md) (43 shared connections)
 - [_play_start](_play_start.md) (29 shared connections)
-- [test_playbook_parser.py](test_playbook_parser.py.md) (23 shared connections)
+- [test_playbook_parser.py](test_playbook_parser.py.md) (22 shared connections)
 - [JsonlEvent](JsonlEvent.md) (19 shared connections)
-- [RoleGroupDefinition](RoleGroupDefinition.md) (17 shared connections)
 - [_drive](_drive.md) (17 shared connections)
 - [Inspect CLI Commands](Inspect_CLI_Commands.md) (16 shared connections)
 - [run_state.py](run_state.py.md) (13 shared connections)
-- [Path](Path.md) (12 shared connections)
+- [TreeProjection](TreeProjection.md) (11 shared connections)
+- [test_run_state_memory_bounds.py](test_run_state_memory_bounds.py.md) (10 shared connections)
 
 ## Source Files
 
@@ -52,15 +52,14 @@
 - `tests/integration/test_invariants_session_roundtrip.py`
 - `tests/unit/test_event_processing.py`
 - `tests/unit/test_host_resolution.py`
-- `tests/unit/test_loop_item_count.py`
 - `tests/unit/test_models.py`
 - `tests/unit/test_parser.py`
 - `tests/unit/test_properties_state.py`
 
 ## Audit Trail
 
-- EXTRACTED: 1175 (72%)
-- INFERRED: 455 (28%)
+- EXTRACTED: 1162 (73%)
+- INFERRED: 439 (27%)
 - AMBIGUOUS: 0 (0%)
 
 ---

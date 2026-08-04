@@ -35,7 +35,7 @@
 
 - [rerun/cli.py](rerun-cli.py.md) (4 shared connections)
 - [_compose_host_set](_compose_host_set.md) (3 shared connections)
-- [SessionManager](SessionManager.md) (2 shared connections)
+- [Path](Path.md) (2 shared connections)
 
 ## Source Files
 

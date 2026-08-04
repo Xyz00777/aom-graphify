@@ -1,6 +1,6 @@
 # test_replay_determinism.py
 
-> 28 nodes · cohesion 0.14
+> 34 nodes · cohesion 0.11
 
 ## Key Concepts
 
@@ -18,29 +18,30 @@
 - **_utils.py** (5 connections) — `tests/_utils.py`
 - **normalize_render_output()** (5 connections) — `tests/_utils.py`
 - **_fake_ansible_command()** (4 connections) — `tests/integration/test_replay_determinism.py`
+- **test_tree_replay_keeps_run_once_rows_separate_across_serial_windows()** (4 connections) — `tests/integration/test_replay_determinism.py`
+- **test_tree_replay_keeps_same_name_task_rows_separate_across_frames()** (4 connections) — `tests/integration/test_replay_determinism.py`
 - **normalize_json_summary()** (4 connections) — `tests/_utils.py`
+- **_events_same_name_concurrent_tasks_repro()** (2 connections) — `tests/integration/test_replay_determinism.py`
+- **_events_serial_run_once_repro()** (2 connections) — `tests/integration/test_replay_determinism.py`
 - **_events_multi_host_mixed()** (1 connections) — `tests/integration/test_replay_determinism.py`
 - **_events_single_ok()** (1 connections) — `tests/integration/test_replay_determinism.py`
 - **_events_with_failure()** (1 connections) — `tests/integration/test_replay_determinism.py`
 - **Build a (cmd, args) pair that emits ``events`` as JSONL then exits.** (1 connections) — `tests/integration/test_replay_determinism.py`
 - **Preflight result that contributes nothing — mirrors a fake shim where     ``--li** (1 connections) — `tests/integration/test_replay_determinism.py`
 - **Run the compact renderer live; return (session_id, captured_stdout).** (1 connections) — `tests/integration/test_replay_determinism.py`
-- **Replay through a fresh CompactRenderer; return captured stdout.** (1 connections) — `tests/integration/test_replay_determinism.py`
-- **Live compact stdout, normalised, must equal replayed compact stdout.** (1 connections) — `tests/integration/test_replay_determinism.py`
-- **Replaying the same session twice produces byte-identical output.** (1 connections) — `tests/integration/test_replay_determinism.py`
-- **Live JSON summary, normalised, must equal replayed JSON summary.      Only the r** (1 connections) — `tests/integration/test_replay_determinism.py`
-- *... and 3 more nodes in this community*
+- *... and 9 more nodes in this community*
 
 ## Relationships
 
 - [event_types.py](event_types.py.md) (5 shared connections)
-- [sessions/conftest.py](sessions-conftest.py.md) (4 shared connections)
-- [run_playbook](run_playbook.md) (3 shared connections)
 - [json.py](json.py.md) (2 shared connections)
+- [sessions/conftest.py](sessions-conftest.py.md) (2 shared connections)
+- [run_playbook](run_playbook.md) (2 shared connections)
 - [CompactRenderer](CompactRenderer.md) (2 shared connections)
 - [JsonRenderer](JsonRenderer.md) (2 shared connections)
 - [Hide State Normalization](Hide_State_Normalization.md) (2 shared connections)
 - [IncludeCacheEntry](IncludeCacheEntry.md) (1 shared connections)
+- [runner.py](runner.py.md) (1 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
 - [drivers/replay.py](drivers-replay.py.md) (1 shared connections)
 - [Status](Status.md) (1 shared connections)
@@ -52,7 +53,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 132 (100%)
+- EXTRACTED: 146 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

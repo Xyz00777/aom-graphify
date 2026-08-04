@@ -16,7 +16,7 @@
 
 ## Relationships
 
-- [Status](Status.md) (3 shared connections)
+- [JsonLineStream](JsonLineStream.md) (3 shared connections)
 - [StreamPhase](StreamPhase.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 

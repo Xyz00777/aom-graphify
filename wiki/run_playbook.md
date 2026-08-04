@@ -1,61 +1,62 @@
 # run_playbook
 
-> 59 nodes · cohesion 0.06
+> 74 nodes · cohesion 0.05
 
 ## Key Concepts
 
 - **run_playbook()** (85 connections) — `src/ansible_aom/ansible/runner.py`
-- **runner.py** (59 connections) — `src/ansible_aom/ansible/runner.py`
-- **_handle_timeout_branch()** (28 connections) — `src/ansible_aom/ansible/runner.py`
-- **_drive()** (25 connections) — `src/ansible_aom/ansible/runner.py`
-- **_SessionSink** (22 connections) — `src/ansible_aom/ansible/runner.py`
-- **_feed()** (19 connections) — `src/ansible_aom/ansible/runner.py`
-- **_NullSink** (18 connections) — `src/ansible_aom/ansible/runner.py`
-- **_flush_pending()** (11 connections) — `src/ansible_aom/ansible/runner.py`
-- **_fire_prompt()** (8 connections) — `src/ansible_aom/ansible/runner.py`
-- **spawn** (7 connections)
-- **_peek_unread()** (6 connections) — `src/ansible_aom/ansible/runner.py`
-- **._disable()** (6 connections) — `src/ansible_aom/ansible/runner.py`
-- **.record_stderr()** (6 connections) — `src/ansible_aom/ansible/runner.py`
-- **_callback_env()** (5 connections) — `src/ansible_aom/ansible/runner.py`
-- **_consume_unread()** (5 connections) — `src/ansible_aom/ansible/runner.py`
-- **Path** (5 connections)
-- **test_runner_session_meta.py** (5 connections) — `tests/unit/test_runner_session_meta.py`
-- **test_state_dir_isolation.py** (5 connections) — `tests/unit/test_state_dir_isolation.py`
-- **_bundled_callback_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **_bundled_connection_callback_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **_default_session_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **.record_event()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- **test_sink_end_without_counts_still_works()** (4 connections) — `tests/unit/test_runner_session_meta.py`
-- **_build_command()** (3 connections) — `src/ansible_aom/ansible/runner.py`
-- **.end()** (3 connections) — `src/ansible_aom/ansible/runner.py`
-- *... and 34 more nodes in this community*
+- **Path** (17 connections)
+- **test_runner_interactive_prompts.py** (11 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **_fake_pause_prompt_command()** (10 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **_fake_ansible_command()** (8 connections) — `tests/integration/test_runner.py`
+- **test_runner.py** (7 connections) — `tests/integration/test_runner.py`
+- **TestRunnerPreflight** (6 connections) — `tests/integration/test_runner.py`
+- **TestNewlineTerminatedPromptPath** (5 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **._fake_newline_terminated_prompt()** (5 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_pause_prompt_answer_forwarded_to_child()** (5 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_custom_pause_prompt_without_press_enter_phrasing()** (5 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_default_bracketed_format_is_caught()** (5 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_question_mark_prompt_is_caught()** (5 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **TestRunnerHappyPath** (5 connections) — `tests/integration/test_runner.py`
+- **.test_yes_no_prompt_triggers_handler()** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **TestKeyboardInterruptDuringPromptAborts** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **._fake_pause_with_capture()** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_ctrl_c_at_prompt_returns_130_not_zero()** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **TestMultilineBlockPromptColonOnOwnLine** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_colon_on_own_line_block_round_trip()** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_newline_terminated_vars_prompt_round_trip()** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_real_ansible_pause_newline_terminated_round_trip()** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **TestNoPromptNoSpuriousInteractiveCall** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **TestPausePromptDetected** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- **.test_pause_prompt_triggers_handle_interactive_prompt()** (4 connections) — `tests/integration/test_runner_interactive_prompts.py`
+- *... and 49 more nodes in this community*
 
 ## Relationships
 
-- [_FakeSink](_FakeSink.md) (21 shared connections)
-- [Path](Path.md) (14 shared connections)
-- [Renderer](Renderer.md) (10 shared connections)
-- [_drive](_drive.md) (10 shared connections)
+- [runner.py](runner.py.md) (13 shared connections)
 - [Status Color Mapping](Status_Color_Mapping.md) (8 shared connections)
-- [PtyStreamParser](PtyStreamParser.md) (7 shared connections)
-- [RunState](RunState.md) (7 shared connections)
-- [_fake_ansible_command](_fake_ansible_command.md) (7 shared connections)
-- [diagnostics.py](diagnostics.py.md) (6 shared connections)
-- [build_run_config_key](build_run_config_key.md) (6 shared connections)
-- [RunDiagnostics](RunDiagnostics.md) (6 shared connections)
-- [JsonlEvent](JsonlEvent.md) (5 shared connections)
+- [_FakeSpawn](_FakeSpawn.md) (5 shared connections)
+- [PlayDefinition](PlayDefinition.md) (5 shared connections)
+- [Task Tree Navigation](Task_Tree_Navigation.md) (4 shared connections)
+- [RunDiagnostics](RunDiagnostics.md) (3 shared connections)
+- [build_run_config_key](build_run_config_key.md) (3 shared connections)
+- [test_r6_encoding_roundtrip.py](test_r6_encoding_roundtrip.py.md) (3 shared connections)
+- [FakeRenderer](FakeRenderer.md) (2 shared connections)
+- [.test_record_false_does_not_touch_default_state_dir](test_record_false_does_not_touch_default_state_dir.md) (2 shared connections)
+- [test_replay_determinism.py](test_replay_determinism.py.md) (2 shared connections)
+- [Diagnostics CLI Wiring](Diagnostics_CLI_Wiring.md) (2 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/ansible/runner.py`
-- `tests/unit/test_runner_session_meta.py`
-- `tests/unit/test_state_dir_isolation.py`
+- `src/ansible_aom/core/diagnostics.py`
+- `tests/integration/test_runner.py`
+- `tests/integration/test_runner_interactive_prompts.py`
 
 ## Audit Trail
 
-- EXTRACTED: 327 (82%)
-- INFERRED: 70 (18%)
+- EXTRACTED: 241 (75%)
+- INFERRED: 80 (25%)
 - AMBIGUOUS: 0 (0%)
 
 ---

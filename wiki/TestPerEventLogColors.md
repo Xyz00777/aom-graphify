@@ -33,13 +33,13 @@
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (10 shared connections)
+- [HostRunState](HostRunState.md) (9 shared connections)
 - [CompactRenderer](CompactRenderer.md) (6 shared connections)
 - [Status](Status.md) (4 shared connections)
-- [renderer.py](renderer.py.md) (2 shared connections)
+- [renderer.py](renderer.py.md) (3 shared connections)
 - [format.py](format.py.md) (1 shared connections)
-- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 - [IO](IO.md) (1 shared connections)
+- [format_failure_recap](format_failure_recap.md) (1 shared connections)
 - [format_host_summary](format_host_summary.md) (1 shared connections)
 - [format_status_bar](format_status_bar.md) (1 shared connections)
 

@@ -1,6 +1,6 @@
 # _drive
 
-> 56 nodes · cohesion 0.05
+> 54 nodes · cohesion 0.06
 
 ## Key Concepts
 
@@ -26,22 +26,21 @@
 - **TestPreStatsSilenceUnchanged** (5 connections) — `tests/unit/test_runner_eof_watchdog.py`
 - **TestWatchdogUsesBoundedTimeout** (5 connections) — `tests/unit/test_runner_eof_watchdog.py`
 - **_build_parser_in_post_run_recap()** (5 connections) — `tests/unit/test_runner_isalive_in_loop.py`
-- **test_runstate_never_holds_orphan_hostrunstate()** (4 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **.test_watchdog_is_at_least_five_seconds()** (2 connections) — `tests/unit/test_runner_eof_watchdog.py`
 - **.expect()** (2 connections) — `tests/unit/test_runner_isalive_in_loop.py`
-- *... and 31 more nodes in this community*
+- **.end()** (1 connections) — `tests/unit/test_runner_eof_watchdog.py`
+- *... and 29 more nodes in this community*
 
 ## Relationships
 
 - [RunState](RunState.md) (17 shared connections)
 - [PtyStreamParser](PtyStreamParser.md) (14 shared connections)
-- [run_playbook](run_playbook.md) (10 shared connections)
+- [runner.py](runner.py.md) (10 shared connections)
 - [test_invariants_session_roundtrip.py](test_invariants_session_roundtrip.py.md) (4 shared connections)
 - [StreamPhase](StreamPhase.md) (3 shared connections)
 - [run_state.py](run_state.py.md) (2 shared connections)
 - [Runner Heartbeat Wiring](Runner_Heartbeat_Wiring.md) (1 shared connections)
 - [Stale Running Cleanup](Stale_Running_Cleanup.md) (1 shared connections)
-- [HostRunState](HostRunState.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 
 ## Source Files
@@ -52,8 +51,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 186 (84%)
-- INFERRED: 36 (16%)
+- EXTRACTED: 182 (84%)
+- INFERRED: 35 (16%)
 - AMBIGUOUS: 0 (0%)
 
 ---

@@ -30,7 +30,7 @@
 
 ## Relationships
 
-- [_FakeSink](_FakeSink.md) (1 shared connections)
+- [_handle_timeout_branch](_handle_timeout_branch.md) (1 shared connections)
 
 ## Source Files
 

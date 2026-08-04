@@ -1,12 +1,11 @@
 # merge_limit_args
 
-> 20 nodes · cohesion 0.17
+> 18 nodes · cohesion 0.20
 
 ## Key Concepts
 
 - **merge_limit_args()** (18 connections) — `src/ansible_aom/cli.py`
 - **TestMergeLimitArgs** (16 connections) — `tests/unit/test_cli_limit_merge.py`
-- **test_cli_limit_merge.py** (3 connections) — `tests/unit/test_cli_limit_merge.py`
 - **.test_comma_value_combined_with_single_value()** (2 connections) — `tests/unit/test_cli_limit_merge.py`
 - **.test_does_not_dedupe_intentionally()** (2 connections) — `tests/unit/test_cli_limit_merge.py`
 - **.test_equals_form_merged()** (2 connections) — `tests/unit/test_cli_limit_merge.py`
@@ -23,7 +22,6 @@
 - **.test_two_long_flags_merged()** (2 connections) — `tests/unit/test_cli_limit_merge.py`
 - **.test_two_short_flags_merged()** (2 connections) — `tests/unit/test_cli_limit_merge.py`
 - **Collapse repeated ``-l`` / ``--limit`` flags into a single comma-joined one.** (1 connections) — `src/ansible_aom/cli.py`
-- **Tests for merging repeated ``-l`` / ``--limit`` flags.  ansible-playbook stores** (1 connections) — `tests/unit/test_cli_limit_merge.py`
 
 ## Relationships
 
@@ -36,7 +34,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 69 (100%)
+- EXTRACTED: 65 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

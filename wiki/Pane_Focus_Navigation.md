@@ -33,9 +33,10 @@
 ## Relationships
 
 - [RunState](RunState.md) (5 shared connections)
-- [TaskDefinition](TaskDefinition.md) (4 shared connections)
 - [HostRunState](HostRunState.md) (3 shared connections)
 - [Status](Status.md) (2 shared connections)
+- [TaskDefinition](TaskDefinition.md) (2 shared connections)
+- [PlayDefinition](PlayDefinition.md) (2 shared connections)
 
 ## Source Files
 

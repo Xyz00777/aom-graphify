@@ -33,7 +33,7 @@
 
 ## Relationships
 
-- [Status](Status.md) (6 shared connections)
+- [JsonLineStream](JsonLineStream.md) (6 shared connections)
 - [format.py](format.py.md) (4 shared connections)
 - [run_playbook](run_playbook.md) (3 shared connections)
 - [json.py](json.py.md) (1 shared connections)

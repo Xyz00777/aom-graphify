@@ -1,13 +1,17 @@
 # PtyStreamParser
 
-> 145 nodes · cohesion 0.02
+> 143 nodes · cohesion 0.02
 
 ## Key Concepts
 
 - **PtyStreamParser** (338 connections) — `src/ansible_aom/core/parser.py`
 - **TestPasswordPromptPatterns** (17 connections) — `tests/unit/test_pty_stream.py`
 - **TestPtyStreamParserLatestOutputIsPlaintext** (15 connections) — `tests/unit/test_parser.py`
-- **TestPasswordPromptHandling** (10 connections) — `tests/unit/test_pty_stream.py`
+- **TestGracefulDegradationJSONLParseFailure** (5 connections) — `tests/integration/test_error_handling.py`
+- **TestPasswordTimeoutMechanisn** (4 connections) — `tests/integration/test_error_handling.py`
+- **.test_malformed_jsonl_does_not_crash()** (3 connections) — `tests/integration/test_error_handling.py`
+- **.test_valid_json_following_malformed_still_parsed()** (3 connections) — `tests/integration/test_error_handling.py`
+- **.test_password_prompt_detected_patterns()** (3 connections) — `tests/integration/test_error_handling.py`
 - **.test_process_play_start_creates_play_state()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_process_playbook_start_sets_start_time()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_process_runner_start_free_strategy()** (3 connections) — `tests/unit/test_parser.py`
@@ -25,19 +29,14 @@
 - **.test_ansi_stripped_before_classification()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_connection_acquire_adds_to_active()** (3 connections) — `tests/unit/test_parser.py`
 - **.test_connection_acquire_different_hosts()** (3 connections) — `tests/unit/test_parser.py`
-- **.test_connection_acquire_multiple_for_same_host()** (3 connections) — `tests/unit/test_parser.py`
-- **.test_connection_release_removes_from_active()** (3 connections) — `tests/unit/test_parser.py`
-- **.test_connection_release_unknown_conn_id_noop()** (3 connections) — `tests/unit/test_parser.py`
-- **.test_deprecation_does_not_emit_stderr_line()** (3 connections) — `tests/unit/test_parser.py`
-- *... and 120 more nodes in this community*
+- *... and 118 more nodes in this community*
 
 ## Relationships
 
-- [Status](Status.md) (71 shared connections)
-- [test_playbook_parser.py](test_playbook_parser.py.md) (23 shared connections)
+- [Status](Status.md) (66 shared connections)
 - [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (23 shared connections)
-- [StreamPhase](StreamPhase.md) (20 shared connections)
-- [test_error_handling.py](test_error_handling.py.md) (16 shared connections)
+- [test_playbook_parser.py](test_playbook_parser.py.md) (22 shared connections)
+- [StreamPhase](StreamPhase.md) (17 shared connections)
 - [_drive](_drive.md) (14 shared connections)
 - [TestEdgeCases](TestEdgeCases.md) (11 shared connections)
 - [_safe_loads](_safe_loads.md) (10 shared connections)
@@ -45,17 +44,19 @@
 - [TestConftestFixtures](TestConftestFixtures.md) (9 shared connections)
 - [TestPtyStreamParserPhaseTransitions](TestPtyStreamParserPhaseTransitions.md) (9 shared connections)
 - [TestWarningPatternDetection](TestWarningPatternDetection.md) (9 shared connections)
+- [TestPasswordPromptHandling](TestPasswordPromptHandling.md) (8 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/core/parser.py`
+- `tests/integration/test_error_handling.py`
 - `tests/unit/test_parser.py`
 - `tests/unit/test_pty_stream.py`
 
 ## Audit Trail
 
-- EXTRACTED: 519 (80%)
-- INFERRED: 132 (20%)
+- EXTRACTED: 509 (79%)
+- INFERRED: 134 (21%)
 - AMBIGUOUS: 0 (0%)
 
 ---

@@ -1,19 +1,12 @@
 # JsonRenderer
 
-> 87 nodes · cohesion 0.03
+> 62 nodes · cohesion 0.04
 
 ## Key Concepts
 
 - **JsonRenderer** (76 connections) — `src/ansible_aom/formats/json.py`
 - **test_json_renderer.py** (25 connections) — `tests/unit/test_json_renderer.py`
-- **create_renderer()** (23 connections) — `src/ansible_aom/renderer/factory.py`
 - **_state_two_hosts_one_failure()** (12 connections) — `tests/unit/test_json_renderer.py`
-- **_default_runner()** (4 connections) — `src/ansible_aom/rerun/cli.py`
-- **.test_factory_creates_compact_renderer_by_default()** (4 connections) — `tests/integration/test_compact_renderer.py`
-- **.test_factory_forwards_failed_hint_flag_to_compact_renderer()** (4 connections) — `tests/unit/test_cli.py`
-- **.test_factory_forwards_is_tty_to_compact_renderer()** (4 connections) — `tests/unit/test_cli.py`
-- **.test_factory_forwards_recording_flags_to_compact_renderer()** (4 connections) — `tests/unit/test_cli.py`
-- **.test_factory_forwards_warning_flags_to_compact_renderer()** (4 connections) — `tests/unit/test_cli.py`
 - **test_handle_completion_aggregates_per_host_counts()** (4 connections) — `tests/unit/test_json_renderer.py`
 - **test_handle_completion_emits_one_json_object()** (4 connections) — `tests/unit/test_json_renderer.py`
 - **test_handle_completion_lists_failed_tasks()** (4 connections) — `tests/unit/test_json_renderer.py`
@@ -23,42 +16,45 @@
 - **.handle_password_prompt()** (3 connections) — `src/ansible_aom/formats/json.py`
 - **.start()** (3 connections) — `src/ansible_aom/formats/json.py`
 - **.update_state()** (3 connections) — `src/ansible_aom/formats/json.py`
-- **.test_main_dispatches_json_renderer_when_format_json()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_factory_default_tui_mode_false()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_factory_function_exists()** (3 connections) — `tests/unit/test_cli.py`
-- **.test_factory_returns_renderer_for_compact_mode()** (3 connections) — `tests/unit/test_cli.py`
-- **test_factory_compact_format_explicit_returns_compact_renderer()** (3 connections) — `tests/unit/test_json_renderer.py`
-- **test_factory_default_format_is_compact()** (3 connections) — `tests/unit/test_json_renderer.py`
-- *... and 62 more nodes in this community*
+- **test_factory_returns_json_renderer_for_json_format()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_handle_completion_empty_state_emits_zero_exit()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_handle_completion_records_playbook_and_exit_code()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_handle_completion_schema_version_is_one()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_interactive_prompt_refuses_to_stderr()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_json_renderer_noop_methods_emit_nothing()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_json_renderer_set_definitions_stores_them()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_json_renderer_start_records_playbook_and_args()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_json_renderer_through_full_lifecycle()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_password_prompt_refuses_to_stderr()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **test_prompt_refusal_does_not_corrupt_completion_json()** (3 connections) — `tests/unit/test_json_renderer.py`
+- **.add_warning()** (2 connections) — `src/ansible_aom/formats/json.py`
+- **.note_pty_bytes()** (2 connections) — `src/ansible_aom/formats/json.py`
+- *... and 37 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (35 shared connections)
-- [create_parser](create_parser.md) (8 shared connections)
-- [CompactRenderer](CompactRenderer.md) (8 shared connections)
+- [HostRunState](HostRunState.md) (22 shared connections)
 - [json.py](json.py.md) (4 shared connections)
-- [Renderer](Renderer.md) (4 shared connections)
+- [create_renderer](create_renderer.md) (4 shared connections)
 - [RunState](RunState.md) (3 shared connections)
 - [JsonlEvent](JsonlEvent.md) (2 shared connections)
 - [test_replay_determinism.py](test_replay_determinism.py.md) (2 shared connections)
+- [create_parser](create_parser.md) (2 shared connections)
+- [TestFormatFlag](TestFormatFlag.md) (2 shared connections)
 - [TestHideStateCompactPlumbing](TestHideStateCompactPlumbing.md) (2 shared connections)
-- [ansible_aom/cli.py](ansible_aom-cli.py.md) (2 shared connections)
-- [rerun/cli.py](rerun-cli.py.md) (2 shared connections)
 - [Status](Status.md) (1 shared connections)
+- [drivers/replay.py](drivers-replay.py.md) (1 shared connections)
+- [test_renderer_parity.py](test_renderer_parity.py.md) (1 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/formats/json.py`
-- `src/ansible_aom/renderer/factory.py`
-- `src/ansible_aom/rerun/cli.py`
-- `tests/integration/test_compact_renderer.py`
-- `tests/unit/test_cli.py`
 - `tests/unit/test_json_renderer.py`
 
 ## Audit Trail
 
-- EXTRACTED: 197 (65%)
-- INFERRED: 106 (35%)
+- EXTRACTED: 149 (66%)
+- INFERRED: 77 (34%)
 - AMBIGUOUS: 0 (0%)
 
 ---

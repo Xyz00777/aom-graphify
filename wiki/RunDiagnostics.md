@@ -31,8 +31,8 @@
 
 ## Relationships
 
-- [run_playbook](run_playbook.md) (6 shared connections)
-- [diagnostics.py](diagnostics.py.md) (4 shared connections)
+- [runner.py](runner.py.md) (7 shared connections)
+- [run_playbook](run_playbook.md) (3 shared connections)
 - [StreamPhase](StreamPhase.md) (2 shared connections)
 - [PtyStreamParser](PtyStreamParser.md) (2 shared connections)
 - [RunState](RunState.md) (2 shared connections)

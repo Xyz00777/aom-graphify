@@ -105,8 +105,8 @@
 - RunProgress `INFERRED`
 - [TestPasswordPromptPTYIntegration](TestPasswordPromptPTYIntegration.md) `INFERRED`
 - [RendererMirrorMachine](RendererMirrorMachine.md) `INFERRED`
-- PriorRun `INFERRED`
-- TestSignalHandling `INFERRED`
+- [PriorRun](PriorRun.md) `INFERRED`
+- [TestSignalHandling](TestSignalHandling.md) `INFERRED`
 - [TestPasswordPromptPatterns](TestPasswordPromptPatterns.md) `INFERRED`
 - [TestHideStateCompactPlumbing](TestHideStateCompactPlumbing.md) `INFERRED`
 - [TestNoRedactFlag](TestNoRedactFlag.md) `INFERRED`

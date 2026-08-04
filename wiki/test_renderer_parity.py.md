@@ -24,7 +24,8 @@
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (4 shared connections)
+- [Status](Status.md) (3 shared connections)
+- [HostRunState](HostRunState.md) (1 shared connections)
 - [RunState](RunState.md) (1 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)

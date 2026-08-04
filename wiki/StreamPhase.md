@@ -1,46 +1,46 @@
 # StreamPhase
 
-> 59 nodes · cohesion 0.04
+> 60 nodes · cohesion 0.04
 
 ## Key Concepts
 
 - **StreamPhase** (97 connections) — `src/ansible_aom/core/parser.py`
 - **parser.py** (43 connections) — `src/ansible_aom/core/parser.py`
 - **test_pty_stream.py** (18 connections) — `tests/unit/test_pty_stream.py`
+- **_FakeSink** (11 connections) — `tests/unit/test_runner_heartbeat.py`
 - **TestStreamPhaseEnum** (10 connections) — `tests/unit/test_pty_stream.py`
+- **test_runner_heartbeat.py** (9 connections) — `tests/unit/test_runner_heartbeat.py`
 - **TestPatternRegexes** (8 connections) — `tests/unit/test_pty_stream.py`
 - **TestPhaseStateMachine** (8 connections) — `tests/unit/test_pty_stream.py`
-- **TestRendererProtocolPasswordHandling** (8 connections) — `tests/unit/test_pty_stream.py`
-- **TestLargePlaybook** (7 connections) — `tests/integration/test_playbook_parser.py`
 - **TestSSHPassword** (7 connections) — `tests/integration/test_playbook_parser.py`
-- **TestUserCancellation** (7 connections) — `tests/integration/test_playbook_parser.py`
 - **TestVaultEncrypted** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestFeedNotesBytes** (7 connections) — `tests/unit/test_runner_heartbeat.py`
+- **TestTaskStartCountsAsHeartbeat** (6 connections) — `tests/unit/test_runner_heartbeat.py`
+- **.test_task_start_does_not_clear_heartbeat()** (6 connections) — `tests/unit/test_runner_heartbeat.py`
+- **_parser_in_execution_phase()** (5 connections) — `tests/unit/test_runner_heartbeat.py`
+- **.test_jsonl_event_line_notes_pty_bytes()** (5 connections) — `tests/unit/test_runner_heartbeat.py`
+- **.test_plaintext_line_notes_pty_bytes()** (5 connections) — `tests/unit/test_runner_heartbeat.py`
 - **.test_cannot_go_backwards_from_execution()** (3 connections) — `tests/unit/test_pty_stream.py`
 - **.test_phase_properties_immutability()** (3 connections) — `tests/unit/test_pty_stream.py`
 - **.test_phase_transition_order()** (3 connections) — `tests/unit/test_pty_stream.py`
-- **.test_full_workflow_simulation()** (3 connections) — `tests/unit/test_pty_stream.py`
-- **.test_password_prompt_detected_before_jsonl()** (3 connections) — `tests/unit/test_pty_stream.py`
-- **.test_pending_password_prompt_interface()** (3 connections) — `tests/unit/test_pty_stream.py`
 - **.test_stream_phase_has_execution()** (3 connections) — `tests/unit/test_pty_stream.py`
 - **.test_stream_phase_has_post_run_recap()** (3 connections) — `tests/unit/test_pty_stream.py`
 - **.test_stream_phase_has_pre_run_prompts()** (3 connections) — `tests/unit/test_pty_stream.py`
 - **.test_stream_phase_three_values()** (3 connections) — `tests/unit/test_pty_stream.py`
 - **Enum** (2 connections)
 - **PTY stream parsing phases.** (2 connections) — `src/ansible_aom/core/parser.py`
-- **.test_large_playbook_performance()** (2 connections) — `tests/integration/test_playbook_parser.py`
-- **.test_ssh_password_prompt()** (2 connections) — `tests/integration/test_playbook_parser.py`
-- *... and 34 more nodes in this community*
+- *... and 35 more nodes in this community*
 
 ## Relationships
 
-- [Status](Status.md) (34 shared connections)
-- [test_playbook_parser.py](test_playbook_parser.py.md) (27 shared connections)
-- [PtyStreamParser](PtyStreamParser.md) (20 shared connections)
+- [Status](Status.md) (26 shared connections)
+- [test_playbook_parser.py](test_playbook_parser.py.md) (24 shared connections)
+- [PtyStreamParser](PtyStreamParser.md) (17 shared connections)
+- [runner.py](runner.py.md) (10 shared connections)
+- [RunState](RunState.md) (9 shared connections)
 - [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (6 shared connections)
-- [RunState](RunState.md) (5 shared connections)
-- [run_playbook](run_playbook.md) (4 shared connections)
+- [JsonLineStream](JsonLineStream.md) (5 shared connections)
 - [TaskDefinition](TaskDefinition.md) (4 shared connections)
-- [_FakeSink](_FakeSink.md) (4 shared connections)
 - [IncludeCacheEntry](IncludeCacheEntry.md) (3 shared connections)
 - [TestJsonLineStreamSurvivesMojibake](TestJsonLineStreamSurvivesMojibake.md) (3 shared connections)
 - [_drive](_drive.md) (3 shared connections)
@@ -51,11 +51,12 @@
 - `src/ansible_aom/core/parser.py`
 - `tests/integration/test_playbook_parser.py`
 - `tests/unit/test_pty_stream.py`
+- `tests/unit/test_runner_heartbeat.py`
 
 ## Audit Trail
 
-- EXTRACTED: 173 (58%)
-- INFERRED: 125 (42%)
+- EXTRACTED: 195 (61%)
+- INFERRED: 123 (39%)
 - AMBIGUOUS: 0 (0%)
 
 ---

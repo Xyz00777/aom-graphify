@@ -23,7 +23,7 @@
 
 ## Relationships
 
-- [Status](Status.md) (2 shared connections)
+- [JsonLineStream](JsonLineStream.md) (2 shared connections)
 - [StreamPhase](StreamPhase.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 - [PtyStreamParser](PtyStreamParser.md) (1 shared connections)

@@ -1,6 +1,6 @@
 # test_invariants_session_roundtrip.py
 
-> 17 nodes · cohesion 0.16
+> 19 nodes · cohesion 0.14
 
 ## Key Concepts
 
@@ -9,6 +9,7 @@
 - **test_session_roundtrip_preserves_state_shape()** (7 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **event_sequences()** (6 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **_runstate_status_totals()** (5 connections) — `tests/integration/test_invariants_session_roundtrip.py`
+- **test_runstate_never_holds_orphan_hostrunstate()** (4 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **_tree_status_totals()** (4 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **_make_play_start()** (2 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **_make_result()** (2 connections) — `tests/integration/test_invariants_session_roundtrip.py`
@@ -20,6 +21,7 @@
 - **Walk RunState the way the tree builder walks events.** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **Persist → load → replay yields the same structural state.** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **``build_task_tree`` over the persisted session agrees with the live RunState.** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
+- **A ``HostRunState`` only exists under a TaskRunState we know about.      Sanity c** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 - **Generate a coherent (play_start → task_start → result*) sequence.      Coherence** (1 connections) — `tests/integration/test_invariants_session_roundtrip.py`
 
 ## Relationships
@@ -32,6 +34,7 @@
 - [inspect_model.py](inspect_model.py.md) (1 shared connections)
 - [Status](Status.md) (1 shared connections)
 - [run_state.py](run_state.py.md) (1 shared connections)
+- [HostRunState](HostRunState.md) (1 shared connections)
 
 ## Source Files
 
@@ -39,8 +42,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 62 (100%)
-- INFERRED: 0 (0%)
+- EXTRACTED: 66 (99%)
+- INFERRED: 1 (1%)
 - AMBIGUOUS: 0 (0%)
 
 ---
