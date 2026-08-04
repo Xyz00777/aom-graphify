@@ -27,8 +27,11 @@
 
 ## Relationships
 
-- [Status](Status.md) (5 shared connections)
 - [HostRunState](HostRunState.md) (3 shared connections)
+- [StatusBarConfig](StatusBarConfig.md) (2 shared connections)
+- [Status](Status.md) (1 shared connections)
+- [WarningType](WarningType.md) (1 shared connections)
+- [WarningEntry](WarningEntry.md) (1 shared connections)
 
 ## Source Files
 

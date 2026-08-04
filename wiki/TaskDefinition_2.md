@@ -29,10 +29,10 @@
 - .test_regression_flat_role_tasks_unchanged() `EXTRACTED`
 
 ### contains
-- models.py `EXTRACTED`
+- [models.py](models.py.md) `EXTRACTED`
 
 ### imports
-- [run_state.py](run_state.py.md) `EXTRACTED`
+- run_state.py `EXTRACTED`
 - [format.py](format.py.md) `EXTRACTED`
 - tree_projection.py `EXTRACTED`
 - includes.py `EXTRACTED`
@@ -90,7 +90,7 @@
 - TestHostRunState `INFERRED`
 - TestPlayRunState `INFERRED`
 - TestRunState `INFERRED`
-- [TestStatusEnum](TestStatusEnum.md) `INFERRED`
+- TestStatusEnum `INFERRED`
 - TestRoleGrouping `INFERRED`
 - TestPlayDefinition `INFERRED`
 - TestTaskRunState `INFERRED`

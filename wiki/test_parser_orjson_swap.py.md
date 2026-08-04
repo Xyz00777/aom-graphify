@@ -16,8 +16,8 @@
 
 ## Relationships
 
-- [JsonLineStream](JsonLineStream.md) (3 shared connections)
-- [StreamPhase](StreamPhase.md) (1 shared connections)
+- [WarningType](WarningType.md) (3 shared connections)
+- [models.py](models.py.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 
 ## Source Files

@@ -11,7 +11,7 @@
 
 ## Relationships
 
-- [Status](Status.md) (2 shared connections)
+- [WarningType](WarningType.md) (2 shared connections)
 - [parse_list_tasks_output](parse_list_tasks_output.md) (1 shared connections)
 - [PtyStreamParser](PtyStreamParser.md) (1 shared connections)
 

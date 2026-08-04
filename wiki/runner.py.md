@@ -1,6 +1,6 @@
 # runner.py
 
-> 101 nodes · cohesion 0.03
+> 102 nodes · cohesion 0.03
 
 ## Key Concepts
 
@@ -23,28 +23,28 @@
 - **build_diagnostics_record()** (5 connections) — `src/ansible_aom/core/diagnostics.py`
 - **RendererStats** (5 connections) — `src/ansible_aom/core/diagnostics.py`
 - **test_runner_session_meta.py** (5 connections) — `tests/unit/test_runner_session_meta.py`
-- **test_state_dir_isolation.py** (5 connections) — `tests/unit/test_state_dir_isolation.py`
 - **_bundled_callback_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
 - **_bundled_connection_callback_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
 - **_default_session_dir()** (4 connections) — `src/ansible_aom/ansible/runner.py`
 - **_probe_psutil()** (4 connections) — `src/ansible_aom/ansible/runner.py`
 - **.record_event()** (4 connections) — `src/ansible_aom/ansible/runner.py`
-- *... and 76 more nodes in this community*
+- **get_profiler()** (4 connections) — `src/ansible_aom/core/diagnostics.py`
+- *... and 77 more nodes in this community*
 
 ## Relationships
 
-- [run_playbook](run_playbook.md) (13 shared connections)
 - [_handle_timeout_branch](_handle_timeout_branch.md) (13 shared connections)
-- [StreamPhase](StreamPhase.md) (10 shared connections)
+- [run_playbook](run_playbook.md) (13 shared connections)
 - [_drive](_drive.md) (10 shared connections)
 - [PtyStreamParser](PtyStreamParser.md) (7 shared connections)
 - [RunState](RunState.md) (7 shared connections)
+- [Renderer](Renderer.md) (7 shared connections)
 - [RunDiagnostics](RunDiagnostics.md) (7 shared connections)
-- [Renderer](Renderer.md) (6 shared connections)
+- [models.py](models.py.md) (6 shared connections)
 - [JsonlEvent](JsonlEvent.md) (5 shared connections)
-- [load_session](load_session.md) (5 shared connections)
 - [Status](Status.md) (4 shared connections)
 - [reconstruct_pause_prompt](reconstruct_pause_prompt.md) (4 shared connections)
+- [SessionManager](SessionManager.md) (4 shared connections)
 
 ## Source Files
 
@@ -52,12 +52,11 @@
 - `src/ansible_aom/core/diagnostics.py`
 - `tests/unit/test_runner_heartbeat.py`
 - `tests/unit/test_runner_session_meta.py`
-- `tests/unit/test_state_dir_isolation.py`
 
 ## Audit Trail
 
-- EXTRACTED: 389 (95%)
-- INFERRED: 21 (5%)
+- EXTRACTED: 390 (95%)
+- INFERRED: 22 (5%)
 - AMBIGUOUS: 0 (0%)
 
 ---

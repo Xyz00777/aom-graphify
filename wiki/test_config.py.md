@@ -17,7 +17,7 @@
 
 - [AppConfig](AppConfig.md) (3 shared connections)
 - [WarningsConfig](WarningsConfig.md) (2 shared connections)
-- [Status](Status.md) (2 shared connections)
+- [StatusBarConfig](StatusBarConfig.md) (2 shared connections)
 - [TestAppConfigFieldTypes](TestAppConfigFieldTypes.md) (1 shared connections)
 - [TestAppConfigValidation](TestAppConfigValidation.md) (1 shared connections)
 - [TestAppConfigYamlFile](TestAppConfigYamlFile.md) (1 shared connections)

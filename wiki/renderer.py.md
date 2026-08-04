@@ -1,6 +1,6 @@
 # renderer.py
 
-> 43 nodes · cohesion 0.12
+> 37 nodes · cohesion 0.15
 
 ## Key Concepts
 
@@ -8,10 +8,8 @@
 - **RunProgress** (27 connections) — `src/ansible_aom/core/estimate.py`
 - **test_estimate.py** (20 connections) — `tests/unit/test_estimate.py`
 - **_est()** (19 connections) — `tests/unit/test_estimate.py`
-- **_BoundedSet** (16 connections) — `src/ansible_aom/compact/renderer.py`
 - **project_remaining()** (16 connections) — `src/ansible_aom/core/estimate.py`
 - **RunEstimate** (12 connections) — `src/ansible_aom/core/estimate.py`
-- **.__init__()** (10 connections) — `src/ansible_aom/compact/renderer.py`
 - **add_completed()** (10 connections) — `src/ansible_aom/core/estimate.py`
 - **add_in_flight()** (10 connections) — `src/ansible_aom/core/estimate.py`
 - **estimate.py** (8 connections) — `src/ansible_aom/core/estimate.py`
@@ -29,22 +27,24 @@
 - **test_warmup_fraction_gate()** (4 connections) — `tests/unit/test_estimate.py`
 - **test_warmup_min_tasks_gate()** (4 connections) — `tests/unit/test_estimate.py`
 - **test_work_pace_clamped_high()** (4 connections) — `tests/unit/test_estimate.py`
-- *... and 18 more nodes in this community*
+- **test_work_pace_clamped_low()** (4 connections) — `tests/unit/test_estimate.py`
+- **test_work_pace_defaults_to_one_before_any_variable_completes()** (4 connections) — `tests/unit/test_estimate.py`
+- *... and 12 more nodes in this community*
 
 ## Relationships
 
-- [JsonlEvent](JsonlEvent.md) (13 shared connections)
+- [JsonlEvent](JsonlEvent.md) (15 shared connections)
+- [format.py](format.py.md) (9 shared connections)
 - [CompactRenderer](CompactRenderer.md) (9 shared connections)
-- [._render_status_panel](_render_status_panel.md) (7 shared connections)
-- [format.py](format.py.md) (6 shared connections)
-- [format_status_bar](format_status_bar.md) (6 shared connections)
-- [format_host_summary](format_host_summary.md) (6 shared connections)
-- [Status](Status.md) (4 shared connections)
-- [_compute_mode_label](_compute_mode_label.md) (4 shared connections)
-- [PriorRun](PriorRun.md) (4 shared connections)
-- [Display](Display.md) (3 shared connections)
-- [TestPerEventLogColors](TestPerEventLogColors.md) (3 shared connections)
+- [._render_status_panel](_render_status_panel.md) (6 shared connections)
+- [format_status_bar](format_status_bar.md) (4 shared connections)
+- [_compute_mode_label](_compute_mode_label.md) (3 shared connections)
 - [test_password.py](test_password.py.md) (3 shared connections)
+- [history.py](history.py.md) (3 shared connections)
+- [parity.py](parity.py.md) (2 shared connections)
+- [TestPerEventLogColors](TestPerEventLogColors.md) (2 shared connections)
+- [format_host_rows](format_host_rows.md) (2 shared connections)
+- [PlayDefinition](PlayDefinition.md) (2 shared connections)
 
 ## Source Files
 
@@ -54,8 +54,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 325 (96%)
-- INFERRED: 13 (4%)
+- EXTRACTED: 303 (99%)
+- INFERRED: 4 (1%)
 - AMBIGUOUS: 0 (0%)
 
 ---

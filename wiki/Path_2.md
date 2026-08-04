@@ -1,11 +1,10 @@
 # Path
 
-> 27 nodes · cohesion 0.15
+> 25 nodes · cohesion 0.16
 
 ## Key Concepts
 
 - **Path** (15 connections)
-- **test_rerun_cli.py** (14 connections) — `tests/unit/test_rerun_cli.py`
 - **_resolve_session_id()** (11 connections) — `src/ansible_aom/rerun/cli.py`
 - **_make_session()** (8 connections) — `tests/unit/test_rerun_cli.py`
 - **TestMain** (7 connections) — `tests/unit/test_rerun_cli.py`
@@ -25,22 +24,18 @@
 - **.test_unknown_session_returns_nonzero()** (2 connections) — `tests/unit/test_rerun_cli.py`
 - **Path** (1 connections)
 - **Resolve an explicit session ID, short prefix, or "most recent" intent.      Mirr** (1 connections) — `src/ansible_aom/rerun/cli.py`
-- **Unit tests for the aom rerun subcommand.** (1 connections) — `tests/unit/test_rerun_cli.py`
 - **Helper: create a session directory with a minimal meta.json.** (1 connections) — `tests/unit/test_rerun_cli.py`
 - **Helper: write a session with one failed host (web2).** (1 connections) — `tests/unit/test_rerun_cli.py`
 - **Happy path: --yes --failed → run_playbook called with --limit web2.** (1 connections) — `tests/unit/test_rerun_cli.py`
-- *... and 2 more nodes in this community*
+- **A session with no failures and --failed → nothing to do, exit 1.** (1 connections) — `tests/unit/test_rerun_cli.py`
+- **Old session without ansible_args field → exit 2.** (1 connections) — `tests/unit/test_rerun_cli.py`
 
 ## Relationships
 
-- [rerun/cli.py](rerun-cli.py.md) (4 shared connections)
-- [_compose_host_set](_compose_host_set.md) (2 shared connections)
-- [Shell Completion Helpers](Shell_Completion_Helpers.md) (2 shared connections)
-- [load_session](load_session.md) (1 shared connections)
-- [IO](IO.md) (1 shared connections)
-- [json.py](json.py.md) (1 shared connections)
-- [Exit Code Constants](Exit_Code_Constants.md) (1 shared connections)
-- [TUI Widgets Module](TUI_Widgets_Module.md) (1 shared connections)
+- [test_rerun_cli.py](test_rerun_cli.py.md) (4 shared connections)
+- [rerun/cli.py](rerun-cli.py.md) (2 shared connections)
+- [list_sessions](list_sessions.md) (1 shared connections)
+- [Shell Completion Helpers](Shell_Completion_Helpers.md) (1 shared connections)
 
 ## Source Files
 
@@ -49,7 +44,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 117 (100%)
+- EXTRACTED: 102 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

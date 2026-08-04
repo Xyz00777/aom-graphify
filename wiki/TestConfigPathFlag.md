@@ -16,11 +16,12 @@
 ## Relationships
 
 - [create_parser](create_parser.md) (5 shared connections)
-- [HostRunState](HostRunState.md) (4 shared connections)
+- [HostRunState](HostRunState.md) (3 shared connections)
 - [CompactRenderer](CompactRenderer.md) (1 shared connections)
 - [Status](Status.md) (1 shared connections)
 - [RunState](RunState.md) (1 shared connections)
 - [JsonRenderer](JsonRenderer.md) (1 shared connections)
+- [test_cli.py](test_cli.py.md) (1 shared connections)
 - [Auto Version Bump Hook](Auto_Version_Bump_Hook.md) (1 shared connections)
 
 ## Source Files

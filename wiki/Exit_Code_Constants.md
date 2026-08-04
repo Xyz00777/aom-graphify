@@ -20,7 +20,7 @@
 ## Relationships
 
 - [rerun/cli.py](rerun-cli.py.md) (2 shared connections)
-- [Path](Path.md) (1 shared connections)
+- [test_rerun_cli.py](test_rerun_cli.py.md) (1 shared connections)
 
 ## Source Files
 

@@ -1,6 +1,6 @@
 # FakeRenderer
 
-> 53 nodes · cohesion 0.05
+> 52 nodes · cohesion 0.06
 
 ## Key Concepts
 
@@ -12,11 +12,11 @@
 - **test_live_driver_drives_renderer_with_fake_subprocess()** (7 connections) — `tests/unit/test_event_source.py`
 - **test_replay_driver_drives_renderer_end_to_end()** (6 connections) — `tests/unit/test_event_source.py`
 - **_write_session()** (6 connections) — `tests/unit/test_event_source.py`
-- **live.py** (5 connections) — `src/ansible_aom/drivers/live.py`
 - **drivers/protocol.py** (5 connections) — `src/ansible_aom/drivers/protocol.py`
 - **Path** (5 connections)
 - **test_replay_driver_missing_session_returns_1()** (5 connections) — `tests/unit/test_event_source.py`
 - **test_replay_driver_satisfies_event_source()** (5 connections) — `tests/unit/test_event_source.py`
+- **.playbook()** (4 connections) — `src/ansible_aom/drivers/live.py`
 - **.drive()** (4 connections) — `src/ansible_aom/drivers/replay.py`
 - **test_live_driver_satisfies_event_source()** (4 connections) — `tests/unit/test_event_source.py`
 - **.drive()** (3 connections) — `src/ansible_aom/drivers/live.py`
@@ -29,17 +29,18 @@
 - **.update_state()** (2 connections) — `tests/unit/test_event_source.py`
 - **test_event_source_rejects_non_conforming()** (2 connections) — `tests/unit/test_event_source.py`
 - **.ansible_args()** (1 connections) — `src/ansible_aom/drivers/live.py`
-- *... and 28 more nodes in this community*
+- *... and 27 more nodes in this community*
 
 ## Relationships
 
-- [drivers/replay.py](drivers-replay.py.md) (6 shared connections)
-- [Renderer](Renderer.md) (5 shared connections)
-- [run_playbook](run_playbook.md) (2 shared connections)
+- [Renderer](Renderer.md) (6 shared connections)
 - [ansible_aom/cli.py](ansible_aom-cli.py.md) (2 shared connections)
 - [_FakeSpawn](_FakeSpawn.md) (2 shared connections)
 - [Hide State Normalization](Hide_State_Normalization.md) (2 shared connections)
+- [store.py](store.py.md) (2 shared connections)
+- [cli_main](cli_main.md) (2 shared connections)
 - [_HideStateAction](_HideStateAction.md) (1 shared connections)
+- [run_playbook](run_playbook.md) (1 shared connections)
 - [json.py](json.py.md) (1 shared connections)
 - [.handle_password_prompt](handle_password_prompt.md) (1 shared connections)
 
@@ -52,8 +53,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 148 (88%)
-- INFERRED: 20 (12%)
+- EXTRACTED: 143 (86%)
+- INFERRED: 23 (14%)
 - AMBIGUOUS: 0 (0%)
 
 ---

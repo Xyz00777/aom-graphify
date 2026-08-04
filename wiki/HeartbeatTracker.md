@@ -1,11 +1,12 @@
 # HeartbeatTracker
 
-> 37 nodes · cohesion 0.08
+> 39 nodes · cohesion 0.08
 
 ## Key Concepts
 
 - **HeartbeatTracker** (28 connections) — `src/ansible_aom/core/heartbeat.py`
 - **test_heartbeat.py** (23 connections) — `tests/unit/test_heartbeat.py`
+- **heartbeat.py** (7 connections) — `src/ansible_aom/core/heartbeat.py`
 - **test_cpu_active_too_long_ago_does_not_promote_to_live()** (3 connections) — `tests/unit/test_heartbeat.py`
 - **test_cpu_active_too_long_ago_does_not_rescue_from_stuck()** (3 connections) — `tests/unit/test_heartbeat.py`
 - **test_cpu_activity_keeps_state_working_past_stuck_threshold()** (3 connections) — `tests/unit/test_heartbeat.py`
@@ -28,13 +29,14 @@
 - **test_reason_stuck_when_no_signals_at_all()** (2 connections) — `tests/unit/test_heartbeat.py`
 - **test_state_is_none_before_any_bytes_observed()** (2 connections) — `tests/unit/test_heartbeat.py`
 - **test_stuck_when_only_inactive_cpu_samples_received()** (2 connections) — `tests/unit/test_heartbeat.py`
-- **.__init__()** (1 connections) — `src/ansible_aom/core/heartbeat.py`
-- *... and 12 more nodes in this community*
+- *... and 14 more nodes in this community*
 
 ## Relationships
 
 - [format_status_bar](format_status_bar.md) (8 shared connections)
-- [renderer.py](renderer.py.md) (3 shared connections)
+- [renderer.py](renderer.py.md) (2 shared connections)
+- [JsonlEvent](JsonlEvent.md) (2 shared connections)
+- [format.py](format.py.md) (1 shared connections)
 - [CompactRenderer](CompactRenderer.md) (1 shared connections)
 
 ## Source Files
@@ -44,7 +46,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 118 (98%)
+- EXTRACTED: 126 (98%)
 - INFERRED: 2 (2%)
 - AMBIGUOUS: 0 (0%)
 

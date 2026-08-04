@@ -7,17 +7,17 @@
 ## Connections by Relation
 
 ### contains
-- models.py `EXTRACTED`
+- [models.py](models.py.md) `EXTRACTED`
 
 ### imports
 - [renderer.py](renderer.py.md) `EXTRACTED`
 - [json.py](json.py.md) `EXTRACTED`
-- [run_state.py](run_state.py.md) `EXTRACTED`
+- run_state.py `EXTRACTED`
 - [format.py](format.py.md) `EXTRACTED`
 - tree.py `EXTRACTED`
 - tree_projection.py `EXTRACTED`
 - icons.py `EXTRACTED`
-- parity.py `EXTRACTED`
+- [parity.py](parity.py.md) `EXTRACTED`
 - core/exit_code.py `EXTRACTED`
 
 ### indirect_call
@@ -50,7 +50,7 @@
 - TestPtyStreamParserStderrLineEmission `INFERRED`
 - TreeLine `INFERRED`
 - TestJsonLineStreamBasics `INFERRED`
-- [TestHideStateFlag](TestHideStateFlag.md) `INFERRED`
+- TestHideStateFlag `INFERRED`
 - TestListTasksEdgeCases `INFERRED`
 - [RendererMirrorMachine](RendererMirrorMachine.md) `INFERRED`
 - TestListTasksParser `INFERRED`
@@ -60,7 +60,7 @@
 - TestHostRunState `INFERRED`
 - TestPlayRunState `INFERRED`
 - TestRunState `INFERRED`
-- [TestStatusEnum](TestStatusEnum.md) `INFERRED`
+- TestStatusEnum `INFERRED`
 - TestRoleGrouping `INFERRED`
 - TestPlayDefinition `INFERRED`
 

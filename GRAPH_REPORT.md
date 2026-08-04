@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 9469 nodes · 19096 edges · 659 communities (360 shown, 299 thin omitted)
+- 9469 nodes · 19097 edges · 667 communities (360 shown, 307 thin omitted)
 - Extraction: 83% EXTRACTED · 17% INFERRED · 0% AMBIGUOUS · INFERRED: 3152 edges (avg confidence: 0.58)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `93f04ab1`
+- Built from commit: `53d4ad26`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -18,19 +18,19 @@
 - PtyStreamParser
 - RunState
 - AppConfig
-- StreamPhase
-- Status
-- index.py
-- PlayDefinition
+- test_pty_stream.py
+- StatusBarConfig
+- load_session
+- .from_run_state
 - Display
-- JsonLineStream
+- WarningType
 - test_concurrent_inspect.py
 - TaskDefinition
 - CompactRenderer
 - parse_list_hosts_output
-- Path
+- SessionManager
 - _play_start
-- run_state.py
+- _BoundedDict
 - RedactionConfig
 - parse_list_tasks_output
 - create_parser
@@ -41,11 +41,11 @@
 - Inspect CLI Commands
 - StatusCounts
 - TaskTreeNode
-- IncludeCacheEntry
+- RoleGroupDefinition
 - test_task_completion.py
 - InspectApp
 - run_preflight
-- _ConfirmDelete
+- datetime
 - Error Handling Tests
 - RedactionConfig
 - Event Log Emission
@@ -53,7 +53,7 @@
 - List Tasks Output Parser
 - TestWarningPatternsEdgeCases
 - TestPasswordPromptPTYIntegration
-- TestGraftIncludeChildren
+- store.py
 - format_status_bar
 - RedactionConfig
 - Renderer
@@ -65,12 +65,12 @@
 - TestPlaintextLineHandling
 - test_overhead.py
 - TestUngroupedRoleTasksInTree
-- .test_host_filter_not_in_inventory
+- TestFilterPanelHostFilter
 - history.py
 - App Config Model Tests
 - RendererMirrorMachine
 - Debug Panel Widget
-- run_playbook
+- Path
 - JsonlEvent
 - RunDiagnostics
 - Total Task Counting
@@ -80,7 +80,7 @@
 - HeartbeatTracker
 - ansible.posix.jsonl (parent callback)
 - Playbook Run Integration Tests
-- TestTaskCompletionLifecycle
+- test_tree_classify_and_role_labels.py
 - test_inspect_debug.py
 - _session
 - RedactionConfig
@@ -101,10 +101,10 @@
 - event_types.py
 - WarningsConfig
 - Play Boundary State Tests
-- _seed_run_state
+- TestHandleEventMalformedPayloads
 - Preflight Definition Assembly
-- _parse_timestamp
-- inspect.py
+- TestTimestampLocalTimezone
+- parse_jsonl_output
 - TestEventParsing
 - _AsyncEventWriter
 - Mitogen Event Robustness
@@ -115,7 +115,7 @@
 - analyze_overhead
 - Skipped Task Collapsing
 - Include Import Role Tasks
-- RoleCacheEntry
+- TestPasswordPromptPatterns
 - Parser Edge Cases
 - RunSummary Schema Contract
 - Parallel Pre-flight Runner
@@ -123,16 +123,16 @@
 - Run Diagnostics Accumulator
 - Main TUI Screen
 - TestEdgeCases
-- Status Color Mapping
+- run_playbook
 - Play Tree Projection
 - sessions/conftest.py
 - _row_count
-- PriorRun
+- PlayDefinition
 - create_renderer
-- format_failure_recap
+- TestSubtreeRoleCounting
 - State Transition Validation
 - _safe_loads
-- load_session
+- inspect/cli.py
 - Path
 - Pane Focus Navigation
 - Log Panel Widget
@@ -149,24 +149,24 @@
 - Subprocess Exit Codes
 - Renderer ETA Wiring
 - Auto Version Bump Hook
-- Tree Navigation Keys
+- test_ignore_errors_callback.py
 - _make_play
-- assemble_definitions
+- test_preflight.py
 - Parser Phase Transitions
 - Warning Pattern Detection
 - Conftest Fixture Validation
-- Memory Bounds Constants
+- assemble_definitions
 - TestAppConfigValidation
-- TestStatusEnum
-- test_renderer_set_definitions.py
-- json.py
+- WarningEntry
+- TestTwoLevelTruncation
+- RunSummary
 - Session Roundtrip Invariants
 - Version Bump Script
 - TestConfigModelBasics
 - Runner Heartbeat Wiring
 - TestPtyStreamParserPhaseTransitions
 - TestWarningPatternDetection
-- test_renderer_parity.py
+- parity.py
 - TestRuntimeRoleTaskCount
 - ansible_aom/cli.py
 - test_render_storm.py
@@ -187,39 +187,39 @@
 - TestPasswordTimeoutDefault
 - TestPerEventLogColors
 - TestConftestFixtures
-- test_playbook_parser.py
+- Status
 - .test_record_false_does_not_touch_default_state_dir
-- TestPlayRecapDetection
-- TestExitCodes
+- test_inspect_accumulator.py
+- test_cli.py
 - test_run_state_memory_bounds.py
 - test_loop_item_count.py
 - _print_session_footer
 - Diagnostics CLI Wiring
 - TestReEnableOnResize
 - test_runner_on_start_host.py
-- TestHideStateCompactPlumbing
+- TestWarningVisibilityCompactPlumbing
 - test_properties_state.py
 - .test_skip_non_host_lines
 - Stale Running Cleanup
 - TestMultiLineWarningContinuation
 - JSON Output Renderer
 - text.py
-- test_unknown_event_hint.py
-- Tree Projection Utilities
+- TestPtyStreamParserWarningsList
+- test_posix_callback.py
 - format_tree_block
 - merge_limit_args
 - .update
 - _compute_mode_label
 - TestVerboseDiagnostics
 - TestVerboseAlwaysMsgDisplay
-- .test_status_checkboxes_union_multiple
-- test_rerun.py
+- _build_compact_renderer
+- json.py
 - Get All Actions
 - Panel Toggle Keybindings
 - Shift Modifier Keybindings
 - unit/test_no_record.py
 - Get Keybinding Function
-- TestDiscoverRole
+- _FakeSink
 - TestAnsiblePosixAvailability
 - Ansible Core Version Check
 - session_id_completer
@@ -229,113 +229,113 @@
 - Password Prompt Handling
 - Compact Password Passthrough
 - TestPasswordPromptHandling
-- drivers/replay.py
-- .test_update_state_streams_log_lines_for_significant_events
+- cli_main
+- list_sessions
 - Width 60-79 Truncation
 - .test_exit_code_syntax_error_output
 - Warning Pattern Classification
-- .test_parse_play_line_pattern
+- collect_failed_hosts
 - Status Bar Formatting
 - Project Architecture Overview
 - Panel Refresh Snapshot
 - Completion State Labels
 - .test_handle_password_prompt_returns_empty_on_keyboard_interrupt
-- .test_list_hosts_partial_error_output
+- TestCrossPlayLookupIsolation
 - Tree Projection Formatters
 - TestConfigFieldValidation
 - TestMixedStreamHandling
-- .test_list_hosts_multiple_plays_hosts
+- TestMultiPlayTruncationWithRoleFooters
 - TestCompactModePasswordPassThrough
 - CLI Framework Architecture
 - TUI Widget Framework
 - Rich Display Backend
-- .test_list_hosts_no_duplicate_hosts
-- test_publication_docs.py
+- TestMultiplePlays
+- TestWarnings
 - TestRewindCorrectness
 - Task Tree Navigation
 - TestLogging
 - Terminal Size Check
 - Watchdog Timer
 - Cancellation Timer
-- .test_list_hosts_play_number_sequential
+- TestFilterPanelTextFilter
 - Ansible Args Validation
-- format_host_summary
+- format.py
 - Keybinding Conflict Validation
-- _compose_host_set
+- test_rerun_cli.py
 - Keybinding Context Coverage
-- .test_import_tasks_expanded
-- .test_list_hosts_stderr_not_in_result
+- TestV2PlaybookOnStatsCrossCheck
+- test_run_state_set_caps.py
 - load_config
 - Monochrome Terminal Fallback
-- .check_terminal_size
+- TestTerminalSizeCheck
 - Renderer Architecture
 - Parser Architecture
 - test_error_handling.py
 - Tree Preservation On Cancel
-- TestSignalHandling
-- TestPasswordPrompts
+- run_state_status_counts
+- TestDeprecationWarnings
 - test_diagnostics.py
 - Core Tree Icons
-- TestPhaseTransitions
+- completion_snippet
 - _make_state_with_stale_running
 - Crash Recovery Stay Open
 - Stderr Capture Handling
-- .test_exit_code_error_output
+- TestAsyncPollDoesNotLeakDictIntoLoopItem
 - Compact Display Sizing
 - TestAppConfigYamlFile
 - TestConfigFromEnvironment
 - TestRedactionCustomPatterns
-- .test_list_tasks_play_hosts_pattern_extraction
+- .test_recap_lines_captured
 - TestYesFlag
-- .test_import_tasks_with_role_prefix
-- .test_role_prefix_extraction
+- test_prior_run_loop_totals_injection.py
+- TestCaptureSetupFlag
 - test_incremental_counters.py
 - State Transition Validation
 - TestMissingAnsiblePlaybook
 - _visible_projection
-- .test_task_without_role
+- TestHideWarningsFlag
 - Core Domain Architecture
-- TestWarningDetection
-- .test_multiple_plays
-- .test_list_tasks_play_id_sequential
+- TestReplayDispatch
+- TestTreeKindIncludesMore
+- .on_list_view_highlighted
 - TestWatchdogTimer
 - Shell Completion Installation
 - test_config.py
-- TestCancellationTimerLogic
+- .test_parser_detects_changed_status
 - TestFormatFlag
 - TestCoreModuleStructure
-- test_posix_callback.py
+- .test_empty_playbook_no_plays
 - Pre-commit Style Hooks
-- TestInspectSubcommand
-- TestVerboseDebugLogging
+- TestNoRecordParserFlag
+- test_skipped_tasks
 - test_warning_color.py
-- test_prior_denominator.py
+- event_play_start
 - Crash Recovery Notification
-- TestPasswordTimeout
-- TestStderrCapture
+- .test_hide_state_rejects_unknown_value
+- .test_hide_state_all_valid_values
 - source_hash
 - Exit Code Constants
 - _compute_tree_budget
 - Stderr Capture Handling
 - TestConfigPathFlag
 - TestRendererProtocolPasswordHandling
-- TestExitCodeConstants
-- TestProcessMonitoring
-- TestStderrHandling
-- TestPasswordPromptHandling
+- .test_hide_state_does_not_appear_in_ansible_args
+- .test_hide_state_mixed_append_and_comma
+- .test_hide_state_rejects_unknown_in_comma_separated
+- .test_hide_state_case_insensitive_ok
 - post-commit-graphify
 - post-commit
-- TestCancellationSecondCtrlC
+- .test_hide_state_case_insensitive_mixed
 - TestCompactModePathUnchanged
-- completion_snippet
-- TestHandlerTasks
+- test_completion.py
+- .test_play_names_extracted
 - Host Set Collection
 - Compact Renderer Module
 - Exit Code Derivation
-- TestHideStateFlag
-- TestRecordStderr
+- .test_hide_state_default_is_empty
+- .test_hide_state_case_insensitive_all_upper
 - Secret Redaction Layers
-- Path
+- models.py
 - TestCaptureVerboseFlag
 - TestNoFailedHintFlag
 - TestHideDeprecationsFlag
@@ -343,12 +343,20 @@
 - Large Playbook Performance
 - JSONL Line Stream
 - _HideStateAction
-- TestUserCancellation
-- TestLargePlaybook
-- deprecated_removed_line
+- .test_hide_state_typo_suggests_failed
+- .test_hide_state_random_garbage_no_suggestion
+- .test_hide_state_error_includes_choices
+- .test_create_parser_has_playbook_positional_arg
+- .test_playbook_positional_argument_required
+- .test_verbose_flag_exists
 - Status Bar Duration Format
 - TDD OODA Methodology
 - Password Prompt Heuristics
+- .test_short_v_does_not_set_aom_verbose
+- .test_verbose_flag_defaults_false
+- .test_help_displays_usage
+- .test_help_shows_flags
+- .test_unknown_args_passed_through
 - Multi-Host Mixed Fixtures
 - Cancellation Test Fixtures
 - Core Module Purity Rule
@@ -356,11 +364,11 @@
 - inspect_model.py
 - Inspect CLI Module
 - Install Hooks Script
-- rerun/cli.py
+- _build_rerun_command
 - test_parser_orjson_swap.py
-- SessionManager
+- test_session_store_async_write.py
 - Runner Skipped Event
-- TUI Widgets Module
+- rerun/cli.py
 - Role Grouping Test
 - Task Liveness Indicator
 - All Skipped Fixture
@@ -389,7 +397,7 @@
 - DOCUMENTATION CHECKLIST (added per user question 2026-06-30)
 - QC REVIEW (grumpi-qa) — 2026-06-30
 - test_completion_summary.py
-- format.py
+- format_age
 - _run_cli
 - test_history_loop_totals.py
 - IO
@@ -645,6 +653,8 @@
 10. `RoleGroupDefinition` - 152 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `test_assemble_definitions_empty_inputs_returns_empty_list()` --calls--> `assemble_definitions()`  [INFERRED]
+  tests/unit/test_preflight.py → src/ansible_aom/ansible/preflight.py
 - `test_format_status_bar_ascii_mode_uses_ascii_warning_glyph()` --calls--> `format_status_bar()`  [INFERRED]
   tests/compact/test_ascii_fallback.py → src/ansible_aom/compact/format.py
 - `test_format_status_bar_ascii_mode_uses_pipe_separator()` --calls--> `format_status_bar()`  [INFERRED]
@@ -653,53 +663,51 @@
   tests/compact/test_ascii_fallback.py → src/ansible_aom/compact/format.py
 - `test_format_status_bar_includes_task_progress_when_total_set()` --calls--> `format_status_bar()`  [INFERRED]
   tests/compact/test_task_progress.py → src/ansible_aom/compact/format.py
-- `test_trim_stderr_empty_returns_empty()` --calls--> `_trim_stderr()`  [INFERRED]
-  tests/unit/test_preflight.py → src/ansible_aom/ansible/preflight.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (659 total, 299 thin omitted)
+## Communities (667 total, 307 thin omitted)
 
 ### Community 0 - "HostRunState"
-Cohesion: 0.01
-Nodes (205): determine_exit_code(), Determine exit code from RunState.      Traverses the RunState to determine the, HostRunState, PlayRunState, Runtime state for a task execution on a host (State class)., Runtime state for a task execution (State class)., Runtime state for a play execution (State class)., TaskRunState (+197 more)
+Cohesion: 0.02
+Nodes (168): format_failure_recap(), Render a one-shot startup summary of plays/tasks/hosts from preflight.      Prin, Build per-failure lines naming the host and task that went wrong.      Returns o, determine_exit_code(), Determine exit code from RunState.      Traverses the RunState to determine the, HostRunState, PlayRunState, Runtime state for a task execution on a host (State class). (+160 more)
 
 ### Community 1 - "PtyStreamParser"
 Cohesion: 0.02
-Nodes (70): PtyStreamParser, 3-phase parser for ansible-playbook PTY output., Handle PLAY RECAP output lines., True if the most recent classified output line was plaintext.          A JSONL e, Clear pending password prompt after handling., Additional password timeout mechanism tests., Password prompts match expected patterns., TC-445: Graceful Degradation - JSONL Parse Failure. (+62 more)
+Nodes (60): PtyStreamParser, 3-phase parser for ansible-playbook PTY output., Handle PLAY RECAP output lines., True if the most recent classified output line was plaintext.          A JSONL e, Clear pending password prompt after handling., SSH password prompt is detected., BECOME password prompt is detected., Password prompt can be cleared. (+52 more)
 
 ### Community 2 - "RunState"
 Cohesion: 0.01
-Nodes (175): FixtureRequest, datetime, Look up preflight resolved_hosts for a runtime play.          Preflight assigns, Handle v2_playbook_on_handler_task_start event (same as task_start)., Handle v2_runner_on_start event., Handle a per-item loop event (``v2_runner_item_on_*``).          These are addit, Extract the ``task`` field as a dict.          ansible.posix.jsonl may emit ``ta, Extract the ``hosts`` field as a dict.          mitogen bulk-reconnect events ca (+167 more)
+Nodes (139): FixtureRequest, Any, Complete execution state (State class)., Advance the private tree-shape revision counter.          TreeProjection instanc, (Re)populate the definition lookup indexes.          Called whenever ``definitio, Update the dynamic-expansion cursor for an arriving task.          Matches the r, Graft every other task of *role_name* as a sibling of the         just-grafted c, RunState (+131 more)
 
 ### Community 3 - "AppConfig"
 Cohesion: 0.09
 Nodes (18): AppConfig, BaseSettings, Application configuration loaded from YAML and CLI.      YAML loading is handled, Tests for AppConfig model - TC-263 to TC-275., TC-263: AppConfig has default log_max_lines=50000., TC-264: AppConfig has default session_keep_count=100., TC-265: AppConfig has default session_keep_days=30., AppConfig has default StatusBarConfig. (+10 more)
 
-### Community 4 - "StreamPhase"
-Cohesion: 0.04
-Nodes (37): Enum, PTY stream parser for AOM.  This module implements the 3-phase parser for ansibl, PTY stream parsing phases., StreamPhase, Integration tests for 12-vault-encrypted playbook., Parser detects vault password prompt., Integration tests for 13-ssh-password playbook., Parser detects SSH password prompt. (+29 more)
+### Community 4 - "test_pty_stream.py"
+Cohesion: 0.05
+Nodes (26): Unit tests for PTY stream parsing.  Covers TEST_SPECIFICATION.md Sections 5.5, 5, TC-140: PLAY RECAP pattern detection., TC-140: PLAY RECAP line matches pattern., PLAY RECAP requires minimum 5 asterisks., PLAY RECAP with fewer than 5 asterisks not matched., PLAY RECAP with many asterisks matched., PLAY RECAP in PRE_RUN_PROMPTS phase routes differently., Multiple recap lines collected in POST_RUN_RECAP. (+18 more)
 
-### Community 5 - "Status"
+### Community 5 - "StatusBarConfig"
 Cohesion: 0.01
-Nodes (183): Backward-compat re-export shim for ``determine_exit_code``.  The canonical imple, Status bar configuration., StatusBarConfig, Process exit-code derivation from a :class:`RunState`.  Pure: in → out, no I/O., __getattr__(), Any, Enum, Data models for AOM.  This module defines the dual-track architecture: - Definit (+175 more)
+Nodes (100): Status bar configuration., StatusBarConfig, Unit tests for TUI panels (Sections 7.2-7.6 of TEST_SPECIFICATION.md).  Test cas, TC-280: Regex search matches patterns., Tests for filter panel state persistence., Filter state is isolated from other instances., Filter state can be reset to show all., TC-280 edge case: Invalid regex patterns handled gracefully. (+92 more)
 
-### Community 6 - "index.py"
-Cohesion: 0.07
-Nodes (72): Connection, NamedTuple, EventRef, PlayRow, Byte span of one event line inside ``events.jsonl``.      The streaming loader r, Aggregate for one (task, host) pair plus the last event seen for it., Aggregate for one task, hosts in first-event order., TaskHostRow (+64 more)
+### Community 6 - "load_session"
+Cohesion: 0.09
+Nodes (56): build_index(), build_indexes(), ensure_index(), _events_path(), events_stat(), find_task_id_by_name(), index_is_fresh(), index_path() (+48 more)
 
-### Community 7 - "PlayDefinition"
-Cohesion: 0.01
-Nodes (137): PlayDefinition, Static play info from --list-tasks and --list-hosts (Definition class)., Running spinner (◐→◓→◑→◒) animates across renders.  Previously ``format_tree_blo, Existing callers that don't pass animation_frame still render., _running_state(), test_default_frame_still_works_for_backward_compat(), test_spinner_glyph_changes_with_animation_frame(), TestTreeRendersCount (+129 more)
+### Community 7 - ".from_run_state"
+Cohesion: 0.03
+Nodes (48): Running spinner (◐→◓→◑→◒) animates across renders.  Previously ``format_tree_blo, Existing callers that don't pass animation_frame still render., _running_state(), test_default_frame_still_works_for_backward_compat(), test_spinner_glyph_changes_with_animation_frame(), _hostless_task_state(), Regression tests for hostless meta-task projection., test_meta_task_does_not_synthesize_fake_host_leaves() (+40 more)
 
 ### Community 8 - "Display"
 Cohesion: 0.05
 Nodes (26): Display, Manages the nom-style compact display.      Owns stdout for the duration of the, Initialize the display manager.          Args:             is_tty: Whether stdou, Begin owning the bottom of the terminal.          Args:             force_size:, Pipe/CI mode has its own no-op behaviour and shouldn't gain         the warning, In degraded mode update() drops the status content (we don't     flood stdout wi, No panel was ever shown, so stop() must not emit clear/show         sequences th, `force_size` is the test injection seam for the size detection     that Task 2 w (+18 more)
 
-### Community 9 - "JsonLineStream"
-Cohesion: 0.05
-Nodes (34): JsonLineStream, Set handler for non-JSON lines., Parses JSON lines from a mixed JSON/plaintext stream.      Pexpect can split a J, TC-077: v2_runner_on_ok event parsed with hosts result., TC-077: v2_runner_on_ok event with changed=True., TC-078: v2_runner_on_failed event parsed with error message., TC-079: v2_runner_on_skipped event parsed with skip reason., TC-080: v2_runner_on_unreachable event parsed. (+26 more)
+### Community 9 - "WarningType"
+Cohesion: 0.03
+Nodes (69): Enum, Warning classification type., WarningType, JsonLineStream, PreParseResult, Set handler for non-JSON lines., Result from pre-parse phase (--list-tasks + --list-hosts)., Parses JSON lines from a mixed JSON/plaintext stream.      Pexpect can split a J (+61 more)
 
 ### Community 10 - "test_concurrent_inspect.py"
 Cohesion: 0.16
@@ -707,43 +715,43 @@ Nodes (18): Event, _build_session(), Any, Path, Concurrency test: writer + concu
 
 ### Community 11 - "TaskDefinition"
 Cohesion: 0.02
-Nodes (133): _count_role_group_tasks(), _count_tasks(), Recursively count leaf tasks inside a ``RoleGroupDefinition``.      ``RoleGroupD, Count leaf TaskDefinitions in a play, expanding any RoleGroupDefinition.      Dy, Grouped role tasks when 5+ consecutive tasks share same role.      ``parent`` ca, Static task info from --list-tasks (Definition class)., RoleGroupDefinition, TaskDefinition (+125 more)
+Nodes (75): Static task info from --list-tasks (Definition class)., TaskDefinition, group_roles(), Group consecutive same-role tasks (5 or more) into RoleGroupDefinition.      Arg, Unit tests for dynamic counter accuracy (TC-310–TC-317).  Tests that ``_count_ta, Without include cache, denominator = max(preflight, runtime)., import_tasks are expanded by --list-tasks — they appear as regular     static Ta, A play with RoleGroupDefinition entries and a TaskDefinition that     has dynami (+67 more)
 
 ### Community 12 - "CompactRenderer"
 Cohesion: 0.02
-Nodes (81): CompactRenderer, ANSI-based compact renderer satisfying the Renderer Protocol.      Implements th, R2: cap long msg output so a runaway host doesn't stall the renderer.  A task th, Per-item ``v2_runner_item_on_failed`` messages are also capped.      A looped ta, Sub-cap messages must be passed through unchanged., R2 spec literal: 1 MB msg is logged with the truncation marker.      A host retu, test_failed_msg_truncated_above_cap(), test_item_failed_msg_truncated_above_cap() (+73 more)
+Nodes (98): CompactRenderer, ANSI-based compact renderer satisfying the Renderer Protocol.      Implements th, R2: cap long msg output so a runaway host doesn't stall the renderer.  A task th, Per-item ``v2_runner_item_on_failed`` messages are also capped.      A looped ta, Sub-cap messages must be passed through unchanged., R2 spec literal: 1 MB msg is logged with the truncation marker.      A host retu, test_failed_msg_truncated_above_cap(), test_item_failed_msg_truncated_above_cap() (+90 more)
 
 ### Community 13 - "parse_list_hosts_output"
-Cohesion: 0.07
-Nodes (16): parse_list_hosts_output(), Parse --list-hosts output into structured data.      Returns list of dicts with, TC-149: parse_list_hosts_output extracts hostnames per play., TC-087: Parallel parsing produces same results as sequential., TC-089: When --list-hosts returns empty, hosts will come from         runner eve, TC-090: Warning message when host resolution fails., TC-101: hosts: 'all' returns all inventory hosts., TC-102: Pattern like webservers:!db_primary is preserved in hosts_pattern. (+8 more)
+Cohesion: 0.05
+Nodes (22): parse_list_hosts_output(), Parse --list-hosts output into structured data.      Returns list of dicts with, TC-149: parse_list_hosts_output extracts hostnames per play., TC-087: Parallel parsing produces same results as sequential., TC-089: When --list-hosts returns empty, hosts will come from         runner eve, TC-089: Partial/corrupted output still returns any parseable plays., TC-090: Warning message when host resolution fails., TC-101: hosts: 'all' returns all inventory hosts. (+14 more)
 
-### Community 14 - "Path"
+### Community 14 - "SessionManager"
 Cohesion: 0.03
-Nodes (55): Path, Integration tests for session recording and inspection.  Tests Section 6.3 (Sess, Phase 4: start_session no longer creates stderr.log (stderr goes to events.jsonl, start_session creates meta.json with initial metadata., start_session records start time in UTC., meta.json includes the ansible_args list so aom rerun can replay flags., Old call sites that don't pass ansible_args get [] in meta.json., TC-219: Session events.jsonl content. (+47 more)
+Nodes (77): Any, Path, Enqueue a serialised JSONL line. Returns immediately.          Drops the line an, Manages session recording and artifact creation.      Sessions are stored during, Return the session's async writer, creating it on first use., Reason string if the session's background writer hit a disk error.          Retu, Enqueue a JSONL event for the background writer.          R16: returns immediate, Classify *line* and persist it as an ``aom_stderr_line`` event.          Phase 4 (+69 more)
 
 ### Community 15 - "_play_start"
-Cohesion: 0.13
-Nodes (16): _play_start(), Terminal runner events must update host state even when ids mismatch.  Real-worl, The fallback must cover every terminal handler, not just ok., An ok carrying a play.id we never saw must still land on the         task that o, Two same-named tasks in one play: the fallback must pick the         one still r, No preflight definitions (or no name match): the second         task_start under, Under strategy free, per-host runner_on_start is the start         signal; synth, A host whose latest result is UNREACHABLE or FAILED is removed         from the (+8 more)
+Cohesion: 0.11
+Nodes (18): _play_start(), Terminal runner events must update host state even when ids mismatch.  Real-worl, The fallback must cover every terminal handler, not just ok., An ok carrying a play.id we never saw must still land on the         task that o, Two same-named tasks in one play: the fallback must pick the         one still r, No preflight definitions (or no name match): the second         task_start under, Under strategy free, per-host runner_on_start is the start         signal; synth, A host whose latest result is UNREACHABLE or FAILED is removed         from the (+10 more)
 
-### Community 16 - "run_state.py"
-Cohesion: 0.08
-Nodes (26): dict, JsonlHostResult, JsonlPlay, Subset of the ``play`` field on ``v2_playbook_on_play_start`` and friends., Per-host result embedded in ``hosts`` dicts on ``v2_runner_on_*``.      The shap, _iter_task_def_tree(), Yield a TaskDefinition and all nested TaskDefinition.children in order., _BoundedDict (+18 more)
+### Community 16 - "_BoundedDict"
+Cohesion: 0.15
+Nodes (12): dict, JsonlHostResult, JsonlPlay, Subset of the ``play`` field on ``v2_playbook_on_play_start`` and friends., Per-host result embedded in ``hosts`` dicts on ``v2_runner_on_*``.      The shap, _BoundedDict, _BoundedSet, _parse_play_window_start() (+4 more)
 
 ### Community 17 - "RedactionConfig"
 Cohesion: 0.04
 Nodes (54): _ansible_event_with_res(), custom_ansible_key_pattern(), default_config(), generic_secret_key_pattern(), Any, RedactionConfig, Integration tests for the 4-layer redaction pipeline with realistic Ansible even, Layer 1 — when ``res._ansible_no_log=True`` the whole result is censored. (+46 more)
 
 ### Community 18 - "parse_list_tasks_output"
-Cohesion: 0.07
-Nodes (16): parse_list_tasks_output(), Parse --list-tasks output into structured data.      Returns list of dicts with, TC-115: Block tasks are flattened — no block container in output., TC-116: pre_tasks and post_tasks appear as regular tasks., TC-117: Unnamed tasks use their module/action as the name., TC-116: Play names may contain special section designations., TC-118: Parser only receives stdout content., TC-119: Valid --list-tasks output parses correctly. (+8 more)
+Cohesion: 0.04
+Nodes (24): parse_list_tasks_output(), Parse --list-tasks output into structured data.      Returns list of dicts with, TC-114: import_tasks IS expanded — tasks appear inline in --list-tasks., TC-115: Block tasks are flattened — no block container in output., TC-116: pre_tasks and post_tasks appear as regular tasks., TC-117: Unnamed tasks use their module/action as the name., TC-116: Play names may contain special section designations., TC-118: Parser only receives stdout content. (+16 more)
 
 ### Community 19 - "create_parser"
-Cohesion: 0.05
-Nodes (20): create_parser(), Create the argument parser for the AOM CLI.      Returns:         Configured Arg, Task 5.2: --capture-setup keeps ansible.builtin.setup output., TC-002: create_parser returns ArgumentParser., TC-002: Parser accepts playbook positional argument., Task 5.2: --hide-warnings hides warnings from the live compact log., --capture-verbose --capture-setup --no-redact --yes --no-failed-hint         --h, Task 5.1's --yes flag is untouched by this change. (+12 more)
+Cohesion: 0.07
+Nodes (15): create_parser(), Create the argument parser for the AOM CLI.      Returns:         Configured Arg, --hide-state ok sets hide_state=["ok"]., --hide-state can be specified multiple times., --hide-state ok,skipped splits into ["ok", "skipped"]., Single value still works without any comma., --hide-state ok,OK stores both tokens; dedup happens downstream., Typo 'skip' suggests 'skipped'. (+7 more)
 
 ### Community 20 - "TreeProjection"
 Cohesion: 0.04
-Nodes (83): iter_preflight_task_defs(), Yield preflight task definitions in display order with effective role path., Strip the ``"role : "`` prefix that ansible adds to task names at     runtime. P, Infer an ``include_role``-style runtime role from a task name.      Accepts simp, runtime_role_from_task_name(), strip_role_prefix(), _bump(), _collapse_role_path() (+75 more)
+Nodes (82): iter_preflight_task_defs(), Yield preflight task definitions in display order with effective role path., Strip the ``"role : "`` prefix that ansible adds to task names at     runtime. P, Infer an ``include_role``-style runtime role from a task name.      Accepts simp, runtime_role_from_task_name(), strip_role_prefix(), _bump(), _collapse_role_path() (+74 more)
 
 ### Community 21 - "TestJsonLineStreamSurvivesMojibake"
 Cohesion: 0.15
@@ -763,15 +771,15 @@ Nodes (33): _aom_jsonl_item_event(), _changed(), _failed(), _logged(), _multi_ho
 
 ### Community 25 - "StatusCounts"
 Cohesion: 0.05
-Nodes (71): build_detail_block(), build_run_summaries(), build_run_summary(), build_task_tree(), Derive a ``RunSummary`` from a session dict (output of ``load_session``)., Map a list of session dicts to RunSummary, sorted newest-first by start_time., Aggregate status tally over (task × host) pairs.      Each ``v2_runner_on_*`` ev, Return a new StatusCounts with the bump for one runner event. (+63 more)
+Nodes (75): build_detail_block(), build_run_summaries(), build_run_summary(), build_task_tree(), Derive a ``RunSummary`` from a session dict (output of ``load_session``)., Map a list of session dicts to RunSummary, sorted newest-first by start_time., Aggregate status tally over (task × host) pairs.      Each ``v2_runner_on_*`` ev, Return a new StatusCounts with the bump for one runner event. (+67 more)
 
 ### Community 26 - "TaskTreeNode"
-Cohesion: 0.05
-Nodes (24): ComposeResult, EllipsisType, RichLog, Hierarchical view of a session's tasks.      Levels: run → play → group → task →, TaskTreeNode, _DetailLog, _FooterStatus, _HelpScreen (+16 more)
+Cohesion: 0.03
+Nodes (49): ComposeResult, EllipsisType, ListItem, ListView, RichLog, DetailBlock, Per-session view consumed by the Runs pane and the text-mode header., Hierarchical view of a session's tasks.      Levels: run → play → group → task → (+41 more)
 
-### Community 27 - "IncludeCacheEntry"
-Cohesion: 0.08
-Nodes (52): Pre-flight: parallel `--list-tasks` + `--list-hosts` orchestration.  This module, _build_name_index(), _collect_role_refs_from_tasks(), _discover_include(), discover_include_with_runtime_path(), _discover_role(), _extract_role_name(), _find_nested_role_includes() (+44 more)
+### Community 27 - "RoleGroupDefinition"
+Cohesion: 0.05
+Nodes (51): _collect_role_group_tags(), _count_role_group_tasks(), Recursively count leaf tasks inside a ``RoleGroupDefinition``.      ``RoleGroupD, _iter_task_def_tree(), Grouped role tasks when 5+ consecutive tasks share same role.      ``parent`` ca, Yield a TaskDefinition and all nested TaskDefinition.children in order., RoleGroupDefinition, count_leaf_tasks() (+43 more)
 
 ### Community 28 - "test_task_completion.py"
 Cohesion: 0.13
@@ -779,15 +787,15 @@ Nodes (29): play_dead_hosts(), _play_def_for_state(), Resolve a runtime play to 
 
 ### Community 29 - "InspectApp"
 Cohesion: 0.04
-Nodes (93): App, ListItem, _copy_to_clipboard(), InspectApp, Index sessions that lack a fresh index, in the background.          Runs once at, Best-effort clipboard copy from within the running TUI.      Routes through Text, Three-pane inspector app., _RunRow (+85 more)
+Nodes (91): App, _copy_to_clipboard(), InspectApp, Index sessions that lack a fresh index, in the background.          Runs once at, Best-effort clipboard copy from within the running TUI.      Routes through Text, Three-pane inspector app., _find_tree_node_by_kind(), _no_load_debounce() (+83 more)
 
 ### Community 30 - "run_preflight"
-Cohesion: 0.14
-Nodes (25): _preflight_env(), Spawn a single ansible-playbook invocation; return (exit_code, stdout, stderr)., Run --list-tasks and --list-hosts in parallel; return assembled result.      Bot, Environment for preflight subprocesses.      `ANSIBLE_NOCOLOR=1` forces ansible-, run_preflight(), _spawn_one(), _make_fake_ansible(), Path (+17 more)
+Cohesion: 0.17
+Nodes (21): Run --list-tasks and --list-hosts in parallel; return assembled result.      Bot, run_preflight(), _make_fake_ansible(), Path, Integration tests for run_preflight against a fake ansible-playbook., ANSIBLE_NOCOLOR=1 must be set so ansible-playbook emits stderr without colours., When ansible-playbook fails with an argparse error, only the error line surfaces, Args like -i inventory.ini must reach both subprocess invocations. (+13 more)
 
-### Community 31 - "_ConfirmDelete"
-Cohesion: 0.09
-Nodes (11): ListView, _ConfirmDelete, Path, RunSummary, Hydrate a meta-only Runs row once its session has been indexed., Swap a placeholder Runs row for real index-derived counts., Refresh the row's labels in place (e.g. after index backfill).          Rebuildi, Yes/no confirmation for session deletion. (+3 more)
+### Community 31 - "datetime"
+Cohesion: 0.08
+Nodes (24): datetime, Look up preflight resolved_hosts for a runtime play.          Preflight assigns, Handle v2_playbook_on_handler_task_start event (same as task_start)., Handle v2_runner_on_start event., Handle a per-item loop event (``v2_runner_item_on_*``).          These are addit, Extract the ``task`` field as a dict.          ansible.posix.jsonl may emit ``ta, Extract the ``hosts`` field as a dict.          mitogen bulk-reconnect events ca, Carry the host's recorded start_time into a terminal HostRunState.          Term (+16 more)
 
 ### Community 32 - "Error Handling Tests"
 Cohesion: 0.04
@@ -810,20 +818,20 @@ Cohesion: 0.07
 Nodes (15): Path, Tests for ``scripts/verify_anchors.py``.  The anchor checker is a pre-commit hoo, The extractor pulls every anchor token from a doc, including     backtick-wrappe, Validation must report the *first* broken anchor with a clear     message and th, ``verify_doc`` returns a list of broken-anchor messages and     should short-cir, ``main`` exits 0 on a clean doc and 1 on a broken anchor, with     a clear stder, The script must be smoke-runnable from the command line so the     pre-commit ho, The anchor grammar is narrow: ``path:line`` or ``path:line-line``. (+7 more)
 
 ### Community 37 - "TestWarningPatternsEdgeCases"
-Cohesion: 0.04
-Nodes (31): Unit tests for warning classification and filtering (v1.8).  Covers TEST_SPECIFI, TC-501: PtyStreamParser _warnings list type., TC-501: _warnings contains WarningEntry objects, not strings., TC-501: _warnings is empty list on initialization., TC-501: Multiple warnings are added in order received., TC-501: warnings property returns list., TC-502: WarningEntry source field for PTY stream., TC-502: WarningEntry from PtyStreamParser has source='controller'. (+23 more)
+Cohesion: 0.06
+Nodes (20): TC-502: WarningEntry source field for PTY stream., TC-502: WarningEntry from PtyStreamParser has source='controller'., TC-502: WarningEntry source defaults to empty string if not provided., TC-502: WarningEntry source can be explicitly set., Edge cases for warning pattern matching., Multiple [DEPRECATION WARNING]: lines are all classified correctly., Mixed WARNING and DEPRECATION lines classified correctly., Warnings before EXECUTION phase may not be captured. (+12 more)
 
 ### Community 38 - "TestPasswordPromptPTYIntegration"
 Cohesion: 0.09
 Nodes (12): TC-143: All PASSWORD_PATTERNS entries compile as valid regex., TC-143: All 10 documented password patterns present.          Ansible-native (7), TC-143: handle_password_prompt uses getpass.getpass for PTY integration., TC-143: The prompt text is passed to getpass for display on /dev/tty., TC-143: child param exists for interface compatibility but unused in compact mod, TC-143: child param accepted for TUI interface compatibility., TC-143: Cursor positioning escape sequence written before getpass., TC-143: EOFError from getpass returns empty string (user cancelled). (+4 more)
 
-### Community 39 - "TestGraftIncludeChildren"
-Cohesion: 0.11
-Nodes (17): _include_stub(), _make_play(), Build a single-play PlayDefinition wrapping *tasks*., Build an include_tasks stub TaskDefinition like --list-tasks produces.      Real, Unit tests for graft_include_children() — TC-094a through TC-094e., Write a one-task playbook that includes *include_target* and return its path., TC-094a: A literal include_tasks stub gains children from cache., TC-094b: include_tasks inside a role resolves relative to the role dir. (+9 more)
+### Community 39 - "store.py"
+Cohesion: 0.08
+Nodes (23): parse_iso_timestamp(), datetime, Canonical ISO 8601 timestamp parsing for ansible-playbook JSONL events.  AOM rea, Parse an ISO 8601 timestamp string, tolerating the ``Z`` UTC suffix.      Args:, _parse_timestamp(), datetime, Replay a recorded AOM session through a Renderer (F2).  Both halves of the repla, Parse an ISO 8601 ``_timestamp`` field; return None when unparseable. (+15 more)
 
 ### Community 40 - "format_status_bar"
 Cohesion: 0.05
-Nodes (49): format_status_bar(), Format the status bar for compact mode display.      Args:         playbook: Pat, LivenessState, Pure liveness state machine for the currently running ansible task.  Distinguish, Snapshot of liveness at a query instant.      ``age_s`` is whole seconds since t, TestStatusBarMode, ANSI escape bytes are zero-width on screen — they must not push     a status lin, test_row_count_ignores_ansi_escape_sequences() (+41 more)
+Nodes (48): format_status_bar(), Format the status bar for compact mode display.      Args:         playbook: Pat, LivenessState, Snapshot of liveness at a query instant.      ``age_s`` is whole seconds since t, TestStatusBarMode, ANSI escape bytes are zero-width on screen — they must not push     a status lin, test_row_count_ignores_ansi_escape_sequences(), ``format_status_bar(colorize=True)`` wraps semantic segments. (+40 more)
 
 ### Community 41 - "RedactionConfig"
 Cohesion: 0.05
@@ -831,7 +839,7 @@ Nodes (35): custom_config(), RedactionConfig, redact_dict() recursively redacts 
 
 ### Community 42 - "Renderer"
 Cohesion: 0.04
-Nodes (26): Drive ``renderer`` to completion and return the run's exit code.          Contra, Protocol, Optional. Provide stats from the most-recent matching prior run.          **Mand, Handle a new JSONL event from ansible.          **Mandatory.** Called once per e, Surface a warning or deprecation to the user.          **Mandatory for the compa, Print a log line above the live panel.          **Mandatory for the compact rend, Refresh time-based UI elements during quiet periods.          Called by the runn, Signal that PTY bytes were just received from the subprocess.          Drives th (+18 more)
+Nodes (29): LiveDriver — :class:`EventSource` that runs a real ``ansible-playbook``.  A thin, Drive ``renderer`` to completion and return the run's exit code.          Contra, Renderer factory for compact and JSON output., Protocol, Renderer Protocol — the display-side port of the architecture.  See ``ARCHITECTU, Optional. Provide stats from the most-recent matching prior run.          **Mand, Handle a new JSONL event from ansible.          **Mandatory.** Called once per e, Surface a warning or deprecation to the user.          **Mandatory for the compa (+21 more)
 
 ### Community 43 - "_handle_timeout_branch"
 Cohesion: 0.07
@@ -839,15 +847,15 @@ Nodes (30): spawn, _consume_unread(), _handle_timeout_branch(), _peek_unread(), 
 
 ### Community 44 - "runner.py"
 Cohesion: 0.03
-Nodes (77): Profile, _bundled_callback_dir(), _bundled_connection_callback_dir(), _callback_env(), _default_session_dir(), _drive(), _feed(), _fire_prompt() (+69 more)
+Nodes (80): Profile, _build_command(), _bundled_callback_dir(), _bundled_connection_callback_dir(), _callback_env(), _default_session_dir(), _drive(), _feed() (+72 more)
 
 ### Community 45 - "TestTemplateVariableNameMismatch"
 Cohesion: 0.12
 Nodes (16): _play_def(), Regression tests for Jinja2 template variable names in preflight tasks.  ansible, Host leaves must appear under a running task whose preflight         name has {{, A task with {{ variable }} in preflight must not appear twice         in the tre, A role task with {{ variable }} must match the resolved runtime         name and, A preflight task with {{ variable }} that has completed at         runtime must, Regression: preflight name `Ensure {{ user }}'s home exists` must         match, Regression: preflight name `Deploy for {{ user }}!` must match         runtime n (+8 more)
 
 ### Community 46 - "test_callback_env.py"
-Cohesion: 0.20
-Nodes (5): Ansible infrastructure: subprocess, pexpect, JSONL callback wiring.  Contains th, Unit tests for the runner's stdout-callback selection.  AOM prefers its bundled, Task 5.3: the new connection-tracking callback ships in     ``src/ansible_aom/ca, TestBundledCallbackDir, TestBundledConnectionCallbackDir
+Cohesion: 0.25
+Nodes (4): Unit tests for the runner's stdout-callback selection.  AOM prefers its bundled, Task 5.3: the new connection-tracking callback ships in     ``src/ansible_aom/ca, TestBundledCallbackDir, TestBundledConnectionCallbackDir
 
 ### Community 47 - "Prompt Detection Heuristics"
 Cohesion: 0.08
@@ -865,9 +873,13 @@ Nodes (17): _playbook_start(), Tests for per-task overhead analysis (core/overhe
 Cohesion: 0.08
 Nodes (20): _play_def(), Regression tests for ungrouped role tasks in the tree view.  Ungrouped role task, Role label for ungrouped role must show the total task count         from defini, _task_role must return the role for ungrouped TaskDefinition entries,         no, When a running task is at the end of the definition list,         the stable par, Host leaf must appear under the running task within an         ungrouped role, e, Pending plays must also show ungrouped role tasks under role headers., A pending play with bare TaskDefinition entries that have role         set must (+12 more)
 
+### Community 51 - "TestFilterPanelHostFilter"
+Cohesion: 0.07
+Nodes (17): Tests for host filter - TC-303., Sample tasks with hosts., TC-303: Host filter shows tasks for specified host., TC-303: Multiple hosts in filter matches any., TC-303 edge case: Host not in inventory shows empty., TC-303 edge case: Empty host input shows all tasks., Additional tests for search logic functions., Search finds partial matches within words. (+9 more)
+
 ### Community 52 - "history.py"
-Cohesion: 0.22
-Nodes (16): _build_prior(), _iter_completed_sessions(), _match_loose(), _mine_and_replace(), _mine_loop_totals(), _mine_task_wall(), _parse_iso(), Any (+8 more)
+Cohesion: 0.11
+Nodes (33): _build_prior(), _iter_completed_sessions(), _match_loose(), _mine_and_replace(), _mine_loop_totals(), _mine_task_wall(), _parse_iso(), PriorRun (+25 more)
 
 ### Community 53 - "App Config Model Tests"
 Cohesion: 0.09
@@ -881,13 +893,13 @@ Nodes (14): RuleBasedStateMachine, Free-strategy entry point — task_id appears
 Cohesion: 0.07
 Nodes (32): _ansible_collection_paths(), _has_ansible_posix(), CompletedProcess, Path, Integration tests for include/import/role task variants.  Covers TC-330 through, TC-330 / TC-331: import_tasks tree rendering and counter accuracy., TC-330: import_tasks are expanded — all task names visible., TC-331: import_tasks counter = 4 runtime tasks. (+24 more)
 
-### Community 56 - "run_playbook"
-Cohesion: 0.05
-Nodes (47): _build_command(), Return the (executable, args) pair to spawn.      Split out so tests can patch i, Run a playbook through the renderer; return the subprocess exit code.      The r, run_playbook(), Snapshot the current ``tracemalloc`` peak and stash it for later.      Reads ``t, record_tracemalloc_peak(), _fake_ansible_command(), _fake_pause_prompt_command() (+39 more)
+### Community 56 - "Path"
+Cohesion: 0.07
+Nodes (29): _fake_pause_prompt_command(), Path, Integration tests for runner pause/vars_prompt handling (IP1, IP3).  These tests, vars_prompt's default format is ``[name]: `` with no custom text., (yes/no) and [y/N] style prompts get the interactive treatment., Simulate exactly what ansible.builtin.pause emits in production.      ansible de, Even when the prompt text doesn't include 'Press Enter',         the bracketed t, The variant the user actually hit in production.      ``ansible.builtin.pause`` (+21 more)
 
 ### Community 57 - "JsonlEvent"
 Cohesion: 0.04
-Nodes (45): _count_cell(), Right-align ``value`` in a fixed-width cell; dim zero values.      A literal zer, ``text`` wrapped in an SGR sequence, or plain ``text`` if not colorising., _wrap(), _extract_error_msg(), _first_line(), Print a log line above the status panel.          Thin pass-through to the Displ, Add a warning or deprecation detected from PTY stream.          Bumps the counte (+37 more)
+Nodes (50): Cap a JSONL ``msg`` field for live display.      R6: any lone-surrogate codepoin, Return the inline body for a verbose-always ok result, or ``None``.      Mirrors, _truncate_msg(), _verbose_ok_body(), _BoundedSet, _extract_error_msg(), _first_line(), set (+42 more)
 
 ### Community 58 - "RunDiagnostics"
 Cohesion: 0.11
@@ -907,27 +919,27 @@ Nodes (27): _full_panel(), Snapshot tests for the compact renderer's tree + host
 
 ### Community 62 - "tests/conftest.py"
 Cohesion: 0.25
-Nodes (7): event_play_start(), event_runner_ok_changed(), list_hosts_output(), Shared test fixtures for AOM test suite.  CRITICAL: All fixtures are IMMUTABLE., v2_runner_on_ok event with changed=True., Sample --list-hosts output., v2_playbook_on_play_start event.
+Nodes (7): deprecated_removed_line(), event_runner_ok_changed(), list_hosts_output(), Shared test fixtures for AOM test suite.  CRITICAL: All fixtures are IMMUTABLE., v2_runner_on_ok event with changed=True., Ansible removed feature deprecation line., Sample --list-hosts output.
 
 ### Community 63 - "HeartbeatTracker"
 Cohesion: 0.08
-Nodes (32): HeartbeatTracker, Tests for HeartbeatTracker (core/heartbeat.py).  The tracker derives a three-lev, The real-world brew-install case: one byte at task start, then     silence. The, User-facing case: ansible-playbook is silent for >5s but its CPU     sampler sho, An ``active=False`` sample is informational ('CPU was idle') and     must not sa, CPU samples older than the live window stop counting as 'recent'.     They can s, ``reason`` annotates why the level is what it is. Backwards-compat:     existing, No CPU info available (sampler hasn't reported yet, or always     inactive) — th (+24 more)
+Nodes (33): HeartbeatTracker, Pure liveness state machine for the currently running ansible task.  Distinguish, Tests for HeartbeatTracker (core/heartbeat.py).  The tracker derives a three-lev, The real-world brew-install case: one byte at task start, then     silence. The, User-facing case: ansible-playbook is silent for >5s but its CPU     sampler sho, An ``active=False`` sample is informational ('CPU was idle') and     must not sa, CPU samples older than the live window stop counting as 'recent'.     They can s, ``reason`` annotates why the level is what it is. Backwards-compat:     existing (+25 more)
 
 ### Community 65 - "Playbook Run Integration Tests"
 Cohesion: 0.15
 Nodes (20): _all_text(), _aom_jsonl_item_event(), _async_poll_payload(), _item(), _item_event(), _logged(), _loop_ok(), Live per-item loop streaming in the compact log.  With the bundled ``aom_jsonl`` (+12 more)
 
-### Community 66 - "TestTaskCompletionLifecycle"
-Cohesion: 0.08
-Nodes (15): Regression guard: ``TreeLine.has_tail_after`` carries the     'a "more tasks" fo, A TreeLine constructed positionally (no kwarg) has         ``has_tail_after=Fals, Constructing a TreeLine with ``has_tail_after=True`` works and         the value, Kwarg-only construction also defaults to ``False`` — covers         the case whe, Regression guards: under linear strategy the state machine sets     task.status, Simulate a complete linear-strategy task lifecycle:         task_start → runner_, After a task's hosts all reach terminal state, the tree         stays visible (s, Completed tasks are intentionally dropped from the tree — the         streaming (+7 more)
+### Community 66 - "test_tree_classify_and_role_labels.py"
+Cohesion: 0.07
+Nodes (20): Regression tests for tree projection bugs:  1. _classify must treat RUNNING task, Regression guard: role labels in the runtime play must show the     total task c, Build a state where one role task is completed and another is         running. T, When a role has 2 tasks and 1 is completed, the runtime role         label shows, When all role tasks are completed (none running, none pending),         the runt, Regression guard: a task with RUNNING status but no host entries yet     (e.g. b, Regression for the '(M remaining) goes UP as tasks complete' bug.          The r, TC-300: _task_role must index TaskDefinition.children (grafted     include_tasks (+12 more)
 
 ### Community 67 - "test_inspect_debug.py"
 Cohesion: 0.20
 Nodes (16): format_diagnostics_section(), Any, Render the ``diagnostics.json`` payload as a plain-text section.      Returns a, Path, Phase 6: ``aom inspect --debug`` prints diagnostics.json contents.  Spec: docs/s, ``--debug --json`` writes the diagnostics record as a single JSON     object for, test_format_diagnostics_recording_disabled_surfaces_reason(), test_format_diagnostics_section_with_full_record() (+8 more)
 
 ### Community 68 - "_session"
-Cohesion: 0.11
-Nodes (18): collect_changed_hosts(), collect_failed_hosts(), collect_unreachable_hosts(), create_session_summary(), Any, Pure post-mortem projections of a loaded session.  These functions take a sessio, Return the set of hostnames that had at least one changed task.      Pure: scans, Create a human-readable summary of a session.      Args:         session: Sessio (+10 more)
+Cohesion: 0.16
+Nodes (12): collect_changed_hosts(), collect_unreachable_hosts(), create_session_summary(), Any, Pure post-mortem projections of a loaded session.  These functions take a sessio, Return the set of hostnames that had at least one changed task.      Pure: scans, Create a human-readable summary of a session.      Args:         session: Sessio, Return the set of hostnames that hit ``v2_runner_on_unreachable``.      Pure: sa (+4 more)
 
 ### Community 69 - "RedactionConfig"
 Cohesion: 0.04
@@ -938,8 +950,8 @@ Cohesion: 0.25
 Nodes (5): Tests for TC-160: URL credential sanitization., TC-160: URL credentials are sanitized., TC-160 edge case: URL-encoded passwords., TC-160 edge: URLs without credentials remain unchanged., TestURLCredentialSanitization
 
 ### Community 71 - "renderer.py"
-Cohesion: 0.12
-Nodes (35): _BoundedSet, set, Compact renderer — Rich Live lifecycle and per-event log emission.  Pure formatt, A ``set`` that drops itself when it exceeds a cap on insert.      R14: the compa, Initialize the compact renderer.          Args:             is_tty: Whether stdo, add_completed(), add_in_flight(), project_remaining() (+27 more)
+Cohesion: 0.15
+Nodes (31): Compact renderer — Rich Live lifecycle and per-event log emission.  Pure formatt, add_completed(), add_in_flight(), project_remaining(), Pure run-duration projection from a prior run's per-task profile.  The "Last run, Fold a just-completed task into ``progress`` by its prior bucket.      A path ab, Top up ``progress`` with a still-running task's partial progress.      Credits `, Project remaining wall-clock seconds, or ``None`` if not estimable.      ``None` (+23 more)
 
 ### Community 73 - "Host Result Hide Filter"
 Cohesion: 0.09
@@ -1001,29 +1013,29 @@ Nodes (17): BaseModel, Warning display configuration., WarningsConfig, Tests for
 Cohesion: 0.10
 Nodes (24): _make_v1_and_v2_sessions(), _make_v1_session(), _make_v2_session(), Path, Schema-boundary regression test (Phase 8 / Task 8.3).  What this test pins -----, Build a current AOM v2 session: meta.json carries ``_schema_version: 2``.      T, Build both regimes side-by-side in the same ``base`` directory.      Returning t, ``load_session`` is the branch site. Pin both sides here. (+16 more)
 
-### Community 88 - "_seed_run_state"
-Cohesion: 0.12
-Nodes (9): Build a RunState with one play, one task, and one host already RUNNING.      The, TC-MITOGEN-1: ``task`` as a bare UUID string must be tolerated.          ansible, TC-MITOGEN-2: ``task: None`` must be tolerated.          Mitogen-shimmed actions, TC-MITOGEN-3: ``hosts`` as a list must be tolerated.          Mitogen aggregates, TC-MITOGEN-4: ``hosts: list`` on unreachable must also be tolerated., TC-MITOGEN-5: ``hosts: list`` on failed must also be tolerated., TC-MITOGEN-6: ``hosts: list`` on skipped must also be tolerated., TC-MITOGEN-7: A malformed event does not poison subsequent events.          Afte (+1 more)
+### Community 88 - "TestHandleEventMalformedPayloads"
+Cohesion: 0.15
+Nodes (11): Build a RunState with one play, one task, and one host already RUNNING.      The, TC-MITOGEN-1..6: handle_event must tolerate mitogen-distorted payloads.      The, TC-MITOGEN-1: ``task`` as a bare UUID string must be tolerated.          ansible, TC-MITOGEN-2: ``task: None`` must be tolerated.          Mitogen-shimmed actions, TC-MITOGEN-3: ``hosts`` as a list must be tolerated.          Mitogen aggregates, TC-MITOGEN-4: ``hosts: list`` on unreachable must also be tolerated., TC-MITOGEN-5: ``hosts: list`` on failed must also be tolerated., TC-MITOGEN-6: ``hosts: list`` on skipped must also be tolerated. (+3 more)
 
 ### Community 89 - "Preflight Definition Assembly"
 Cohesion: 0.30
 Nodes (14): _failed(), _logged(), _ok(), Per-event cost of the full-completion summary sweep must stay flat.  Regression, A host dying in one task completes OTHER tasks it was blocking:     dead hosts l, A host whose FAILED result is later overwritten by an OK (retry /     async-poll, One slow host must not make per-event completion checks sweep the     whole pend, _renderer() (+6 more)
 
-### Community 90 - "_parse_timestamp"
-Cohesion: 0.12
-Nodes (9): _parse_timestamp(), Process a JSONL event and update state., Parse timestamp from event, defaulting to current time., TC-085: _parse_timestamp returns timezone-aware datetime from UTC string., TC-085: UTC timestamp can be converted to local timezone via astimezone()., TC-085: 'Z' suffix in timestamps is handled as UTC., TC-085: Timestamps without Z still parse as UTC if +00:00., TC-085: Various UTC timestamp strings parse correctly. (+1 more)
+### Community 90 - "TestTimestampLocalTimezone"
+Cohesion: 0.14
+Nodes (11): _parse_timestamp(), Process a JSONL event and update state., Parse timestamp from event, defaulting to current time., Tests for UTC timestamp conversion to local timezone (TC-085)., TC-085: _parse_timestamp returns timezone-aware datetime from UTC string., TC-085: UTC timestamp can be converted to local timezone via astimezone()., TC-085: 'Z' suffix in timestamps is handled as UTC., TC-085: Timestamps without Z still parse as UTC if +00:00. (+3 more)
 
-### Community 91 - "inspect.py"
-Cohesion: 0.10
-Nodes (25): build_verbose_lines(), Return ``play_name -> task_id`` membership from an already-built tree.      Call, Build the verbose-panel body for one session dict and focus scope.      In-memor, task_ids_by_play(), query_verbose(), Verbose lines for a focus scope, filtered inside sqlite.      The WHERE clauses, _fmt_duration_short(), Inspect TUI app — three-pane browser for past AOM sessions.  Pane layout (Horizo (+17 more)
+### Community 91 - "parse_jsonl_output"
+Cohesion: 0.12
+Nodes (12): parse_jsonl_output(), Run ansible-playbook with JSONL callback and capture output., Parser correctly handles unreachable host., --tags install runs only install-tagged tasks., --tags configure runs only configure-tagged tasks., --tags all runs every task regardless of tag., include_tasks expands dynamic tasks at runtime., import_tasks expands static tasks before execution. (+4 more)
 
 ### Community 92 - "TestEventParsing"
 Cohesion: 0.11
 Nodes (14): Path, Tests using pre-recorded JSONL fixtures (no ansible-playbook needed)., Return path to tests/fixtures directory., Parse single_task_ok.jsonl fixture., Parse playbook_failed.jsonl fixture., Parse multi_host_mixed.jsonl fixture., Test parsing of specific event types from JSONL., Return path to tests/fixtures directory. (+6 more)
 
 ### Community 93 - "_AsyncEventWriter"
-Cohesion: 0.07
-Nodes (15): _AsyncEventWriter, Background thread that drains events onto disk.      R16: ``record_event`` enque, Enqueue a serialised JSONL line. Returns immediately.          Drops the line an, Cumulative count of events dropped because the queue was full., Reason string if the writer thread hit a disk error, else None.          Set onc, Wait until the queue is fully drained.          Used by tests that need to asser, Signal the writer thread to drain and exit., Consume the rest of the queue as no-ops after a disk error.          We can't wr (+7 more)
+Cohesion: 0.12
+Nodes (10): _AsyncEventWriter, Background thread that drains events onto disk.      R16: ``record_event`` enque, Cumulative count of events dropped because the queue was full., Reason string if the writer thread hit a disk error, else None.          Set onc, Wait until the queue is fully drained.          Used by tests that need to asser, Signal the writer thread to drain and exit., Consume the rest of the queue as no-ops after a disk error.          We can't wr, Drain the queue, writing each line to events.jsonl.          Any disk error (``o (+2 more)
 
 ### Community 94 - "Mitogen Event Robustness"
 Cohesion: 0.16
@@ -1042,8 +1054,8 @@ Cohesion: 0.14
 Nodes (8): Tests for StatusBarConfig model - TC-260, TC-307, TC-290., TC-260: StatusBarConfig has default elements list., TC-307: StatusBarConfig can have custom elements., TC-307: elements field is a list., TC-307 edge case: Empty elements list is valid., TC-307: elements list contains strings., TC-260: Field uses default_factory for mutable default., TestStatusBarConfig
 
 ### Community 98 - "test_r6_encoding_roundtrip.py"
-Cohesion: 0.09
-Nodes (22): _fake_ansible_emits_jsonl_with_raw_msg(), _isolate_session_dir(), MonkeyPatch, Path, R6: encoding surrogateescape for byte-exact round-trip into ``events.jsonl``.  P, Sanity check: switching pexpect to ``surrogateescape`` must         not change b, The renderer's display path must normalise surrogate codepoints     to U+FFFD (`, ``_truncate_msg`` runs every msg field through the         encode-with-replace/d (+14 more)
+Cohesion: 0.11
+Nodes (19): _fake_ansible_emits_jsonl_with_raw_msg(), _isolate_session_dir(), MonkeyPatch, Path, R6: encoding surrogateescape for byte-exact round-trip into ``events.jsonl``.  P, Sanity check: switching pexpect to ``surrogateescape`` must         not change b, The renderer's display path must normalise surrogate codepoints     to U+FFFD (`, ``_truncate_msg`` runs every msg field through the         encode-with-replace/d (+11 more)
 
 ### Community 99 - "analyze_overhead"
 Cohesion: 0.19
@@ -1057,9 +1069,9 @@ Nodes (18): IntEnum, Numeric verbosity caplevel for an ``aom_stderr_line`` event
 Cohesion: 0.11
 Nodes (21): LogCaptureFixture, _make_partial_session(), CompletedProcess, Path, Crash-recovery regression tests (Phase 8 / Task 8.2).  What this test pins -----, Spawn a real Python subprocess that writes events, then SIGKILL it.      The sub, ``load_session`` degrades gracefully when meta.json is missing., A directory with only events.jsonl still loads (returns a dict). (+13 more)
 
-### Community 102 - "RoleCacheEntry"
-Cohesion: 0.16
-Nodes (9): Cached task list for a role discovered at runtime.      When a role is applied d, Pre-computed count for O(1) access in counter hot paths., RoleCacheEntry, Unit tests for IncludeCacheEntry.task_count and RoleCacheEntry.task_count., task_count property equals len(task_names)., Empty task_names yields task_count of 0., task_count property equals len(task_names)., Empty task_names yields task_count of 0. (+1 more)
+### Community 102 - "TestPasswordPromptPatterns"
+Cohesion: 0.08
+Nodes (14): TC-133 to TC-139: Password pattern detection., TC-134: Vault password: pattern detected., TC-135: Vault password (id): pattern detected., TC-136: SSH password: pattern detected., TC-137: BECOME password: pattern detected., TC-138: BECOME password[defaults to SSH password]: pattern detected., TC-139: New Vault password: pattern detected., TC-139: Confirm New Vault password: pattern detected. (+6 more)
 
 ### Community 103 - "Parser Edge Cases"
 Cohesion: 0.13
@@ -1089,9 +1101,9 @@ Nodes (15): normalize_hide_states(), Lowercase, deduplicate, validate, and separ
 Cohesion: 0.09
 Nodes (12): Edge cases and boundary conditions., Empty lines don't crash parser., Whitespace-only lines handled gracefully., JSON without _event field returns empty., Malformed JSON doesn't crash parser., JSON with trailing newline handled., Multiple stats events handled (shouldn't happen but test)., Password prompts with extra text still match. (+4 more)
 
-### Community 110 - "Status Color Mapping"
-Cohesion: 0.12
-Nodes (19): _fake_ansible_command(), MonkeyPatch, Path, Integration tests for the runner's session recording (roadmap #14).  Every `run_, Recording is best-effort — disk failures don't crash the run., If session_dir can't be written to, the playbook still runs and exits cleanly., R3: an OSError mid-run (disk full, FS quota, NFS hiccup) disables     further re, (command, args) pair emitting `events` then exiting with `exit_code`. (+11 more)
+### Community 110 - "run_playbook"
+Cohesion: 0.07
+Nodes (33): Run a playbook through the renderer; return the subprocess exit code.      The r, run_playbook(), _fake_ansible_command(), Integration tests for the ansible-playbook runner.  The runner spawns `ansible-p, Missing ansible-playbook surfaces as exit 127 without crashing., Runner calls run_preflight before spawning and forwards its result., Build a (command, args) pair that emits `events` as JSONL then exits.      Retur, Each error → an add_warning call, even when they share a body.          The coun (+25 more)
 
 ### Community 111 - "Play Tree Projection"
 Cohesion: 0.17
@@ -1105,17 +1117,17 @@ Nodes (10): copy_session_fixture(), load_session_dict(), Path, Loaders for curat
 Cohesion: 0.12
 Nodes (24): How many terminal rows `text` occupies at the given terminal `width`.      Each, _row_count(), Tests for width-aware row counting (roadmap #12).  `_row_count` decides how many, ANSI codes are excluded from the wrap calculation; visible chars     are what co, After update() in a narrow terminal, _status_rows reflects wrapped rows.      SI, After 'abc\\n' the cursor sits on the next row but nothing is rendered there., A line exactly `width` chars long fits on one row (no wrap)., First line wraps to 2 rows, second line takes 1 row → 3 total. (+16 more)
 
-### Community 114 - "PriorRun"
-Cohesion: 0.12
-Nodes (31): _collect_role_group_tags(), collect_tags(), format_preflight_summary(), Unique tags across every leaf TaskDefinition, alphabetically sorted.      Used f, PriorRun, Stats from the most recent matching prior session., Tests for format_preflight_summary — startup tree preview., When --list-hosts failed for a play, resolved_hosts is empty. (+23 more)
+### Community 114 - "PlayDefinition"
+Cohesion: 0.03
+Nodes (61): collect_tags(), _count_tasks(), format_preflight_summary(), Count leaf TaskDefinitions in a play, expanding any RoleGroupDefinition.      Dy, Unique tags across every leaf TaskDefinition, alphabetically sorted.      Used f, PlayDefinition, Static play info from --list-tasks and --list-hosts (Definition class)., Tests for format_preflight_summary — startup tree preview. (+53 more)
 
 ### Community 115 - "create_renderer"
 Cohesion: 0.09
 Nodes (15): RenderMode, create_renderer(), Create the renderer selected by ``mode``.      Args:         mode: ``"compact"``, _default_runner(), Real-world runner: spawn the renderer + run_playbook.      Lazy-imported so unit, Default view mode is compact., TC-005: create_renderer function exists., TC-005: create_renderer() returns CompactRenderer. (+7 more)
 
-### Community 116 - "format_failure_recap"
-Cohesion: 0.15
-Nodes (9): format_failure_recap(), Render a one-shot startup summary of plays/tasks/hosts from preflight.      Prin, Build per-failure lines naming the host and task that went wrong.      Returns o, Tests for the failure recap printed when a run ends in failure.  The per-host su, Recap lines should align visually with the per-host summary block., _state_with_failure(), TestFormatFailureRecap, Recap line labels carry the same colour as the per-host count. (+1 more)
+### Community 116 - "TestSubtreeRoleCounting"
+Cohesion: 0.11
+Nodes (14): Subtree semantics for ``_build_role_total_tasks`` and     ``_count_visible_tasks, Build a state with ``podman > angie_ssl_terminator`` nesting.          ``n_podma, ``role_total_tasks["podman"]`` must include angie's 30 tasks         as part of, Regression guard: subtree and direct-children counts are         equal for a sin, When only role headers + a couple tasks fit in the budget,         both ``podman, Regression guard for single-role subtree == direct., With a small budget that truncates inside angie's task list,         both podman, Multi-level inner footer emission for nested roles.      When the cut lands insi (+6 more)
 
 ### Community 117 - "State Transition Validation"
 Cohesion: 0.25
@@ -1125,13 +1137,13 @@ Nodes (10): detect_duplicate_playbook(), True if `playbook` appears (path-normal
 Cohesion: 0.08
 Nodes (16): _has_surrogate_codepoint(), Any, Parse a line and return zero or more JSON events.          Returns empty list fo, Parse a line and return zero or more events., Parse JSON line and return events., Classify and handle non-JSON lines from PTY stream.          Real ansible-playbo, Update connection tracking state from a connection event.          Intercepts ``, Resolve connection_id and attribution_confidence for a stderr line.          Arg (+8 more)
 
-### Community 119 - "load_session"
-Cohesion: 0.06
-Nodes (55): parse_iso_timestamp(), datetime, Canonical ISO 8601 timestamp parsing for ansible-playbook JSONL events.  AOM rea, Parse an ISO 8601 timestamp string, tolerating the ``Z`` UTC suffix.      Args:, _build_parser(), _default_state_dir(), inspect_debug(), inspect_prune() (+47 more)
+### Community 119 - "inspect/cli.py"
+Cohesion: 0.08
+Nodes (39): _build_parser(), _default_state_dir(), inspect_debug(), inspect_prune(), inspect_text(), inspect_tui(), main(), ArgumentParser (+31 more)
 
 ### Community 120 - "Path"
-Cohesion: 0.15
-Nodes (14): Path, Resolve an explicit session ID, short prefix, or "most recent" intent.      Mirr, _resolve_session_id(), _make_session(), Path, Unit tests for the aom rerun subcommand., Helper: create a session directory with a minimal meta.json., Helper: write a session with one failed host (web2). (+6 more)
+Cohesion: 0.16
+Nodes (13): Path, Resolve an explicit session ID, short prefix, or "most recent" intent.      Mirr, _resolve_session_id(), _make_session(), Path, Helper: create a session directory with a minimal meta.json., Helper: write a session with one failed host (web2)., Happy path: --yes --failed → run_playbook called with --limit web2. (+5 more)
 
 ### Community 121 - "Pane Focus Navigation"
 Cohesion: 0.20
@@ -1174,7 +1186,7 @@ Cohesion: 0.26
 Nodes (12): _all_text(), _item(), _logged(), _loop_failed(), _loop_ok(), Tests for per-item loop rendering in the streaming log.  The ``ansible.posix.jso, _renderer(), _task_start() (+4 more)
 
 ### Community 131 - "_FakeSpawn"
-Cohesion: 0.13
+Cohesion: 0.14
 Nodes (11): _FakeSpawn, _patch_runner_with_fake_spawn(), Any, MonkeyPatch, R9 — searchwindowsize bound on pexpect.spawn().  R9 spec: pexpect's ``searchwind, R9: searchwindowsize must exceed every pattern the runner uses.      The runner', Stand-in for pexpect.spawn() with the kwargs the runner passes., Capture every kwarg passed to pexpect.spawn() inside the runner. (+3 more)
 
 ### Community 132 - "Password Prompt Patterns"
@@ -1193,17 +1205,17 @@ Nodes (11): Header + bare colon (no markers, no question mark) is still a prompt
 Cohesion: 0.05
 Nodes (58): PydanticBaseSettingsSource, AomSettings, CaptureConfig, _cli_config_path(), find_config_paths(), InspectConfig, LiveConfig, load_config_with_layers() (+50 more)
 
-### Community 136 - "Tree Navigation Keys"
-Cohesion: 0.27
-Nodes (5): Path, Integration: the bundled ``aom_jsonl`` callback emits ``ignore_errors``.  Ansibl, Producer + consumer compose: the ignored failure lands as OK in the         stat, _run_playbook(), TestIgnoreErrorsCallback
+### Community 136 - "test_ignore_errors_callback.py"
+Cohesion: 0.32
+Nodes (4): Path, Integration: the bundled ``aom_jsonl`` callback emits ``ignore_errors``.  Ansibl, _run_playbook(), TestIgnoreErrorsCallback
 
 ### Community 137 - "_make_play"
 Cohesion: 0.19
 Nodes (10): _make_play(), _make_task(), _resolve_play_hosts uses _play_def_by_name dict lookup., Unknown play name → empty list, just like the linear scan returned., After definitions = [...], _task_def_index contains every leaf by name., _graft_or_match_task must NOT call _iter_leaf_task_defs.          Mock _iter_lea, Async launcher + async-status rows with the same display name stay separate., TestIndexReassignment (+2 more)
 
-### Community 138 - "assemble_definitions"
-Cohesion: 0.07
-Nodes (30): assemble_definitions(), Reduce ansible-playbook stderr to the diagnostic lines worth showing.      Argpa, Build PlayDefinition objects from parsed --list-tasks / --list-hosts dicts., _trim_stderr(), Tests for host name resolution (TC-149 to TC-152).  Covers TEST_SPECIFICATION.md, TC-151: --list-hosts failure → empty play_hosts → empty resolved_hosts., TC-149: --list-hosts populates PlayDefinition.resolved_hosts., TC-149: assemble_definitions wires parse_list_hosts_output into PlayDefinition. (+22 more)
+### Community 138 - "test_preflight.py"
+Cohesion: 0.12
+Nodes (19): Reduce ansible-playbook stderr to the diagnostic lines worth showing.      Argpa, _trim_stderr(), Tests for the pre-flight orchestrator (--list-tasks + --list-hosts)., When there's no `: error:` marker, keep the first few non-empty lines, capped., The new fields are optional with empty defaults so old call sites still work., assemble_definitions builds a PlayDefinition per play with tasks + resolved_host, When --list-hosts has no entry for a play, resolved_hosts stays empty., ansible-playbook on bad args dumps usage + error + full --help. Keep only error. (+11 more)
 
 ### Community 139 - "Parser Phase Transitions"
 Cohesion: 0.25
@@ -1217,25 +1229,25 @@ Nodes (18): _ansible_collection_paths(), _find_session(), _has_ansible_posix(), 
 Cohesion: 0.15
 Nodes (18): _ansible_collection_paths(), _find_session(), _has_ansible_posix(), _parse_jsonl_through_core(), CompletedProcess, Path, Real-ansible throttle awareness test (RED — TDD failing test).  This test is **i, Spawn ``python -m ansible_aom <playbook>`` against a sandboxed HOME.      The fi (+10 more)
 
-### Community 142 - "Memory Bounds Constants"
-Cohesion: 0.06
-Nodes (19): TC-280: Regex search matches patterns., TC-280 edge case: Invalid regex patterns handled gracefully., TC-281: Case-sensitive toggle affects search matching., TC-282: F3 jumps to next match., TC-282: Shift+F3 jumps to previous match., TC-282 edge case: F3 at last match wraps to first., TC-283: Search matches are visually highlighted., TC-279 edge case: No matches shows empty result. (+11 more)
+### Community 142 - "assemble_definitions"
+Cohesion: 0.10
+Nodes (15): assemble_definitions(), Build PlayDefinition objects from parsed --list-tasks / --list-hosts dicts., TC-151: If --list-hosts fails, resolved_hosts starts empty; populated by runner, TC-151: --list-hosts failure → empty play_hosts → empty resolved_hosts., TC-151: RunState.definitions=[] → _resolve_play_hosts returns []., TC-151: v2_runner_on_* events add hosts to task.hosts even without preflight., TC-151 edge: host arriving from a runner event but absent from preflight, TC-149: --list-hosts populates PlayDefinition.resolved_hosts. (+7 more)
 
 ### Community 143 - "TestAppConfigValidation"
 Cohesion: 0.10
 Nodes (11): Tests for Pydantic field constraints - TC-316, TC-317, TC-318., TC-318: log_max_lines minimum is 1000., TC-318: log_max_lines below 1000 raises ValidationError., TC-318: log_max_lines above 100000 raises ValidationError., TC-318: session_keep_count minimum is 1., TC-318: session_keep_count below 1 raises ValidationError., TC-318: session_keep_count negative raises ValidationError., TC-318: session_keep_days minimum is 1. (+3 more)
 
-### Community 144 - "TestStatusEnum"
-Cohesion: 0.09
-Nodes (12): Tests for Status enum - TC-186., TC-186: Status enum contains exactly 8 values (7 task/host + COMPLETED for run-l, TC-186: Status.PENDING exists with correct value., TC-186: Status.RUNNING exists with correct value., TC-186: Status.OK exists with correct value., TC-186: Status.CHANGED exists with correct value., TC-186: Status.FAILED exists with correct value., TC-186: Status.SKIPPED exists with correct value. (+4 more)
+### Community 144 - "WarningEntry"
+Cohesion: 0.03
+Nodes (59): A classified warning or deprecation from the PTY stream., WarningEntry, Tests for status filter checkboxes - TC-301., Create filter state for status checkboxes., TC-301: Status checkboxes filter tasks by status., TC-301: Multiple statuses create union filter., TC-301 edge case: Uncheck all shows all tasks (no filter)., TC-301 edge case: No tasks match filter shows empty tree. (+51 more)
 
-### Community 145 - "test_renderer_set_definitions.py"
-Cohesion: 0.16
-Nodes (15): _build_definitions(), Tests for CompactRenderer.set_definitions (preflight result wiring)., Hosts that appear in multiple plays count once each., After preflight, the status bar should show total resolved hosts immediately., Defensive: calling set_definitions before start should not crash., Preflight failure path: empty definitions should not crash and leaves hosts at 0, The startup summary lands above the status panel via print_log., Empty preflight result should not print a stray header. (+7 more)
+### Community 145 - "TestTwoLevelTruncation"
+Cohesion: 0.12
+Nodes (12): Two-cut truncation: when the budget is exceeded, the algorithm     emits BOTH an, 1 play, 1 role, ``n_tasks`` tasks, 1 host — the simplest         tree whose budg, 2 plays, each with a single role and ``n_tasks_per_role`` tasks.         The unb, A small tree that fits the budget returns verbatim — no footers,         no has_, The classic scenario from test_tree_nested_roles.py: 1 play, 1         role, 34, When the budget cut lands inside a role's task list, both an         inner foote, When the budget cut lands cleanly on a play boundary (between         two plays), The inner footer's count must equal the number of tasks remaining         in the (+4 more)
 
-### Community 146 - "json.py"
-Cohesion: 0.08
-Nodes (28): HostCounts, BaseModel, JSON output renderer for AOM (F6).  Implements the Renderer Protocol but produce, Build the RunSummary from accumulated RunState and print as JSON.          ``exi, Per-host status counts aggregated across every task in every play., One (host, task) pair that ended in FAILED or UNREACHABLE., End-of-run summary emitted by ``JsonRenderer.handle_completion``.      Field rul, RunSummary (+20 more)
+### Community 146 - "RunSummary"
+Cohesion: 0.11
+Nodes (19): End-of-run summary emitted by ``JsonRenderer.handle_completion``.      Field rul, RunSummary, _canonical_schema_text(), _load_committed_schema(), Contract test for the committed ``RunSummary`` v1 JSON schema (Item #7).  Downst, Load the on-disk schema. Skipped if missing (handled in Layer 1)., Each canonical shape must validate. Catches accidental tightening., Bonus: a payload produced through the Pydantic model must validate.      Prevent (+11 more)
 
 ### Community 147 - "Session Roundtrip Invariants"
 Cohesion: 0.40
@@ -1261,21 +1273,21 @@ Nodes (10): Phase stays EXECUTION without v2_playbook_on_stats., Lines in POST_R
 Cohesion: 0.11
 Nodes (10): TC-141: Warning pattern detection and classification., TC-141: [WARNING]: pattern detected., TC-141: [DEPRECATION WARNING]: pattern detected., TC-141: [DEPRECATED]: pattern detected., Multiple warnings collected separately., Warnings captured in PRE_RUN_PROMPTS phase., Warning entries have timestamp., Warning message preserved exactly. (+2 more)
 
-### Community 153 - "test_renderer_parity.py"
-Cohesion: 0.17
-Nodes (16): _empty_host_counts(), Any, Project ``state`` into a renderer-agnostic dict.      Shape::          {, reduce_state_for_parity(), _drive_compact(), _drive_json(), _load_events(), CaptureFixture (+8 more)
+### Community 153 - "parity.py"
+Cohesion: 0.12
+Nodes (19): Backward-compat re-export shim for ``determine_exit_code``.  The canonical imple, Process exit-code derivation from a :class:`RunState`.  Pure: in → out, no I/O., _empty_host_counts(), Any, Reduce a ``RunState`` into a renderer-agnostic dict.  This is the canonical "wha, Project ``state`` into a renderer-agnostic dict.      Shape::          {, reduce_state_for_parity(), _drive_compact() (+11 more)
 
 ### Community 154 - "TestRuntimeRoleTaskCount"
 Cohesion: 0.15
 Nodes (10): Regression tests for role_total_tasks counting runtime-only tasks.  When a role, A role loaded via include_role must show its runtime task count         in the r, Runtime podman tasks should appear as children of the podman         role header, When a role has tasks in BOTH preflight and runtime (same task         resolved, A task name containing ' : ' that is NOT a role prefix must not         be assig, Pure runtime role (no preflight tasks at all) must still show         the correc, role_total_tasks must include tasks from runtime that aren't in     the prefligh, Preflight has no podman tasks. At runtime, podman tasks appear         via inclu (+2 more)
 
 ### Community 155 - "ansible_aom/cli.py"
-Cohesion: 0.19
-Nodes (10): OutputFormat, _confirm_no_redact(), main(), CLI entry point for AOM.  This module provides the main command-line interface f, Validate ``--no-redact`` per QC-003 (Q4=B: confirm prompt).      Returns ``(proc, Spawn the streaming renderer (compact ANSI or end-of-run JSON) via a LiveDriver., Main CLI entry point.      Returns:         Exit code (0 for success, non-zero f, _run_compact() (+2 more)
+Cohesion: 0.13
+Nodes (11): OutputFormat, _confirm_no_redact(), main(), CLI entry point for AOM.  This module provides the main command-line interface f, Validate ``--no-redact`` per QC-003 (Q4=B: confirm prompt).      Returns ``(proc, Spawn the streaming renderer (compact ANSI or end-of-run JSON) via a LiveDriver., Main CLI entry point.      Returns:         Exit code (0 for success, non-zero f, _run_compact() (+3 more)
 
 ### Community 157 - "FakeRenderer"
-Cohesion: 0.05
-Nodes (31): LiveDriver, Path, LiveDriver — :class:`EventSource` that runs a real ``ansible-playbook``.  A thin, Spawns ``ansible-playbook`` and pumps its JSONL output.      Parameters mirror :, EventSource, Protocol, EventSource Protocol — the source-side port of the architecture.  See ``ARCHITEC, A producer of run events for a :class:`Renderer`.      Implementations own the f (+23 more)
+Cohesion: 0.06
+Nodes (30): LiveDriver, Path, Spawns ``ansible-playbook`` and pumps its JSONL output.      Parameters mirror :, EventSource, Protocol, EventSource Protocol — the source-side port of the architecture.  See ``ARCHITEC, A producer of run events for a :class:`Renderer`.      Implementations own the f, Path (+22 more)
 
 ### Community 158 - "Color Support Detection"
 Cohesion: 0.15
@@ -1337,29 +1349,29 @@ Nodes (10): _color_enabled(), True if we should emit SGR codes — TTY only, NO_
 Cohesion: 0.11
 Nodes (10): Verify all conftest fixtures work correctly., password_prompt_ssh fixture is valid., password_prompt_vault fixture is valid., password_prompt_become fixture is valid., deprecation_warning_line fixture is valid., deprecated_removed_line fixture is valid., warning_line fixture is valid., recap_line fixture is valid. (+2 more)
 
-### Community 174 - "test_playbook_parser.py"
-Cohesion: 0.02
-Nodes (97): parse_jsonl_output(), Integration tests for PtyStreamParser against real ansible-playbook output.  The, Integration tests for 02-single-task-changed playbook., Parser correctly identifies changed=True for copy module., Integration tests for 03-task-failure playbook., Parser correctly identifies failed task., Parser correctly identifies skipped tasks., Integration tests for 04-ignore-errors playbook. (+89 more)
+### Community 174 - "Status"
+Cohesion: 0.04
+Nodes (72): Task/host execution status., Status, PTY stream parsing phases., StreamPhase, Integration tests for PtyStreamParser against real ansible-playbook output.  The, Test warning pattern detection., Integration tests for 02-single-task-changed playbook., Integration tests for 03-task-failure playbook. (+64 more)
 
 ### Community 175 - ".test_record_false_does_not_touch_default_state_dir"
 Cohesion: 0.36
 Nodes (5): _fake_ansible_command(), Path, Integration test for F3 --no-record at the runner level.  The unit tests cover a, Even if session_dir is None, record=False must not create the default., TestNoRecordIntegration
 
-### Community 176 - "TestPlayRecapDetection"
-Cohesion: 0.14
-Nodes (8): TC-140: PLAY RECAP pattern detection., TC-140: PLAY RECAP line matches pattern., PLAY RECAP requires minimum 5 asterisks., PLAY RECAP with fewer than 5 asterisks not matched., PLAY RECAP with many asterisks matched., PLAY RECAP in PRE_RUN_PROMPTS phase routes differently., Multiple recap lines collected in POST_RUN_RECAP., TestPlayRecapDetection
-
-### Community 177 - "TestExitCodes"
+### Community 176 - "test_inspect_accumulator.py"
 Cohesion: 0.17
-Nodes (7): Tests for TC-024, TC-025, TC-027, TC-028: Exit Codes., TC-024: Exit code 0 for --help., TC-024: Exit code 0 for --version., TC-027: Exit code 127 when ansible-playbook not found.          The runner is re, TC-028: Exit code 130 for user cancelled (Ctrl+C)., TC-024: main() returns integer exit code., TestExitCodes
+Nodes (19): Single-pass, constant-per-event aggregation over a session's events.      ``feed, SessionIndexAccumulator, _events(), _feed_with_refs(), _iter_task_nodes(), Unit tests for the streaming SessionIndex accumulator (core).  The accumulator i, The sqlite builder streams stderr rows straight to disk; the     accumulator mus, Tasks with no play attribution must all land under a single     '(orphan tasks)' (+11 more)
+
+### Community 177 - "test_cli.py"
+Cohesion: 0.02
+Nodes (68): Unit tests for CLI interface in ansible_aom.cli.  Test cases cover: - TC-001 to, F5: argcomplete.autocomplete must be called inside create_parser., Tests for --hide-state flag., --hide-state propagates from CLI to create_renderer/run_playbook., aom --hide-state ok playbook.yml → create_renderer gets hide_states=["ok"]., --hide-state ok --hide-state skipped → hide_states=["ok", "skipped"]., No --hide-state flag → create_renderer gets hide_states=[]., --capture-verbose should reach compact renderer creation. (+60 more)
 
 ### Community 178 - "test_run_state_memory_bounds.py"
-Cohesion: 0.06
-Nodes (43): Memory bounds constants for AOM.  This module previously also housed an ``Execut, _build_compact_renderer(), Any, R14 — cap unbounded CompactRenderer sets.  R14 spec: the compact renderer carrie, Construct a CompactRenderer with mocks for its dependencies.      The renderer's, R14: ``_streamed_loop_items`` is bounded at 10 000 entries., R14: ``_announced_task_uuids`` is bounded at MAX_TASKS_PER_PLAY., R14: ``_completed_task_ids`` is bounded at MAX_TASKS_PER_PLAY. (+35 more)
+Cohesion: 0.17
+Nodes (19): _play_start(), R12 — enforce MAX_PLAYS / MAX_TASKS_PER_PLAY / MAX_HOSTS_PER_TASK / MAX_TOTAL_HO, R12: a task's 10001st host is dropped., R12: the 1 000 001st HostRunState insertion is dropped.      The MAX_TOTAL_HOST_, R12: a fresh RunState has no truncations recorded., R12: each cap has its own counter, not shared., R12: pin the documented cap values so accidental edits are caught., R12: the 1001st ``v2_playbook_on_play_start`` is dropped. (+11 more)
 
 ### Community 179 - "test_loop_item_count.py"
-Cohesion: 0.39
-Nodes (4): _item_event(), Per-host loop item counting for the TUI task tree.  The bundled ``aom_jsonl`` ca, _running_loop_state(), TestRunStateCounter
+Cohesion: 0.26
+Nodes (5): _item_event(), Per-host loop item counting for the TUI task tree.  The bundled ``aom_jsonl`` ca, _running_loop_state(), TestRunStateCounter, TestTreeRendersCount
 
 ### Community 180 - "_print_session_footer"
 Cohesion: 0.38
@@ -1377,9 +1389,9 @@ Nodes (3): The 'SIGWINCH' equivalent: a previously-degraded display     re-enabl
 Cohesion: 0.33
 Nodes (4): Path, Integration: ``v2_runner_on_start`` must identify which host started.  ``ansible, _run_free_playbook(), TestRunnerOnStartCarriesHost
 
-### Community 184 - "TestHideStateCompactPlumbing"
-Cohesion: 0.09
-Nodes (16): MonkeyPatch, Path, --hide-state propagates from CLI to create_renderer/run_playbook., aom --hide-state ok playbook.yml → create_renderer gets hide_states=["ok"]., --hide-state ok --hide-state skipped → hide_states=["ok", "skipped"]., No --hide-state flag → create_renderer gets hide_states=[]., --capture-verbose should reach compact renderer creation., --no-failed-hint should disable failed hints in compact mode only. (+8 more)
+### Community 184 - "TestWarningVisibilityCompactPlumbing"
+Cohesion: 0.18
+Nodes (9): MonkeyPatch, Path, [live] show_failed_hint: false should disable compact hints., --no-failed-hint still wins when config enables hints., --hide-warnings / --hide-deprecations propagate into compact mode., TC-003: Core module file exists at expected path., TC-001: Package name is 'ansible-aom'., TC-001: CLI entry point is 'aom'. (+1 more)
 
 ### Community 185 - "test_properties_state.py"
 Cohesion: 0.16
@@ -1402,20 +1414,20 @@ Cohesion: 0.11
 Nodes (18): 10. Live streaming inspect (answers Q23, Q25), 12. Schema migration (answers Q29, Q31, Q9=B no version bump), 13. Test plan, 14. Documentation (answers Q37–Q39), 15. Migration / rollout, 16. Out-of-scope (explicit non-goals for v1), 17. Risks & open questions for sign-off, 1. Reframe (anchored in research) (+10 more)
 
 ### Community 190 - "text.py"
-Cohesion: 0.10
-Nodes (41): DetailBlock, Right-pane data for a focused (task, host) pair.      Everything here is *per ta, _fmt_duration(), _host_counts_line(), _hydrate_node(), _iter_failed_tasks(), _iter_tree(), _play_name_for_task() (+33 more)
+Cohesion: 0.07
+Nodes (53): build_verbose_lines(), Return ``play_name -> task_id`` membership from an already-built tree.      Call, Build the verbose-panel body for one session dict and focus scope.      In-memor, task_ids_by_play(), _fmt_duration(), _host_counts_line(), _hydrate_node(), _iter_failed_tasks() (+45 more)
 
-### Community 191 - "test_unknown_event_hint.py"
-Cohesion: 0.32
-Nodes (7): _empty_state(), R5: completion-time hint when JSONL emits events AOM didn't recognise.  When ans, No "unknown events" line when nothing weird happened., stop()'d renderer with state=None must still complete cleanly., test_completion_no_hint_when_all_known(), test_completion_no_hint_when_state_is_none(), test_completion_prints_unknown_event_hint()
+### Community 191 - "TestPtyStreamParserWarningsList"
+Cohesion: 0.12
+Nodes (10): TC-501: PtyStreamParser _warnings list type., TC-501: _warnings contains WarningEntry objects, not strings., TC-501: _warnings is empty list on initialization., TC-501: Multiple warnings are added in order received., TC-501: warnings property returns list., TC-503: WarningEntry timestamp from PTY stream., TC-503: WarningEntry captures timestamp when created., TC-503: Timestamp is either datetime or None. (+2 more)
 
-### Community 193 - "Tree Projection Utilities"
-Cohesion: 0.25
-Nodes (5): Tests for TC-070: ansible.posix Version Check.      AOM never imports the ansibl, TC-070: When bundled dir missing, callback name is the canonical string., TC-070: ansible.posix.jsonl parses as collection='ansible.posix', plugin='jsonl', TC-070: When bundled aom_jsonl is selected, ansible.posix isn't required., TestAnsiblePosixVersionCheck
+### Community 193 - "test_posix_callback.py"
+Cohesion: 0.11
+Nodes (11): Ansible infrastructure: subprocess, pexpect, JSONL callback wiring.  Contains th, Tests for JSONL callback plugin configuration (TC-067 to TC-071).  Test cases co, TC-068: When bundled dir resolves, aom_jsonl wins over ansible.posix.jsonl., Tests for TC-070: ansible.posix Version Check.      AOM never imports the ansibl, TC-070: When bundled dir missing, callback name is the canonical string., TC-070: ansible.posix.jsonl parses as collection='ansible.posix', plugin='jsonl', TC-070: When bundled aom_jsonl is selected, ansible.posix isn't required., Tests for TC-068: ansible.posix Install Prompt (implicit fallback path).      AO (+3 more)
 
 ### Community 194 - "format_tree_block"
-Cohesion: 0.14
-Nodes (21): format_tree_block(), Render the tree block as a list of lines.      Returns an empty list when the pr, State with two plays, each with a running task on one host.      Built directly, A task under a non-last play must be indented with ``│  ``., A task under the last play must NOT carry a vertical pipe — the     parent is th, ASCII mode renders the continuation as ``|  `` (or equivalent)     rather than t, test_ascii_mode_uses_pipe_substitute(), test_last_play_children_have_plain_indent() (+13 more)
+Cohesion: 0.12
+Nodes (25): format_tree_block(), Render the tree block as a list of lines.      Returns an empty list when the pr, State with two plays, each with a running task on one host.      Built directly, A task under a non-last play must be indented with ``│  ``., A task under the last play must NOT carry a vertical pipe — the     parent is th, ASCII mode renders the continuation as ``|  `` (or equivalent)     rather than t, test_ascii_mode_uses_pipe_substitute(), test_last_play_children_have_plain_indent() (+17 more)
 
 ### Community 195 - "merge_limit_args"
 Cohesion: 0.20
@@ -1426,16 +1438,20 @@ Cohesion: 0.13
 Nodes (12): Erase the status block and release the terminal., Redraw the status block with new content.          Updates within _THROTTLE_INTE, Queue a log line for printing above the status block.          Leading-edge batc, Drain any buffered log lines in one synchronized frame.          Called by the r, True when the flush window has elapsed (or never started)., Take the queued log lines (each already newline-terminated)., One synchronized frame: pending logs, then the status block., Erase the status content (but leave the display running). (+4 more)
 
 ### Community 197 - "_compute_mode_label"
-Cohesion: 0.10
-Nodes (10): _compute_mode_label(), Render the status-bar mode chip(s) from ansible-playbook args.      Recording is, Return an immutable snapshot of this renderer's activity counters.          Call, Stop rendering and clean up resources.          Restores terminal state, flushes, Start rendering a playbook run.          Initializes the RunState, starts the Ri, Surface a pause / vars_prompt-style prompt and capture one line.          Mirror, Handle a password prompt.          Stops the Rich Live display, delegates to the, Tests for the ``DRY RUN`` / ``DIFF`` chip in the status bar.  Users sometimes fo (+2 more)
+Cohesion: 0.09
+Nodes (12): _compute_mode_label(), Replace any lone-surrogate codepoints in ``s`` with U+FFFD.      Pexpect's ``cod, Render the status-bar mode chip(s) from ansible-playbook args.      Recording is, _replace_surrogates(), Return an immutable snapshot of this renderer's activity counters.          Call, Stop rendering and clean up resources.          Restores terminal state, flushes, Start rendering a playbook run.          Initializes the RunState, starts the Ri, Surface a pause / vars_prompt-style prompt and capture one line.          Mirror (+4 more)
 
 ### Community 198 - "TestVerboseDiagnostics"
 Cohesion: 0.17
 Nodes (7): Tests for TC-008: Verbose flag diagnostics., TC-008: --verbose prints resolved ansible-playbook path., TC-008: --verbose prints ANSIBLE_STDOUT_CALLBACK env override., TC-008: --verbose prints terminal capabilities when verbose., TC-008: --verbose without playbook still shows help, not crash., TC-008: --verbose includes --list-tasks summary in diagnostics., TestVerboseDiagnostics
 
-### Community 201 - "test_rerun.py"
-Cohesion: 0.33
-Nodes (6): Path, End-to-end integration test for `aom rerun`.  Wires the real ``run_playbook`` ag, `aom rerun --failed --yes` spawns ansible-playbook with --limit web2,web3., When the session has no failures, `--failed` exits 1 and never spawns., test_aom_rerun_failed_spawns_with_correct_limit(), test_aom_rerun_no_failures_exits_1_without_spawning()
+### Community 200 - "_build_compact_renderer"
+Cohesion: 0.18
+Nodes (14): _build_compact_renderer(), Any, R14 — cap unbounded CompactRenderer sets.  R14 spec: the compact renderer carrie, Construct a CompactRenderer with mocks for its dependencies.      The renderer's, R14: ``_streamed_loop_items`` is bounded at 10 000 entries., R14: ``_announced_task_uuids`` is bounded at MAX_TASKS_PER_PLAY., R14: ``_completed_task_ids`` is bounded at MAX_TASKS_PER_PLAY., R14: ``_seen_warning_messages`` is bounded at 5 000 entries. (+6 more)
+
+### Community 201 - "json.py"
+Cohesion: 0.14
+Nodes (15): HostCounts, BaseModel, JSON output renderer for AOM (F6).  Implements the Renderer Protocol but produce, Build the RunSummary from accumulated RunState and print as JSON.          ``exi, Per-host status counts aggregated across every task in every play., One (host, task) pair that ended in FAILED or UNREACHABLE., TaskFailure, Path (+7 more)
 
 ### Community 202 - "Get All Actions"
 Cohesion: 0.20
@@ -1450,16 +1466,16 @@ Cohesion: 0.25
 Nodes (12): _complete_task(), _FakeDisplay, _prior(), Renderer wiring for the live run-duration estimate.  The renderer builds a :clas, _setup(), _task(), test_eta_appears_once_gate_opens(), test_fixed_floor_not_scaled_by_fast_variable_task() (+4 more)
 
 ### Community 205 - "unit/test_no_record.py"
-Cohesion: 0.15
-Nodes (9): _fake_ansible_command(), Path, Unit tests for F3 --no-record plumbing., run_playbook accepts a record=bool kwarg; default is True., `--no-record` is a top-level flag that defaults to False., `aom --no-record playbook.yml` calls run_playbook(..., record=False)., TestNoRecordCompactPlumbing, TestNoRecordParserFlag (+1 more)
+Cohesion: 0.21
+Nodes (7): _fake_ansible_command(), Path, Unit tests for F3 --no-record plumbing., run_playbook accepts a record=bool kwarg; default is True., `aom --no-record playbook.yml` calls run_playbook(..., record=False)., TestNoRecordCompactPlumbing, TestRunPlaybookRecordParameter
 
 ### Community 206 - "Get Keybinding Function"
 Cohesion: 0.33
 Nodes (5): Design, Problem, Scope, Testing, Worktree-safe version hook design
 
-### Community 207 - "TestDiscoverRole"
-Cohesion: 0.17
-Nodes (7): Unit tests for _discover_role()., Successful role parsing creates and returns a RoleCacheEntry., Second call returns the cached role entry., Missing role directory returns None., Role name is lowercased and stripped for the cache key., Role name whitespace is stripped for cache key normalisation.          _discover, TestDiscoverRole
+### Community 207 - "_FakeSink"
+Cohesion: 0.15
+Nodes (8): _FakeSink, _parser_in_execution_phase(), Return a parser advanced past the PRE_RUN_PROMPTS gate.      ``feed_line`` only, Every successful line fed to ``_feed`` bumps the heartbeat., The task_start line is itself bytes from the subprocess; it must     leave the t, ``reset_heartbeat`` is no longer called on task_start — the         line's own `, TestFeedNotesBytes, TestTaskStartCountsAsHeartbeat
 
 ### Community 208 - "TestAnsiblePosixAvailability"
 Cohesion: 0.25
@@ -1497,9 +1513,13 @@ Nodes (9): Each RedactionConfig instance has independent lists., custom_fields i
 Cohesion: 0.17
 Nodes (7): TC-143 to TC-148: Password prompt handling in PTY stream., TC-143: Password prompts set _pending_password_prompt., Password prompt state cleared after handle_password_prompt., Multiple password prompts - last one wins., Password prompt persists across phase transition., Password prompts still detected in POST_RUN_RECAP (unusual edge case)., TestPasswordPromptHandling
 
-### Community 217 - "drivers/replay.py"
-Cohesion: 0.10
-Nodes (19): _build_parser(), cli_main(), _parse_timestamp(), ArgumentParser, datetime, Replay a recorded AOM session through a Renderer (F2).  Both halves of the repla, Build the ``aom replay`` argument parser.      Factored out of :func:`cli_main`, Entry point for ``aom replay <session-id> [...]``.      Argparse the supplied ta (+11 more)
+### Community 217 - "cli_main"
+Cohesion: 0.21
+Nodes (11): _build_parser(), cli_main(), ArgumentParser, Build the ``aom replay`` argument parser.      Factored out of :func:`cli_main`, Entry point for ``aom replay <session-id> [...]``.      Argparse the supplied ta, _make_session(), Path, CLI tests for the F2 `aom replay` subcommand dispatch.  Mirrors the inspect-disp (+3 more)
+
+### Community 218 - "list_sessions"
+Cohesion: 0.19
+Nodes (9): list_sessions(), List all sessions in the state directory.      Returns sessions sorted by start, Section 9.1: Inspect list command., list_sessions returns empty list when no sessions., list_sessions returns all session summaries., Session UUIDs displayed as first 8 characters in list., list_sessions returns sessions sorted by start time (newest first)., list_sessions includes session status. (+1 more)
 
 ### Community 219 - "Width 60-79 Truncation"
 Cohesion: 0.17
@@ -1509,6 +1529,10 @@ Nodes (14): _assert_installed(), MonkeyPatch, Path, Verify every CLI entry point
 Cohesion: 0.07
 Nodes (20): get_status_icon(), Get the icon for a given status.      For RUNNING status, use the frame paramete, TC-367: get_status_icon returns correct icon for FAILED., TC-368: get_status_icon returns correct icon for UNREACHABLE., TC-369: get_status_icon returns first frame for RUNNING by default., TC-369: get_status_icon returns correct frame for RUNNING., TC-369: Frame index wraps around for RUNNING animation., TC-370: get_status_icon returns correct icon for PENDING. (+12 more)
 
+### Community 222 - "collect_failed_hosts"
+Cohesion: 0.22
+Nodes (6): collect_failed_hosts(), Return the set of hostnames that hit ``v2_runner_on_failed`` in this session., collect_failed_hosts only looks at v2_runner_on_failed., A single failed event can carry multiple hosts., A meta-only session (no events.jsonl) returns an empty set., TestCollectFailedHosts
+
 ### Community 223 - "Status Bar Formatting"
 Cohesion: 0.16
 Nodes (15): _encode_event_line(), _hostname_strategy(), _identifier_strategy(), DrawFn, SearchStrategy, Property-based tests for the JSONL parser (Batch C, family #5a).  These tests as, Arbitrary bytes (decoded loosely) never raise from JsonLineStream.feed_line., Arbitrary bytes (decoded loosely) never raise from PtyStreamParser.feed_line. (+7 more)
@@ -1516,6 +1540,10 @@ Nodes (15): _encode_event_line(), _hostname_strategy(), _identifier_strategy(), 
 ### Community 225 - "Panel Refresh Snapshot"
 Cohesion: 0.21
 Nodes (14): MonkeyPatch, Path, Phase 5: SessionManager writes diagnostics.json next to meta.json.  Spec: docs/s, diagnostics.json write is best-effort: an OSError must not propagate     out of, end_session writes diagnostics.json containing the schema version + histogram., If the run path never published a RunDiagnostics, schema still writes     with z, A session directory without diagnostics.json (older session) is still loadable;, _start_and_end() (+6 more)
+
+### Community 228 - "TestCrossPlayLookupIsolation"
+Cohesion: 0.16
+Nodes (8): Build a state where play 1 stays active and play 2 shares a task         name th, TC-CROSS-2: When play 2 has a RUNNING task, a previously completed         play, TC-CROSS-1: When handler tasks run under a different play UUID,         the hand, TC-CROSS-3: A play with its own RUNNING task renders correctly         using cro, TC-CROSS-4: ``_play_running_and_pending(play, include_cross_play=True)``, TC-CROSS: Cross-play runtime_by_name lookup must not pollute the     ``any_runni, Build a state with two plays sharing task name "Cleanup tasks".          Play 1, TestCrossPlayLookupIsolation
 
 ### Community 230 - "TestConfigFieldValidation"
 Cohesion: 0.17
@@ -1525,9 +1553,21 @@ Nodes (7): Tests for edge cases in field validation., Boundary values for log_ma
 Cohesion: 0.17
 Nodes (7): Section 5.6: JSONL events interleaved with plaintext., JSONL events and plaintext interleaved correctly., Plaintext before v2_playbook_on_start is captured., feed_line returns parsed events for JSONL., feed_line returns aom_stderr_line for plaintext., feed_line returns empty for invalid JSON., TestMixedStreamHandling
 
+### Community 232 - "TestMultiPlayTruncationWithRoleFooters"
+Cohesion: 0.22
+Nodes (7): Multi-play truncation with completed tasks in earlier plays.      Reproduces the, Build the user's exact reproduction state.          Play 1 = ``podman`` (289 dir, Bug 1: the angie role (in the head, before the outer cut) has         127 remain, Bug 2: with nested roles (podman > angie) both roles in the         head have re, Bug 3: the outer footer must report the TOTAL remaining tasks         across ALL, Regression guard: when every task under a role is visible         (remaining ==, TestMultiPlayTruncationWithRoleFooters
+
 ### Community 233 - "TestCompactModePasswordPassThrough"
 Cohesion: 0.17
 Nodes (7): TC-144, TC-145: Compact mode password pass-through., TC-144: Password prompt sets pending state for UI handling., TC-144: All password types set correct pending state., Exact prompt text stored for UI display., Password prompts don't generate JSON events., Clearing prompt allows detecting next password prompt., TestCompactModePasswordPassThrough
+
+### Community 238 - "TestMultiplePlays"
+Cohesion: 0.18
+Nodes (9): Integration tests for 04-ignore-errors playbook., Parser handles ignore_errors correctly (task fails but playbook continues)., Integration tests for 08-multiple-plays playbook., Parser correctly tracks multiple plays., Integration tests for 04-ignore-errors playbook., Parser handles ignore_errors correctly (task fails but playbook continues)., Integration tests for 08-multiple-plays playbook., TestIgnoreErrors (+1 more)
+
+### Community 239 - "TestWarnings"
+Cohesion: 0.17
+Nodes (10): Integration tests for 16-warnings playbook., Parser captures [WARNING]: messages., Parser correctly handles multiple hosts with different results., Integration tests for 16-warnings playbook., Parser captures [WARNING]: messages., Parser correctly handles multiple hosts with different results., Integration tests for 16-warnings playbook., Parser captures [WARNING]: messages. (+2 more)
 
 ### Community 241 - "TestRewindCorrectness"
 Cohesion: 0.25
@@ -1538,8 +1578,8 @@ Cohesion: 0.17
 Nodes (10): _fake_ansible_command(), Batch E item #10b — R7 Ctrl-C race with completion.  SIGINT can arrive at any of, Same as above but the child failed (exit 2). The real exit         code still wi, If SIGINT arrives *after* ``handle_completion`` has fully run         (i.e. insi, SIGINT before ``playbook_on_stats`` — runner returns 130., Variant A: signal arrives mid-stream, completion never happens., Variant B: completion arrives first, then SIGINT.      R7 spec: completion wins., The run completed cleanly (exit 0). SIGINT arrives during the         ``renderer (+2 more)
 
 ### Community 243 - "TestLogging"
-Cohesion: 0.15
-Nodes (9): Path, TC-455 to TC-464: Logging tests., TC-455: Log file follows XDG state directory convention., TC-456: Log file written but console silent during normal operation., TC-457: RotatingFileHandler with 10MB/file, 5 backups., TC-459 to TC-462: Log levels for different event types., TC-463: --verbose flag enables DEBUG logging to file., TC-463: Without --verbose, INFO level used. (+1 more)
+Cohesion: 0.07
+Nodes (18): Path, TC-455 to TC-464: Logging tests., TC-455: Log file follows XDG state directory convention., TC-456: Log file written but console silent during normal operation., TC-457: RotatingFileHandler with 10MB/file, 5 backups., TC-459 to TC-462: Log levels for different event types., TC-463: --verbose flag enables DEBUG logging to file., TC-463: Without --verbose, INFO level used. (+10 more)
 
 ### Community 245 - "Terminal Size Check"
 Cohesion: 0.47
@@ -1553,25 +1593,37 @@ Nodes (14): _imports_in(), _iter_modules(), _module_name_for(), Path, Architectu
 Cohesion: 0.13
 Nodes (13): Tests for the psutil-safe probe in the runner.  Background: ``_sample_subprocess, If subprocess itself blows up (highly unlikely but defensive), the     helper st, If the subprocess probe exits non-zero (e.g. SIGSEGV at import),     ``_sample_s, The disable reason is surfaced via the diagnostics module so it     lands in dia, The probe is expensive (subprocess spawn). It must be cached so     repeated hea, A successful probe yields a usable psutil module; subsequent     sample calls go, Sanity: the real subprocess probe runs to completion in the test     environment, test_probe_failure_disables_psutil_in_diagnostics() (+5 more)
 
+### Community 249 - "TestFilterPanelTextFilter"
+Cohesion: 0.17
+Nodes (7): Tests for text filter - TC-302., Sample tasks for filtering., TC-302: Text filter matches substring in task name., TC-302: Text filter is case-insensitive by default., TC-302: Clear filter shows all tasks., TC-302: Regex in text filter (if supported)., TestFilterPanelTextFilter
+
 ### Community 253 - "Ansible Args Validation"
 Cohesion: 0.15
 Nodes (9): get_tree_icon(), Get tree expansion icon.      Args:         expanded: True for expanded node (▼), Tests for TC-373 and TC-374., TC-373: Collapsed tree node displays right arrow (▶)., TC-374: Expanded tree node displays down arrow (▼)., TC-373: get_tree_icon returns correct icon for collapsed node., TC-374: get_tree_icon returns correct icon for expanded node., Tree icons are valid Unicode characters. (+1 more)
 
-### Community 254 - "format_host_summary"
-Cohesion: 0.10
-Nodes (21): _format_count_cells(), format_host_summary(), Render non-zero status count cells.      Order: ok, changed, skipped, failed, un, Format a host summary line with status icons.      Only includes non-zero counts, get_running_frame(), is_unicode_terminal(), Status icon mapping for AOM display.  This module provides Unicode status icons, Get the current animation frame for RUNNING status.      Cycles through the 4 qu (+13 more)
+### Community 254 - "format.py"
+Cohesion: 0.06
+Nodes (36): _count_cell(), _format_count_cells(), format_host_summary(), Pure formatters for the compact renderer.  Every public function here takes doma, Render non-zero status count cells.      Order: ok, changed, skipped, failed, un, Format a host summary line with status icons.      Only includes non-zero counts, Right-align ``value`` in a fixed-width cell; dim zero values.      A literal zer, ``text`` wrapped in an SGR sequence, or plain ``text`` if not colorising. (+28 more)
 
 ### Community 255 - "Keybinding Conflict Validation"
 Cohesion: 0.18
 Nodes (10): A classified stderr line.      Carries the full info needed to emit a synthetic, StderrEvent, StderrEvent shape — used by emit code in store.py., StderrEvent is frozen so emit code can rely on it being immutable., Frozen dataclass equality on all four fields., All four fields are required (no defaults)., Real ansible-playbook wraps stderr in SGR escape sequences. The     classifier s, Sanity: clean text is classifiable. (+2 more)
 
-### Community 256 - "_compose_host_set"
-Cohesion: 0.39
-Nodes (5): _compose_host_set(), Combine the requested host categories into a single set.      Semantics (from th, --unreachable is a strict superset of --failed (per spec)., _session_dict(), TestComposeHostSet
+### Community 256 - "test_rerun_cli.py"
+Cohesion: 0.32
+Nodes (6): _compose_host_set(), Combine the requested host categories into a single set.      Semantics (from th, Unit tests for the aom rerun subcommand., --unreachable is a strict superset of --failed (per spec)., _session_dict(), TestComposeHostSet
 
 ### Community 257 - "Keybinding Context Coverage"
 Cohesion: 0.18
 Nodes (9): generate_uuidv7(), Create a new session and return the session ID (UUIDv7).          Creates the se, Generate a UUIDv7 session ID.      UUIDv7 is time-sortable, which allows session, TC-218: Session UUIDv7 Format Validation., UUIDv7 matches expected format pattern., UUIDv7 values are time-sortable (earlier timestamps produce smaller UUIDs)., First 8 characters of UUIDv7 can be used for display., UUIDv7 embeds timestamp in first segment. (+1 more)
+
+### Community 259 - "TestV2PlaybookOnStatsCrossCheck"
+Cohesion: 0.17
+Nodes (7): TC-152: Final stats event cross-checks collected hosts.      Production code: ``, TC-152: v2_playbook_on_stats with no failures transitions state to COMPLETED., TC-152: v2_playbook_on_stats with failures transitions state to FAILED., TC-152: v2_playbook_on_stats with unreachable hosts transitions to FAILED., TC-152: Hosts still marked RUNNING at stats time get finalised., TC-152 edge: stats event hosts not seen during the run still process cleanly., TestV2PlaybookOnStatsCrossCheck
+
+### Community 260 - "test_run_state_set_caps.py"
+Cohesion: 0.18
+Nodes (9): R15 — cap unbounded RunState sets.  R15 spec: ``RunState`` carries several set/d, R15: ``_grafted_uuids`` does not exceed ``MAX_TASKS_PER_PLAY``., R15: ``_grafted_role_names`` is bounded (some reasonable N)., R15: ``_play_window_counts`` is bounded at ``MAX_PLAYS``., R15: ``unknown_events`` keys are bounded by event-type cardinality.      The JSO, test_grafted_role_names_capped(), test_grafted_uuids_capped_at_max_tasks_per_play(), test_play_window_counts_capped_at_max_plays() (+1 more)
 
 ### Community 261 - "load_config"
 Cohesion: 0.24
@@ -1581,29 +1633,29 @@ Nodes (7): load_config(), Load configuration from YAML file or use defaults.    
 Cohesion: 0.24
 Nodes (8): HS-1/HS-8: a sustained burst of state changes must not starve the         panel., HS-1/HS-8: dirty but already-rendered state waits for the 1 s         clock-adva, Two update_state calls within the throttle window → 1 panel compute.          ``, tick() with _panel_dirty=False and recent compute skips compute., Sustained log output still lets the compact panel repaint.          The log path, _renderer(), _task_start(), TestDirtyFlagGating
 
-### Community 263 - ".check_terminal_size"
-Cohesion: 0.20
-Nodes (5): Check if terminal meets minimum size., TC-043: Below minimum shows error., TC-043: Minimum size passes check., TC-043: Larger terminal passes check., TC-044: Error message shows dimensions and minimum.
+### Community 263 - "TestTerminalSizeCheck"
+Cohesion: 0.14
+Nodes (11): Tests for CompactRenderer.handle_completion() method., Each significant JSONL event must produce a log line above the panel.          W, Tests for TC-043, TC-044, TC-045: Terminal size requirements., TC-043: Minimum terminal size is 24 lines x 80 columns., Check if terminal meets minimum size., TC-043: Below minimum shows error., TC-043: Minimum size passes check., TC-043: Larger terminal passes check. (+3 more)
 
 ### Community 266 - "test_error_handling.py"
-Cohesion: 0.20
-Nodes (7): Integration tests for error handling (TEST_SPECIFICATION.md Section 14).  Tests, TC-458: Non-blocking QueueHandler., TC-458: QueueHandler is available in Python stdlib., TC-480 to TC-483: Process state monitoring., TC-480: Process state checked every 0.5 seconds., TestProcessStateMonitoring, TestQueueHandlerLogging
+Cohesion: 0.03
+Nodes (41): Integration tests for error handling (TEST_SPECIFICATION.md Section 14).  Tests, TC-452: Password Timeout - 60 Second Limit., TC-452: Password timeout defaults to 60 seconds., TC-453: Password timeout cancels with error message., TC-454: User can retry after timeout., Additional password timeout mechanism tests., Password prompts match expected patterns., TC-458: Non-blocking QueueHandler. (+33 more)
 
 ### Community 267 - "Tree Preservation On Cancel"
 Cohesion: 0.25
 Nodes (13): Path, Integration tests for the rebuilt `aom inspect` CLI., state_dir(), test_no_arg_invocation_falls_back_to_text_when_non_tty(), test_old_diff_subcommand_is_gone(), test_old_list_subcommand_is_gone(), test_old_show_subcommand_is_gone(), test_prune_subcommand() (+5 more)
 
-### Community 268 - "TestSignalHandling"
-Cohesion: 0.20
-Nodes (6): Tests for TC-046 to TC-053: Signal handling., TC-047: Exit code 130 for SIGINT (second Ctrl+C)., TC-047: Second Ctrl+C within 2s kills everything, exits 130., TC-048: SIGQUIT logs stack trace to file, continues execution., TC-052: SIGPIPE is ignored — process continues without crash., TestSignalHandling
+### Community 268 - "run_state_status_counts"
+Cohesion: 0.27
+Nodes (8): run_state_status_counts(), Producer + consumer compose: the ignored failure lands as OK in the         stat, Unit tests for live-state status tallies (aggregate + per-host).  The compact st, A run with two hosts across three tasks, mixed outcomes.      web1: task A ok, t, _run_state(), test_aggregate_status_counts(), test_per_host_status_counts(), test_unreachable_counted()
 
-### Community 269 - "TestPasswordPrompts"
-Cohesion: 0.20
-Nodes (6): SSH password prompt is detected., BECOME password prompt is detected., Password prompt can be cleared., Test password prompt detection., Vault password prompt is detected., TestPasswordPrompts
+### Community 269 - "TestDeprecationWarnings"
+Cohesion: 0.22
+Nodes (8): Integration tests for 17-deprecation-warnings playbook., Parser captures [DEPRECATION WARNING]: messages., Integration tests for 17-deprecation-warnings playbook., Parser captures [DEPRECATION WARNING]: messages., Parser captures PLAY RECAP lines., Integration tests for 17-deprecation-warnings playbook., Parser captures [DEPRECATION WARNING]: messages., TestDeprecationWarnings
 
-### Community 275 - "TestPhaseTransitions"
-Cohesion: 0.20
-Nodes (6): Test PtyStreamParser phase transitions., Parser starts in PRE_RUN_PROMPTS phase., PRE_RUN_PROMPTS -> EXECUTION on v2_playbook_on_start., EXECUTION -> POST_RUN_RECAP on v2_playbook_on_stats., Non-JSON lines during EXECUTION are added to plaintext_lines., TestPhaseTransitions
+### Community 275 - "completion_snippet"
+Cohesion: 0.36
+Nodes (3): completion_snippet(), Return the rc-file snippet to enable AOM tab-completion in ``shell``.      The s, TestCompletionSnippet
 
 ### Community 276 - "_make_state_with_stale_running"
 Cohesion: 0.19
@@ -1617,6 +1669,10 @@ Nodes (13): Empirical re-verification (2026-06-30), Open flags (pending input), 
 Cohesion: 0.15
 Nodes (13): FINAL RECAP, Key design decisions in the plan (locked in), Open decisions to sign off, Q10 — Size caps, Q6 — Live view: failed-task hint, Q7 — Warnings & deprecations, Q8 — Inspect view layout, Q9 — Schema versioning (+5 more)
 
+### Community 284 - "TestAsyncPollDoesNotLeakDictIntoLoopItem"
+Cohesion: 0.36
+Nodes (5): LoopItem, _make_loop_item(), One entry from a task's loop ``results[]`` array., Async-poll bookkeeping payloads must not leak the raw dict into LoopItem.label., TestAsyncPollDoesNotLeakDictIntoLoopItem
+
 ### Community 286 - "TestAppConfigYamlFile"
 Cohesion: 0.20
 Nodes (6): Tests for Pydantic Settings YAML file integration - TC-304, TC-305, TC-306., TC-304: Default YAML file path is ~/.config/aom/config.yaml., TC-304: YAML path should be expandable to absolute path., TC-304: Config path follows XDG spec (~/.config/aom/config.yaml)., AppConfig uses SettingsConfigDict for configuration., TestAppConfigYamlFile
@@ -1629,9 +1685,17 @@ Nodes (6): Tests for environment variable and YAML config loading., AppConfig ca
 Cohesion: 0.20
 Nodes (6): Tests for redaction custom patterns - TC-314., Custom patterns use dict with regex and replacement., Multiple custom patterns can be defined., Custom patterns support complex regex patterns., Custom pattern dicts have regex and replacement keys., TestRedactionCustomPatterns
 
+### Community 289 - ".test_recap_lines_captured"
+Cohesion: 0.29
+Nodes (5): Parser captures PLAY RECAP lines., Syntax error playbook fails before JSONL output starts., Parser captures PLAY RECAP lines., Syntax error playbook fails before JSONL output starts., Syntax error playbook fails before JSONL output starts.
+
 ### Community 290 - "TestYesFlag"
 Cohesion: 0.17
 Nodes (6): Tests for global --yes flag., --yes defaults to False when not provided., --yes is consumed by argparse, not forwarded to ansible-playbook., -y is consumed by argparse, not forwarded to ansible-playbook., Help text for --yes mentions the flag., TestYesFlag
+
+### Community 291 - "test_prior_run_loop_totals_injection.py"
+Cohesion: 0.40
+Nodes (3): _prior_with_totals(), ``set_prior_run`` injects a prior run's loop totals into the RunState.  The tree, TestCompactInjection
 
 ### Community 293 - "test_incremental_counters.py"
 Cohesion: 0.27
@@ -1653,9 +1717,9 @@ Nodes (8): Build a ``TreeProjection`` whose ``is_tree_visible()`` returns True  
 Cohesion: 0.17
 Nodes (4): Path, Phase 7: AOM_PROFILE and AOM_TRACEMALLOC wiring.  Spec: docs/superpowers/specs/2, test_dump_profile_noop_when_off(), test_dump_profile_writes_pstats()
 
-### Community 299 - "TestWarningDetection"
-Cohesion: 0.25
-Nodes (5): Test warning pattern detection., [WARNING]: pattern is detected., [DEPRECATION WARNING]: pattern is detected., [DEPRECATED]: pattern is detected., TestWarningDetection
+### Community 300 - "TestTreeKindIncludesMore"
+Cohesion: 0.40
+Nodes (3): Regression guard: the ``TreeKind`` Literal must include the     ``"more"`` value, Constructing a TreeLine with ``kind='more'`` is statically valid         — guard, TestTreeKindIncludesMore
 
 ### Community 302 - "TestWatchdogTimer"
 Cohesion: 0.20
@@ -1665,10 +1729,6 @@ Nodes (6): TC-484 to TC-487: Watchdog timer tests., TC-484: No output for 60 sec
 Cohesion: 0.25
 Nodes (5): Unit tests for configuration models in ansible_aom.core.config.  Test cases cove, Tests reinforcing config should not be mutated after creation., Mutating one config's elements doesn't affect others., Nested configs are independent between instances., TestConfigImmutabilityIntent
 
-### Community 305 - "TestCancellationTimerLogic"
-Cohesion: 0.20
-Nodes (6): Tests for the double-Ctrl+C cancellation timer., Timer starts unset on initialization., First Ctrl+C sets the timer., Second Ctrl+C within 2s triggers immediate exit., Timer resets after 2 seconds., TestCancellationTimerLogic
-
 ### Community 306 - "TestFormatFlag"
 Cohesion: 0.20
 Nodes (4): Tests for F6: --format {compact,json} flag., --format is consumed by argparse, not forwarded to ansible-playbook., `aom --format json playbook.yml` constructs a JsonRenderer., TestFormatFlag
@@ -1677,37 +1737,21 @@ Nodes (4): Tests for F6: --format {compact,json} flag., --format is consumed by 
 Cohesion: 0.20
 Nodes (6): Tests for TC-003: Core Module Structure., TC-003: cli.py module exists., TC-003: __main__.py module exists., TC-003: renderer/ module exists., TC-003: core/ module exists., TestCoreModuleStructure
 
-### Community 308 - "test_posix_callback.py"
-Cohesion: 0.25
-Nodes (5): Tests for JSONL callback plugin configuration (TC-067 to TC-071).  Test cases co, TC-068: When bundled dir resolves, aom_jsonl wins over ansible.posix.jsonl., Tests for TC-068: ansible.posix Install Prompt (implicit fallback path).      AO, TC-068: When bundled stdout dir unavailable, env selects ansible.posix.jsonl., TestAnsiblePosixInstallPrompt
+### Community 308 - ".test_empty_playbook_no_plays"
+Cohesion: 0.50
+Nodes (3): Parser handles empty playbook (no plays)., Parser handles empty playbook (no plays)., Parser handles empty playbook (no plays).
 
 ### Community 309 - "Pre-commit Style Hooks"
 Cohesion: 0.40
 Nodes (5): mypy type check hook, pytest hook (pre-push only), ruff check hook, ruff format hook, version bumper (not registered)
 
-### Community 310 - "TestInspectSubcommand"
-Cohesion: 0.20
-Nodes (6): Tests for TC-013 to TC-023: Inspect Subcommand dispatch.      The top-level CLI, No-arg `aom inspect` forwards an empty argv to inspect.cli.main., `aom inspect --text` forwards `['--text']` to inspect.cli.main., `aom inspect prune --days 30` forwards args verbatim., Exit code from inspect.cli.main flows back through the dispatcher., TestInspectSubcommand
-
-### Community 311 - "TestVerboseDebugLogging"
-Cohesion: 0.20
-Nodes (6): Tests for TC-009: Verbose enables DEBUG logging., TC-009: --verbose sets logging level to DEBUG., TC-009: --verbose causes DEBUG entries in log output., TC-009: Without --verbose, logging level is not DEBUG., --verbose should set diagnostics._debug to True., TestVerboseDebugLogging
+### Community 311 - "test_skipped_tasks"
+Cohesion: 0.67
+Nodes (3): Parser correctly identifies skipped tasks., Parser correctly identifies skipped tasks., test_skipped_tasks()
 
 ### Community 312 - "test_warning_color.py"
 Cohesion: 0.44
 Nodes (8): _printed(), Warnings emitted to the log must be coloured yellow and deprecations orange so t, add_warning falls through to a `[WARNING] msg` synthesis when the     raw text d, _renderer(), test_deprecation_wrapped_in_orange(), test_warning_with_synthesised_prefix_also_colored(), test_warning_without_color_when_colorize_off(), test_warning_wrapped_in_yellow()
-
-### Community 313 - "test_prior_denominator.py"
-Cohesion: 0.46
-Nodes (7): _drive_one_task(), _prior(), Renderer seeds the task denominator from a matching prior run.  Preflight ``--li, _run(), test_loose_prior_seeds_estimated_total(), test_no_prior_falls_back_to_seen(), test_strict_prior_seeds_plain_total()
-
-### Community 315 - "TestPasswordTimeout"
-Cohesion: 0.25
-Nodes (5): TC-452: Password Timeout - 60 Second Limit., TC-452: Password timeout defaults to 60 seconds., TC-453: Password timeout cancels with error message., TC-454: User can retry after timeout., TestPasswordTimeout
-
-### Community 316 - "TestStderrCapture"
-Cohesion: 0.25
-Nodes (5): TC-477 to TC-479: Stderr capture and handling., TC-477: Stderr output stored in session directory., TC-478: Stderr lines displayed in log panel., TC-479: Stderr containing JSON is parsed as JSONL if possible., TestStderrCapture
 
 ### Community 317 - "source_hash"
 Cohesion: 0.18
@@ -1733,53 +1777,25 @@ Nodes (3): Task 5.2: --config PATH sets the highest-precedence config layer.    
 Cohesion: 0.25
 Nodes (5): Test password prompt handling interface for renderer integration., Parser provides interface for password prompt handling., Password prompts detected before playbook starts., Simulate full playbook workflow with parser., TestRendererProtocolPasswordHandling
 
-### Community 323 - "TestExitCodeConstants"
-Cohesion: 0.33
-Nodes (4): Exit code constant definitions., Verify exit code constants match spec., Verify signal exit code calculations., TestExitCodeConstants
-
-### Community 324 - "TestProcessMonitoring"
-Cohesion: 0.33
-Nodes (4): Tests for process state monitoring with isalive., TC-480: child.isalive() checked every 0.5 seconds., Process death detection updates state correctly., TestProcessMonitoring
-
-### Community 325 - "TestStderrHandling"
-Cohesion: 0.33
-Nodes (4): Tests for stderr capture and handling., stderr.log file is created in session directory., stderr might contain JSONL events in some cases., TestStderrHandling
-
-### Community 326 - "TestPasswordPromptHandling"
-Cohesion: 0.33
-Nodes (4): Tests for password prompt detection and handling., All password patterns from spec are defined., Password timeout defaults to 60 seconds., TestPasswordPromptHandling
-
-### Community 329 - "TestCancellationSecondCtrlC"
-Cohesion: 0.33
-Nodes (4): TC-450: Cancellation - Second Ctrl+C Kill Everything., TC-450: Second Ctrl+C within 2 seconds triggers immediate exit., TC-450: Second Ctrl+C after 2 seconds is normal interrupt., TestCancellationSecondCtrlC
-
 ### Community 330 - "TestCompactModePathUnchanged"
 Cohesion: 0.40
 Nodes (3): Tests for the CLI's run dispatch paths.  Compact mode uses the legacy ``run_play, The compact path must keep calling run_playbook directly., TestCompactModePathUnchanged
 
-### Community 331 - "completion_snippet"
-Cohesion: 0.12
-Nodes (11): completion_snippet(), Return the rc-file snippet to enable AOM tab-completion in ``shell``.      The s, MonkeyPatch, Unit tests for shell-completion helpers (F5).  Covers: - ``session_id_completer`, F5: session-id positional on the replay parser carries the completer., F5: session-id positional on the rerun parser carries the completer., Smoke test: setting _ARGCOMPLETE causes the parser to short-circuit.      argcom, TestArgcompleteEnvHandoff (+3 more)
+### Community 331 - "test_completion.py"
+Cohesion: 0.17
+Nodes (8): MonkeyPatch, Unit tests for shell-completion helpers (F5).  Covers: - ``session_id_completer`, F5: session-id positional on the replay parser carries the completer., F5: session-id positional on the rerun parser carries the completer., Smoke test: setting _ARGCOMPLETE causes the parser to short-circuit.      argcom, TestArgcompleteEnvHandoff, TestReplayCLICompleterWiring, TestRerunCLICompleterWiring
 
-### Community 332 - "TestHandlerTasks"
-Cohesion: 0.33
-Nodes (5): Integration tests for 09-handler-tasks playbook., Parser handles handler task events., Integration tests for 09-handler-tasks playbook., Parser handles handler task events., TestHandlerTasks
-
-### Community 336 - "TestHideStateFlag"
-Cohesion: 0.05
-Nodes (21): Tests for --hide-state flag., No --hide-state flag → hide_state is None., --hide-state ok sets hide_state=["ok"]., --hide-state can be specified multiple times., Unknown state values are rejected by argparse., All choices are accepted., --hide-state must be consumed by argparse, not forwarded to ansible., --hide-state ok,skipped splits into ["ok", "skipped"]. (+13 more)
-
-### Community 337 - "TestRecordStderr"
+### Community 332 - ".test_play_names_extracted"
 Cohesion: 0.40
-Nodes (4): TC-220: Session stderr content (now in events.jsonl as aom_stderr_line)., record_stderr emits aom_stderr_line events to events.jsonl., record_stderr handles UTF-8 characters in aom_stderr_line events., TestRecordStderr
+Nodes (3): Play names are correctly extracted., Parser handles handler task events., Parser handles handler task events.
 
 ### Community 338 - "Secret Redaction Layers"
 Cohesion: 0.23
 Nodes (10): _populate(), Phase 13: automatic post-run diagnostics summary on AOM_DEBUG=1.  When the user, No accumulator published yet — still safe to call., set_debug(True) should have same effect as AOM_DEBUG=1 env var., set_debug(False) should suppress the summary., test_print_summary_if_debug_emits_with_debug(), test_print_summary_if_debug_handles_no_run_data(), test_print_summary_if_debug_silent_without_debug() (+2 more)
 
-### Community 339 - "Path"
-Cohesion: 0.04
-Nodes (39): Path, Unit tests for include/role file parsing and caching.  Covers all public functio, Empty YAML list returns empty list., Unit tests for parse_role_tasks()., Valid role directory with tasks/main.yml returns task names., Missing role directory returns empty list., Role prefix 'role : ' is stripped from task names., Tasks without 'name' key are skipped in role parsing. (+31 more)
+### Community 339 - "models.py"
+Cohesion: 0.02
+Nodes (142): _preflight_env(), Pre-flight: parallel `--list-tasks` + `--list-hosts` orchestration.  This module, Spawn a single ansible-playbook invocation; return (exit_code, stdout, stderr)., Environment for preflight subprocesses.      `ANSIBLE_NOCOLOR=1` forces ansible-, _spawn_one(), _build_name_index(), _collect_role_refs_from_tasks(), _discover_include() (+134 more)
 
 ### Community 343 - "Become Password Prompt"
 Cohesion: 0.23
@@ -1793,41 +1809,33 @@ Nodes (11): Capture & Storage, Configuration, Documentation & Onboarding, Edge C
 Cohesion: 0.50
 Nodes (3): Namespace, _HideStateAction, ArgumentParser
 
-### Community 347 - "TestUserCancellation"
-Cohesion: 0.50
-Nodes (3): Integration tests for 24-user-cancellation playbook., Parser handles Ctrl+C during execution., TestUserCancellation
-
-### Community 348 - "TestLargePlaybook"
-Cohesion: 0.50
-Nodes (3): Integration tests for 32-large-playbook., Parser handles large playbook (1000+ tasks)., TestLargePlaybook
-
 ### Community 370 - "inspect_model.py"
-Cohesion: 0.05
-Nodes (61): accumulate_session_events(), _freeze_map(), _group_key(), _HostAcc, LoopItem, _make_loop_item(), _MutCounts, _nest_includes() (+53 more)
+Cohesion: 0.06
+Nodes (55): Connection, NamedTuple, accumulate_session_events(), EventRef, _freeze_map(), _group_key(), _HostAcc, _MutCounts (+47 more)
 
 ### Community 374 - "Inspect CLI Module"
 Cohesion: 0.27
 Nodes (5): _final_line(), Tests for the labeled final-state line in handle_completion.  A bare ✖ told the, Exit code 130 (KeyboardInterrupt) shows 'cancelled by user'., Exit code 127 (command not found) gets its own label., TestCompletionLabel
 
-### Community 383 - "rerun/cli.py"
-Cohesion: 0.15
-Nodes (12): _build_rerun_command(), main(), CLI entry point for ``aom rerun``.  Reads a recorded session, derives a host lis, Drop any pre-existing ``--limit`` / ``-l`` from the args list.      Handles thre, Construct the (playbook, ansible_args) pair to spawn for the rerun.      The ses, CLI entry point for ``aom rerun``.      Args:         argv: Argument list. If No, _strip_limit_args(), A pre-existing --limit in the original args is dropped in favour of ours. (+4 more)
+### Community 383 - "_build_rerun_command"
+Cohesion: 0.18
+Nodes (9): _build_rerun_command(), Drop any pre-existing ``--limit`` / ``-l`` from the args list.      Handles thre, Construct the (playbook, ansible_args) pair to spawn for the rerun.      The ses, _strip_limit_args(), A pre-existing --limit in the original args is dropped in favour of ours., ``-l`` is the short form of ``--limit``; treat it the same., ``--limit=hosts`` (single arg) is also dropped., No hosts → no rerun. Caller is expected to surface this earlier. (+1 more)
 
 ### Community 384 - "test_parser_orjson_swap.py"
 Cohesion: 0.22
 Nodes (8): Path, TC-PERF-005..007 — orjson swap equivalency tests.  Pin behaviour of ``JsonLineSt, TC-PERF-005: orjson swap is byte-equivalent for real-world fixtures., TC-PERF-006: truncated JSON head is stashed and re-joined.      Equivalent behav, TC-PERF-007: top-level JSON that's not an object is rejected.      A JSON top-le, test_perf_005_parser_byte_equal_to_stdlib(), test_perf_006_carry_buffer_still_works_after_swap(), test_perf_007_non_dict_json_rejected()
 
-### Community 385 - "SessionManager"
-Cohesion: 0.04
-Nodes (51): Manages session recording and artifact creation.      Sessions are stored during, Total events dropped across all sessions because a queue was full., Reason string if the session's background writer hit a disk error.          Retu, SessionManager, TC-222 to TC-225: Artifact file creation and format., create_artifact creates .aom file in artifacts directory., TC-223: Artifact starts with metadata header line., TC-224: Artifact contains event lines with type=event. (+43 more)
+### Community 385 - "test_session_store_async_write.py"
+Cohesion: 0.12
+Nodes (23): Total events dropped across all sessions because a queue was full., _break_events_file(), _build_1mb_event(), Path, R16 — async / non-blocking disk write in session/store.py.  R16 spec: the legacy, R16: ``end_session`` drains the writer, so every recorded event lands     on dis, R16: events and stderr lines share one writer, so their relative     order on di, Requirement: ``end_session`` flushes the writer BEFORE building the     sqlite i (+15 more)
 
 ### Community 390 - "Runner Skipped Event"
 Cohesion: 0.11
 Nodes (17): `aom inspect` Rebuild Implementation Plan, File structure, Plan self-review notes, Task 10: Test-leakage fix (autouse `isolated_state_dir`), Task 11: TUI screen — Runs pane (left), Task 12: TUI screen — Tasks pane (middle), Task 13: TUI screen — Detail pane (right) + R/y bindings, Task 14: Manual smoke test + suite green (+9 more)
 
-### Community 400 - "TUI Widgets Module"
-Cohesion: 0.29
-Nodes (5): Return the recorded ``ansible_args`` or refuse with a clear error.      Sessions, _require_ansible_args(), An explicit [] is valid — the user originally ran `aom site.yml`., A null value (rare, but possible if hand-edited) is also missing., TestRequireAnsibleArgs
+### Community 400 - "rerun/cli.py"
+Cohesion: 0.20
+Nodes (8): main(), CLI entry point for ``aom rerun``.  Reads a recorded session, derives a host lis, Return the recorded ``ansible_args`` or refuse with a clear error.      Sessions, CLI entry point for ``aom rerun``.      Args:         argv: Argument list. If No, _require_ansible_args(), An explicit [] is valid — the user originally ran `aom site.yml`., A null value (rare, but possible if hand-edited) is also missing., TestRequireAnsibleArgs
 
 ### Community 402 - "Task Liveness Indicator"
 Cohesion: 0.12
@@ -1857,9 +1865,9 @@ Nodes (9): 1. Executive roast summary, 2. Quality scorecard, 3. Findings table, 
 Cohesion: 0.28
 Nodes (8): Tests for the host table printed by handle_completion.  After completion, the re, Build a RunState where web1 had 2 OK + 1 changed, web2 had 1 OK + 1 failed., On failure, the host table is included in the snapshot output., If no hosts ran (preflight-only failure), don't print a host table., _state_with_two_hosts(), test_completion_no_host_rows_when_no_hosts(), test_completion_prints_host_table_with_counts(), test_completion_snapshot_contains_host_rows()
 
-### Community 479 - "format.py"
-Cohesion: 0.07
-Nodes (35): Pure formatters for the compact renderer.  Every public function here takes doma, Cap a JSONL ``msg`` field for live display.      R6: any lone-surrogate codepoin, Return the inline body for a verbose-always ok result, or ``None``.      Mirrors, Replace any lone-surrogate codepoints in ``s`` with U+FFFD.      Pexpect's ``cod, Truncate to `width` visible chars while preserving any open SGR     state by app, _replace_surrogates(), _truncate_msg(), _truncate_visible() (+27 more)
+### Community 479 - "format_age"
+Cohesion: 0.15
+Nodes (18): format_age(), format_duration_compact(), format_elapsed_hms(), datetime, Pure formatters for durations and relative ages.  These functions are used where, Render a duration as the most compact human form ("42s", "1m23s", "1h05m")., Render an elapsed time as ``M:SS`` (under an hour) or ``H:MM:SS``.      Used by, Render an absolute UTC ``end_time`` as a relative ``"Xs/m/h/d ago"`` string. (+10 more)
 
 ### Community 480 - "_run_cli"
 Cohesion: 0.28
@@ -1903,7 +1911,7 @@ Nodes (6): A. JSONL event types in current AOM parser (`core/run_state.py:handle
 
 ### Community 560 - "._render_status_panel"
 Cohesion: 0.06
-Nodes (34): count_completed_tasks(), count_total_tasks(), count_total_tasks_seen(), Sum of leaf tasks across all preflight play definitions.      Used for the statu, Running upper bound on task count for the status-bar denominator.      Preflight, Count tasks across all plays whose hosts have all reached terminal state.      T, Handle playbook completion (success/failure/crash).          Shows final status, Store preflight definitions and emit the startup summary.          Two effects: (+26 more)
+Nodes (33): count_completed_tasks(), count_total_tasks(), count_total_tasks_seen(), Sum of leaf tasks across all preflight play definitions.      Used for the statu, Running upper bound on task count for the status-bar denominator.      Preflight, Count tasks across all plays whose hosts have all reached terminal state.      T, Handle playbook completion (success/failure/crash).          Shows final status, Store preflight definitions and emit the startup summary.          Two effects: (+25 more)
 
 ### Community 575 - "TestClassifyError"
 Cohesion: 0.33
@@ -1936,16 +1944,16 @@ Nodes (4): 11. CLI flags & config (answers Q33–Q36, plus Q4.2 refactor), Captu
 ## Knowledge Gaps
 - **408 isolated node(s):** `graphify-refresh.sh script`, `GRAPHIFY_VIZ_NODE_LIMIT`, `pre-commit-wrapper.sh script`, `ansible-aom`, `install-hooks.sh script` (+403 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **299 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **307 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `RunState` connect `RunState` to `HostRunState`, `StreamPhase`, `Status`, `PlayDefinition`, `TaskDefinition`, `CompactRenderer`, `_play_start`, `run_state.py`, `create_parser`, `TreeProjection`, `Inspect CLI Commands`, `IncludeCacheEntry`, `test_task_completion.py`, `_play_start`, `runner.py`, `TestTemplateVariableNameMismatch`, `._render_status_panel`, `TestUngroupedRoleTasksInTree`, `run_playbook`, `JsonlEvent`, `RunDiagnostics`, `test_tree_render.py`, `TestTaskCompletionLifecycle`, `JsonRenderer`, `event_types.py`, `_seed_run_state`, `_parse_timestamp`, `TestEventParsing`, `_drive`, `_state_with_play`, `RoleCacheEntry`, `Playbook Event Parsing`, `format_failure_recap`, `Pane Focus Navigation`, `Log Panel Widget`, `format_host_rows`, `Tree Navigation Keys`, `_make_play`, `assemble_definitions`, `json.py`, `Runner Heartbeat Wiring`, `test_renderer_parity.py`, `TestRuntimeRoleTaskCount`, `TestNoRedactFlag`, `test_playbook_parser.py`, `TestExitCodes`, `test_run_state_memory_bounds.py`, `test_loop_item_count.py`, `TestHideStateCompactPlumbing`, `test_properties_state.py`, `Stale Running Cleanup`, `test_unknown_event_hint.py`, `format_tree_block`, `_compute_mode_label`, `TestVerboseDiagnostics`, `Get All Actions`, `TestDiscoverRole`, `test_invariants_session_roundtrip.py`, `TestPasswordPrompts`, `TestPhaseTransitions`, `_make_state_with_stale_running`, `TestYesFlag`, `_visible_projection`, `TestWarningDetection`, `TestFormatFlag`, `TestCoreModuleStructure`, `TestInspectSubcommand`, `TestVerboseDebugLogging`, `TestConfigPathFlag`, `TestHandlerTasks`, `TestHideStateFlag`, `Path`, `TestCaptureVerboseFlag`, `TestNoFailedHintFlag`, `TestHideDeprecationsFlag`, `TestUserCancellation`, `TestLargePlaybook`, `test_pause_lingering_cleanup.py`, `test_completion_summary.py`, `format.py`?**
+- **Why does `RunState` connect `RunState` to `HostRunState`, `StatusBarConfig`, `.from_run_state`, `TaskDefinition`, `CompactRenderer`, `_play_start`, `_BoundedDict`, `TreeProjection`, `Inspect CLI Commands`, `RoleGroupDefinition`, `test_task_completion.py`, `datetime`, `_play_start`, `runner.py`, `TestTemplateVariableNameMismatch`, `._render_status_panel`, `TestUngroupedRoleTasksInTree`, `JsonlEvent`, `RunDiagnostics`, `test_tree_render.py`, `test_tree_classify_and_role_labels.py`, `JsonRenderer`, `event_types.py`, `TestHandleEventMalformedPayloads`, `TestTimestampLocalTimezone`, `parse_jsonl_output`, `TestEventParsing`, `_drive`, `_state_with_play`, `Playbook Event Parsing`, `run_playbook`, `PlayDefinition`, `TestSubtreeRoleCounting`, `Pane Focus Navigation`, `Log Panel Widget`, `format_host_rows`, `_make_play`, `assemble_definitions`, `TestTwoLevelTruncation`, `RunSummary`, `Runner Heartbeat Wiring`, `parity.py`, `TestRuntimeRoleTaskCount`, `TestNoRedactFlag`, `Status`, `test_cli.py`, `test_run_state_memory_bounds.py`, `test_loop_item_count.py`, `TestWarningVisibilityCompactPlumbing`, `test_properties_state.py`, `Stale Running Cleanup`, `format_tree_block`, `_compute_mode_label`, `TestVerboseDiagnostics`, `json.py`, `Get All Actions`, `_FakeSink`, `test_invariants_session_roundtrip.py`, `TestCrossPlayLookupIsolation`, `TestMultiPlayTruncationWithRoleFooters`, `TestMultiplePlays`, `TestWarnings`, `format.py`, `TestV2PlaybookOnStatsCrossCheck`, `test_run_state_set_caps.py`, `run_state_status_counts`, `TestDeprecationWarnings`, `_make_state_with_stale_running`, `TestYesFlag`, `TestCaptureSetupFlag`, `_visible_projection`, `TestHideWarningsFlag`, `TestFormatFlag`, `TestCoreModuleStructure`, `TestConfigPathFlag`, `models.py`, `TestCaptureVerboseFlag`, `TestNoFailedHintFlag`, `TestHideDeprecationsFlag`, `test_pause_lingering_cleanup.py`, `test_completion_summary.py`?**
   _High betweenness centrality (0.154) - this node is a cross-community bridge._
-- **Why does `Status` connect `Status` to `HostRunState`, `PtyStreamParser`, `RunState`, `StreamPhase`, `PlayDefinition`, `JsonLineStream`, `assemble_definitions`, `TaskDefinition`, `CompactRenderer`, `TestSignalHandling`, `TestPasswordPrompts`, `Memory Bounds Constants`, `run_state.py`, `TestStatusEnum`, `json.py`, `TestPhaseTransitions`, `TreeProjection`, `create_parser`, `_play_start`, `_make_state_with_stale_running`, `TestRuntimeRoleTaskCount`, `TestProjectionLifecycle`, `TestYesFlag`, `TestNoRedactFlag`, `Dirty Flag Throttle`, `format_status_bar`, `TestWarningDetection`, `TestPerEventLogColors`, `TestTemplateVariableNameMismatch`, `test_playbook_parser.py`, `TestExitCodes`, `TestFormatFlag`, `TestCoreModuleStructure`, `test_loop_item_count.py`, `_make_play`, `TestInspectSubcommand`, `TestVerboseDebugLogging`, `TestHideStateCompactPlumbing`, `RendererMirrorMachine`, `TestUngroupedRoleTasksInTree`, `TestMultiLineWarningContinuation`, `TestConfigPathFlag`, `format_tree_block`, `TestTaskCompletionLifecycle`, `TestVerboseDiagnostics`, `renderer.py`, `TestVerboseAlwaysMsgDisplay`, `TestHandlerTasks`, `test_pause_lingering_cleanup.py`, `JsonRenderer`, `TestHideStateFlag`, `TestPasswordPromptPatterns`, `TestCaptureVerboseFlag`, `TestHideDeprecationsFlag`, `TestNoFailedHintFlag`, `TestUserCancellation`, `TestEventParsing`, `Warning Pattern Classification`, `TestLargePlaybook`, `format.py`, `format_failure_recap`, `Pane Focus Navigation`, `TestStatusBarAvailableElements`, `Pydantic Model Basics`, `format_host_summary`?**
+- **Why does `Status` connect `Status` to `HostRunState`, `PtyStreamParser`, `RunState`, `TestV2PlaybookOnStatsCrossCheck`, `StatusBarConfig`, `TestTerminalSizeCheck`, `.from_run_state`, `WarningType`, `_make_play`, `TaskDefinition`, `CompactRenderer`, `TestDeprecationWarnings`, `assemble_definitions`, `_play_start`, `_BoundedDict`, `WarningEntry`, `RunSummary`, `TestTwoLevelTruncation`, `TreeProjection`, `_make_state_with_stale_running`, `parity.py`, `TestRuntimeRoleTaskCount`, `RoleGroupDefinition`, `TestProjectionLifecycle`, `TestYesFlag`, `TestCaptureSetupFlag`, `TestNoRedactFlag`, `Dirty Flag Throttle`, `format_status_bar`, `TestHideWarningsFlag`, `TestPerEventLogColors`, `TestTemplateVariableNameMismatch`, `TestTreeKindIncludesMore`, `test_cli.py`, `TestFormatFlag`, `TestFilterPanelHostFilter`, `TestCoreModuleStructure`, `test_loop_item_count.py`, `RendererMirrorMachine`, `TestUngroupedRoleTasksInTree`, `TestWarningVisibilityCompactPlumbing`, `JsonlEvent`, `TestMultiLineWarningContinuation`, `TestConfigPathFlag`, `format_tree_block`, `test_tree_classify_and_role_labels.py`, `TestVerboseDiagnostics`, `renderer.py`, `TestVerboseAlwaysMsgDisplay`, `json.py`, `test_pause_lingering_cleanup.py`, `JsonRenderer`, `models.py`, `TestPasswordPromptPatterns`, `TestCaptureVerboseFlag`, `TestHideDeprecationsFlag`, `TestNoFailedHintFlag`, `TestHandleEventMalformedPayloads`, `TestTimestampLocalTimezone`, `TestEventParsing`, `Warning Pattern Classification`, `Pane Focus Navigation`, `TestCrossPlayLookupIsolation`, `TestMultiPlayTruncationWithRoleFooters`, `TestMultiplePlays`, `TestWarnings`, `PlayDefinition`, `TestSubtreeRoleCounting`, `TestFilterPanelTextFilter`, `TestStatusBarAvailableElements`, `Pydantic Model Basics`, `format.py`?**
   _High betweenness centrality (0.112) - this node is a cross-community bridge._
-- **Why does `CompactRenderer` connect `CompactRenderer` to `HostRunState`, `Compact Display Logic`, `Renderer Parity Invariant`, `test_run_state_memory_bounds.py`, `Password Prompt Patterns`, `Status`, `Monochrome Terminal Fallback`, `Display`, `Parser Phase Transitions`, `TestSignalHandling`, `test_renderer_set_definitions.py`, `create_parser`, `Inspect CLI Commands`, `test_renderer_parity.py`, `Event Log Emission`, `TestProjectionLifecycle`, `Psutil Safe Probe`, `test_incremental_counters.py`, `TestPasswordPromptPTYIntegration`, `TestNoRedactFlag`, `format_status_bar`, `Tree Expansion Icons`, `Renderer`, `TestPasswordTimeoutDefault`, `TestPerEventLogColors`, `._render_status_panel`, `TestExitCodes`, `TestFormatFlag`, `TestCoreModuleStructure`, `TestYesFlag`, `App Config Model Tests`, `TestInspectSubcommand`, `TestVerboseDebugLogging`, `test_warning_color.py`, `JsonlEvent`, `test_prior_denominator.py`, `TestHideStateCompactPlumbing`, `_fresh_display`, `test_tree_render.py`, `RendererMirrorMachine`, `HeartbeatTracker`, `Stderr Capture Handling`, `_compute_tree_budget`, `Playbook Run Integration Tests`, `test_unknown_event_hint.py`, `TestConfigPathFlag`, `_compute_mode_label`, `TestVerboseDiagnostics`, `renderer.py`, `TestVerboseAlwaysMsgDisplay`, `.handle_password_prompt`, `test_full_completion_summary.py`, `Shift Modifier Keybindings`, `TestHideStateFlag`, `TestPasswordPromptPatterns`, `TestCaptureVerboseFlag`, `TestHideDeprecationsFlag`, `TestNoFailedHintFlag`, `drivers/replay.py`, `Preflight Definition Assembly`, `.test_update_state_streams_log_lines_for_significant_events`, `test_replay_determinism.py`, `test_completion_summary.py`, `Mitogen Event Robustness`, `format.py`, `Completion State Labels`, `RunSummary Schema Contract`, `Playbook Event Parsing`, `PriorRun`, `create_renderer`, `format_failure_recap`, `Inspect CLI Module`, `format_host_summary`?**
+- **Why does `CompactRenderer` connect `CompactRenderer` to `HostRunState`, `Compact Display Logic`, `Renderer Parity Invariant`, `Password Prompt Patterns`, `Monochrome Terminal Fallback`, `TestTerminalSizeCheck`, `Display`, `Parser Phase Transitions`, `Inspect CLI Commands`, `StatusCounts`, `parity.py`, `Event Log Emission`, `TestProjectionLifecycle`, `Psutil Safe Probe`, `test_incremental_counters.py`, `TestPasswordPromptPTYIntegration`, `TestCaptureSetupFlag`, `format_status_bar`, `Tree Expansion Icons`, `Renderer`, `TestPasswordTimeoutDefault`, `TestPerEventLogColors`, `TestHideWarningsFlag`, `Status`, `TestNoRedactFlag`, `._render_status_panel`, `test_cli.py`, `TestFormatFlag`, `TestCoreModuleStructure`, `history.py`, `App Config Model Tests`, `TestYesFlag`, `RendererMirrorMachine`, `test_warning_color.py`, `JsonlEvent`, `TestWarningVisibilityCompactPlumbing`, `test_prior_run_loop_totals_injection.py`, `_fresh_display`, `test_tree_render.py`, `HeartbeatTracker`, `Stderr Capture Handling`, `_compute_tree_budget`, `Playbook Run Integration Tests`, `TestConfigPathFlag`, `_compute_mode_label`, `TestVerboseDiagnostics`, `renderer.py`, `TestVerboseAlwaysMsgDisplay`, `_build_compact_renderer`, `.handle_password_prompt`, `test_full_completion_summary.py`, `Shift Modifier Keybindings`, `TestPasswordPromptPatterns`, `TestCaptureVerboseFlag`, `TestHideDeprecationsFlag`, `TestNoFailedHintFlag`, `Preflight Definition Assembly`, `test_replay_determinism.py`, `test_completion_summary.py`, `Mitogen Event Robustness`, `Completion State Labels`, `RunSummary Schema Contract`, `Playbook Event Parsing`, `create_renderer`, `Inspect CLI Module`, `format.py`?**
   _High betweenness centrality (0.104) - this node is a cross-community bridge._
 - **Are the 253 inferred relationships involving `RunState` (e.g. with `_NullSink` and `_SessionSink`) actually correct?**
   _`RunState` has 253 INFERRED edges - model-reasoned connections that need verification._

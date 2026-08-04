@@ -1,6 +1,6 @@
 # RunState
 
-> 292 nodes · cohesion 0.01
+> 225 nodes · cohesion 0.01
 
 ## Key Concepts
 
@@ -9,19 +9,10 @@
 - **TestRunState** (21 connections) — `tests/unit/test_models.py`
 - **TestRunStateUnknownEvent** (19 connections) — `tests/unit/test_parser.py`
 - **TestHandleEventDispatcher** (17 connections) — `tests/unit/test_event_processing.py`
-- **datetime** (15 connections)
-- **._handle_v2_playbook_on_task_start()** (14 connections) — `src/ansible_aom/core/run_state.py`
-- **._handle_v2_runner_on_start()** (13 connections) — `src/ansible_aom/core/run_state.py`
-- **._task_dict()** (13 connections) — `src/ansible_aom/core/run_state.py`
+- **TestTaskMatchingAlgorithm** (16 connections) — `tests/unit/test_event_processing.py`
+- **TestElapsedTimeFormat** (15 connections) — `tests/unit/test_event_processing.py`
 - **TestPlaybookOnStats** (13 connections) — `tests/unit/test_event_processing.py`
-- **._handle_v2_runner_on_failed()** (12 connections) — `src/ansible_aom/core/run_state.py`
-- **._handle_v2_runner_on_ok()** (12 connections) — `src/ansible_aom/core/run_state.py`
-- **._handle_v2_runner_on_skipped()** (12 connections) — `src/ansible_aom/core/run_state.py`
-- **._handle_v2_runner_on_unreachable()** (12 connections) — `src/ansible_aom/core/run_state.py`
-- **._resolve_play_id()** (12 connections) — `src/ansible_aom/core/run_state.py`
-- **_reserve_host_run_state()** (11 connections) — `src/ansible_aom/core/run_state.py`
 - **._graft_or_match_task()** (11 connections) — `src/ansible_aom/core/run_state.py`
-- **._resolve_runner_task()** (11 connections) — `src/ansible_aom/core/run_state.py`
 - **TestEventProcessingEdgeCases** (11 connections) — `tests/unit/test_event_processing.py`
 - **TestHandleEventTimestampParsing** (11 connections) — `tests/unit/test_event_processing.py`
 - **TestHandleEventUnknownType** (11 connections) — `tests/unit/test_event_processing.py`
@@ -29,37 +20,45 @@
 - **TestPlaybookOnStart** (11 connections) — `tests/unit/test_event_processing.py`
 - **TestPlayStart** (11 connections) — `tests/unit/test_event_processing.py`
 - **TestRunnerOnFailed** (11 connections) — `tests/unit/test_event_processing.py`
-- *... and 267 more nodes in this community*
+- **TestRunnerOnFailedIgnoreErrors** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnFailedStateTransition** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnOk** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnOkStatus** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnStartTaskCreation** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestTaskStart** (11 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnSkipped** (10 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnStartStrategy** (10 connections) — `tests/unit/test_event_processing.py`
+- **TestRunnerOnUnreachable** (10 connections) — `tests/unit/test_event_processing.py`
+- *... and 200 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (156 shared connections)
-- [PlayDefinition](PlayDefinition.md) (76 shared connections)
-- [TaskDefinition](TaskDefinition.md) (63 shared connections)
-- [Status](Status.md) (43 shared connections)
-- [_play_start](_play_start.md) (29 shared connections)
-- [test_playbook_parser.py](test_playbook_parser.py.md) (22 shared connections)
-- [JsonlEvent](JsonlEvent.md) (19 shared connections)
+- [HostRunState](HostRunState.md) (129 shared connections)
+- [Status](Status.md) (55 shared connections)
+- [TaskDefinition](TaskDefinition.md) (49 shared connections)
+- [.from_run_state](from_run_state.md) (31 shared connections)
+- [_play_start](_play_start.md) (30 shared connections)
+- [PlayDefinition](PlayDefinition.md) (25 shared connections)
+- [datetime](datetime.md) (24 shared connections)
+- [models.py](models.py.md) (23 shared connections)
+- [test_cli.py](test_cli.py.md) (18 shared connections)
 - [_drive](_drive.md) (17 shared connections)
 - [Inspect CLI Commands](Inspect_CLI_Commands.md) (16 shared connections)
-- [run_state.py](run_state.py.md) (13 shared connections)
-- [TreeProjection](TreeProjection.md) (11 shared connections)
-- [test_run_state_memory_bounds.py](test_run_state_memory_bounds.py.md) (10 shared connections)
+- [RoleGroupDefinition](RoleGroupDefinition.md) (15 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/core/run_state.py`
 - `tests/integration/test_invariants_session_roundtrip.py`
 - `tests/unit/test_event_processing.py`
-- `tests/unit/test_host_resolution.py`
 - `tests/unit/test_models.py`
 - `tests/unit/test_parser.py`
 - `tests/unit/test_properties_state.py`
 
 ## Audit Trail
 
-- EXTRACTED: 1162 (73%)
-- INFERRED: 439 (27%)
+- EXTRACTED: 882 (67%)
+- INFERRED: 439 (33%)
 - AMBIGUOUS: 0 (0%)
 
 ---

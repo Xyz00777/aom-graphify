@@ -33,18 +33,18 @@
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (22 shared connections)
+- [test_cli.py](test_cli.py.md) (18 shared connections)
+- [HostRunState](HostRunState.md) (9 shared connections)
 - [json.py](json.py.md) (4 shared connections)
 - [create_renderer](create_renderer.md) (4 shared connections)
 - [RunState](RunState.md) (3 shared connections)
 - [JsonlEvent](JsonlEvent.md) (2 shared connections)
+- [Renderer](Renderer.md) (2 shared connections)
 - [test_replay_determinism.py](test_replay_determinism.py.md) (2 shared connections)
-- [create_parser](create_parser.md) (2 shared connections)
 - [TestFormatFlag](TestFormatFlag.md) (2 shared connections)
-- [TestHideStateCompactPlumbing](TestHideStateCompactPlumbing.md) (2 shared connections)
 - [Status](Status.md) (1 shared connections)
-- [drivers/replay.py](drivers-replay.py.md) (1 shared connections)
-- [test_renderer_parity.py](test_renderer_parity.py.md) (1 shared connections)
+- [parity.py](parity.py.md) (1 shared connections)
+- [TestCaptureSetupFlag](TestCaptureSetupFlag.md) (1 shared connections)
 
 ## Source Files
 

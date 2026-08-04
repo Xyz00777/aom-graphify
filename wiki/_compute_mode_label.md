@@ -1,6 +1,6 @@
 # _compute_mode_label
 
-> 28 nodes · cohesion 0.10
+> 31 nodes · cohesion 0.09
 
 ## Key Concepts
 
@@ -8,11 +8,13 @@
 - **TestComputeModeLabel** (13 connections) — `tests/compact/test_check_mode_chip.py`
 - **.start()** (9 connections) — `src/ansible_aom/compact/renderer.py`
 - **.stop()** (6 connections) — `src/ansible_aom/compact/renderer.py`
+- **_replace_surrogates()** (5 connections) — `src/ansible_aom/compact/format.py`
 - **.collect_stats()** (4 connections) — `src/ansible_aom/compact/renderer.py`
 - **.handle_interactive_prompt()** (4 connections) — `src/ansible_aom/compact/renderer.py`
 - **.handle_password_prompt()** (4 connections) — `src/ansible_aom/compact/renderer.py`
 - **test_check_mode_chip.py** (4 connections) — `tests/compact/test_check_mode_chip.py`
 - **.test_substring_in_other_arg_does_not_false_positive()** (3 connections) — `tests/compact/test_check_mode_chip.py`
+- **Replace any lone-surrogate codepoints in ``s`` with U+FFFD.      Pexpect's ``cod** (2 connections) — `src/ansible_aom/compact/format.py`
 - **.test_check_and_diff_combine()** (2 connections) — `tests/compact/test_check_mode_chip.py`
 - **.test_check_long_flag_yields_dry_run_label()** (2 connections) — `tests/compact/test_check_mode_chip.py`
 - **.test_check_short_flag_also_caught()** (2 connections) — `tests/compact/test_check_mode_chip.py`
@@ -24,20 +26,19 @@
 - **.test_recording_label_is_present_by_default()** (2 connections) — `tests/compact/test_check_mode_chip.py`
 - **.test_recording_label_precedes_check_and_diff()** (2 connections) — `tests/compact/test_check_mode_chip.py`
 - **.test_verbose_capture_upgrades_recording_label()** (2 connections) — `tests/compact/test_check_mode_chip.py`
+- **.test_replace_surrogates_converts_lone_surrogates()** (2 connections) — `tests/integration/test_r6_encoding_roundtrip.py`
 - **Render the status-bar mode chip(s) from ansible-playbook args.      Recording is** (1 connections) — `src/ansible_aom/compact/format.py`
 - **Return an immutable snapshot of this renderer's activity counters.          Call** (1 connections) — `src/ansible_aom/compact/renderer.py`
-- **Stop rendering and clean up resources.          Restores terminal state, flushes** (1 connections) — `src/ansible_aom/compact/renderer.py`
-- **Start rendering a playbook run.          Initializes the RunState, starts the Ri** (1 connections) — `src/ansible_aom/compact/renderer.py`
-- **Surface a pause / vars_prompt-style prompt and capture one line.          Mirror** (1 connections) — `src/ansible_aom/compact/renderer.py`
-- *... and 3 more nodes in this community*
+- *... and 6 more nodes in this community*
 
 ## Relationships
 
 - [CompactRenderer](CompactRenderer.md) (5 shared connections)
-- [renderer.py](renderer.py.md) (4 shared connections)
-- [format.py](format.py.md) (2 shared connections)
+- [format.py](format.py.md) (3 shared connections)
+- [renderer.py](renderer.py.md) (3 shared connections)
+- [JsonlEvent](JsonlEvent.md) (2 shared connections)
+- [test_r6_encoding_roundtrip.py](test_r6_encoding_roundtrip.py.md) (2 shared connections)
 - [format_status_bar](format_status_bar.md) (2 shared connections)
-- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 - [runner.py](runner.py.md) (1 shared connections)
 - [RunState](RunState.md) (1 shared connections)
 - [._render_status_panel](_render_status_panel.md) (1 shared connections)
@@ -47,11 +48,12 @@
 - `src/ansible_aom/compact/format.py`
 - `src/ansible_aom/compact/renderer.py`
 - `tests/compact/test_check_mode_chip.py`
+- `tests/integration/test_r6_encoding_roundtrip.py`
 
 ## Audit Trail
 
-- EXTRACTED: 70 (74%)
-- INFERRED: 25 (26%)
+- EXTRACTED: 76 (73%)
+- INFERRED: 28 (27%)
 - AMBIGUOUS: 0 (0%)
 
 ---

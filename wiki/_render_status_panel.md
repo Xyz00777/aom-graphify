@@ -1,6 +1,6 @@
 # ._render_status_panel
 
-> 42 nodes · cohesion 0.06
+> 41 nodes · cohesion 0.06
 
 ## Key Concepts
 
@@ -10,7 +10,6 @@
 - **.handle_completion()** (13 connections) — `src/ansible_aom/compact/renderer.py`
 - **count_completed_tasks()** (12 connections) — `src/ansible_aom/compact/format.py`
 - **count_total_tasks_seen()** (12 connections) — `src/ansible_aom/compact/format.py`
-- **run_state_status_counts()** (10 connections) — `src/ansible_aom/core/tree.py`
 - **test_count_total_tasks_grows_with_runtime_announced_tasks()** (8 connections) — `tests/compact/test_task_progress.py`
 - **test_handle_completion_keeps_runtime_grown_denominator()** (8 connections) — `tests/compact/test_task_progress.py`
 - **_task()** (7 connections) — `tests/compact/test_task_progress.py`
@@ -29,35 +28,35 @@
 - **test_count_total_tasks_empty()** (2 connections) — `tests/compact/test_task_progress.py`
 - **test_format_status_bar_includes_task_progress_when_total_set()** (2 connections) — `tests/compact/test_task_progress.py`
 - **Sum of leaf tasks across all preflight play definitions.      Used for the statu** (1 connections) — `src/ansible_aom/compact/format.py`
-- *... and 17 more nodes in this community*
+- **Running upper bound on task count for the status-bar denominator.      Preflight** (1 connections) — `src/ansible_aom/compact/format.py`
+- *... and 16 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (14 shared connections)
-- [TaskDefinition](TaskDefinition.md) (10 shared connections)
+- [HostRunState](HostRunState.md) (13 shared connections)
+- [PlayDefinition](PlayDefinition.md) (9 shared connections)
+- [TaskDefinition](TaskDefinition.md) (9 shared connections)
 - [CompactRenderer](CompactRenderer.md) (9 shared connections)
-- [PlayDefinition](PlayDefinition.md) (8 shared connections)
-- [renderer.py](renderer.py.md) (7 shared connections)
-- [RunState](RunState.md) (6 shared connections)
-- [JsonlEvent](JsonlEvent.md) (5 shared connections)
+- [renderer.py](renderer.py.md) (6 shared connections)
+- [RunState](RunState.md) (5 shared connections)
 - [format_status_bar](format_status_bar.md) (5 shared connections)
-- [format.py](format.py.md) (3 shared connections)
+- [format.py](format.py.md) (4 shared connections)
+- [JsonlEvent](JsonlEvent.md) (4 shared connections)
 - [RendererMirrorMachine](RendererMirrorMachine.md) (2 shared connections)
 - [_compute_tree_budget](_compute_tree_budget.md) (2 shared connections)
-- [TreeProjection](TreeProjection.md) (2 shared connections)
+- [run_state_status_counts](run_state_status_counts.md) (2 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/compact/format.py`
 - `src/ansible_aom/compact/renderer.py`
-- `src/ansible_aom/core/tree.py`
 - `tests/compact/test_task_progress.py`
 - `tests/unit/test_dynamic_counters.py`
 
 ## Audit Trail
 
-- EXTRACTED: 168 (88%)
-- INFERRED: 22 (12%)
+- EXTRACTED: 159 (88%)
+- INFERRED: 21 (12%)
 - AMBIGUOUS: 0 (0%)
 
 ---

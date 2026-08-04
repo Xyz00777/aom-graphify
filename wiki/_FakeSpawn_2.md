@@ -1,6 +1,6 @@
 # _FakeSpawn
 
-> 20 nodes · cohesion 0.13
+> 19 nodes · cohesion 0.14
 
 ## Key Concepts
 
@@ -9,7 +9,6 @@
 - **test_runner_searchwindowsize.py** (5 connections) — `tests/unit/test_runner_searchwindowsize.py`
 - **test_runner_searchwindow_covers_longest_pattern()** (5 connections) — `tests/unit/test_runner_searchwindowsize.py`
 - **test_runner_sets_explicit_searchwindowsize()** (5 connections) — `tests/unit/test_runner_searchwindowsize.py`
-- **.playbook()** (4 connections) — `src/ansible_aom/drivers/live.py`
 - **Any** (3 connections)
 - **MonkeyPatch** (3 connections)
 - **.expect()** (2 connections) — `tests/unit/test_runner_searchwindowsize.py`
@@ -27,19 +26,17 @@
 
 ## Relationships
 
-- [FakeRenderer](FakeRenderer.md) (2 shared connections)
 - [run_playbook](run_playbook.md) (2 shared connections)
-- [_FakeSpawn](_FakeSpawn.md) (1 shared connections)
+- [FakeRenderer](FakeRenderer.md) (1 shared connections)
 
 ## Source Files
 
-- `src/ansible_aom/drivers/live.py`
 - `tests/unit/test_runner_searchwindowsize.py`
 
 ## Audit Trail
 
-- EXTRACTED: 49 (89%)
-- INFERRED: 6 (11%)
+- EXTRACTED: 48 (94%)
+- INFERRED: 3 (6%)
 - AMBIGUOUS: 0 (0%)
 
 ---

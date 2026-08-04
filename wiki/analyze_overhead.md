@@ -24,7 +24,7 @@
 
 - [test_overhead.py](test_overhead.py.md) (15 shared connections)
 - [OverheadStats](OverheadStats.md) (5 shared connections)
-- [load_session](load_session.md) (3 shared connections)
+- [store.py](store.py.md) (3 shared connections)
 - [JsonlEvent](JsonlEvent.md) (2 shared connections)
 - [event_types.py](event_types.py.md) (1 shared connections)
 

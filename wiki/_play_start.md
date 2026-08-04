@@ -1,6 +1,6 @@
 # _play_start
 
-> 29 nodes · cohesion 0.13
+> 32 nodes · cohesion 0.11
 
 ## Key Concepts
 
@@ -9,6 +9,8 @@
 - **TestTaskStartHostSynthesisFallback** (10 connections) — `tests/unit/test_runner_event_fallback.py`
 - **TestTerminalEventFallbackAttribution** (10 connections) — `tests/unit/test_runner_event_fallback.py`
 - **test_runner_event_fallback.py** (9 connections) — `tests/unit/test_runner_event_fallback.py`
+- **TestTreeReflectsPartialCompletion** (7 connections) — `tests/unit/test_runner_event_fallback.py`
+- **.test_tree_shows_per_host_status_when_subset_completed()** (7 connections) — `tests/unit/test_runner_event_fallback.py`
 - **TestUnmatchedEventCounter** (7 connections) — `tests/unit/test_runner_event_fallback.py`
 - **.test_preflight_resolved_hosts_still_win()** (6 connections) — `tests/unit/test_runner_event_fallback.py`
 - **.test_no_synthesis_under_free_strategy()** (5 connections) — `tests/unit/test_runner_event_fallback.py`
@@ -27,17 +29,17 @@
 - **An ok carrying a play.id we never saw must still land on the         task that o** (1 connections) — `tests/unit/test_runner_event_fallback.py`
 - **Two same-named tasks in one play: the fallback must pick the         one still r** (1 connections) — `tests/unit/test_runner_event_fallback.py`
 - **No preflight definitions (or no name match): the second         task_start under** (1 connections) — `tests/unit/test_runner_event_fallback.py`
-- **Under strategy free, per-host runner_on_start is the start         signal; synth** (1 connections) — `tests/unit/test_runner_event_fallback.py`
-- **A host whose latest result is UNREACHABLE or FAILED is removed         from the** (1 connections) — `tests/unit/test_runner_event_fallback.py`
-- *... and 4 more nodes in this community*
+- *... and 7 more nodes in this community*
 
 ## Relationships
 
-- [RunState](RunState.md) (14 shared connections)
-- [TaskDefinition](TaskDefinition.md) (6 shared connections)
+- [RunState](RunState.md) (15 shared connections)
+- [PlayDefinition](PlayDefinition.md) (6 shared connections)
+- [TreeProjection](TreeProjection.md) (5 shared connections)
+- [TaskDefinition](TaskDefinition.md) (5 shared connections)
 - [Status](Status.md) (4 shared connections)
-- [TreeProjection](TreeProjection.md) (4 shared connections)
-- [PlayDefinition](PlayDefinition.md) (4 shared connections)
+- [models.py](models.py.md) (1 shared connections)
+- [.from_run_state](from_run_state.md) (1 shared connections)
 
 ## Source Files
 
@@ -45,8 +47,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 124 (91%)
-- INFERRED: 12 (9%)
+- EXTRACTED: 135 (89%)
+- INFERRED: 16 (11%)
 - AMBIGUOUS: 0 (0%)
 
 ---

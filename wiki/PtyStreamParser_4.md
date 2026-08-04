@@ -71,10 +71,10 @@
 ### uses
 - [PlayDefinition](PlayDefinition.md) `INFERRED`
 - [RoleGroupDefinition](RoleGroupDefinition.md) `INFERRED`
-- WarningType `INFERRED`
-- WarningEntry `INFERRED`
+- [WarningType](WarningType.md) `INFERRED`
+- [WarningEntry](WarningEntry.md) `INFERRED`
 - [JsonlEvent](JsonlEvent.md) `INFERRED`
-- [IncludeCacheEntry](IncludeCacheEntry.md) `INFERRED`
+- IncludeCacheEntry `INFERRED`
 - TestPtyStreamParserStderrLineEmission `INFERRED`
 - TestJsonLineStreamBasics `INFERRED`
 - TestListTasksEdgeCases `INFERRED`

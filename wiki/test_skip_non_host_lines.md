@@ -13,7 +13,7 @@
 
 ## Relationships
 
-- [Status](Status.md) (3 shared connections)
+- [WarningType](WarningType.md) (3 shared connections)
 - [PtyStreamParser](PtyStreamParser.md) (2 shared connections)
 - [parse_list_hosts_output](parse_list_hosts_output.md) (1 shared connections)
 

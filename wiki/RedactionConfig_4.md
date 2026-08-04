@@ -40,9 +40,9 @@
 - [WarningsConfig](WarningsConfig.md) (3 shared connections)
 - [AppConfig](AppConfig.md) (2 shared connections)
 - [TestURLCredentialSanitization](TestURLCredentialSanitization.md) (2 shared connections)
-- [Status](Status.md) (1 shared connections)
+- [StatusBarConfig](StatusBarConfig.md) (1 shared connections)
 - [View Mode Selection](View_Mode_Selection.md) (1 shared connections)
-- [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (1 shared connections)
+- [models.py](models.py.md) (1 shared connections)
 - [TestAppConfigFieldTypes](TestAppConfigFieldTypes.md) (1 shared connections)
 - [TestAppConfigValidation](TestAppConfigValidation.md) (1 shared connections)
 

@@ -1,13 +1,17 @@
 # test_loop_item_count.py
 
-> 8 nodes · cohesion 0.39
+> 12 nodes · cohesion 0.26
 
 ## Key Concepts
 
 - **test_loop_item_count.py** (8 connections) — `tests/unit/test_loop_item_count.py`
 - **_running_loop_state()** (7 connections) — `tests/unit/test_loop_item_count.py`
 - **TestRunStateCounter** (6 connections) — `tests/unit/test_loop_item_count.py`
+- **TestTreeRendersCount** (6 connections) — `tests/unit/test_loop_item_count.py`
+- **.test_running_host_leaf_shows_n_over_total_when_known()** (4 connections) — `tests/unit/test_loop_item_count.py`
 - **_item_event()** (3 connections) — `tests/unit/test_loop_item_count.py`
+- **.test_no_count_when_no_items()** (3 connections) — `tests/unit/test_loop_item_count.py`
+- **.test_running_host_leaf_shows_item_count()** (3 connections) — `tests/unit/test_loop_item_count.py`
 - **.test_item_events_do_not_inflate_status_counts()** (2 connections) — `tests/unit/test_loop_item_count.py`
 - **.test_item_events_increment_per_host_counter()** (2 connections) — `tests/unit/test_loop_item_count.py`
 - **.test_item_events_keep_host_running()** (2 connections) — `tests/unit/test_loop_item_count.py`
@@ -15,10 +19,10 @@
 
 ## Relationships
 
-- [PlayDefinition](PlayDefinition.md) (3 shared connections)
+- [RunState](RunState.md) (5 shared connections)
+- [.from_run_state](from_run_state.md) (3 shared connections)
+- [models.py](models.py.md) (2 shared connections)
 - [Status](Status.md) (2 shared connections)
-- [RunState](RunState.md) (2 shared connections)
-- [run_state.py](run_state.py.md) (1 shared connections)
 - [TreeProjection](TreeProjection.md) (1 shared connections)
 
 ## Source Files
@@ -27,8 +31,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 29 (94%)
-- INFERRED: 2 (6%)
+- EXTRACTED: 43 (91%)
+- INFERRED: 4 (9%)
 - AMBIGUOUS: 0 (0%)
 
 ---

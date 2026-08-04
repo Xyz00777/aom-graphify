@@ -33,18 +33,18 @@
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (26 shared connections)
+- [HostRunState](HostRunState.md) (27 shared connections)
 - [.update](update.md) (10 shared connections)
 - [IO](IO.md) (8 shared connections)
 - [_fresh_display](_fresh_display.md) (7 shared connections)
 - [TestReEnableOnResize](TestReEnableOnResize.md) (5 shared connections)
 - [TestRewindCorrectness](TestRewindCorrectness.md) (4 shared connections)
-- [renderer.py](renderer.py.md) (3 shared connections)
 - [CompactRenderer](CompactRenderer.md) (3 shared connections)
-- [TestSignalHandling](TestSignalHandling.md) (3 shared connections)
+- [JsonlEvent](JsonlEvent.md) (2 shared connections)
 - [Monochrome Terminal Fallback](Monochrome_Terminal_Fallback.md) (2 shared connections)
+- [TestTerminalSizeCheck](TestTerminalSizeCheck.md) (2 shared connections)
 - [Completion State Labels](Completion_State_Labels.md) (2 shared connections)
-- [_row_count](_row_count.md) (1 shared connections)
+- [renderer.py](renderer.py.md) (1 shared connections)
 
 ## Source Files
 

@@ -25,7 +25,7 @@
 
 ## Relationships
 
-- [load_session](load_session.md) (3 shared connections)
+- [inspect/cli.py](inspect-cli.py.md) (3 shared connections)
 - [OverheadStats](OverheadStats.md) (2 shared connections)
 - [core/__init__.py](core-__init__.py.md) (1 shared connections)
 - [IO](IO.md) (1 shared connections)

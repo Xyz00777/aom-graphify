@@ -37,7 +37,7 @@
 - [test_overhead.py](test_overhead.py.md) (5 shared connections)
 - [test_inspect_debug.py](test_inspect_debug.py.md) (2 shared connections)
 - [JsonlEvent](JsonlEvent.md) (1 shared connections)
-- [load_session](load_session.md) (1 shared connections)
+- [inspect/cli.py](inspect-cli.py.md) (1 shared connections)
 
 ## Source Files
 

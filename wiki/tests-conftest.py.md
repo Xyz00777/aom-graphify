@@ -5,19 +5,19 @@
 ## Key Concepts
 
 - **tests/conftest.py** (26 connections) — `tests/conftest.py`
-- **event_play_start()** (2 connections) — `tests/conftest.py`
+- **deprecated_removed_line()** (2 connections) — `tests/conftest.py`
 - **event_runner_ok_changed()** (2 connections) — `tests/conftest.py`
 - **list_hosts_output()** (2 connections) — `tests/conftest.py`
 - **Shared test fixtures for AOM test suite.  CRITICAL: All fixtures are IMMUTABLE.** (1 connections) — `tests/conftest.py`
 - **v2_runner_on_ok event with changed=True.** (1 connections) — `tests/conftest.py`
+- **Ansible removed feature deprecation line.** (1 connections) — `tests/conftest.py`
 - **Sample --list-hosts output.** (1 connections) — `tests/conftest.py`
-- **v2_playbook_on_play_start event.** (1 connections) — `tests/conftest.py`
 
 ## Relationships
 
 - [json.py](json.py.md) (1 shared connections)
-- [deprecated_removed_line](deprecated_removed_line.md) (1 shared connections)
 - [deprecation_warning_line](deprecation_warning_line.md) (1 shared connections)
+- [event_play_start](event_play_start.md) (1 shared connections)
 - [event_playbook_start](event_playbook_start.md) (1 shared connections)
 - [event_runner_failed](event_runner_failed.md) (1 shared connections)
 - [event_runner_failed_ignore](event_runner_failed_ignore.md) (1 shared connections)

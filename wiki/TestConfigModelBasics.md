@@ -27,7 +27,7 @@
 
 ## Relationships
 
-- [Status](Status.md) (4 shared connections)
+- [StatusBarConfig](StatusBarConfig.md) (4 shared connections)
 - [WarningsConfig](WarningsConfig.md) (3 shared connections)
 - [AppConfig](AppConfig.md) (2 shared connections)
 - [RedactionConfig](RedactionConfig.md) (1 shared connections)

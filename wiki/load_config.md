@@ -19,7 +19,7 @@
 
 - [RedactionConfig](RedactionConfig.md) (3 shared connections)
 - [AppConfig](AppConfig.md) (3 shared connections)
-- [Status](Status.md) (2 shared connections)
+- [StatusBarConfig](StatusBarConfig.md) (2 shared connections)
 - [WarningsConfig](WarningsConfig.md) (2 shared connections)
 - [test_config.py](test_config.py.md) (1 shared connections)
 

@@ -1,40 +1,35 @@
 # rerun/cli.py
 
-> 19 nodes · cohesion 0.15
+> 14 nodes · cohesion 0.20
 
 ## Key Concepts
 
 - **rerun/cli.py** (22 connections) — `src/ansible_aom/rerun/cli.py`
 - **main()** (12 connections) — `src/ansible_aom/rerun/cli.py`
-- **_build_rerun_command()** (10 connections) — `src/ansible_aom/rerun/cli.py`
-- **TestBuildRerunCommand** (7 connections) — `tests/unit/test_rerun_cli.py`
-- **_strip_limit_args()** (3 connections) — `src/ansible_aom/rerun/cli.py`
-- **.test_empty_host_set_raises()** (3 connections) — `tests/unit/test_rerun_cli.py`
-- **.test_overrides_existing_limit_flag()** (3 connections) — `tests/unit/test_rerun_cli.py`
-- **.test_overrides_limit_equals_form()** (3 connections) — `tests/unit/test_rerun_cli.py`
-- **.test_overrides_short_l_flag()** (3 connections) — `tests/unit/test_rerun_cli.py`
-- **.test_appends_limit_to_original_args()** (2 connections) — `tests/unit/test_rerun_cli.py`
-- **.test_single_host_limit()** (2 connections) — `tests/unit/test_rerun_cli.py`
+- **_require_ansible_args()** (8 connections) — `src/ansible_aom/rerun/cli.py`
+- **TestRequireAnsibleArgs** (6 connections) — `tests/unit/test_rerun_cli.py`
+- **.test_none_value_treated_as_missing()** (3 connections) — `tests/unit/test_rerun_cli.py`
+- **.test_session_with_empty_args_returns_empty_list()** (3 connections) — `tests/unit/test_rerun_cli.py`
+- **.test_missing_field_error_message_explains_schema()** (2 connections) — `tests/unit/test_rerun_cli.py`
+- **.test_missing_field_raises_with_clear_error()** (2 connections) — `tests/unit/test_rerun_cli.py`
+- **.test_session_with_args_returns_them()** (2 connections) — `tests/unit/test_rerun_cli.py`
 - **CLI entry point for ``aom rerun``.  Reads a recorded session, derives a host lis** (1 connections) — `src/ansible_aom/rerun/cli.py`
-- **Drop any pre-existing ``--limit`` / ``-l`` from the args list.      Handles thre** (1 connections) — `src/ansible_aom/rerun/cli.py`
-- **Construct the (playbook, ansible_args) pair to spawn for the rerun.      The ses** (1 connections) — `src/ansible_aom/rerun/cli.py`
+- **Return the recorded ``ansible_args`` or refuse with a clear error.      Sessions** (1 connections) — `src/ansible_aom/rerun/cli.py`
 - **CLI entry point for ``aom rerun``.      Args:         argv: Argument list. If No** (1 connections) — `src/ansible_aom/rerun/cli.py`
-- **A pre-existing --limit in the original args is dropped in favour of ours.** (1 connections) — `tests/unit/test_rerun_cli.py`
-- **``-l`` is the short form of ``--limit``; treat it the same.** (1 connections) — `tests/unit/test_rerun_cli.py`
-- **``--limit=hosts`` (single arg) is also dropped.** (1 connections) — `tests/unit/test_rerun_cli.py`
-- **No hosts → no rerun. Caller is expected to surface this earlier.** (1 connections) — `tests/unit/test_rerun_cli.py`
+- **An explicit [] is valid — the user originally ran `aom site.yml`.** (1 connections) — `tests/unit/test_rerun_cli.py`
+- **A null value (rare, but possible if hand-edited) is also missing.** (1 connections) — `tests/unit/test_rerun_cli.py`
 
 ## Relationships
 
-- [Path](Path.md) (4 shared connections)
-- [load_session](load_session.md) (4 shared connections)
-- [_session](_session.md) (4 shared connections)
+- [test_rerun_cli.py](test_rerun_cli.py.md) (4 shared connections)
+- [_build_rerun_command](_build_rerun_command.md) (3 shared connections)
+- [_session](_session.md) (3 shared connections)
 - [runner.py](runner.py.md) (2 shared connections)
 - [create_renderer](create_renderer.md) (2 shared connections)
-- [_compose_host_set](_compose_host_set.md) (2 shared connections)
 - [Exit Code Constants](Exit_Code_Constants.md) (2 shared connections)
 - [Shell Completion Helpers](Shell_Completion_Helpers.md) (2 shared connections)
-- [TUI Widgets Module](TUI_Widgets_Module.md) (2 shared connections)
+- [Path](Path.md) (2 shared connections)
+- [load_session](load_session.md) (2 shared connections)
 - [ansible_aom/cli.py](ansible_aom-cli.py.md) (2 shared connections)
 - [run_playbook](run_playbook.md) (1 shared connections)
 - [session_id_completer](session_id_completer.md) (1 shared connections)
@@ -46,7 +41,7 @@
 
 ## Audit Trail
 
-- EXTRACTED: 78 (100%)
+- EXTRACTED: 65 (100%)
 - INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 

@@ -1,6 +1,6 @@
 # format_status_bar
 
-> 69 nodes · cohesion 0.05
+> 67 nodes · cohesion 0.05
 
 ## Key Concepts
 
@@ -8,7 +8,6 @@
 - **LivenessState** (30 connections) — `src/ansible_aom/core/heartbeat.py`
 - **test_status_bar_liveness.py** (20 connections) — `tests/compact/test_status_bar_liveness.py`
 - **TestStatusBarColors** (13 connections) — `tests/compact/test_status_bar_colors.py`
-- **heartbeat.py** (7 connections) — `src/ansible_aom/core/heartbeat.py`
 - **test_status_bar_eta.py** (7 connections) — `tests/compact/test_status_bar_eta.py`
 - **test_row_count_ignores_ansi_escape_sequences()** (5 connections) — `tests/compact/test_row_count.py`
 - **.test_sigwinch_triggers_rerender()** (5 connections) — `tests/integration/test_compact_renderer.py`
@@ -29,22 +28,23 @@
 - **test_stuck_segment_rendered_with_bang()** (3 connections) — `tests/compact/test_status_bar_liveness.py`
 - **test_working_segment_is_dim_when_colorized()** (3 connections) — `tests/compact/test_status_bar_liveness.py`
 - **test_working_segment_rendered_with_open_circle()** (3 connections) — `tests/compact/test_status_bar_liveness.py`
-- *... and 44 more nodes in this community*
+- **.test_format_status_bar_elapsed_24_plus_hours()** (3 connections) — `tests/unit/test_event_processing.py`
+- *... and 42 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (10 shared connections)
 - [HeartbeatTracker](HeartbeatTracker.md) (8 shared connections)
-- [renderer.py](renderer.py.md) (6 shared connections)
-- [format.py](format.py.md) (5 shared connections)
+- [format.py](format.py.md) (7 shared connections)
+- [RunState](RunState.md) (7 shared connections)
 - [._render_status_panel](_render_status_panel.md) (5 shared connections)
-- [format_host_summary](format_host_summary.md) (3 shared connections)
+- [renderer.py](renderer.py.md) (4 shared connections)
+- [HostRunState](HostRunState.md) (4 shared connections)
 - [CompactRenderer](CompactRenderer.md) (3 shared connections)
 - [_compute_mode_label](_compute_mode_label.md) (2 shared connections)
 - [_row_count](_row_count.md) (2 shared connections)
-- [JsonlEvent](JsonlEvent.md) (1 shared connections)
+- [format_age](format_age.md) (1 shared connections)
 - [StatusCounts](StatusCounts.md) (1 shared connections)
-- [Status](Status.md) (1 shared connections)
+- [JsonlEvent](JsonlEvent.md) (1 shared connections)
 
 ## Source Files
 
@@ -60,8 +60,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 179 (65%)
-- INFERRED: 97 (35%)
+- EXTRACTED: 171 (64%)
+- INFERRED: 97 (36%)
 - AMBIGUOUS: 0 (0%)
 
 ---

@@ -17,7 +17,7 @@
 
 - [runner.py](runner.py.md) (1 shared connections)
 - [renderer.py](renderer.py.md) (1 shared connections)
-- [load_session](load_session.md) (1 shared connections)
+- [store.py](store.py.md) (1 shared connections)
 - [CompactRenderer](CompactRenderer.md) (1 shared connections)
 - [RunDiagnostics](RunDiagnostics.md) (1 shared connections)
 - [test_diagnostics.py](test_diagnostics.py.md) (1 shared connections)

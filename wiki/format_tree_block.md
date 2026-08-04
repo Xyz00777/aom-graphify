@@ -1,13 +1,15 @@
 # format_tree_block
 
-> 22 nodes · cohesion 0.14
+> 26 nodes · cohesion 0.12
 
 ## Key Concepts
 
 - **format_tree_block()** (48 connections) — `src/ansible_aom/compact/format.py`
 - **_state_with_play()** (14 connections) — `tests/compact/test_tree_upcoming_tasks.py`
 - **test_tree_upcoming_tasks.py** (12 connections) — `tests/compact/test_tree_upcoming_tasks.py`
+- **test_format_tree_block_renders_two_level_truncation()** (11 connections) — `tests/compact/test_tree_render.py`
 - **_two_plays_with_running_tasks()** (9 connections) — `tests/compact/test_tree_pipe_continuation.py`
+- **test_no_preflight_falls_back_to_running_only()** (8 connections) — `tests/compact/test_tree_upcoming_tasks.py`
 - **test_ascii_mode_uses_pipe_substitute()** (5 connections) — `tests/compact/test_tree_pipe_continuation.py`
 - **test_last_play_children_have_plain_indent()** (5 connections) — `tests/compact/test_tree_pipe_continuation.py`
 - **test_non_last_play_children_show_vertical_pipe()** (5 connections) — `tests/compact/test_tree_pipe_continuation.py`
@@ -22,36 +24,39 @@
 - **A task under a non-last play must be indented with ``│  ``.** (1 connections) — `tests/compact/test_tree_pipe_continuation.py`
 - **A task under the last play must NOT carry a vertical pipe — the     parent is th** (1 connections) — `tests/compact/test_tree_pipe_continuation.py`
 - **ASCII mode renders the continuation as ``|  `` (or equivalent)     rather than t** (1 connections) — `tests/compact/test_tree_pipe_continuation.py`
+- **End-to-end snapshot of the user's sketch shape. Two plays,     second with a ``p** (1 connections) — `tests/compact/test_tree_render.py`
 - **Tree projection shows the currently-running task plus every task yet to come in** (1 connections) — `tests/compact/test_tree_upcoming_tasks.py`
 - **Pending tasks render with the PENDING status icon (□ or ASCII '.').** (1 connections) — `tests/compact/test_tree_upcoming_tasks.py`
+- **Without preflight definitions the projection cannot enumerate     upcoming tasks** (1 connections) — `tests/compact/test_tree_upcoming_tasks.py`
 - **All preflight tasks completed, more coming → show the next pending.** (1 connections) — `tests/compact/test_tree_upcoming_tasks.py`
-- **Build a RunState with one play and one host.      ``runtime_tasks`` maps preflig** (1 connections) — `tests/compact/test_tree_upcoming_tasks.py`
+- *... and 1 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (13 shared connections)
-- [PlayDefinition](PlayDefinition.md) (11 shared connections)
+- [HostRunState](HostRunState.md) (16 shared connections)
+- [.from_run_state](from_run_state.md) (12 shared connections)
 - [TreeProjection](TreeProjection.md) (10 shared connections)
 - [_state_with_play](_state_with_play.md) (6 shared connections)
-- [test_tree_render.py](test_tree_render.py.md) (5 shared connections)
-- [format.py](format.py.md) (3 shared connections)
+- [test_tree_render.py](test_tree_render.py.md) (6 shared connections)
+- [format.py](format.py.md) (5 shared connections)
+- [RunState](RunState.md) (4 shared connections)
 - [Get All Actions](Get_All_Actions.md) (3 shared connections)
 - [_visible_projection](_visible_projection.md) (3 shared connections)
-- [RunState](RunState.md) (2 shared connections)
-- [Status](Status.md) (2 shared connections)
-- [JsonlEvent](JsonlEvent.md) (1 shared connections)
+- [TaskDefinition](TaskDefinition.md) (2 shared connections)
+- [PlayDefinition](PlayDefinition.md) (2 shared connections)
 - [format_host_rows](format_host_rows.md) (1 shared connections)
 
 ## Source Files
 
 - `src/ansible_aom/compact/format.py`
 - `tests/compact/test_tree_pipe_continuation.py`
+- `tests/compact/test_tree_render.py`
 - `tests/compact/test_tree_upcoming_tasks.py`
 
 ## Audit Trail
 
-- EXTRACTED: 123 (93%)
-- INFERRED: 9 (7%)
+- EXTRACTED: 143 (93%)
+- INFERRED: 10 (7%)
 - AMBIGUOUS: 0 (0%)
 
 ---

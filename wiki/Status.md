@@ -1,67 +1,62 @@
 # Status
 
-> 278 nodes · cohesion 0.01
+> 80 nodes · cohesion 0.04
 
 ## Key Concepts
 
 - **Status** (273 connections) — `src/ansible_aom/core/models.py`
-- **WarningType** (95 connections) — `src/ansible_aom/core/models.py`
-- **models.py** (86 connections) — `src/ansible_aom/core/models.py`
-- **WarningEntry** (72 connections) — `src/ansible_aom/core/models.py`
-- **StatusBarConfig** (64 connections) — `src/ansible_aom/core/config.py`
-- **TestPtyStreamParserStderrLineEmission** (41 connections) — `tests/unit/test_parser.py`
-- **PreParseResult** (35 connections) — `src/ansible_aom/core/parser.py`
-- **test_panels.py** (29 connections) — `tests/tui/test_panels.py`
-- **TestListTasksEdgeCases** (26 connections) — `tests/unit/test_parser.py`
-- **TestListTasksParser** (25 connections) — `tests/unit/test_parser.py`
-- **TestPtyStreamParserPhases** (25 connections) — `tests/unit/test_parser.py`
-- **test_parser.py** (24 connections) — `tests/unit/test_parser.py`
-- **TestListHostsEdgeCases** (23 connections) — `tests/unit/test_parser.py`
-- **TestListHostsParser** (20 connections) — `tests/unit/test_parser.py`
-- **TestWarningEntry** (19 connections) — `tests/unit/test_models.py`
-- **TestPtyStreamParserJsonlEvents** (18 connections) — `tests/unit/test_parser.py`
-- **TestWarningDetectionThroughAnsiPrefix** (18 connections) — `tests/unit/test_parser.py`
-- **TestListHostsFallback** (17 connections) — `tests/unit/test_parser.py`
-- **TestListTasksListHostsIntegration** (16 connections) — `tests/unit/test_parser.py`
-- **TestParallelPreParse** (16 connections) — `tests/unit/test_parser.py`
-- **TestPtyStreamParserPlaintextCap** (16 connections) — `tests/unit/test_parser.py`
+- **StreamPhase** (97 connections) — `src/ansible_aom/core/parser.py`
+- **test_playbook_parser.py** (38 connections) — `tests/integration/test_playbook_parser.py`
 - **TestStatusEnum** (16 connections) — `tests/unit/test_parser.py`
-- **TestFilterPanelWarningCheckboxes** (15 connections) — `tests/tui/test_panels.py`
-- **TestWarningTypeEnum** (15 connections) — `tests/unit/test_models.py`
-- **TestFilterPanelHostFilter** (14 connections) — `tests/tui/test_panels.py`
-- *... and 253 more nodes in this community*
+- **TestPasswordPrompts** (10 connections) — `tests/integration/test_playbook_parser.py`
+- **TestPhaseTransitions** (10 connections) — `tests/integration/test_playbook_parser.py`
+- **TestPlayRecap** (10 connections) — `tests/integration/test_playbook_parser.py`
+- **TestEmptyPlaybook** (9 connections) — `tests/integration/test_playbook_parser.py`
+- **TestMultiHostMixed** (9 connections) — `tests/integration/test_playbook_parser.py`
+- **TestSyntaxError** (9 connections) — `tests/integration/test_playbook_parser.py`
+- **TestTags** (9 connections) — `tests/integration/test_playbook_parser.py`
+- **TestWarningDetection** (9 connections) — `tests/integration/test_playbook_parser.py`
+- **TestHandlerTasks** (8 connections) — `tests/integration/test_playbook_parser.py`
+- **TestIncludeVsImport** (8 connections) — `tests/integration/test_playbook_parser.py`
+- **TestMixedWarningsExecution** (8 connections) — `tests/integration/test_playbook_parser.py`
+- **TestSingleTaskChanged** (8 connections) — `tests/integration/test_playbook_parser.py`
+- **TestTaskFailure** (8 connections) — `tests/integration/test_playbook_parser.py`
+- **TestBecomePassword** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestBlockTasks** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestFreeStrategy** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestHostPatternFiltering** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestLargePlaybook** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestRoleGrouping** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestSingleHostLocalhost** (7 connections) — `tests/integration/test_playbook_parser.py`
+- **TestSingleTaskSuccess** (7 connections) — `tests/integration/test_playbook_parser.py`
+- *... and 55 more nodes in this community*
 
 ## Relationships
 
-- [HostRunState](HostRunState.md) (175 shared connections)
-- [TaskDefinition](TaskDefinition.md) (71 shared connections)
-- [PtyStreamParser](PtyStreamParser.md) (66 shared connections)
-- [PlayDefinition](PlayDefinition.md) (51 shared connections)
-- [RunState](RunState.md) (43 shared connections)
-- [JsonLineStream](JsonLineStream.md) (27 shared connections)
-- [StreamPhase](StreamPhase.md) (26 shared connections)
-- [test_playbook_parser.py](test_playbook_parser.py.md) (22 shared connections)
-- [TreeProjection](TreeProjection.md) (17 shared connections)
-- [parse_list_hosts_output](parse_list_hosts_output.md) (15 shared connections)
-- [parse_list_tasks_output](parse_list_tasks_output.md) (15 shared connections)
-- [TestWarningPatternsEdgeCases](TestWarningPatternsEdgeCases.md) (14 shared connections)
+- [RunState](RunState.md) (55 shared connections)
+- [PtyStreamParser](PtyStreamParser.md) (39 shared connections)
+- [WarningType](WarningType.md) (37 shared connections)
+- [HostRunState](HostRunState.md) (31 shared connections)
+- [StatusBarConfig](StatusBarConfig.md) (18 shared connections)
+- [test_cli.py](test_cli.py.md) (18 shared connections)
+- [parse_jsonl_output](parse_jsonl_output.md) (16 shared connections)
+- [WarningEntry](WarningEntry.md) (13 shared connections)
+- [.from_run_state](from_run_state.md) (11 shared connections)
+- [TreeProjection](TreeProjection.md) (10 shared connections)
+- [PlayDefinition](PlayDefinition.md) (9 shared connections)
+- [models.py](models.py.md) (8 shared connections)
 
 ## Source Files
 
-- `src/ansible_aom/compact/exit_code.py`
-- `src/ansible_aom/core/config.py`
-- `src/ansible_aom/core/exit_code.py`
 - `src/ansible_aom/core/models.py`
-- `src/ansible_aom/core/parity.py`
 - `src/ansible_aom/core/parser.py`
-- `tests/tui/test_panels.py`
-- `tests/unit/test_models.py`
+- `tests/integration/test_playbook_parser.py`
 - `tests/unit/test_parser.py`
 
 ## Audit Trail
 
-- EXTRACTED: 818 (50%)
-- INFERRED: 828 (50%)
+- EXTRACTED: 228 (33%)
+- INFERRED: 458 (67%)
 - AMBIGUOUS: 0 (0%)
 
 ---

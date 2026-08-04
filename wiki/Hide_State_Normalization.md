@@ -35,7 +35,7 @@
 
 - [Play Boundary State Tests](Play_Boundary_State_Tests.md) (4 shared connections)
 - [Include Import Role Tasks](Include_Import_Role_Tasks.md) (3 shared connections)
-- [drivers/replay.py](drivers-replay.py.md) (2 shared connections)
+- [store.py](store.py.md) (2 shared connections)
 - [FakeRenderer](FakeRenderer.md) (2 shared connections)
 - [test_replay_determinism.py](test_replay_determinism.py.md) (2 shared connections)
 - [Diagnostics CLI Wiring](Diagnostics_CLI_Wiring.md) (2 shared connections)

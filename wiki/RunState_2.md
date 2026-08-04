@@ -29,7 +29,7 @@
 - test_host_leaves_dropped_when_budget_tight() `EXTRACTED`
 
 ### contains
-- [run_state.py](run_state.py.md) `EXTRACTED`
+- run_state.py `EXTRACTED`
 
 ### imports
 - [json.py](json.py.md) `EXTRACTED`
@@ -38,7 +38,7 @@
 - tree_projection.py `EXTRACTED`
 - includes.py `EXTRACTED`
 - core/replay.py `EXTRACTED`
-- parity.py `EXTRACTED`
+- [parity.py](parity.py.md) `EXTRACTED`
 - core/exit_code.py `EXTRACTED`
 
 ### method
@@ -99,13 +99,13 @@
 - [JsonRenderer](JsonRenderer.md) `INFERRED`
 - [JsonlEvent](JsonlEvent.md) `INFERRED`
 - [TreeProjection](TreeProjection.md) `INFERRED`
-- [IncludeCacheEntry](IncludeCacheEntry.md) `INFERRED`
+- IncludeCacheEntry `INFERRED`
 - TreeLine `INFERRED`
-- [TestHideStateFlag](TestHideStateFlag.md) `INFERRED`
+- TestHideStateFlag `INFERRED`
 - _SessionSink `INFERRED`
-- [RoleCacheEntry](RoleCacheEntry.md) `INFERRED`
+- RoleCacheEntry `INFERRED`
 - _NullSink `INFERRED`
-- [TestHideStateCompactPlumbing](TestHideStateCompactPlumbing.md) `INFERRED`
+- TestHideStateCompactPlumbing `INFERRED`
 - [TestNoRedactFlag](TestNoRedactFlag.md) `INFERRED`
 - TestRendererProtocol `INFERRED`
 - TestHandleEventDispatcher `INFERRED`

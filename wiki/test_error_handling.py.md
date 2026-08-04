@@ -1,33 +1,41 @@
 # test_error_handling.py
 
-> 10 nodes · cohesion 0.20
+> 62 nodes · cohesion 0.03
 
 ## Key Concepts
 
 - **test_error_handling.py** (16 connections) — `tests/integration/test_error_handling.py`
+- **TestCancellationTimerLogic** (7 connections) — `tests/integration/test_error_handling.py`
+- **TestPasswordTimeout** (6 connections) — `tests/integration/test_error_handling.py`
+- **TestCancellationSecondCtrlC** (5 connections) — `tests/integration/test_error_handling.py`
+- **TestExitCodeConstants** (5 connections) — `tests/integration/test_error_handling.py`
+- **TestGracefulDegradationJSONLParseFailure** (5 connections) — `tests/integration/test_error_handling.py`
+- **TestPasswordPromptHandling** (5 connections) — `tests/integration/test_error_handling.py`
+- **TestProcessMonitoring** (5 connections) — `tests/integration/test_error_handling.py`
+- **TestPasswordTimeoutMechanisn** (4 connections) — `tests/integration/test_error_handling.py`
 - **TestProcessStateMonitoring** (4 connections) — `tests/integration/test_error_handling.py`
 - **TestQueueHandlerLogging** (4 connections) — `tests/integration/test_error_handling.py`
-- **.test_monitoring_interval_is_half_second()** (2 connections) — `tests/integration/test_error_handling.py`
-- **.test_queue_handler_exists_in_stdlib()** (2 connections) — `tests/integration/test_error_handling.py`
-- **Integration tests for error handling (TEST_SPECIFICATION.md Section 14).  Tests** (1 connections) — `tests/integration/test_error_handling.py`
-- **TC-458: Non-blocking QueueHandler.** (1 connections) — `tests/integration/test_error_handling.py`
-- **TC-458: QueueHandler is available in Python stdlib.** (1 connections) — `tests/integration/test_error_handling.py`
-- **TC-480 to TC-483: Process state monitoring.** (1 connections) — `tests/integration/test_error_handling.py`
-- **TC-480: Process state checked every 0.5 seconds.** (1 connections) — `tests/integration/test_error_handling.py`
+- **.test_malformed_jsonl_does_not_crash()** (3 connections) — `tests/integration/test_error_handling.py`
+- **.test_valid_json_following_malformed_still_parsed()** (3 connections) — `tests/integration/test_error_handling.py`
+- **.test_password_patterns_defined()** (3 connections) — `tests/integration/test_error_handling.py`
+- **.test_password_prompt_detected_patterns()** (3 connections) — `tests/integration/test_error_handling.py`
+- **.test_second_sigint_after_2s_is_normal()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_second_sigint_within_2s_is_immediate_exit()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_cancellation_timer_check_within_window()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_cancellation_timer_initial_state()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_cancellation_timer_resets_after_timeout()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_cancellation_timer_sets_on_first_interrupt()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_exit_code_constants_defined()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_signal_exit_codes()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_password_timeout_value()** (2 connections) — `tests/integration/test_error_handling.py`
+- **.test_password_timeout_cancels_with_error()** (2 connections) — `tests/integration/test_error_handling.py`
+- *... and 37 more nodes in this community*
 
 ## Relationships
 
-- [PtyStreamParser](PtyStreamParser.md) (4 shared connections)
-- [TestCancellationSecondCtrlC](TestCancellationSecondCtrlC.md) (1 shared connections)
-- [TestCancellationTimerLogic](TestCancellationTimerLogic.md) (1 shared connections)
-- [TestExitCodeConstants](TestExitCodeConstants.md) (1 shared connections)
-- [TestLogging](TestLogging.md) (1 shared connections)
+- [PtyStreamParser](PtyStreamParser.md) (14 shared connections)
+- [TestLogging](TestLogging.md) (3 shared connections)
 - [TestMissingAnsiblePlaybook](TestMissingAnsiblePlaybook.md) (1 shared connections)
-- [TestPasswordPromptHandling](TestPasswordPromptHandling.md) (1 shared connections)
-- [TestPasswordTimeout](TestPasswordTimeout.md) (1 shared connections)
-- [TestProcessMonitoring](TestProcessMonitoring.md) (1 shared connections)
-- [TestStderrCapture](TestStderrCapture.md) (1 shared connections)
-- [TestStderrHandling](TestStderrHandling.md) (1 shared connections)
 - [TestWatchdogTimer](TestWatchdogTimer.md) (1 shared connections)
 
 ## Source Files
@@ -36,8 +44,8 @@
 
 ## Audit Trail
 
-- EXTRACTED: 31 (94%)
-- INFERRED: 2 (6%)
+- EXTRACTED: 127 (90%)
+- INFERRED: 14 (10%)
 - AMBIGUOUS: 0 (0%)
 
 ---

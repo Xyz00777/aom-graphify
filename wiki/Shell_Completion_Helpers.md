@@ -21,9 +21,10 @@
 ## Relationships
 
 - [rerun/cli.py](rerun-cli.py.md) (2 shared connections)
-- [Path](Path.md) (2 shared connections)
 - [session_id_completer](session_id_completer.md) (1 shared connections)
-- [completion_snippet](completion_snippet.md) (1 shared connections)
+- [test_completion.py](test_completion.py.md) (1 shared connections)
+- [test_rerun_cli.py](test_rerun_cli.py.md) (1 shared connections)
+- [Path](Path.md) (1 shared connections)
 
 ## Source Files
 

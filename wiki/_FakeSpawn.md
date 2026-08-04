@@ -33,7 +33,7 @@
 ## Relationships
 
 - [run_playbook](run_playbook.md) (3 shared connections)
-- [_FakeSpawn](_FakeSpawn.md) (1 shared connections)
+- [FakeRenderer](FakeRenderer.md) (1 shared connections)
 
 ## Source Files
 

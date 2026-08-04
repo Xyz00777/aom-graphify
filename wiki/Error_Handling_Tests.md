@@ -34,7 +34,7 @@
 ## Relationships
 
 - [Warning Pattern Classification](Warning_Pattern_Classification.md) (9 shared connections)
-- [format_host_summary](format_host_summary.md) (2 shared connections)
+- [format.py](format.py.md) (2 shared connections)
 - [test_icons.py](test_icons.py.md) (1 shared connections)
 - [TUI Widget Framework](TUI_Widget_Framework.md) (1 shared connections)
 - [CLI Framework Architecture](CLI_Framework_Architecture.md) (1 shared connections)

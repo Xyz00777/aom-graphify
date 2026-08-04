@@ -18,7 +18,7 @@
 ## Relationships
 
 - [AppConfig](AppConfig.md) (4 shared connections)
-- [Status](Status.md) (2 shared connections)
+- [StatusBarConfig](StatusBarConfig.md) (2 shared connections)
 - [RedactionConfig](RedactionConfig.md) (1 shared connections)
 - [WarningsConfig](WarningsConfig.md) (1 shared connections)
 - [test_config.py](test_config.py.md) (1 shared connections)

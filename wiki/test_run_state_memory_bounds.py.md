@@ -1,14 +1,10 @@
 # test_run_state_memory_bounds.py
 
-> 48 nodes · cohesion 0.06
+> 20 nodes · cohesion 0.17
 
 ## Key Concepts
 
 - **test_run_state_memory_bounds.py** (14 connections) — `tests/unit/test_run_state_memory_bounds.py`
-- **_build_compact_renderer()** (9 connections) — `tests/unit/test_renderer_unbounded_caps.py`
-- **test_renderer_unbounded_caps.py** (8 connections) — `tests/unit/test_renderer_unbounded_caps.py`
-- **test_run_state_set_caps.py** (8 connections) — `tests/unit/test_run_state_set_caps.py`
-- **state_machine.py** (7 connections) — `src/ansible_aom/core/state_machine.py`
 - **_play_start()** (7 connections) — `tests/unit/test_run_state_memory_bounds.py`
 - **_task_start()** (6 connections) — `tests/unit/test_run_state_memory_bounds.py`
 - **test_max_hosts_per_task_enforced()** (6 connections) — `tests/unit/test_run_state_memory_bounds.py`
@@ -17,39 +13,31 @@
 - **test_max_tasks_per_play_enforced()** (5 connections) — `tests/unit/test_run_state_memory_bounds.py`
 - **test_truncated_events_independent_counters()** (5 connections) — `tests/unit/test_run_state_memory_bounds.py`
 - **test_max_plays_enforced()** (4 connections) — `tests/unit/test_run_state_memory_bounds.py`
-- **test_announced_task_uuids_capped()** (3 connections) — `tests/unit/test_renderer_unbounded_caps.py`
-- **test_completed_task_ids_capped()** (3 connections) — `tests/unit/test_renderer_unbounded_caps.py`
-- **test_renderer_constructor_uses_sane_initial_caps()** (3 connections) — `tests/unit/test_renderer_unbounded_caps.py`
-- **test_seen_warning_messages_capped()** (3 connections) — `tests/unit/test_renderer_unbounded_caps.py`
-- **test_streamed_loop_items_capped()** (3 connections) — `tests/unit/test_renderer_unbounded_caps.py`
 - **test_truncated_events_starts_empty()** (3 connections) — `tests/unit/test_run_state_memory_bounds.py`
-- **test_grafted_role_names_capped()** (3 connections) — `tests/unit/test_run_state_set_caps.py`
-- **test_grafted_uuids_capped_at_max_tasks_per_play()** (3 connections) — `tests/unit/test_run_state_set_caps.py`
-- **test_play_window_counts_capped_at_max_plays()** (3 connections) — `tests/unit/test_run_state_set_caps.py`
-- **test_unknown_events_keys_naturally_bounded()** (3 connections) — `tests/unit/test_run_state_set_caps.py`
 - **_runner_on_ok()** (2 connections) — `tests/unit/test_run_state_memory_bounds.py`
 - **test_truncated_constants_pinned()** (2 connections) — `tests/unit/test_run_state_memory_bounds.py`
-- *... and 23 more nodes in this community*
+- **R12 — enforce MAX_PLAYS / MAX_TASKS_PER_PLAY / MAX_HOSTS_PER_TASK / MAX_TOTAL_HO** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
+- **R12: a task's 10001st host is dropped.** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
+- **R12: the 1 000 001st HostRunState insertion is dropped.      The MAX_TOTAL_HOST_** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
+- **R12: a fresh RunState has no truncations recorded.** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
+- **R12: each cap has its own counter, not shared.** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
+- **R12: pin the documented cap values so accidental edits are caught.** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
+- **R12: the 1001st ``v2_playbook_on_play_start`` is dropped.** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
+- **R12: a play's 10001st task is dropped (other plays unaffected).** (1 connections) — `tests/unit/test_run_state_memory_bounds.py`
 
 ## Relationships
 
-- [RunState](RunState.md) (10 shared connections)
-- [run_state.py](run_state.py.md) (3 shared connections)
-- [StreamPhase](StreamPhase.md) (1 shared connections)
-- [test_parser_recap_cap.py](test_parser_recap_cap.py.md) (1 shared connections)
-- [CompactRenderer](CompactRenderer.md) (1 shared connections)
+- [RunState](RunState.md) (6 shared connections)
+- [models.py](models.py.md) (2 shared connections)
 
 ## Source Files
 
-- `src/ansible_aom/core/state_machine.py`
-- `tests/unit/test_renderer_unbounded_caps.py`
 - `tests/unit/test_run_state_memory_bounds.py`
-- `tests/unit/test_run_state_set_caps.py`
 
 ## Audit Trail
 
-- EXTRACTED: 147 (99%)
-- INFERRED: 1 (1%)
+- EXTRACTED: 74 (100%)
+- INFERRED: 0 (0%)
 - AMBIGUOUS: 0 (0%)
 
 ---

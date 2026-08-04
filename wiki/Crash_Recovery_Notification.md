@@ -9,7 +9,7 @@
 
 ## Relationships
 
-- [format_host_summary](format_host_summary.md) (1 shared connections)
+- [format.py](format.py.md) (1 shared connections)
 - [Error Handling Tests](Error_Handling_Tests.md) (1 shared connections)
 
 ## Source Files

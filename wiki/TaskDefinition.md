@@ -1,54 +1,53 @@
 # TaskDefinition
 
-> 205 nodes · cohesion 0.02
+> 126 nodes · cohesion 0.02
 
 ## Key Concepts
 
 - **TaskDefinition** (357 connections) — `src/ansible_aom/core/models.py`
-- **RoleGroupDefinition** (152 connections) — `src/ansible_aom/core/models.py`
-- **TestTaskDefinition** (24 connections) — `tests/unit/test_models.py`
 - **TestRoleGrouping** (21 connections) — `tests/unit/test_parser.py`
-- **test_models.py** (18 connections) — `tests/unit/test_models.py`
-- **TestRoleGroupDefinition** (18 connections) — `tests/unit/test_models.py`
-- **TestMemoryBounds** (17 connections) — `tests/unit/test_models.py`
-- **TestTaskMatchingAlgorithm** (16 connections) — `tests/unit/test_event_processing.py`
-- **TestDefinitionVsStateSeparation** (15 connections) — `tests/unit/test_models.py`
 - **TestLinearForceCompletion** (15 connections) — `tests/unit/test_models.py`
-- **TestTaskMatching** (15 connections) — `tests/unit/test_models.py`
-- **TestRunnerTaskCompletionPromotion** (14 connections) — `tests/unit/test_models.py`
-- **test_tree_nested_roles.py** (14 connections) — `tests/unit/test_tree_nested_roles.py`
 - **test_dynamic_counters.py** (12 connections) — `tests/unit/test_dynamic_counters.py`
-- **TestFreeStrategyMetaTaskVisibility** (12 connections) — `tests/unit/test_models.py`
 - **group_roles()** (11 connections) — `src/ansible_aom/core/parser.py`
-- **_play_def()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_mixed_consecutive_and_nested_roles()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_nested_role_renders_as_sub_branch()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_runtime_podman_prefix_does_not_duplicate_role_header()** (10 connections) — `tests/unit/test_tree_nested_roles.py`
 - **TestIncludeStubHiding** (10 connections) — `tests/unit/test_tree_projection.py`
-- **_fire_startup()** (9 connections) — `tests/unit/test_tree_nested_roles.py`
-- **_line_summary()** (9 connections) — `tests/unit/test_tree_nested_roles.py`
-- **.test_regression_flat_role_tasks_unchanged()** (9 connections) — `tests/unit/test_tree_nested_roles.py`
-- **_count_tasks()** (8 connections) — `src/ansible_aom/compact/format.py`
-- *... and 180 more nodes in this community*
+- **test_total_tasks_seen_no_cache_falls_back_to_preflight_runtime_max()** (8 connections) — `tests/unit/test_dynamic_counters.py`
+- **TestTreeLinesAsyncTaskIdentity** (8 connections) — `tests/unit/test_tree_projection.py`
+- **test_total_tasks_seen_includes_include_cache()** (7 connections) — `tests/unit/test_dynamic_counters.py`
+- **._active_state()** (7 connections) — `tests/unit/test_tree_projection.py`
+- **TestTreeProjectionCacheRefresh** (7 connections) — `tests/unit/test_tree_projection.py`
+- **test_total_tasks_with_role_group_and_dynamic_children()** (6 connections) — `tests/unit/test_dynamic_counters.py`
+- **._async_task_collision_state()** (6 connections) — `tests/unit/test_tree_projection.py`
+- **.test_dynamic_child_graft_refreshes_role_cache()** (6 connections) — `tests/unit/test_tree_projection.py`
+- **test_total_tasks_counts_dynamic_children()** (5 connections) — `tests/unit/test_dynamic_counters.py`
+- **test_total_tasks_counts_import_tasks_as_static()** (5 connections) — `tests/unit/test_dynamic_counters.py`
+- **test_total_tasks_multi_play_with_dynamic_children()** (5 connections) — `tests/unit/test_dynamic_counters.py`
+- **test_total_tasks_no_dynamic_children()** (5 connections) — `tests/unit/test_dynamic_counters.py`
+- **.test_meta_task_emits_no_events_under_free_strategy()** (5 connections) — `tests/unit/test_models.py`
+- **.test_free_strategy_not_affected()** (5 connections) — `tests/unit/test_models.py`
+- **.test_meta_task_force_completed_under_linear()** (5 connections) — `tests/unit/test_models.py`
+- **.test_real_terminal_hosts_preserved()** (5 connections) — `tests/unit/test_models.py`
+- **.test_same_play_handler_task_force_completed()** (5 connections) — `tests/unit/test_models.py`
+- **.test_multi_host_all_terminal_promotes_to_completed()** (5 connections) — `tests/unit/test_models.py`
+- **.test_single_host_ok_promotes_task_to_completed()** (5 connections) — `tests/unit/test_models.py`
+- *... and 101 more nodes in this community*
 
 ## Relationships
 
-- [PlayDefinition](PlayDefinition.md) (176 shared connections)
-- [HostRunState](HostRunState.md) (73 shared connections)
-- [Status](Status.md) (71 shared connections)
-- [RunState](RunState.md) (63 shared connections)
-- [_play_start](_play_start.md) (24 shared connections)
-- [TreeProjection](TreeProjection.md) (18 shared connections)
-- [TestUngroupedRoleTasksInTree](TestUngroupedRoleTasksInTree.md) (15 shared connections)
-- [IncludeCacheEntry](IncludeCacheEntry.md) (13 shared connections)
-- [run_state.py](run_state.py.md) (12 shared connections)
-- [._render_status_panel](_render_status_panel.md) (10 shared connections)
-- [PriorRun](PriorRun.md) (8 shared connections)
-- [JsonLineStream](JsonLineStream.md) (8 shared connections)
+- [PlayDefinition](PlayDefinition.md) (51 shared connections)
+- [RunState](RunState.md) (49 shared connections)
+- [RoleGroupDefinition](RoleGroupDefinition.md) (42 shared connections)
+- [WarningEntry](WarningEntry.md) (35 shared connections)
+- [HostRunState](HostRunState.md) (33 shared connections)
+- [.from_run_state](from_run_state.md) (30 shared connections)
+- [models.py](models.py.md) (27 shared connections)
+- [_play_start](_play_start.md) (23 shared connections)
+- [WarningType](WarningType.md) (20 shared connections)
+- [TestUngroupedRoleTasksInTree](TestUngroupedRoleTasksInTree.md) (12 shared connections)
+- [test_tree_classify_and_role_labels.py](test_tree_classify_and_role_labels.py.md) (10 shared connections)
+- [._render_status_panel](_render_status_panel.md) (9 shared connections)
 
 ## Source Files
 
-- `src/ansible_aom/compact/format.py`
 - `src/ansible_aom/core/models.py`
 - `src/ansible_aom/core/parser.py`
 - `tests/unit/test_dynamic_counters.py`
@@ -56,14 +55,12 @@
 - `tests/unit/test_invariants_runstate_renderer.py`
 - `tests/unit/test_models.py`
 - `tests/unit/test_parser.py`
-- `tests/unit/test_runner_event_fallback.py`
-- `tests/unit/test_tree_nested_roles.py`
 - `tests/unit/test_tree_projection.py`
 
 ## Audit Trail
 
-- EXTRACTED: 867 (67%)
-- INFERRED: 430 (33%)
+- EXTRACTED: 509 (70%)
+- INFERRED: 223 (30%)
 - AMBIGUOUS: 0 (0%)
 
 ---
